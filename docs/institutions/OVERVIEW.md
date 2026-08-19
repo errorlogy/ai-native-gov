@@ -6,22 +6,28 @@ AI Native Gov models **institutions as processing layers** — each applies chec
 
 | Institution | Model role | Primary output |
 |-------------|------------|----------------|
+| [Charter](CHARTER.md) | Constitutional foundation — permissions, prohibitions, human override hook | `charter_status`: PERMITTED / CONDITIONAL / PROHIBITED |
 | [Parliament](parliament.md) | Multi-actor deliberation, legislative posture | Consensus, dissent, bill-like proposals |
 | [AI Parliament](AI_PARLIAMENT.md) | Literal role-mapping simulator (Speaker, parties, ministers, PM) | Isomorphic agent graph, autonomy dials, phased human→AI modeling |
-| [Executive](executive.md) | Policy execution, action likelihood | Implementation paths, executive orders (modeled) |
+| [AI Cabinet](AI_CABINET.md) | PM coordination + cabinet ensemble; executive intent synthesis | `cabinet_intent`, `action_likelihood` |
+| [AI Ministries](AI_MINISTRIES.md) | Domain executive agents (Finance, Justice, Interior, Foreign Affairs, Science/Tech) | `portfolio_posture`, `implementation_capacity` per domain |
+| [Executive](executive.md) | Abstract policy execution layer | Implementation paths, executive orders (modeled) |
 | [Judiciary](judiciary.md) | Dispute resolution, precedent | Rulings, legitimacy constraints |
 | [Interpol](interpol.md) | Cross-border coordination | Jurisdiction bridges, enforcement posture |
 
-## Ministries (planned)
+## Ministries
 
-Domain-specific layers that feed into Parliament and Executive:
+Domain-specific layers that feed into Cabinet and Parliament. See [AI_MINISTRIES.md](AI_MINISTRIES.md) for full ministry template and each domain doc.
 
-- Defense — military posture, alliance dynamics
-- Finance — sanctions, currency, trade flows
-- Climate — energy transition, climate diplomacy
-- Tech — AI regulation, cyber, platform governance
+| Ministry | Layer ID | Domain |
+|----------|----------|--------|
+| Finance | `institution:minister-finance` | Sanctions, trade, currency, fiscal signals |
+| Justice | `institution:minister-justice` | Legal framework, rights signals, Judiciary interface |
+| Interior / Public Safety | `institution:minister-interior` | Civil order, emergency management, internal enforcement signals |
+| Foreign Affairs | `institution:minister-foreign-affairs` | Diplomacy, treaties, Transnational Ops interface |
+| Science / Technology | `institution:minister-science-tech` | AI regulation, cyber, platform governance, research policy |
 
-Ministry stubs will live in this folder as the roadmap advances.
+Additional ministries (Defense, Climate, etc.) can be added using the ministry template in [AI_MINISTRIES.md](AI_MINISTRIES.md).
 
 ## How institutions interact
 
@@ -44,13 +50,33 @@ These are **AI modeling layers**, not operational governments. They provide:
 - Explicit disagreement and constraint surfaces
 - Reproducible scenario analysis (see `docs/examples/`)
 
-## AI Parliament simulator
+## AI Government simulator
 
-For the **literal isomorphism** model — AI Speaker, party coalition MAS, AI ministers/PM, autonomy dials, and Transnational Ops as a separate layer — see [AI_PARLIAMENT.md](AI_PARLIAMENT.md).
+For the full AI-Native Government simulator — all layers, autonomy dial table, gradual replacement phases, and epistemic guarantees in one place — see [AI_GOVERNMENT_OVERVIEW.md](AI_GOVERNMENT_OVERVIEW.md).
+
+Individual simulator docs:
+
+| Document | Description |
+|----------|-------------|
+| [AI_PARLIAMENT.md](AI_PARLIAMENT.md) | Speaker, parties, ministers, PM, autonomy dials |
+| [AI_JUDICIARY.md](AI_JUDICIARY.md) | Procedural constraint layer, due process, NAMM integration |
+| [AI_TRANSNATIONAL_OPS.md](AI_TRANSNATIONAL_OPS.md) | Cross-border coordination, routing, audit trail |
+| [AI_HUMAN_OVERSIGHT.md](AI_HUMAN_OVERSIGHT.md) | Veto, appeal, audit, dead man's switch |
+
+## Constitutional foundation
+
+The **AI Charter** ([CHARTER.md](CHARTER.md)) is the hard-stop layer above all others. It defines what agents may and may not do, propagates permission constraints to every downstream layer, and provides the human override hook. No parliamentary resolution, cabinet plan, or ministerial output is valid against a `charter_status: PROHIBITED` ruling.
 
 ## Related docs
 
+- [AI_GOVERNMENT_OVERVIEW.md](AI_GOVERNMENT_OVERVIEW.md) — master map (all layers + autonomy dials)
+- [CHARTER.md](CHARTER.md) — constitutional foundation, permissions, human override hook
 - [AI_PARLIAMENT.md](AI_PARLIAMENT.md) — role-mapping simulator
+- [AI_JUDICIARY.md](AI_JUDICIARY.md) — procedural constraint, due process, NAMM integration
+- [AI_TRANSNATIONAL_OPS.md](AI_TRANSNATIONAL_OPS.md) — cross-border coordination layer
+- [AI_HUMAN_OVERSIGHT.md](AI_HUMAN_OVERSIGHT.md) — veto, appeal, audit, dead man's switch
+- [AI_CABINET.md](AI_CABINET.md) — PM coordination, cabinet ensemble, decision flow
+- [AI_MINISTRIES.md](AI_MINISTRIES.md) — domain executive agents
 - [TOPOLOGY.md](TOPOLOGY.md) — layer intersections
 - [ARCHITECTURE.md](../ARCHITECTURE.md) — system architecture
 - Integrations: [ERRORLOGY.md](../integrations/ERRORLOGY.md), [POLITIC_BAR.md](../integrations/POLITIC_BAR.md)
