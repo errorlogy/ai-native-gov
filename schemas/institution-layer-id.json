@@ -17,13 +17,25 @@
     "institution:audit",
     "institution:ombudsman",
     "institution:central-bank-analog",
-    "institution:regulatory-agency"
+    "institution:regulatory-agency",
+    "institution:eu-parliament",
+    "institution:eu-commission",
+    "institution:eu-council",
+    "institution:eu-court-of-justice",
+    "institution:eu-transnational-ops",
+    "institution:national-instance"
   ],
   "examples": [
     "institution:executive",
     "institution:parliament",
     "institution:ai-speaker",
     "institution:party-coalition",
-    "institution:transnational-ops"
+    "institution:transnational-ops",
+    "institution:eu-parliament",
+    "institution:eu-commission",
+    "institution:eu-council",
+    "institution:eu-court-of-justice",
+    "institution:eu-transnational-ops",
+    "institution:national-instance"
   ]
 }

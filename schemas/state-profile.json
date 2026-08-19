@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/errorlogy/ai-native-gov/schemas/state-profile.json",
+  "title": "StateProfile",
+  "description": "INSTITUTIONAL_MODEL — profile for a national instance in the EU multi-level topology. Each EU member state runs a full institutional stack; this schema captures the static configuration parameters.",
+  "type": "object",
+  "required": [
+    "state_id",
+    "name",
+    "legal_family",
+    "system_type",
+    "integration_depth",
+    "membership_rings",
+    "ai_readiness_level",
+    "autonomy_dials",
+    "national_charter_ref",
+    "opt_outs",
+    "epistemic_label"
+  ],
+  "properties": {
+    "state_id": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 country code",
+      "examples": ["DE", "FR", "DK", "EE", "HU"]
+    },
+    "name": {
+      "type": "string",
+      "description": "Full English name of the member state",
+      "examples": ["Germany", "France", "Denmark", "Estonia", "Hungary"]
+    },
+    "legal_family": {
+      "type": "string",
+      "enum": ["romano-germanic", "common-law", "nordic", "mixed"],
+      "description": "Dominant legal tradition shaping national_charter behavior and judiciary modeling"
+    },
+    "system_type": {
+      "type": "string",
+      "enum": [
+        "parliamentary-monarchy",
+        "republic",
+        "federal-republic",
+        "semi-presidential-republic"
+      ],
+      "description": "Constitutional system type affecting parliament-cabinet interaction modeling"
+    },
+    "integration_depth": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Scalar summary of EU integration depth. 1.0 = full integration (full+euro+schengen, no opt-outs); lower values reflect opt-outs and partial membership rings."
+    },
+    "membership_rings": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["full", "schengen", "eurozone", "eea", "epc"]
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "description": "EU integration rings the state participates in. 'full' = EU member. 'epc' = European Political Community (associate/candidate only)."
+    },
+    "ai_readiness_level": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4,
+      "description": "AI governance readiness level for this state, mapped to Phase 0–4 autonomy dial ranges from AI_GOVERNMENT_OVERVIEW.md. 0 = procedural AI only; 4 = full AI cabinet with human appeal."
+    },
+    "autonomy_dials": {
+      "type": "object",
+      "description": "Per-layer autonomy dial configuration for this national instance. Values within the range appropriate to ai_readiness_level.",
+      "required": [
+        "national_parliament",
+        "national_cabinet",
+        "national_judiciary",
+        "transnational_ops_interface"
+      ],
+      "properties": {
+        "national_parliament": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "national_cabinet": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "national_judiciary": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "transnational_ops_interface": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "national_charter_ref": {
+      "type": "string",
+      "description": "Path or URI to the national charter stub document for this state"
+    },
+    "opt_outs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "eurozone",
+          "schengen-jha",
+          "defense-cooperation",
+          "common-travel-area",
+          "article7-resistance",
+          "digital-services-delay"
+        ]
+      },
+      "uniqueItems": true,
+      "description": "Registered EU policy opt-outs. Opted-out domains produce no treaty_conformity collision signals."
+    },
+    "notable_tensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tension_type", "description"],
+        "properties": {
+          "tension_type": {
+            "type": "string",
+            "enum": [
+              "rule_of_law_tension",
+              "treaty_conformity",
+              "policy_divergence",
+              "opt_out_activation",
+              "fundamental_rights"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "mu_estimate": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "description": "Estimated μ_divergence for Errorlogy engine (analytical contribution only)"
+          }
+        }
+      },
+      "description": "Known tension signals relevant to EU simulation. Analytical only — not verdicts."
+    },
+    "epistemic_label": {
+      "type": "string",
+      "const": "INSTITUTIONAL_MODEL",
+      "description": "All state profiles are INSTITUTIONAL_MODEL constructs. No legal standing."
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "state_id": "DE",
+      "name": "Germany",
+      "legal_family": "romano-germanic",
+      "system_type": "federal-republic",
+      "integration_depth": 0.95,
+      "membership_rings": ["full", "eurozone", "schengen"],
+      "ai_readiness_level": 3,
+      "autonomy_dials": {
+        "national_parliament": 0.75,
+        "national_cabinet": 0.70,
+        "national_judiciary": 0.60,
+        "transnational_ops_interface": 0.65
+      },
+      "national_charter_ref": "docs/institutions/charters/DE_grundgesetz_stub.md",
+      "opt_outs": [],
+      "notable_tensions": [],
+      "epistemic_label": "INSTITUTIONAL_MODEL"
+    },
+    {
+      "state_id": "FR",
+      "name": "France",
+      "legal_family": "romano-germanic",
+      "system_type": "semi-presidential-republic",
+      "integration_depth": 0.93,
+      "membership_rings": ["full", "eurozone", "schengen"],
+      "ai_readiness_level": 3,
+      "autonomy_dials": {
+        "national_parliament": 0.70,
+        "national_cabinet": 0.75,
+        "national_judiciary": 0.60,
+        "transnational_ops_interface": 0.65
+      },
+      "national_charter_ref": "docs/institutions/charters/FR_constitution_stub.md",
+      "opt_outs": [],
+      "notable_tensions": [
+        {
+          "tension_type": "policy_divergence",
+          "description": "Strong national sovereignty framing in industrial and agricultural policy; frequent divergence from EU Commission proposals",
+          "mu_estimate": 0.25
+        }
+      ],
+      "epistemic_label": "INSTITUTIONAL_MODEL"
+    },
+    {
+      "state_id": "DK",
+      "name": "Denmark",
+      "legal_family": "nordic",
+      "system_type": "parliamentary-monarchy",
+      "integration_depth": 0.52,
+      "membership_rings": ["full", "schengen"],
+      "ai_readiness_level": 3,
+      "autonomy_dials": {
+        "national_parliament": 0.75,
+        "national_cabinet": 0.70,
+        "national_judiciary": 0.65,
+        "transnational_ops_interface": 0.55
+      },
+      "national_charter_ref": "docs/institutions/charters/DK_grundlov_stub.md",
+      "opt_outs": ["eurozone", "defense-cooperation", "schengen-jha"],
+      "notable_tensions": [
+        {
+          "tension_type": "opt_out_activation",
+          "description": "Edinburgh Agreement opt-outs (1992) on eurozone, defense cooperation, and parts of justice/home affairs. Opt-outs suppress treaty_conformity collision signals in those domains.",
+          "mu_estimate": 0.05
+        }
+      ],
+      "epistemic_label": "INSTITUTIONAL_MODEL"
+    },
+    {
+      "state_id": "EE",
+      "name": "Estonia",
+      "legal_family": "romano-germanic",
+      "system_type": "republic",
+      "integration_depth": 0.95,
+      "membership_rings": ["full", "eurozone", "schengen"],
+      "ai_readiness_level": 4,
+      "autonomy_dials": {
+        "national_parliament": 0.85,
+        "national_cabinet": 0.85,
+        "national_judiciary": 0.75,
+        "transnational_ops_interface": 0.80
+      },
+      "national_charter_ref": "docs/institutions/charters/EE_constitution_stub.md",
+      "opt_outs": [],
+      "notable_tensions": [
+        {
+          "tension_type": "policy_divergence",
+          "description": "Leading digital governance posture (e-Residency, X-Road infrastructure) may diverge from EU AI Act compliance pace; potential digital-services-delay signal",
+          "mu_estimate": 0.10
+        }
+      ],
+      "epistemic_label": "INSTITUTIONAL_MODEL"
+    },
+    {
+      "state_id": "HU",
+      "name": "Hungary",
+      "legal_family": "romano-germanic",
+      "system_type": "republic",
+      "integration_depth": 0.68,
+      "membership_rings": ["full", "eurozone", "schengen"],
+      "ai_readiness_level": 1,
+      "autonomy_dials": {
+        "national_parliament": 0.30,
+        "national_cabinet": 0.25,
+        "national_judiciary": 0.20,
+        "transnational_ops_interface": 0.30
+      },
+      "national_charter_ref": "docs/institutions/charters/HU_fundamental_law_stub.md",
+      "opt_outs": [],
+      "notable_tensions": [
+        {
+          "tension_type": "rule_of_law_tension",
+          "description": "Structural independence of national judiciary is modeled as compromised; Article 7 analog has been activated at EU level. High μ_divergence on rule-of-law signals.",
+          "mu_estimate": 0.80
+        },
+        {
+          "tension_type": "fundamental_rights",
+          "description": "Multiple EU Charter of Fundamental Rights conformity disputes; several EU Court of Justice preliminary rulings outstanding.",
+          "mu_estimate": 0.65
+        }
+      ],
+      "epistemic_label": "INSTITUTIONAL_MODEL"
+    }
+  ]
+}
