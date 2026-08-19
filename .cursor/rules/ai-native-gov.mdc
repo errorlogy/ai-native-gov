@@ -1,0 +1,31 @@
+---
+description: AI Native Gov umbrella project — agents read AGENTS.md and WORKSPACE.md first
+globs:
+alwaysApply: true
+---
+
+# AI Native Gov — Umbrella Context
+
+You are working in **AI_NATIVE_GOV** (`C:\Users\Public\AI_NATIVE_GOV`) — the primary umbrella workspace for надгосударственный global AI institutional topology.
+
+## Read first
+
+1. [AGENTS.md](../../AGENTS.md)
+2. [WORKSPACE.md](../../WORKSPACE.md)
+
+## Rules
+
+- **This repo is the root context** — strategy, institutions, integrations, schemas live here.
+- **Child repos** (`errorlogy`, `politic-bar`) are implementation targets under `repos/` or `C:\Users\Public\` siblings — reference, don't duplicate umbrella docs.
+- Institutional topology: `docs/institutions/` — especially TOPOLOGY.md
+- Integration contracts: `docs/integrations/`
+- Do not store secrets. Do not force-push main. Only commit when user asks.
+
+## Task routing
+
+| Domain | Path |
+|--------|------|
+| Institutions | `docs/institutions/` |
+| Integrations | `docs/integrations/` |
+| Architecture | `ARCHITECTURE.md`, `VISION.md` |
+| Child repo code | `repos/errorlogy`, `repos/politic-bar` |

@@ -1,11 +1,24 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Secrets — never commit
 .env
 .env.*
 *.pem
-*.key
 credentials.json
-__pycache__/
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
+secrets/
+
+# Dependencies (child repos)
+repos/*/node_modules/
+repos/*/__pycache__/
+repos/*/.venv/
+
+# Build artifacts
+dist/
+build/
 *.log
