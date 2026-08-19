@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/errorlogy/ai-native-gov/schemas/cross-layer-event.json",
+  "title": "CrossLayerEvent",
+  "description": "Event envelope with institutional layer activation for AI Native Gov integration",
+  "type": "object",
+  "required": ["story_id", "event_type", "activated_layers", "epistemic_label"],
+  "properties": {
+    "story_id": {
+      "type": "string",
+      "description": "Stable story anchor (politic.bar stream ID)",
+      "examples": ["2026-08-summit-trump-macron"]
+    },
+    "event_type": {
+      "type": "string",
+      "examples": ["bilateral_summit", "sanctions_coordination", "domestic_policy"]
+    },
+    "activated_layers": {
+      "type": "array",
+      "items": { "$ref": "institution-layer-id.json" },
+      "minItems": 1
+    },
+    "topology_intersections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["intersection", "tension_type"],
+        "properties": {
+          "intersection": {
+            "type": "string",
+            "examples": ["executive-judiciary", "parliament-executive"]
+          },
+          "tension_type": { "type": "string" },
+          "resolution_status": {
+            "type": "string",
+            "enum": ["unresolved", "partially_resolved", "resolved", "not_applicable"]
+          }
+        }
+      }
+    },
+    "jurisdiction_set": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "ISO 3166-1 alpha-2 or institutional slugs"
+    },
+    "coordination_forum": {
+      "type": "string",
+      "examples": ["NATO", "EU Council", "bilateral", "UN SC"]
+    },
+    "politifi_assets": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "politic.bar asset slugs (brand:*, agenda:*, institution:*)"
+    },
+    "stream_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "precedent_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Prior error card IDs for α graph"
+    },
+    "certificate_ref": {
+      "type": "string",
+      "description": "Optional NAMM certificate.json URI"
+    },
+    "epistemic_label": {
+      "type": "string",
+      "enum": [
+        "INSTITUTIONAL_MODEL",
+        "OPERATIONAL",
+        "COMPUTATIONAL_EVIDENCE",
+        "PHILOSOPHICAL_INFERENCE"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

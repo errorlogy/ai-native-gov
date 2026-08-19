@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/errorlogy/ai-native-gov/schemas/institution-layer-id.json",
+  "title": "InstitutionLayerId",
+  "description": "Stable identifiers for AI Native Gov institutional modeling layers",
+  "type": "string",
+  "enum": [
+    "institution:parliament",
+    "institution:executive",
+    "institution:judiciary",
+    "institution:interpol-analog",
+    "institution:audit",
+    "institution:ombudsman",
+    "institution:central-bank-analog",
+    "institution:regulatory-agency"
+  ],
+  "examples": [
+    "institution:executive",
+    "institution:parliament"
+  ]
+}

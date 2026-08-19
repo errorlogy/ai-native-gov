@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/errorlogy/ai-native-gov/schemas/institution-graph.json",
+  "title": "InstitutionGraph",
+  "description": "Stub schema for institutional topology edges (checks and balances)",
+  "type": "object",
+  "required": ["nodes", "edges"],
+  "properties": {
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "layer"],
+        "properties": {
+          "id": { "type": "string" },
+          "layer": { "$ref": "institution-layer-id.json" },
+          "jurisdiction": { "type": "string" }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to", "type"],
+        "properties": {
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "authorizes",
+              "implements",
+              "constrains",
+              "coordinates",
+              "audits",
+              "interprets",
+              "signals"
+            ]
+          },
+          "weight": { "type": "number", "minimum": 0, "maximum": 1 },
+          "epistemic_label": {
+            "type": "string",
+            "const": "INSTITUTIONAL_MODEL"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
