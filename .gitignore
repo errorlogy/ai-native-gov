@@ -13,7 +13,11 @@ Thumbs.db
 credentials.json
 secrets/
 
-# Dependencies (child repos)
+# Child repo clones (keep repos/README.md only)
+repos/*
+!repos/README.md
+
+# Dependencies inside clones
 repos/*/node_modules/
 repos/*/__pycache__/
 repos/*/.venv/
