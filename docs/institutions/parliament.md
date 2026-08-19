@@ -42,6 +42,7 @@ The **Parliament layer** models multi-actor deliberation — parties, coalitions
 
 ## Related
 
+- [AI_PARLIAMENT.md](AI_PARLIAMENT.md) — literal role-mapping simulator (Speaker, parties, ministers, PM, autonomy dials)
 - [TOPOLOGY.md](TOPOLOGY.md)
 - [executive.md](executive.md)
 - [judiciary.md](judiciary.md)

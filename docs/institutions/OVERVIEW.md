@@ -7,6 +7,7 @@ AI Native Gov models **institutions as processing layers** — each applies chec
 | Institution | Model role | Primary output |
 |-------------|------------|----------------|
 | [Parliament](parliament.md) | Multi-actor deliberation, legislative posture | Consensus, dissent, bill-like proposals |
+| [AI Parliament](AI_PARLIAMENT.md) | Literal role-mapping simulator (Speaker, parties, ministers, PM) | Isomorphic agent graph, autonomy dials, phased human→AI modeling |
 | [Executive](executive.md) | Policy execution, action likelihood | Implementation paths, executive orders (modeled) |
 | [Judiciary](judiciary.md) | Dispute resolution, precedent | Rulings, legitimacy constraints |
 | [Interpol](interpol.md) | Cross-border coordination | Jurisdiction bridges, enforcement posture |
@@ -43,8 +44,13 @@ These are **AI modeling layers**, not operational governments. They provide:
 - Explicit disagreement and constraint surfaces
 - Reproducible scenario analysis (see `docs/examples/`)
 
+## AI Parliament simulator
+
+For the **literal isomorphism** model — AI Speaker, party coalition MAS, AI ministers/PM, autonomy dials, and Transnational Ops as a separate layer — see [AI_PARLIAMENT.md](AI_PARLIAMENT.md).
+
 ## Related docs
 
+- [AI_PARLIAMENT.md](AI_PARLIAMENT.md) — role-mapping simulator
 - [TOPOLOGY.md](TOPOLOGY.md) — layer intersections
 - [ARCHITECTURE.md](../ARCHITECTURE.md) — system architecture
 - Integrations: [ERRORLOGY.md](../integrations/ERRORLOGY.md), [POLITIC_BAR.md](../integrations/POLITIC_BAR.md)
