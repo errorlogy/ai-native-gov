@@ -46,6 +46,7 @@ Nation-states остаются юридическими и политическ�
 | Документ | Содержание |
 |----------|------------|
 | [`VISION.md`](VISION.md) | Надгосударственный слой, epistemic humility |
+| [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md) | Homo loquens heuristic, AI→AGI→ASI framing, Errorlogy role |
 | [`ARCHITECTURE.md`](ARCHITECTURE.md) | Системная диаграмма, data flows |
 | [`REPOS.md`](REPOS.md) | Карта репозиториев и контракты |
 | [`ROADMAP.md`](ROADMAP.md) | Фазовое развитие |

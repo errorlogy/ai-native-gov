@@ -2,6 +2,8 @@
 
 AI Native Gov models **institutions as processing layers** — each applies checks, constraints, and synthesis to geopolitical signals before outputs feed Errorlogy and politic.bar.
 
+At **world scale**, the simulator stacks three tiers: **national instances** (per-country full stacks with configurable human↔AI dials), **regional blocs** (EU as the first reference implementation; ASEAN, AU, Mercosur as planned stubs), and a **global coordination layer** (planned) that mediates cross-bloc tensions without claiming sovereignty. See [GLOBAL_AI_GOVERNANCE.md](GLOBAL_AI_GOVERNANCE.md).
+
 ## Institutional map
 
 | Institution | Model role | Primary output |
@@ -50,6 +52,14 @@ These are **AI modeling layers**, not operational governments. They provide:
 - Explicit disagreement and constraint surfaces
 - Reproducible scenario analysis (see `docs/examples/`)
 
+## Global AI governance
+
+Three-tier world model — national → regional bloc → global coordination. EU is the reference regional implementation; human involvement varies per country via autonomy dials. Full framing: [GLOBAL_AI_GOVERNANCE.md](GLOBAL_AI_GOVERNANCE.md).
+
+## EU multi-level topology
+
+The simulator also models the EU as a two-tier `INSTITUTIONAL_MODEL`: one `EU_SUPRANATIONAL_LAYER` plus 27 `NATIONAL_INSTANCES`. See [EU_TOPOLOGY.md](EU_TOPOLOGY.md) (roles and collisions) and [EU_SCHEMA.md](EU_SCHEMA.md) (mermaid diagrams). Member-state parameters: [EU_STATES.md](EU_STATES.md).
+
 ## AI Government simulator
 
 For the full AI-Native Government simulator — all layers, autonomy dial table, gradual replacement phases, and epistemic guarantees in one place — see [AI_GOVERNMENT_OVERVIEW.md](AI_GOVERNMENT_OVERVIEW.md).
@@ -69,7 +79,11 @@ The **AI Charter** ([CHARTER.md](CHARTER.md)) is the hard-stop layer above all o
 
 ## Related docs
 
+- [GLOBAL_AI_GOVERNANCE.md](GLOBAL_AI_GOVERNANCE.md) — three-tier world model (national → regional → global)
 - [AI_GOVERNMENT_OVERVIEW.md](AI_GOVERNMENT_OVERVIEW.md) — master map (all layers + autonomy dials)
+- [EU_SCHEMA.md](EU_SCHEMA.md) — EU two-tier mermaid schema (INSTITUTIONAL_MODEL)
+- [EU_TOPOLOGY.md](EU_TOPOLOGY.md) — EU supranational vs national instances
+- [EU_STATES.md](EU_STATES.md) — 27 national instance profiles
 - [CHARTER.md](CHARTER.md) — constitutional foundation, permissions, human override hook
 - [AI_PARLIAMENT.md](AI_PARLIAMENT.md) — role-mapping simulator
 - [AI_JUDICIARY.md](AI_JUDICIARY.md) — procedural constraint, due process, NAMM integration

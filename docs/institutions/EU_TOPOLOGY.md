@@ -15,6 +15,8 @@ The EU topology introduces a **two-tier structure** layered on top of the base s
 
 Each national instance runs a full local copy of the base topology ([AI_GOVERNMENT_OVERVIEW.md](AI_GOVERNMENT_OVERVIEW.md)). The supranational layer adds EU-specific roles that constrain and coordinate national instances without replacing them.
 
+**Visual schema (mermaid):** [EU_SCHEMA.md](EU_SCHEMA.md) — two-tier structure, collision/event flow, and variable-geometry rings.
+
 ---
 
 ## Structural diagram
@@ -250,6 +252,7 @@ Extends [TOPOLOGY.md](TOPOLOGY.md) with EU-specific intersections.
 
 ## Related documents
 
+- [EU_SCHEMA.md](EU_SCHEMA.md) — mermaid visual schema (structure, event flow, rings)
 - [AI_GOVERNMENT_OVERVIEW.md](AI_GOVERNMENT_OVERVIEW.md) — base topology; EU layers extend this
 - [AI_PARLIAMENT.md](AI_PARLIAMENT.md) — parliament role isomorphism (national + EU parliament inherit this)
 - [AI_JUDICIARY.md](AI_JUDICIARY.md) — judiciary constraint model (national + EU court inherit this)

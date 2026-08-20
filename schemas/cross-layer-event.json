@@ -13,7 +13,20 @@
     },
     "event_type": {
       "type": "string",
-      "examples": ["bilateral_summit", "sanctions_coordination", "domestic_policy"]
+      "examples": [
+        "bilateral_summit",
+        "sanctions_coordination",
+        "domestic_policy",
+        "fin_crypto_market_snapshot",
+        "fin_crypto_technical_indicator",
+        "fin_crypto_screener_rank_update",
+        "fin_crypto_news_headline",
+        "fin_crypto_sentiment_momentum",
+        "fin_crypto_onchain_risk",
+        "fin_crypto_backtest_result",
+        "fin_crypto_walk_forward_validation",
+        "fin_crypto_data_unavailable"
+      ]
     },
     "activated_layers": {
       "type": "array",

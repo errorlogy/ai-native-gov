@@ -38,6 +38,16 @@ Geopolitical signal streams are noisy, fragmented, and often interpreted without
 - Scenario docs (e.g. trump-macron-cascade) demonstrate end-to-end flow
 - Child repos implement without duplicating umbrella strategy
 
+## Epistemic lore (Homo loquens)
+
+For the philosophical frame — *Homo loquens* / pre-sapiens heuristic, governance error minimization via AI → AGI → ASI as **institutional reasoning layers** (not replacement mythology), and Errorlogy’s measurement role — see [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md).
+
+Summary constraints:
+
+- Narrative coordination alone does not minimize governance error; cognitive extension is modeled as necessary for that research program
+- Human oversight remains structurally required ([AI_HUMAN_OVERSIGHT](docs/institutions/AI_HUMAN_OVERSIGHT.md))
+- Autonomy dials encode homo↔AI participation in an unfinished phase — simulator parameters, not sovereign claims
+
 ## Long-term direction
 
 - Live signal ingestion with institutional routing

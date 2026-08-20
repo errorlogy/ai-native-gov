@@ -144,6 +144,6 @@ States with multiple registered opt-outs or active rule-of-law tension signals. 
 
 ---
 
-*See also:* [EU_TOPOLOGY.md](EU_TOPOLOGY.md) | [AI_GOVERNMENT_OVERVIEW.md](AI_GOVERNMENT_OVERVIEW.md) | `schemas/state-profile.json`
+*See also:* [EU_SCHEMA.md](EU_SCHEMA.md) | [EU_TOPOLOGY.md](EU_TOPOLOGY.md) | [AI_GOVERNMENT_OVERVIEW.md](AI_GOVERNMENT_OVERVIEW.md) | `schemas/state-profile.json`
 
 *Phase classification: Phase 3 (institutional depth). See ROADMAP.md.*

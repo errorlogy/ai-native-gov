@@ -220,6 +220,10 @@ Integration contracts: [ERRORLOGY.md](../integrations/ERRORLOGY.md), [POLITIC_BA
 | [AI_JUDICIARY.md](AI_JUDICIARY.md) | Active | Procedural constraint layer, due process, NAMM integration |
 | [AI_TRANSNATIONAL_OPS.md](AI_TRANSNATIONAL_OPS.md) | Active | Cross-border coordination, routing, audit trail |
 | [AI_HUMAN_OVERSIGHT.md](AI_HUMAN_OVERSIGHT.md) | Active | Veto, appeal, audit, dead man's switch |
+| [GLOBAL_AI_GOVERNANCE.md](GLOBAL_AI_GOVERNANCE.md) | Active | Three-tier world model (national → regional → global) |
+| [EU_SCHEMA.md](EU_SCHEMA.md) | Active | EU two-tier mermaid schema (structure, flow, rings) |
+| [EU_TOPOLOGY.md](EU_TOPOLOGY.md) | Active | EU supranational layer vs 27 national instances |
+| [EU_STATES.md](EU_STATES.md) | Active | Member-state profiles and tension cases |
 | [parliament.md](parliament.md) | Active | Abstract deliberation layer |
 | [executive.md](executive.md) | Active | Policy execution modeling |
 | [judiciary.md](judiciary.md) | Active | Abstract legitimacy-constraint layer |
@@ -233,8 +237,12 @@ Integration contracts: [ERRORLOGY.md](../integrations/ERRORLOGY.md), [POLITIC_BA
 
 ## Related docs
 
+- [GLOBAL_AI_GOVERNANCE.md](GLOBAL_AI_GOVERNANCE.md) — three-tier world model (national → regional bloc → global)
 - [TOPOLOGY.md](TOPOLOGY.md) — layer intersection matrix
 - [OVERVIEW.md](OVERVIEW.md) — short institutional map
+- [EU_SCHEMA.md](EU_SCHEMA.md) — EU two-tier mermaid schema
+- [EU_TOPOLOGY.md](EU_TOPOLOGY.md) — EU multi-level topology
+- [EU_STATES.md](EU_STATES.md) — 27 national instances
 - [ARCHITECTURE.md](../../ARCHITECTURE.md) — system architecture
 - [VISION.md](../../VISION.md) — epistemic humility, non-sovereignty
 - [AGENTS.md](../../AGENTS.md) — language rules, routing, epistemic labels
