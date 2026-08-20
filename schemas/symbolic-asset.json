@@ -1,0 +1,255 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/errorlogy/ai-native-gov/schemas/symbolic-asset.json",
+  "title": "SymbolicAsset",
+  "description": "Minimal stub for AI Native Gov symbolic / visual identity catalog (Symbol, Variant, MediaAsset, Collection). INSTITUTIONAL_MODEL contract — not a legitimacy or trademark verdict.",
+  "type": "object",
+  "required": ["id", "kind", "epistemic_label"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable catalog ID (e.g. symbolic:symbol:aing-primary)",
+      "examples": [
+        "symbolic:symbol:aing-primary",
+        "symbolic:media:sha256-abc123",
+        "symbolic:collection:aing-merch-s1"
+      ]
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "symbol",
+        "variant",
+        "media_asset",
+        "collection",
+        "provenance",
+        "license",
+        "institutional_binding",
+        "usage_context"
+      ]
+    },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "symbol_class": {
+      "type": "string",
+      "description": "Coarse class for Symbol/Variant kinds",
+      "examples": [
+        "logo",
+        "coat_of_arms_analog",
+        "seal",
+        "charter_mark",
+        "party_mark",
+        "merch_mark",
+        "nft_art",
+        "analysis_seed",
+        "other"
+      ]
+    },
+    "archetype_tags": {
+      "type": "array",
+      "description": "Jungian / mythic heuristic tags for INSTITUTIONAL_MODEL analysis (not clinical or academic verdicts). Cite Man and His Symbols as method frame only — do not store verbatim book text.",
+      "items": { "type": "string" },
+      "examples": [
+        ["Warrior", "Hero"],
+        ["Anima", "Athena", "WiseYouth"],
+        ["Temple", "SacredSpace", "Self"],
+        ["Self", "Scholar", "WiseYouth"]
+      ]
+    },
+    "culture_refs": {
+      "type": "array",
+      "description": "Culture / iconography references; prefer Wikidata / Iconclass / Getty AAT URIs when known, else short slugs",
+      "items": { "type": "string" },
+      "examples": [
+        "https://www.wikidata.org/wiki/Q37100",
+        "iconclass:94A",
+        "greco-roman-martial",
+        "egyptian-monumental"
+      ]
+    },
+    "lore_cluster": {
+      "type": "string",
+      "description": "Ideological / aesthetic cluster for AI Native Gov identity modeling",
+      "enum": [
+        "greco-roman-neoclassical-digital",
+        "egyptian-monumental",
+        "progress-synthesis",
+        "heraldic-sim",
+        "other"
+      ]
+    },
+    "ontology_refs": {
+      "type": "array",
+      "description": "External ontology library pointers (do not dump vocabularies into umbrella)",
+      "items": {
+        "type": "object",
+        "required": ["system", "uri"],
+        "properties": {
+          "system": {
+            "type": "string",
+            "enum": ["wikidata", "iconclass", "getty_aat", "schema_org", "other"]
+          },
+          "uri": { "type": "string" },
+          "label": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "media_type": {
+      "type": "string",
+      "description": "For media_asset: image, video, drawing, animation, other",
+      "examples": ["image", "video", "drawing", "animation", "other"]
+    },
+    "content_address": {
+      "type": "object",
+      "description": "Content-addressed pointer to binary (local hash and/or IPFS CID)",
+      "properties": {
+        "sha256": { "type": "string" },
+        "cid": { "type": "string", "description": "IPFS CID when pinned" },
+        "uri": {
+          "type": "string",
+          "description": "ipfs://, ar://, https://, or data: URI"
+        },
+        "mime_type": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "variant_of": {
+      "type": "string",
+      "description": "Parent Symbol id when kind=variant"
+    },
+    "collection_kind": {
+      "type": "string",
+      "enum": ["nft", "merch", "media_pack", "mixed", "other"]
+    },
+    "nft": {
+      "type": "object",
+      "description": "Optional ERC-721/1155-style mint linkage (OpenSea-compatible fields when present)",
+      "properties": {
+        "standard": { "type": "string", "enum": ["erc721", "erc1155", "other"] },
+        "chain_id": { "type": "integer" },
+        "contract_address": { "type": "string" },
+        "token_id": { "type": "string" },
+        "token_uri": { "type": "string" },
+        "attributes": {
+          "type": "array",
+          "description": "OpenSea-style traits",
+          "items": {
+            "type": "object",
+            "properties": {
+              "trait_type": { "type": "string" },
+              "value": {
+                "type": ["string", "number", "boolean"]
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "creator": { "type": "string" },
+        "source_system": { "type": "string" },
+        "parent_id": { "type": "string" },
+        "observed_at": { "type": "string", "format": "date-time" },
+        "onchain_anchor": {
+          "type": "string",
+          "description": "Optional tx hash or registry ref for content hash"
+        }
+      },
+      "additionalProperties": false
+    },
+    "license_id": {
+      "type": "string",
+      "description": "License slug (e.g. internal-sim, cc-by-4.0, proprietary-merch)"
+    },
+    "institutional_bindings": {
+      "type": "array",
+      "description": "Which modeled layers/states/parties may use this asset",
+      "items": {
+        "type": "object",
+        "required": ["target"],
+        "properties": {
+          "target": {
+            "type": "string",
+            "description": "institution:* layer, state:{iso2}, bloc:{code}, party slug, or global:*",
+            "examples": [
+              "institution:executive",
+              "state:fr",
+              "bloc:eu",
+              "institution:symbolic-visual"
+            ]
+          },
+          "role": {
+            "type": "string",
+            "examples": ["primary_mark", "seal", "optional_display"]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "usage_contexts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "gov-sim-ui",
+          "clothing",
+          "nft-drop",
+          "seal",
+          "charter-mark",
+          "politifi-card",
+          "analysis-seed",
+          "media_pack",
+          "other"
+        ]
+      }
+    },
+    "edges": {
+      "type": "array",
+      "description": "Optional inline graph edges from this node",
+      "items": {
+        "type": "object",
+        "required": ["type", "to"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "derives_from",
+              "variant_of",
+              "used_by_institution",
+              "minted_as",
+              "references_charter_mark",
+              "has_media",
+              "licensed_under"
+            ]
+          },
+          "to": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "same_as": {
+      "type": "array",
+      "description": "Optional external identity links (Wikidata, schema.org-style URIs)",
+      "items": { "type": "string", "format": "uri" }
+    },
+    "certificate_ref": {
+      "type": "string",
+      "description": "Optional NAMM certificate.json URI for COMPUTATIONAL_EVIDENCE upgrade"
+    },
+    "epistemic_label": {
+      "type": "string",
+      "enum": [
+        "INSTITUTIONAL_MODEL",
+        "OPERATIONAL",
+        "COMPUTATIONAL_EVIDENCE",
+        "PHILOSOPHICAL_INFERENCE"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

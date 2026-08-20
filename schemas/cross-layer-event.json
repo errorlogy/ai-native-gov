@@ -25,7 +25,18 @@
         "fin_crypto_onchain_risk",
         "fin_crypto_backtest_result",
         "fin_crypto_walk_forward_validation",
-        "fin_crypto_data_unavailable"
+        "fin_crypto_data_unavailable",
+        "gov_open_data_snapshot",
+        "gov_legislative_document",
+        "gov_parliamentary_activity",
+        "gov_data_unavailable",
+        "symbolic_media_discovered",
+        "symbolic_media_fetched",
+        "symbolic_provenance_incomplete",
+        "symbolic_rights_blocked",
+        "symbolic_asset_registered",
+        "symbolic_nft_mint_signal",
+        "symbolic_media_variant"
       ]
     },
     "activated_layers": {

@@ -2,6 +2,11 @@
 
 How AI Native Gov integrates finance and crypto market signals into an institutional simulator without claiming verdict authority.
 
+## Sibling layers
+Government open-data / legislative / parsing ingress (official APIs, parliamentary feeds, graded news, human uploads) lives in [GOV_DATA_SOURCES.md](GOV_DATA_SOURCES.md). Use that contract for non-market institutional inputs; keep this file for finance-crypto market adapters.
+
+Symbolic / visual identity (logos, seals, merch marks, NFT **catalog** graph, content-addressed media) lives in [SYMBOLIC_VISUAL_LAYER.md](SYMBOLIC_VISUAL_LAYER.md). NFT floor/volume/listing and on-chain risk stay here as market signals; symbol↔token registry edges (`minted_as`, collection metadata) stay in the symbolic layer.
+
 ## Purpose (INSTITUTIONAL_MODEL framing)
 This integration layer collects and normalizes market, technical, and risk-related signals for downstream institutional reasoning.
 
@@ -15,9 +20,9 @@ Only downstream certified artifacts may be labeled `COMPUTATIONAL_EVIDENCE` (via
 ## What belongs in this layer (signal families)
 Adapters under this layer may ingest (or reference) signals from:
 
-1. TradingView MCP server (connected via MCP)
-2. Exchange and venue feeds (price, order book summaries, liquidity proxies)
-3. On-chain indicators (flows, liquidity movement, token health proxies, risk heuristics)
+1. TradingView MCP server (connected via MCP) — first adapter
+2. Exchange and venue feeds via **Exchange MCP adapters** (unified CCXT-style and venue-specific; price, order book, public trades; execution gated) — see section below
+3. On-chain / aggregator MCP indicators (CoinGecko, DefiLlama, flows, liquidity, token health proxies, risk heuristics)
 4. Macro and cross-asset feeds (rates, FX, risk-on/off proxies, volatility proxies)
 5. News and sentiment feeds (headlines, sentiment aggregates, social momentum)
 
@@ -131,6 +136,83 @@ Minimal plan (MVP adapter behavior):
 Epistemic label policy:
 - Until NAMM verification is linked, the eventual cross-layer envelope for these events uses `epistemic_label=OPERATIONAL`.
 
+## Exchange MCP adapters
+Exchange-specific and unified MCP servers plug into the same adapter contract as TradingView: normalize vendor payloads into the event types above, then route through the institutional framer. None of these sources issue policy verdicts; market data remains `OPERATIONAL` / (optionally) `COMPUTATIONAL_EVIDENCE` when NAMM-linked.
+
+### Market-data vs trading/execution (hard split)
+| Mode | Typical tools | Simulator policy |
+|---|---|---|
+| **Market-data only** (preferred) | tickers, OHLCV/klines, order book depth, public trades, exchange status, listings, fees | Enable by default for `INSTITUTIONAL_MODEL` context. Emit normalized records with `evidence_grade=weak\|medium`. |
+| **Account / portfolio read** | balances, open orders, positions, PnL | Optional, approval-gated. Treat as private operational telemetry, not public institutional evidence. Never label as legitimacy or compliance verdicts. |
+| **Trading / execution** | place/cancel order, convert, TWAP, smart routing | **High-risk.** Disable in the institutional simulator by default. If ever exposed, require explicit human approval, sandbox/testnet-first, audit journal, and never map fills into μ/α/PNO as “policy outcomes.” |
+
+Quality flags for this family (in addition to the global list):
+- `execution_surface`: tool can place or cancel orders (adapter should refuse or no-op in simulator mode)
+- `api_key_required`: private endpoints; keys must stay local (never in umbrella docs or git)
+- `public_rest_only`: no credentials; preferred for simulator ingest
+- `venue_specific`: symbol/venue quirks; normalize `instrument.exchange_or_venue`
+
+### Candidate MCP servers (community / vendor — not endorsements)
+Candidates below are discovery notes for Phase 1–2 linkage. Star counts and APIs change; verify before wiring. Prefer market-data modes. Flag any execution surface as approval-gated.
+
+| Name | GitHub / endpoint | Data types | Auth notes | Fit for INSTITUTIONAL_MODEL simulator |
+|---|---|---|---|---|
+| **CCXT (community, market-data lean)** — `Nayshins/mcp-server-ccxt` | https://github.com/Nayshins/mcp-server-ccxt | OHLCV, tickers, volume ranks, multi-exchange summaries (Binance, Coinbase, Kraken, Bybit, OKX, …) | Public market data; no keys for read path | **Strong fit** as unified next adapter after TradingView |
+| **CCXT (community, trading-capable)** — `lazy-dinosaur/ccxt-mcp` | https://github.com/lazy-dinosaur/ccxt-mcp | Market data + trading across 100+ venues | API keys for private/trade | Use **market-data subset only**; gate execution |
+| **CCXT (community)** — `doggybee/mcp-server-ccxt` | https://github.com/doggybee/mcp-server-ccxt | Spot/futures market data + trade ops | Keys for trade | Same: prefer public reads; gate execution |
+| **CCXT (community)** — `dante1989/mcp-ccxt` | https://github.com/dante1989/mcp-ccxt | Market data, account, trading (sandbox-default claimed) | Keys optional; sandbox-on default | Good unified candidate if sandbox stays default |
+| **CCXT official MCP (in progress)** | https://github.com/ccxt/ccxt/pull/29277 (`ccxt-mcp` npm package proposed) | Public market data; private reads; opt-in trading with caps/audit | Keys in OS keychain; model sees account names only | Watch for merge/release — preferred long-term unified adapter if shipped with trading opt-in |
+| **CEX watch (public REST)** — `Zanecex101/cex-watch-mcp` | https://github.com/Zanecex101/cex-watch-mcp | Listings, fee compare, exchange status (Binance, OKX, Bybit, Coinbase, Kraken) | **None** (public REST) | **Strong fit** for venue health / listing context; narrow scope |
+| **Order book analytics** — `kukapay/crypto-orderbook-mcp` | https://github.com/kukapay/crypto-orderbook-mcp | Order book depth / imbalance (Binance, Kraken, Coinbase, Bitfinex, OKX, Bybit) | Public APIs | Good liquidity-proxy signals → `fin_crypto_market_snapshot` |
+| **Binance** — `AnalyticAce/binance-mcp-server` | https://github.com/AnalyticAce/binance-mcp-server | Ticker, order book, balances, orders, PnL | API key/secret | Prefer ticker/order book only; **execution high-risk** |
+| **Binance** — `nirholas/Binance-MCP` | https://github.com/nirholas/Binance-MCP | Very broad Binance surface (market + many private products) | API credentials local | Too wide for simulator; whitelist market-data tools |
+| **Binance** — `ethancod1ng/binance-mcp-server` | https://github.com/ethancod1ng/binance-mcp-server | Price, order book, klines, account, place/cancel | Key/secret; testnet flag | Market-data OK; gate `place_order` / cancel tools |
+| **Binance** — `TermiX-official/binance-mcp` | https://github.com/TermiX-official/binance-mcp | Market data + portfolio + order execution | Binance API + optional wallet key | High-risk execution surface; not default for simulator |
+| **Coinbase** — `visusnet/coinbase-mcp-server` | https://github.com/visusnet/coinbase-mcp-server | Market data, balances, Advanced Trade | Coinbase API credentials | Market-data subset only; gate trading |
+| **Coinbase** — `almoore/coinbase-mcp` | https://github.com/almoore/coinbase-mcp | Spot/futures, paper trading, technicals | Advanced Trade auth | Prefer paper/market-data paths if retained |
+| **Kraken** — `oilst/kraken-mcp` | https://github.com/oilst/kraken-mcp | Kraken exchange MCP (community) | Per-repo; expect API keys for private | Verify market-data vs trade tools before enable |
+| **Kraken (public)** — `sebastiancoombs/kraken-mcp` | https://github.com/sebastiancoombs/kraken-mcp | server_time, asset_pairs, ticker, OHLC, order book | Public REST (x402 pay-per-call wrapper) | Market-data fit; note payment/wrapper complexity |
+| **Bybit** — `ethancod1ng/bybit-mcp-server` | https://github.com/ethancod1ng/bybit-mcp-server | Market data, account, trading | Bybit API keys | Same split: reads OK, execution gated |
+| **OKX** — `mbarinov/okx-mcp` | https://github.com/mbarinov/okx-mcp | Portfolio, positions, order history, trading | OKX API credentials | Account-heavy; whitelist public market tools if present |
+| **OKX** — `esshka/okx-mcp` | https://github.com/esshka/okx-mcp | OKX MCP (community) | Per-repo | Evaluate before wiring |
+| **CoinGecko (official)** | Docs: https://docs.coingecko.com/ai-integration/mcp-server · package: `@coingecko/coingecko-mcp` · source under https://github.com/coingecko/coingecko-typescript/tree/main/packages/mcp-server · remote `https://mcp.api.coingecko.com/mcp` | Prices, caps, volumes, charts, DEX pools, trending (aggregator — **not** exchange execution) | Keyless free remote or Demo/Pro key | **Strong fit** for cross-venue market snapshots / screener ranks |
+| **DefiLlama (official remote)** | https://mcp.defillama.com/mcp · skills: https://github.com/DefiLlama/defillama-skills | TVL, yields, protocol metrics, stablecoins, bridges (on-chain/DeFi analytics — **not** CEX execution) | DefiLlama account + API plan | Strong fit for `fin_crypto_onchain_risk` / liquidity context |
+| **DefiLlama (community free)** — `friendlygeorge/defillama-mcp-server` | https://github.com/friendlygeorge/defillama-mcp-server | TVL, yields, stablecoins, bridges, DEX volumes | None (public API) | Good no-key on-chain metrics adapter |
+| **DefiLlama (community)** — `dcSpark/mcp-server-defillama` | https://github.com/dcSpark/mcp-server-defillama | Protocols, TVL, token prices, stablecoins | Public DefiLlama API | Alternative on-chain metrics path |
+| **Hybrid metrics** — `copperxx/mcp-crypto-metrics` | https://github.com/copperxx/mcp-crypto-metrics | CoinGecko + DefiLlama dominance/TVL/cycle proxies | Free APIs, no key | Useful macro/crypto context; keep `evidence_grade=weak` on derived “cycle” proxies |
+| **Hybrid + MCP** — `nirholas/crypto-market-data` | https://github.com/nirholas/crypto-market-data (`mcp-server/`) | CoinGecko prices/OHLCV + DefiLlama TVL/yields | Public APIs | Market-data / on-chain metrics; not execution |
+
+No first-party “official exchange MCP” from Binance/Coinbase/Kraken/Bybit/OKX was confirmed as a vendor-published standard product in this pass; listings above are community or aggregator/vendor-data (CoinGecko, DefiLlama) unless noted.
+
+### Mapping exchange MCP outputs → normalized event types
+| Upstream MCP payload | Normalized `event_type` | Notes |
+|---|---|---|
+| Ticker / last price / 24h stats / OHLCV | `fin_crypto_market_snapshot` | Set `instrument.exchange_or_venue`, `timeframe`, `as_of` |
+| Order book depth / imbalance / spread | `fin_crypto_market_snapshot` | Encode depth metrics in `signal.name` (e.g. `bid_depth_bps`, `imbalance`); `quality_flags` may include `partial_payload` |
+| Public recent trades (tape summary) | `fin_crypto_market_snapshot` | Prefer aggregates over raw tape spam; throttle |
+| Volume / gainer-loser / listing ranks | `fin_crypto_screener_rank_update` | Store filter criteria in `signal` / notes |
+| Exchange status / latency / fee compare | `fin_crypto_market_snapshot` or `fin_crypto_data_unavailable` | Status failures → unavailable with `quality_flags` |
+| Aggregator prices (CoinGecko) | `fin_crypto_market_snapshot` | `exchange_or_venue` = aggregator or null; note delayed/composite |
+| TVL / protocol / bridge / stablecoin metrics | `fin_crypto_onchain_risk` (context) or `fin_crypto_market_snapshot` | Hypotheses/context only — not accusations or sanctions findings |
+| Account balances / open orders / PnL | *(do not emit into public institutional stream by default)* | If needed for private ops: separate adapter_id namespace; never `COMPUTATIONAL_EVIDENCE` without NAMM |
+| Place/cancel/convert orders | **Refuse in simulator** | Emit nothing, or `fin_crypto_data_unavailable` with `quality_flags: ["execution_surface"]` if a tool was invoked by mistake |
+| Provider errors / rate limits | `fin_crypto_data_unavailable` | Preserve retryable metadata in `uncertainty.notes` |
+
+Cross-layer envelopes that reference these records keep `epistemic_label=OPERATIONAL` until a NAMM `certificate_ref` justifies `COMPUTATIONAL_EVIDENCE`. Framing hypotheses about institutional response remain `INSTITUTIONAL_MODEL` — market numbers do not become policy verdicts.
+
+### Plug-in order (recommended)
+1. **TradingView MCP** (first) — already planned above; indicators, screeners, multi-asset context.
+2. **Unified exchange MCP (CCXT-style)** — `Nayshins/mcp-server-ccxt` or successor official `ccxt-mcp`; one adapter covering many venues for OHLCV/tickers.
+3. **Major exchange MCPs (narrow whitelist)** — Binance / Coinbase / Kraken / Bybit / OKX only where venue-specific depth, status, or symbol coverage is missing from CCXT; **market-data tools only**.
+4. **On-chain / aggregator MCPs** — CoinGecko (official), DefiLlama (official or community free), optional hybrid metrics; feeds liquidity and protocol-health context, not CEX execution.
+5. **Specialized microstructure** (optional) — order-book MCP / CEX-watch for depth and venue health overlays.
+
+Do not enable multi-exchange “all-in-one trading” MCP servers in the institutional simulator path without an explicit approval and sandbox policy.
+
+## Sibling layers
+- **Gov open data** — [GOV_DATA_SOURCES.md](GOV_DATA_SOURCES.md): official APIs, parliamentary feeds, graded news, human uploads. Keep ownership separate so crypto venue adapters do not absorb gov data contracts.
+- **Symbolic / visual** — [SYMBOLIC_VISUAL_LAYER.md](SYMBOLIC_VISUAL_LAYER.md) catalog graph; [SYMBOLIC_INGEST.md](SYMBOLIC_INGEST.md) for IG/web media candidates (rights-gated before any NFT join).
+
 ## Guardrails (epistemic humility)
 - No legal or moral verdict claims: on-chain risk signals are hypotheses about risk/dispute surfaces, not accusations.
 - No financial advice: backtest and technical indicators are recorded as evidence-grade context only.
@@ -150,6 +232,11 @@ This layer produces normalized operational inputs that later institutional frami
 
 ## Links
 - TradingView MCP server: https://github.com/atilaahmettaner/tradingview-mcp
+- Unified / CCXT-style: https://github.com/Nayshins/mcp-server-ccxt · https://github.com/lazy-dinosaur/ccxt-mcp · https://github.com/ccxt/ccxt/pull/29277
+- CoinGecko MCP: https://docs.coingecko.com/ai-integration/mcp-server
+- DefiLlama MCP: https://mcp.defillama.com/mcp · https://github.com/DefiLlama/defillama-skills
+- Sibling ingress: [`GOV_DATA_SOURCES.md`](GOV_DATA_SOURCES.md)
+- Symbolic / NFT catalog: [`SYMBOLIC_VISUAL_LAYER.md`](SYMBOLIC_VISUAL_LAYER.md)
 - [`ERRORLOGY.md`](ERRORLOGY.md)
 - [`NAMM.md`](NAMM.md)
 

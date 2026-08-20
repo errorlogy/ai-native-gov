@@ -23,7 +23,8 @@
     "institution:eu-council",
     "institution:eu-court-of-justice",
     "institution:eu-transnational-ops",
-    "institution:national-instance"
+    "institution:national-instance",
+    "institution:symbolic-visual"
   ],
   "examples": [
     "institution:executive",
@@ -36,6 +37,7 @@
     "institution:eu-council",
     "institution:eu-court-of-justice",
     "institution:eu-transnational-ops",
-    "institution:national-instance"
+    "institution:national-instance",
+    "institution:symbolic-visual"
   ]
 }
