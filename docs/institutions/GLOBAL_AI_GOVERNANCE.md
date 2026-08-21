@@ -196,6 +196,7 @@ At world scale, fin-crypto signals may activate **multiple national instances** 
 |-------------|---------------------|
 | [GOV_DATA_SOURCES.md](../integrations/GOV_DATA_SOURCES.md) | Gov/open-data/legislative ingress; parsing adapters → cross-layer events |
 | [SYMBOLIC_VISUAL_LAYER.md](../integrations/SYMBOLIC_VISUAL_LAYER.md) | Symbolic marks, seals, merch, NFT/media catalog graph |
+| [MATRAIX_PERSONA.md](../integrations/MATRAIX_PERSONA.md) | **Future:** persona cohorts for citizen-analog / party-coalition diversity (simulation instruments — not “digital citizens”) |
 | [ERRORLOGY.md](../integrations/ERRORLOGY.md) | μ/α/PNO/FPD validation on institutional outputs; collision fuzzy membership |
 | [POLITIC_BAR.md](../integrations/POLITIC_BAR.md) | Error cards, politifi streams; surfaces tensions across jurisdictions |
 | [NAMM.md](../integrations/NAMM.md) | Verification certificates for grounds packages (`COMPUTATIONAL_EVIDENCE`) |
@@ -270,6 +271,7 @@ Envelope format: `schemas/cross-layer-event.json` with `activated_layers` listin
 |----------|-------------|
 | [FIN_CRYPTO_MARKETS.md](../integrations/FIN_CRYPTO_MARKETS.md) | Market/crypto signal ingress |
 | [SYMBOLIC_VISUAL_LAYER.md](../integrations/SYMBOLIC_VISUAL_LAYER.md) | Symbolic / visual identity registry + graph |
+| [MATRAIX_PERSONA.md](../integrations/MATRAIX_PERSONA.md) | MatrAIx persona cohort conditioning (future adapter) |
 | [ERRORLOGY.md](../integrations/ERRORLOGY.md) | Engine validation contract |
 | [POLITIC_BAR.md](../integrations/POLITIC_BAR.md) | Stream publishing contract |
 | [NAMM.md](../integrations/NAMM.md) | Verification certificates |
@@ -288,6 +290,7 @@ Envelope format: `schemas/cross-layer-event.json` with `activated_layers` listin
 | `schemas/state-profile.json` | National instance profile fields |
 | `schemas/institution-graph.json` | Machine-readable topology (planned depth) |
 | `schemas/symbolic-asset.json` | Symbolic/visual identity catalog stub |
+| `schemas/persona-cohort-ref.json` | MatrAIx / persona cohort ref stub (not yet wired into cross-layer-event) |
 
 ---
 

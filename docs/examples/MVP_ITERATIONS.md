@@ -61,6 +61,7 @@ Vite proxies `/api` → `:8000`. Topology map + institutional event feed = **one
 - [`schemas/institution-layer-id.json`](../../schemas/institution-layer-id.json) — includes EU + national layer IDs
 - [`docs/integrations/FIN_CRYPTO_MARKETS.md`](../integrations/FIN_CRYPTO_MARKETS.md) — adapter record shape + event types
 - [`docs/integrations/GOV_DATA_SOURCES.md`](../integrations/GOV_DATA_SOURCES.md) — sibling gov ingress (exists)
+- [`docs/integrations/MATRAIX_PERSONA.md`](../integrations/MATRAIX_PERSONA.md) — future persona cohort conditioning (after iter1 tags; no MatrAIx runtime in MVP)
 - [`docs/institutions/EU_TOPOLOGY.md`](../institutions/EU_TOPOLOGY.md) / `EU_STATES.md` — static map source material
 
 ---
@@ -211,6 +212,7 @@ Public CCXT snapshot → normalized record → institutional envelope `OPERATION
 3. NAMM certificate_ref → `COMPUTATIONAL_EVIDENCE`
 4. TradingView MCP or official `ccxt-mcp` as alternate adapters
 5. Gov open-data fetchers already in MAS (`fetch-us-gov`, etc.) mapped through the same institutions framer
+6. **Future: persona cohorts** — after Iteration 1 events stub: optional `persona_cohort_id` tags / sidecar on cross-layer events; full MatrAIx Persona 1M adapter only post-MVP (see [`MATRAIX_PERSONA.md`](../integrations/MATRAIX_PERSONA.md)). Never claim 8.3B simultaneous agents or “digital EU citizens.”
 
 ---
 

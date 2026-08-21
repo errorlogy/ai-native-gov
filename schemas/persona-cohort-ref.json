@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/errorlogy/ai-native-gov/schemas/persona-cohort-ref.json",
+  "title": "PersonaCohortRef",
+  "description": "INSTITUTIONAL_MODEL — opaque reference to a MatrAIx (or compatible) persona cohort used to condition institutional MAS agents. Not a citizen identity, electoral mandate, or probability sample of a real population. Standalone stub: not yet $ref'd from cross-layer-event.json (additionalProperties:false). See docs/integrations/MATRAIX_PERSONA.md.",
+  "type": "object",
+  "required": ["persona_cohort_id", "epistemic_label"],
+  "properties": {
+    "persona_cohort_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Opaque cohort identifier minted by the sampling adapter",
+      "examples": ["matraix-1m-eu-de-n48-seed20260720"]
+    },
+    "source": {
+      "type": "string",
+      "enum": ["matraix_persona_1m", "matraix_persona_8b_internal", "other"],
+      "description": "Corpus provenance; prefer open Persona 1M for research runs"
+    },
+    "sample_size": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of persona records in the realized cohort (not 8.3B)"
+    },
+    "filter_recipe_hash": {
+      "type": "string",
+      "description": "Hash of declared strata / filter recipe for reproducibility"
+    },
+    "human_grounded_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "synthetic_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "persona_agent_model": {
+      "type": "string",
+      "description": "LLM (or agent stack) that plays the personas; first-order factor per MatrAIx"
+    },
+    "jurisdiction_hint": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Optional ISO2 / bloc tags used in sampling — modeling hints only"
+    },
+    "epistemic_label": {
+      "type": "string",
+      "enum": ["INSTITUTIONAL_MODEL", "OPERATIONAL"],
+      "description": "Cohort refs are never COMPUTATIONAL_EVIDENCE by themselves"
+    }
+  },
+  "additionalProperties": false
+}
