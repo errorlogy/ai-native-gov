@@ -94,6 +94,6 @@ Full table: [AGENTS.md](../AGENTS.md#language-rules-shared-with-errorlogy--polit
 - [VISION.md](../VISION.md) — product vision and core principles
 - [AI_HUMAN_OVERSIGHT.md](institutions/AI_HUMAN_OVERSIGHT.md) — structural override
 - [GLOBAL_AI_GOVERNANCE.md](institutions/GLOBAL_AI_GOVERNANCE.md) — three-tier world model
-- [SYMBOLIC_VISUAL_LAYER.md](integrations/SYMBOLIC_VISUAL_LAYER.md) — visual identity registry; SYNTHEΣ / Greco-Roman lore axis as cultural **signals**
+- [SYMBOLIC_VISUAL_LAYER.md](integrations/SYMBOLIC_VISUAL_LAYER.md) — visual identity registry; SYNTHEΣ / Greco-Roman lore axis as cultural **signals**; owner-curated lore via [ANTHEMIUM Pinterest](https://www.pinterest.com/ainativelife/) ([`symbolic/SOURCES.md`](integrations/symbolic/SOURCES.md))
 - [ERRORLOGY.md](integrations/ERRORLOGY.md) — engine contract
 - [AGENTS.md](../AGENTS.md) — routing and language rules

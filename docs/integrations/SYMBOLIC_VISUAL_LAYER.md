@@ -56,6 +56,41 @@ Internal: EIDA / SYNTHEΣ progress      ──►  classical + technical overlay
 
 ---
 
+## Curated lore sources (external collections)
+
+**Epistemic label:** `INSTITUTIONAL_MODEL`. Owner-curated boards are **reference workflows**, not scraped third-party archives without rights clearance. Symbols remain cultural **signals**, not legitimacy verdicts.
+
+| Source | Source id | Handle / brand | URL | Role |
+|--------|-----------|----------------|-----|------|
+| **Pinterest — ANTHEMIUM** | `source:pinterest:ainativelife` | [@ainativelife](https://www.pinterest.com/ainativelife/) | https://www.pinterest.com/ainativelife/ | Curated lore / visual references — Greco-Roman / digital remake / symbolic visual codes for SYMBOLIC layer analysis |
+| Instagram (third-party seeds) | — | e.g. @tonybamber | per seed row | Third-party art referenced in v0 seed pack — analysis only; see [`symbolic/seeds/README.md`](symbolic/seeds/README.md) |
+
+Canonical registry row: [`symbolic/CURATED_SOURCES.md`](symbolic/CURATED_SOURCES.md). Ingest contract: [SYMBOLIC_INGEST.md](SYMBOLIC_INGEST.md#pinterest-adapter--anthemium-owner-curated).
+
+**ANTHEMIUM / ainativelife purpose:** accumulate found visual lore and symbolic references the operator saves for later tagging, ontology linking, and optional promotion through the ingest pipeline. Prefer **user-owned pins** and explicit curation over bulk third-party scraping.
+
+**Ingest path** (see [SYMBOLIC_INGEST.md](SYMBOLIC_INGEST.md)):
+
+```text
+Pinterest profile/board link
+  → manual export | oEmbed/link metadata | (future) Pinterest API if ToS permits
+  → discover → human review gate → SEED_CATALOG / symbolic graph
+```
+
+| Path | `parse_method` | Notes |
+|------|----------------|-------|
+| Manual pin/board export or screenshot + permalink | `creator_export` / `human_upload` | Preferred MVP; operator controls what enters review |
+| Public oEmbed / OpenGraph on pin or board URL | `oembed` | Metadata discovery; binary fetch still needs rights |
+| Pinterest Developer API (future) | `official_api` | Only when app approved and ToS allows; not assumed in Phase 2 |
+
+**Rights:** set `rights_status: owner_curated` when the operator saves pins through their own curation workflow (saved references for analysis — not an automatic NFT or merch clearance). Third-party pins re-saved without license remain `analysis_only` or `unknown` until explicitly cleared. **Never auto-mint from Pinterest** without rights clearance.
+
+**Guardrails:** respect [Pinterest Terms of Service](https://policy.pinterest.com/en/terms-of-service); do not scrape production catalogs without API/operator approval; do not treat board presence as copyright transfer.
+
+Provenance index: [`symbolic/SOURCES.md`](symbolic/SOURCES.md). Curated source registry: [`symbolic/CURATED_SOURCES.md`](symbolic/CURATED_SOURCES.md).
+
+---
+
 ## Analysis methods (heuristic — not academic or clinical verdicts)
 
 ### Jungian method card (primary tagging vocabulary)
@@ -241,6 +276,7 @@ Normalized `event_type` strings for [`schemas/cross-layer-event.json`](../../sch
 | `symbolic_asset_registered` | `OPERATIONAL` | New Symbol / MediaAsset / Collection entered in registry (post review) |
 | `symbolic_nft_mint_signal` | `OPERATIONAL` (→ `COMPUTATIONAL_EVIDENCE` if NAMM-linked) | Mint or metadata URI observed; may also emit FIN_CRYPTO market events |
 | `symbolic_media_variant` | `OPERATIONAL` | New Variant or media rendition of an existing Symbol |
+| `symbolic_lore_source_linked` | `OPERATIONAL` | External curated collection (e.g. Pinterest board/profile) registered as lore workflow anchor — not a catalog row for every pin |
 
 Typical `activated_layers`: `institution:symbolic-visual` plus relevant bindings (`institution:executive`, `institution:national-instance`, EU layers, etc.). Ingest-only events stay on `institution:symbolic-visual` (+ audit when blocked/incomplete).
 
@@ -263,7 +299,7 @@ Example envelope (illustrative):
 
 | Sibling | Boundary |
 |---------|----------|
-| [SYMBOLIC_INGEST.md](SYMBOLIC_INGEST.md) | Instagram (Graph primary; scrape experimental) + web (Exa, RSS, oEmbed, Wayback, GLAM) → candidates → human gate → this registry |
+| [SYMBOLIC_INGEST.md](SYMBOLIC_INGEST.md) | Instagram (Graph primary; scrape experimental) + Pinterest (owner-curated ANTHEMIUM board) + web (Exa, RSS, oEmbed, Wayback, GLAM) → candidates → human gate → this registry |
 | [FIN_CRYPTO_MARKETS.md](FIN_CRYPTO_MARKETS.md) | Floor price, volume, listing, on-chain risk for NFT collections → market event types; **this layer** owns symbol↔token catalog edges (`minted_as`) |
 | [GOV_DATA_SOURCES.md](GOV_DATA_SOURCES.md) | Official open-data coats, flags, emblem APIs (when available) → ingest as `MediaAsset` + `Provenance` with `source_class=official_open_data`; never treat as sovereignty upgrade |
 | [NAMM.md](NAMM.md) | Optional certificate over content hash / graph invariant of a collection |
@@ -320,7 +356,9 @@ Do **not** copy large binary packs, full NFT metadata dumps, or copyrighted book
 - Layer IDs: [`schemas/institution-layer-id.json`](../../schemas/institution-layer-id.json)
 - Seed catalog: [`symbolic/SEED_CATALOG.md`](symbolic/SEED_CATALOG.md)
 - Seed binaries: [`symbolic/seeds/`](symbolic/seeds/)
-- Ingest (IG + web): [SYMBOLIC_INGEST.md](SYMBOLIC_INGEST.md)
+- Ingest (IG + Pinterest + web): [SYMBOLIC_INGEST.md](SYMBOLIC_INGEST.md)
+- Curated source registry: [`symbolic/CURATED_SOURCES.md`](symbolic/CURATED_SOURCES.md)
+- Curated lore provenance: [`symbolic/SOURCES.md`](symbolic/SOURCES.md)
 - World framing: [GLOBAL_AI_GOVERNANCE.md](../institutions/GLOBAL_AI_GOVERNANCE.md)
 - Philosophy / Homo loquens: [PHILOSOPHY.md](../PHILOSOPHY.md)
 - Markets: [FIN_CRYPTO_MARKETS.md](FIN_CRYPTO_MARKETS.md)

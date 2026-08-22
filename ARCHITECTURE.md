@@ -77,6 +77,10 @@ Layers **intersect** — see [docs/institutions/TOPOLOGY.md](docs/institutions/T
 
 See [AGENTS.md](AGENTS.md) and [WORKSPACE.md](WORKSPACE.md).
 
+## CMS fit (by layer)
+
+AI Native Gov is **not** one monolithic CMS site. Layer-by-layer platform fit (headless, static, DAM, APIs vs anti-patterns): [docs/architecture/CMS_FIT.md](docs/architecture/CMS_FIT.md).
+
 ## Security
 
 - Private GitHub repos

@@ -72,7 +72,7 @@ Normalized record (institutional framer may reference via `stream_refs` / map in
     "license_hint": "string|null",
     "same_as": ["string URI …"]
   },
-  "rights_status": "unknown|blocked|analysis_only|cleared_internal|cleared_merch|cleared_nft",
+  "rights_status": "unknown|blocked|analysis_only|owner_curated|cleared_internal|cleared_merch|cleared_nft",
   "tag_suggest": {
     "lore_cluster": "string|null",
     "archetype_tags": ["string", "..."],
@@ -106,6 +106,7 @@ Normalized record (institutional framer may reference via `stream_refs` / map in
 | `symbolic_asset_registered` | `OPERATIONAL` | Passed human review → catalog/graph (see SYMBOLIC_VISUAL_LAYER) |
 | `symbolic_media_variant` | `OPERATIONAL` | New rendition of existing Symbol |
 | `symbolic_nft_mint_signal` | `OPERATIONAL` | Mint/metadata only after `rights_status` cleared for NFT |
+| `symbolic_lore_source_linked` | `OPERATIONAL` | External curated collection (Pinterest profile/board, etc.) linked as lore workflow anchor |
 
 Suggested `cross-layer-event.json` examples: `symbolic_media_discovered`, `symbolic_media_fetched`, `symbolic_provenance_incomplete`, `symbolic_rights_blocked` (see schema).
 
@@ -118,6 +119,7 @@ Suggested `cross-layer-event.json` examples: `symbolic_media_discovered`, `symbo
 - `partial_payload` — incomplete OG/oEmbed/Graph fields
 - `hash_pending` — discovered but blob not yet hashed
 - `license_unknown` — no machine-readable license
+- `owner_curated` — operator-owned curation workflow (e.g. Pinterest saves); not auto NFT clearance
 - `third_party_art` — not first-party AING mark
 - `glam_open` — museum/open cultural data license path
 - `rate_limited` / `key_required_missing` / `error_envelope`
@@ -153,6 +155,35 @@ Seed pack v0 (@tonybamber Odyssey/Athena stills) entered via **manual analysis p
 
 ---
 
+## Pinterest adapter — ANTHEMIUM (owner-curated)
+
+**Source id:** `source:pinterest:ainativelife` — canonical row in [`symbolic/CURATED_SOURCES.md`](symbolic/CURATED_SOURCES.md). Registry framing: [SYMBOLIC_VISUAL_LAYER.md](SYMBOLIC_VISUAL_LAYER.md#curated-lore-sources-external-collections).
+
+| Item | Contract |
+|------|----------|
+| Profile / brand | **ANTHEMIUM** — Pinterest [@ainativelife](https://www.pinterest.com/ainativelife/) |
+| Purpose | Accumulate Greco-Roman / digital remake / symbolic visual codes for SYMBOLIC layer analysis |
+| Nature | **Owner-curated** reference board — operator saves visual lore for later review; not bulk third-party scrape without rights |
+| Discover | Profile or board URL; optional manual pin permalink list |
+| Fetch | Manual export, oEmbed/OpenGraph on pin URL, or future Pinterest API when ToS permits |
+| Emit | `symbolic_lore_source_linked` (collection anchor) → per-pin `symbolic_media_discovered` / `symbolic_media_fetched` after human selection |
+| `rights_status` | `owner_curated` for operator curation workflow; individual pins may stay `analysis_only` or `unknown` until cleared |
+| ToS | Respect [Pinterest Terms of Service](https://policy.pinterest.com/en/terms-of-service); prefer user-owned saves over automated catalog mirroring |
+| Mint | **Never auto-mint from Pinterest** without explicit `rights_status` ∈ {`cleared_merch`, `cleared_nft`} after review |
+
+**MVP ingest path:**
+
+```text
+ainativelife profile/board URL
+  → operator selects pin(s) for review
+  → manual export | oEmbed/link metadata | (future) official API
+  → human review gate → SEED_CATALOG / symbolic-asset stub
+```
+
+Curated source registry: [`symbolic/CURATED_SOURCES.md`](symbolic/CURATED_SOURCES.md) (`source:pinterest:ainativelife`). Provenance index: [`symbolic/SOURCES.md`](symbolic/SOURCES.md). Registry framing: [SYMBOLIC_VISUAL_LAYER.md](SYMBOLIC_VISUAL_LAYER.md#curated-lore-sources-external-collections).
+
+---
+
 ## General web adapters
 
 | Source | Role | Typical emit |
@@ -160,6 +191,7 @@ Seed pack v0 (@tonybamber Odyssey/Athena stills) entered via **manual analysis p
 | **Exa / search MCP** | Discovery of neoclassical remakes, heraldry refs, lore carriers | `symbolic_media_discovered` (`source_class=web_search`) |
 | **RSS / Atom** | Creator or museum feeds | `symbolic_media_discovered` |
 | **OpenGraph / oEmbed** | Title, image URL, site name without full page scrape | `symbolic_media_fetched` (metadata); blob fetch separate |
+| **Pinterest (ANTHEMIUM)** | Owner-curated lore board [@ainativelife](https://www.pinterest.com/ainativelife/) | `symbolic_lore_source_linked` + per-pin discover/fetch after human selection |
 | **Wayback Machine** | Historical snapshots for provenance / disappearance | `symbolic_media_fetched` + archive flags; license from original |
 | **Europeana** | Classical / European cultural objects (open API) | discover/fetch with `glam_open` |
 | **Met Collection API** | Open-access object metadata + images where CC0/open | same |
@@ -213,7 +245,9 @@ Activated layers for envelopes: typically `institution:symbolic-visual`; optiona
 | Rule | Detail |
 |------|--------|
 | `rights_status` **required** on every fetched/register path | Default `unknown` until set |
+| `owner_curated` | Operator Pinterest (or similar) save workflow — analysis reference only until pin-level clearance |
 | No auto-mint from scraped IG | Scrape → at most `analysis_only` after review |
+| No auto-mint from Pinterest | Board link ≠ NFT clearance; per-pin review required |
 | Third-party seeds in git | Analysis / visual-code study — not ownership |
 | GOV open emblems | Via [GOV_DATA_SOURCES.md](GOV_DATA_SOURCES.md) with `source_class=official_open_data`; still not sovereignty |
 | FIN_CRYPTO join | Floor/volume only for collections already `minted_as` with clearance |
@@ -229,19 +263,21 @@ Activated layers for envelopes: typically `institution:symbolic-visual`; optiona
 | `symbolic_provenance_incomplete` | `institution:symbolic-visual`, `institution:audit` | Block upgrade |
 | `symbolic_rights_blocked` | `institution:symbolic-visual`, `institution:audit` | Hard stop on mint |
 | `symbolic_asset_registered` | `institution:symbolic-visual` (+ bindings) | Post-review |
+| `symbolic_lore_source_linked` | `institution:symbolic-visual` | Collection anchor only; pins still gated |
 
 ---
 
 ## Plug-in order
 
 1. **Human upload / creator export** — safest path into seeds + CAS hash.
-2. **Meta Graph API** (owned/authorized IG) — primary social ingress.
-3. **GLAM open APIs** (Europeana, Met, Rijks) — classical lore + open licenses.
-4. **Exa / RSS / oEmbed** — discovery and metadata enrichment.
-5. **Wayback** — provenance aid.
-6. **IG/web HTML scrape** — experimental only; approval-gated; never production mint.
-7. **Register → SEED_CATALOG / symbolic-asset** — human gate.
-8. **Optional NAMM** on content hash; **optional FIN_CRYPTO** mint/trade join.
+2. **Pinterest ANTHEMIUM board** — owner-curated lore collection; manual/oEmbed per pin.
+3. **Meta Graph API** (owned/authorized IG) — primary social ingress.
+4. **GLAM open APIs** (Europeana, Met, Rijks) — classical lore + open licenses.
+5. **Exa / RSS / oEmbed** — discovery and metadata enrichment.
+6. **Wayback** — provenance aid.
+7. **IG/web HTML scrape** — experimental only; approval-gated; never production mint.
+8. **Register → SEED_CATALOG / symbolic-asset** — human gate.
+9. **Optional NAMM** on content hash; **optional FIN_CRYPTO** mint/trade join.
 
 Phase: **Phase 2** contract (this doc + event examples); **Phase 4** live adapters in child repos / MCP.
 
@@ -251,6 +287,8 @@ Phase: **Phase 2** contract (this doc + event examples); **Phase 4** live adapte
 
 - Registry / lore / Jungian tags: [SYMBOLIC_VISUAL_LAYER.md](SYMBOLIC_VISUAL_LAYER.md)
 - Seed catalog: [symbolic/SEED_CATALOG.md](symbolic/SEED_CATALOG.md)
+- Curated source registry: [symbolic/CURATED_SOURCES.md](symbolic/CURATED_SOURCES.md)
+- Curated lore provenance: [symbolic/SOURCES.md](symbolic/SOURCES.md)
 - Seed binaries: [symbolic/seeds/](symbolic/seeds/)
 - Schema asset: [`schemas/symbolic-asset.json`](../../schemas/symbolic-asset.json)
 - Events: [`schemas/cross-layer-event.json`](../../schemas/cross-layer-event.json)

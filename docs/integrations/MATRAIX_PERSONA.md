@@ -225,6 +225,7 @@ Unsupported MatrAIx uses (echo Appendix M): impersonating named individuals; att
 - [PHILOSOPHY.md](../PHILOSOPHY.md) — Homo loquens; cognitive extension ≠ sovereignty
 - [ERRORLOGY.md](ERRORLOGY.md) — engine contract
 - [MVP_ITERATIONS.md](../examples/MVP_ITERATIONS.md) — plug order
+- [CONNECTION_GUIDE.md](CONNECTION_GUIDE.md) — optional MatrAIx hook in end-to-end MCP flow
 - [FIN_CRYPTO_MARKETS.md](FIN_CRYPTO_MARKETS.md) / [SYMBOLIC_VISUAL_LAYER.md](SYMBOLIC_VISUAL_LAYER.md) — optional preference dimensions
 
 ---

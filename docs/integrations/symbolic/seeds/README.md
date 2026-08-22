@@ -14,6 +14,17 @@ These binaries are **third-party visual references** copied into the umbrella fo
 
 If a seed is later promoted to a product mark or NFT collection, obtain explicit rights and update `license_id` + provenance before any `minted_as` edge.
 
+## External curated collections
+
+Visual lore may be **discovered** outside this repo and promoted through the ingest pipeline after human review. These are reference workflows — not automatic catalog entries.
+
+| Source | Brand / handle | URL | `rights_status` (default) |
+|--------|----------------|-----|---------------------------|
+| Pinterest | **ANTHEMIUM** / [@ainativelife](https://www.pinterest.com/ainativelife/) | https://www.pinterest.com/ainativelife/ | `owner_curated` (operator save workflow) |
+| Instagram | per creator (e.g. @tonybamber) | per seed row | `analysis_only` for v0 third-party seeds |
+
+Ingest: discover → review gate → [SEED_CATALOG.md](../SEED_CATALOG.md). Full provenance index: [SOURCES.md](../SOURCES.md). Contract: [SYMBOLIC_INGEST.md](../../SYMBOLIC_INGEST.md).
+
 ## Files
 
 | Seed id | File | Stated provenance (from chat / on-image UI) |

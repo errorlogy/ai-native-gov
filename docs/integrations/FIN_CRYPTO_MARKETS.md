@@ -209,6 +209,11 @@ Cross-layer envelopes that reference these records keep `epistemic_label=OPERATI
 
 Do not enable multi-exchange “all-in-one trading” MCP servers in the institutional simulator path without an explicit approval and sandbox policy.
 
+## NFT marketplace MCP (research note)
+Official **OpenSea MCP** ([docs](https://docs.opensea.io/reference/mcp), `https://mcp.opensea.io/mcp`) is the main vendor NFT surface: floor/stats/portfolio = **market-data**; SeaDrop `get_mint_action` / `deploy_seadrop_contract` = **execution prep** (returns txs for wallet sign — approval-gated, high risk if auto-submitted). **Alchemy MCP** ([docs](https://www.alchemy.com/docs/alchemy-mcp-server)) is read-only NFT metadata/ownership. Community/vendor mint paths (Rare Protocol `rare mcp serve --allow-writes`, thirdweb remote MCP `deployContract`/`writeContract`, Solana Agent Kit MCP `MINT_NFT`, Story Protocol MCP hub collection/IP mint) require keys or server wallets — do not wire into the simulator without sandbox policy. No official Manifold / Zora / Foundation MCP found; Crossmint exposes docs + checkout MCP, not a first-party collection-mint MCP. Catalog ownership and `rights_status` stay in [SYMBOLIC_VISUAL_LAYER.md](SYMBOLIC_VISUAL_LAYER.md) — never auto-mint scraped art.
+
+**Practical setup (Cursor + cross-layer POST):** [CONNECTION_GUIDE.md](CONNECTION_GUIDE.md) — OpenSea/Alchemy MCP config, normalize → `POST /api/events/cross-layer`, mint approval gates.
+
 ## Sibling layers
 - **Gov open data** — [GOV_DATA_SOURCES.md](GOV_DATA_SOURCES.md): official APIs, parliamentary feeds, graded news, human uploads. Keep ownership separate so crypto venue adapters do not absorb gov data contracts.
 - **Symbolic / visual** — [SYMBOLIC_VISUAL_LAYER.md](SYMBOLIC_VISUAL_LAYER.md) catalog graph; [SYMBOLIC_INGEST.md](SYMBOLIC_INGEST.md) for IG/web media candidates (rights-gated before any NFT join).
@@ -237,6 +242,9 @@ This layer produces normalized operational inputs that later institutional frami
 - DefiLlama MCP: https://mcp.defillama.com/mcp · https://github.com/DefiLlama/defillama-skills
 - Sibling ingress: [`GOV_DATA_SOURCES.md`](GOV_DATA_SOURCES.md)
 - Symbolic / NFT catalog: [`SYMBOLIC_VISUAL_LAYER.md`](SYMBOLIC_VISUAL_LAYER.md)
+- OpenSea MCP: https://docs.opensea.io/reference/mcp · https://docs.opensea.io/docs/build-with-ai-agents
+- Alchemy MCP (NFT read): https://www.alchemy.com/docs/alchemy-mcp-server
+- Cursor connection playbook: [`CONNECTION_GUIDE.md`](CONNECTION_GUIDE.md)
 - [`ERRORLOGY.md`](ERRORLOGY.md)
 - [`NAMM.md`](NAMM.md)
 

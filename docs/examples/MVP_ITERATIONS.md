@@ -62,6 +62,7 @@ Vite proxies `/api` → `:8000`. Topology map + institutional event feed = **one
 - [`docs/integrations/FIN_CRYPTO_MARKETS.md`](../integrations/FIN_CRYPTO_MARKETS.md) — adapter record shape + event types
 - [`docs/integrations/GOV_DATA_SOURCES.md`](../integrations/GOV_DATA_SOURCES.md) — sibling gov ingress (exists)
 - [`docs/integrations/MATRAIX_PERSONA.md`](../integrations/MATRAIX_PERSONA.md) — future persona cohort conditioning (after iter1 tags; no MatrAIx runtime in MVP)
+- [`docs/integrations/CONNECTION_GUIDE.md`](../integrations/CONNECTION_GUIDE.md) — Cursor MCP (OpenSea, Alchemy) → normalize → `POST /api/events/cross-layer` → gui-v2 iter 2
 - [`docs/institutions/EU_TOPOLOGY.md`](../institutions/EU_TOPOLOGY.md) / `EU_STATES.md` — static map source material
 
 ---
@@ -222,4 +223,5 @@ Public CCXT snapshot → normalized record → institutional envelope `OPERATION
 - [`ARCHITECTURE.md`](../../ARCHITECTURE.md)
 - [`schemas/cross-layer-event.json`](../../schemas/cross-layer-event.json)
 - [`docs/integrations/FIN_CRYPTO_MARKETS.md`](../integrations/FIN_CRYPTO_MARKETS.md)
+- [`docs/integrations/CONNECTION_GUIDE.md`](../integrations/CONNECTION_GUIDE.md)
 - Child: `ERRORLOGY_MVP/errorlogy-mas/api/main.py`, `errorlogy-gui-v2/src/App.tsx`
