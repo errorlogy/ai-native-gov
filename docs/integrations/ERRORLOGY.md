@@ -39,7 +39,21 @@ Institutional context enters **before and alongside** WMS — not as replacement
 | `dispute_surfaces` (judiciary) | Red Team seeds |
 | `precedent_refs` | α edge proposals |
 
-**Future envelope:** `schemas/cross-layer-event.json` → adapter in errorlogy-mas.
+**Envelope:** [`schemas/cross-layer-event.json`](../../schemas/cross-layer-event.json) →
+`errorlogy-mas` adapter (`mas/institutional/activation.py`).
+
+### Cross-layer API (live stub)
+
+Institutional activation ingress — **no μ/analyze**; framing stub only:
+
+| Method | Path | Description |
+|--------|------|-------------|
+| `POST` | `/api/events/cross-layer` | Frame & persist cross-layer event |
+| `GET` | `/api/events/cross-layer` | List events (`?story_id=`, `?event_type=`, `?limit=`) |
+| `GET` | `/api/events/cross-layer/layers` | Valid `institution:*` layer enum |
+| `GET` | `/api/events/cross-layer/{event_id}` | Single event |
+
+OpenAPI: `http://127.0.0.1:8000/docs` when `errorlogy-mas` is running.
 
 ---
 

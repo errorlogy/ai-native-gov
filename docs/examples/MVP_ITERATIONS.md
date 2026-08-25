@@ -19,7 +19,7 @@
 
 | Proposed | Reality check | Revision |
 |----------|---------------|----------|
-| 1. `cross-layer-event` → FastAPI → institutional activation stub | Ingress already exists (`/api/ingest/*`); no institutional router; analyze has optional JWT (`current_user` may be `None`) | Thin **institutions** router + stub activator; do **not** fork a second full ingest stack |
+| 1. `cross-layer-event` → FastAPI → institutional activation stub | **Shipped** — `api/routers/cross_layer.py` at `/api/events/cross-layer*`; analyze has optional JWT (`current_user` may be `None`) | Iter 1 baseline done; extend with fin-crypto adapter (iter 3) |
 | 2. UI: EU/national map + event stream in gui-v2 | gui-v2 has 4 routes (`/`, `/stream`, `/case`, `/data`); `/data` already polls ingest docs/signals; Electron `errorlogy-gui/` is separate ACTIVE desktop | Keep **gui-v2**; map is feasible as one new page + API client methods |
 | 3. One fin-crypto adapter (TradingView **or** CCXT MCP) | No `ccxt` / TradingView in `requirements.txt`; FIN doc prefers TradingView **MCP** first, then CCXT MCP; FastAPI has no MCP client bridge | Prefer **CCXT Python library, market-data only** (not MCP) for first adapter |
 
@@ -42,7 +42,7 @@ Roadmap alignment: Phase 0 ✅; this MVP is **Phase 1–2 contracts + early Phas
 
 There is **no** dedicated “stream” router: “stream” means analyze SSE + `GET /api/forecast/stream`.
 
-**Least-friction fit for institutional activation:** new sibling router `api/routers/institutions.py` (prefix `/api/institutions`), with a small module `mas/institutions/` that validates envelopes and returns `activated_layers` — **without** calling μ/α/PNO and without copying taxonomy JSON into the umbrella.
+**Institutional activation (shipped):** `api/routers/cross_layer.py` (prefix `/api/events`), module `mas/institutional/` — validates envelopes and returns `activated_layers` — **without** calling μ/α/PNO.
 
 ### errorlogy-gui-v2
 
@@ -77,11 +77,11 @@ Vite proxies `/api` → `:8000`. Topology map + institutional event feed = **one
 
 | Target | Action |
 |--------|--------|
-| `api/routers/institutions.py` | **New** — `POST /api/institutions/activate`, `GET /api/institutions/events`, `GET /api/institutions/layers` |
-| `mas/institutions/activate.py` | **New** — validate body against umbrella `cross-layer-event` fields; if `activated_layers` empty/missing from a partial ingress, apply **static** route table (copy mapping tables from FIN_CRYPTO / GOV_DATA docs as code constants, not LLM) |
-| `mas/institutions/store.py` | **New** — in-memory or SQLite table of recent envelopes (reuse `mas/db.py` patterns if cheap) |
-| `api/main.py` | `include_router(institutions_router)` |
-| Optional | `POST /api/institutions/activate` may accept a **partial** ingress (`story_id`, `event_type`, `jurisdiction_set`, …) and fill `activated_layers` + default `epistemic_label=INSTITUTIONAL_MODEL` or `OPERATIONAL` |
+| `api/routers/cross_layer.py` | **Done** — `POST /api/events/cross-layer`, `GET /api/events/cross-layer`, `GET /api/events/cross-layer/layers`, `GET /api/events/cross-layer/{event_id}` |
+| `mas/institutional/activation.py` | **Done** — validate body against umbrella `cross-layer-event` fields; static route table for partial ingress |
+| `mas/db.py` | **Done** — persist framed envelopes (SQLite) |
+| `api/main.py` | **Done** — `include_router(cross_layer_router)` |
+| Optional | `POST /api/events/cross-layer` accepts partial ingress (`story_id`, `event_type`, `jurisdiction_set`, …) and fills `activated_layers` + default `epistemic_label` |
 
 **Do not in iter 1:** wire auto_analyze into μ/α; require OAuth; host schema copies as “new taxonomy”; implement politic.bar story IDs for real.
 
@@ -89,12 +89,12 @@ Vite proxies `/api` → `:8000`. Topology map + institutional event feed = **one
 
 **Done when:**
 
-- [ ] `POST /api/institutions/activate` accepts a valid cross-layer-event-shaped JSON and returns the same plus stub metadata (`status: activated`, `framer: stub`)
-- [ ] Invalid `activated_layers` / `epistemic_label` → 400
-- [ ] `GET /api/institutions/events?limit=N` returns recently activated envelopes
-- [ ] `GET /api/institutions/layers` returns enum list consistent with umbrella `institution-layer-id.json` (vendored path or documented sync note)
-- [ ] No new secrets; umbrella repo unchanged except this planning doc / schema notes if needed
-- [ ] Smoke: one curl (or pytest) with `event_type=bilateral_summit` and EU/national layers
+- [x] `POST /api/events/cross-layer` accepts a valid cross-layer-event-shaped JSON and returns framed envelope plus stub metadata
+- [x] Invalid `activated_layers` / `epistemic_label` → 400
+- [x] `GET /api/events/cross-layer?limit=N` returns recently activated envelopes
+- [x] `GET /api/events/cross-layer/layers` returns enum list consistent with umbrella `institution-layer-id.json`
+- [x] No new secrets; umbrella repo unchanged except planning docs / schema notes
+- [x] Smoke: pytest `tests/test_cross_layer.py`
 
 ---
 
@@ -108,7 +108,7 @@ Vite proxies `/api` → `:8000`. Topology map + institutional event feed = **one
 |--------|--------|
 | `src/pages/TopologyPage.tsx` (or `InstitutionsPage.tsx`) | **New** — two-panel: static EU/national layer graph + live event list |
 | `src/App.tsx` / `Layout.tsx` / `lib/ru.ts` | Route `/topology` + nav entry |
-| `src/lib/api.ts` + `types.ts` | `institutionsActivate`, `institutionsEvents`, `institutionsLayers` |
+| `src/lib/api.ts` + `types.ts` | `crossLayerPost`, `crossLayerList`, `crossLayerLayers` |
 | Map data | Hardcode or fetch static JSON derived from umbrella `EU_TOPOLOGY` / layer IDs — **no** runtime import from umbrella git path required if a small `public/eu-topology.json` is checked into gui-v2 |
 
 **Feasibility:** 1–2 iterations is realistic if the map is **schematic** (nodes = layer IDs / member ISO codes, highlight on `activated_layers`), not a full GIS product. Reuse poll interval pattern from `DataStreamsPage` (~12s).
@@ -117,7 +117,7 @@ Vite proxies `/api` → `:8000`. Topology map + institutional event feed = **one
 
 - [ ] `/topology` loads without auth wall
 - [ ] Map shows EU supranational nodes + at least a subset of national instances (or “national-instance” generic + sample ISO set)
-- [ ] Event feed shows `GET /api/institutions/events`; selecting an event highlights `activated_layers` on the map
+- [ ] Event feed shows `GET /api/events/cross-layer`; selecting an event highlights `activated_layers` on the map
 - [ ] Manual “activate sample event” button posts a fixture envelope (optional but useful)
 - [ ] No Electron packaging; no politic.bar iframe
 
@@ -133,7 +133,7 @@ Vite proxies `/api` → `:8000`. Topology map + institutional event feed = **one
 |--------|--------|
 | `requirements.txt` | Add `ccxt` (pin a known stable minor) |
 | `mas/adapters/fin_crypto_ccxt.py` (or `mas/ingest/fetchers/ccxt_markets.py`) | Public ticker/OHLCV only → FIN_CRYPTO normalized record → map to `fin_crypto_market_snapshot` |
-| `api/routers/institutions.py` or thin `api/routers/fin_crypto.py` | `POST /api/institutions/fin-crypto/snapshot` (symbols + optional exchange) → activate stub |
+| `api/routers/cross_layer.py` or thin `api/routers/fin_crypto.py` | `POST /api/events/fin-crypto/snapshot` (symbols + optional exchange) → activate stub |
 | Config | Exchange list + symbols via env; **no API keys** for public market path |
 
 **Done when:**
