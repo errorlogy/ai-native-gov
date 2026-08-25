@@ -5,11 +5,15 @@
 [cc-by]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
-**Supranational institutional topology for AI-augmented governance** (`INSTITUTIONAL_MODEL`): models how parliament, courts, executive power, and cross-border coordination intersect as reasoning layers for agents—not a claim to sovereignty. The umbrella covers an EU 27-state simulator, symbolic identity layer, fin-crypto and gov-data integration contracts, and routes product work to [Errorlogy](https://errorlogy.com), [Anthemium](https://anthemium.tech), and the child repositories below.
+**Homepage:** [anthemium.tech](https://anthemium.tech) · **Engine & ontology:** [errorlogy.com](https://errorlogy.com)
+
+Open framework to model AI-native government as institutional reasoning layers — parliament, judiciary, transnational ops — with human oversight dials. **Not sovereignty claims.** (`INSTITUTIONAL_MODEL`)
+
+The umbrella covers an EU 27-state simulator, symbolic identity layer, fin-crypto and gov-data integration contracts, and routes product work to the child repositories below.
 
 > This is a **conceptual and architectural framework**, not a replacement for nation-states. Institutions here are **reasoning layers for AI agents** and structured context for [errorlogy/errorlogy](https://github.com/errorlogy/errorlogy), [politic-bar](https://github.com/errorlogy/politic-bar), and [namm-experiments](https://github.com/errorlogy/namm-experiments).
 
-Documentation and schema stubs are licensed under **[CC BY 4.0](LICENSE)** · Copyright © 2026 [Errorlogy](https://errorlogy.com)
+Documentation and schema stubs are licensed under **[CC BY 4.0](LICENSE)** · Copyright © 2026 [Errorlogy](https://errorlogy.com) · [Anthemium](https://anthemium.tech)
 
 ---
 
