@@ -97,7 +97,7 @@ This section exists so agents do not drift off context when working with histori
 
 ### Multi-repository ownership (who stores which type of knowledge)
 
-AI Native Gov (`ai-native-gov`) is the umbrella / supranational layer for **institutional topology & contracts**. Any "product" implementation (UI, pipelines, math engines) lives in child repositories and should be connected via links, not duplication.
+AI Native Gov (`ai-native-gov`) is the umbrella repository for **institutional topology and integration contracts** at the supranational layer. Product implementations (UI, pipelines, math engines) live in child repositories and connect here via links, not duplication.
 
 Route by knowledge type:
 
@@ -139,7 +139,7 @@ Before writing a conclusion / decision:
 5. **Reference child repos "as sources", not as copy-paste resources.**
    For links and orientation, update `docs/integrations/` and `docs/examples/` rather than moving architecture into umbrella code.
 
-### Retrospective: how to look back and transfer insights
+### Retrospective: reviewing prior work and carrying insights forward
 
 1. **Find the "comparison point".**
    Usually migrations / sketches: `v0.6 sketch (politic-bar)` → taxonomy v16 (see `docs/integrations/POLITIC_BAR.md` and `docs/integrations/ERRORLOGY.md`).

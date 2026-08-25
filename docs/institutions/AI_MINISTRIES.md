@@ -6,7 +6,7 @@
 
 **AI Ministries** are the domain-specialized execution agents of the AI Native Gov simulator. Each ministry models a specific policy domain, ingesting signals relevant to that domain, maintaining a `portfolio_posture`, and reporting to the [AI Cabinet](AI_CABINET.md) (Prime Minister and Cabinet MAS).
 
-Ministries are the granular interface between parliamentary intent and executable signals. They do not originate policy — that belongs to Parliament. They do not validate constitutionality — that belongs to the Charter. They do not adjudicate — that belongs to the Judiciary. They **translate** cabinet intent into domain-specific action postures.
+Ministries are the granular interface between parliamentary intent and executable signals. They do not originate policy — that belongs to Parliament. They do not validate constitutionality — that belongs to the Charter. They do not adjudicate — that belongs to the Judiciary. They **map** cabinet intent into domain-specific action postures.
 
 > For cabinet coordination and PM synthesis, see [AI_CABINET.md](AI_CABINET.md).  
 > For constitutional constraints shared across all ministries, see [CHARTER.md](CHARTER.md).  

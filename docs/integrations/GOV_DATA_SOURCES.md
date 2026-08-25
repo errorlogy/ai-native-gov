@@ -114,7 +114,7 @@ Suggested `cross-layer-event.json` examples for ingress: `gov_open_data_snapshot
 - `partial_payload` — incomplete fields
 - `estimated` — derived/approximated
 - `html_parsed` — no official structured API used
-- `translation_uncertain` — cross-language retrieval without native text
+- `language_source_uncertain` — cross-language retrieval without native text
 - `error_envelope` — structured provider error
 - `key_required_missing` — keyed API skipped
 - `duplicate_suspected` — near-duplicate of prior ingest
@@ -229,7 +229,7 @@ Rules:
 1. Prefer **official API first**; MCP is a convenient agent bridge, not a higher authority than the underlying portal.
 2. Never treat scraped HTML as strong evidence without human or secondary corroboration.
 3. Deduplicate on `doc_id` / canonical URL before Scout/WMS.
-4. Preserve original language when available; flag `translation_uncertain` if only translated text is used.
+4. Preserve original language when available; flag `language_source_uncertain` if only non-native-language text is available.
 5. On failure: emit `gov_data_unavailable` (do not invent values).
 6. Do **not** port democracy-monitor (or any) “concern scoring” into μ — ingest collection only ([ERRORLOGY.md](ERRORLOGY.md)).
 

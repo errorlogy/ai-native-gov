@@ -23,7 +23,7 @@ Nation-states remain legal and political anchors. In parallel, **global informat
 
 **AI Native Gov** describes:
 
-1. **Institutional topology** — how to model parliament, executive power, courts, international coordination, and oversight bodies as *+1 reasoning layers* for agents.
+1. **Institutional topology** — how to model parliament, executive power, courts, international coordination, and oversight bodies as additional reasoning layers for agents.
 2. **Cross-layer intersections** — where layers conflict, reinforce, or constrain each other.
 3. **Integration contracts** — how these layers feed [Errorlogy](https://github.com/errorlogy/errorlogy), [politic.bar](https://github.com/errorlogy/politic-bar), and [NAMM](https://github.com/errorlogy/namm-experiments).
 

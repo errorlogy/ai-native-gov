@@ -1,6 +1,6 @@
 # Agent Retrospective Checklist (umbrella → child)
 
-This checklist helps agents safely "look back" and transfer insights into `AI_NATIVE_GOV` without breaking context (ownership, taxonomy versions, signal/noise).
+This checklist helps agents review prior work and carry insights into `AI_NATIVE_GOV` without breaking context (ownership, taxonomy versions, signal/noise).
 
 ## 1) Before you start (required context labeling)
 
@@ -28,7 +28,7 @@ This checklist helps agents safely "look back" and transfer insights into `AI_NA
    - stop
    - verify that "v0.6 taxonomy" is not being mixed with v16 (forbidden)
 
-## 3) How to transfer insights to the right places
+## 3) Where to apply insights
 
 ### Transfer into `AI_NATIVE_GOV` (umbrella)
 

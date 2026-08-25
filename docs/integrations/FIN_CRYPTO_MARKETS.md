@@ -222,7 +222,7 @@ Official **OpenSea MCP** ([docs](https://docs.opensea.io/reference/mcp), `https:
 - No legal or moral verdict claims: on-chain risk signals are hypotheses about risk/dispute surfaces, not accusations.
 - No financial advice: backtest and technical indicators are recorded as evidence-grade context only.
 - Uncertainty is mandatory:
-  - `evidence_grade` must be set even when the provider supplies a confidence score (the adapter must translate provider confidence into this scale).
+  - `evidence_grade` must be set even when the provider supplies a confidence score (the adapter must map provider confidence into this scale).
   - `quality_flags` must capture provider health and completeness.
 - Certificate discipline:
   - Use `COMPUTATIONAL_EVIDENCE` only when a NAMM certificate is linked via `certificate_ref`.
