@@ -1,5 +1,10 @@
 # AI Native Gov
 
+[![CC BY 4.0][cc-by-shield]][cc-by]
+
+[cc-by]: https://creativecommons.org/licenses/by/4.0/
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
 **Supranational AI layer** for modeling governance topology, institutional checks & balances, and intersections between emerging layers.
 
 > This is a **conceptual and architectural framework**, not a claim to sovereignty or a replacement for nation-states. Institutions here are **reasoning layers for AI agents** and sources of structured context for product repositories.
@@ -66,6 +71,19 @@ Recommended topics for this and child repos:
 
 ## License and status
 
-Research / architecture documentation. Status: **early concept — active development**.
+Documentation, architecture notes, and JSON schema stubs in this repository are licensed under **[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE)**.
+
+**Copyright © 2026 [Errorlogy](https://errorlogy.com)**
+
+If you share or adapt this material, you must:
+
+- Credit **AI Native Gov** by Errorlogy
+- Link to [https://github.com/errorlogy/ai-native-gov](https://github.com/errorlogy/ai-native-gov)
+- Link to [https://errorlogy.com](https://errorlogy.com)
+- Indicate if changes were made and link to the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/)
+
+CC BY 4.0 covers the docs-heavy umbrella content and schema contract stubs. Product implementations live in child repositories under their own licenses.
+
+Status: **early concept — active development**.
 
 Related projects: [errorlogy.com](https://errorlogy.com) · [Anthemium](https://anthemium.tech)
