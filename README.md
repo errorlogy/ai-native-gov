@@ -1,71 +1,71 @@
 # AI Native Gov
 
-**Надгосударственный AI-слой** для моделирования governance-топологии, institutional checks & balances и пересечений между emerging layers.
+**Supranational AI layer** for modeling governance topology, institutional checks & balances, and intersections between emerging layers.
 
-> Это **концептуальная и архитектурная рамка**, а не претензия на суверенитет или замену государств. Институции здесь — **слои рассуждения для AI-агентов** и источники структурированного контекста для продуктовых репозиториев.
-
----
-
-## Зачем этот репозиторий
-
-Nation-states остаются юридическими и политическими якорями. Параллельно возникают **глобальные информационные, экономические и технологические слои**, которые пересекаются с governance, но не сводятся к одной юрисдикции.
-
-**AI Native Gov** описывает:
-
-1. **Institutional topology** — как моделировать парламент, исполнительную власть, суды, международную координацию и контрольные органы как *+1 reasoning layers* для агентов.
-2. **Cross-layer intersections** — где слои конфликтуют, усиливают или ограничивают друг друга.
-3. **Integration contracts** — как эти слои питают [Errorlogy](https://github.com/errorlogy/errorlogy), [politic.bar](https://github.com/errorlogy/politic-bar) и [NAMM](https://github.com/errorlogy/namm-experiments).
-
-Код продуктов **не живёт здесь**. Это umbrella-репозиторий: vision, architecture, institution docs, schemas, agent guidance.
+> This is a **conceptual and architectural framework**, not a claim to sovereignty or a replacement for nation-states. Institutions here are **reasoning layers for AI agents** and sources of structured context for product repositories.
 
 ---
 
-## Дочерние репозитории
+## Why this repository
 
-| Репозиторий | Роль |
+Nation-states remain legal and political anchors. In parallel, **global information, economic, and technological layers** emerge that intersect with governance but do not reduce to a single jurisdiction.
+
+**AI Native Gov** describes:
+
+1. **Institutional topology** — how to model parliament, executive power, courts, international coordination, and oversight bodies as *+1 reasoning layers* for agents.
+2. **Cross-layer intersections** — where layers conflict, reinforce, or constrain each other.
+3. **Integration contracts** — how these layers feed [Errorlogy](https://github.com/errorlogy/errorlogy), [politic.bar](https://github.com/errorlogy/politic-bar), and [NAMM](https://github.com/errorlogy/namm-experiments).
+
+Product code **does not live here**. This is the umbrella repository: vision, architecture, institution docs, schemas, agent guidance.
+
+---
+
+## Child repositories
+
+| Repository | Role |
 |-------------|------|
-| [errorlogy/errorlogy](https://github.com/errorlogy/errorlogy) | Онтология ошибок, MAS engine, μ/α/PNO/FPD |
+| [errorlogy/errorlogy](https://github.com/errorlogy/errorlogy) | Error ontology, MAS engine, μ/α/PNO/FPD |
 | [errorlogy/politic-bar](https://github.com/errorlogy/politic-bar) | Politifi assets, error cards, signal/noise streams |
 | [errorlogy/namm-experiments](https://github.com/errorlogy/namm-experiments) | Verification-first math, certificates |
 
-Подробнее: [`REPOS.md`](REPOS.md)
+More detail: [`REPOS.md`](REPOS.md)
 
 ---
 
-## Быстрый старт для агентов
+## Quick start for agents
 
-1. Прочитать [`VISION.md`](VISION.md) и [`ARCHITECTURE.md`](ARCHITECTURE.md)
-2. Изучить institutional framework: [`docs/institutions/OVERVIEW.md`](docs/institutions/OVERVIEW.md)
-3. Для интеграции с продуктами — [`docs/integrations/`](docs/integrations/)
-4. Навигация по репо: [`AGENTS.md`](AGENTS.md)
+1. Read [`VISION.md`](VISION.md) and [`ARCHITECTURE.md`](ARCHITECTURE.md)
+2. Study the institutional framework: [`docs/institutions/OVERVIEW.md`](docs/institutions/OVERVIEW.md)
+3. For product integration — [`docs/integrations/`](docs/integrations/)
+4. Repository navigation: [`AGENTS.md`](AGENTS.md)
 
 ---
 
-## Документация
+## Documentation
 
-| Документ | Содержание |
+| Document | Contents |
 |----------|------------|
-| [`VISION.md`](VISION.md) | Надгосударственный слой, epistemic humility |
+| [`VISION.md`](VISION.md) | Supranational layer, epistemic humility |
 | [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md) | Homo loquens heuristic, AI→AGI→ASI framing, Errorlogy role |
-| [`ARCHITECTURE.md`](ARCHITECTURE.md) | Системная диаграмма, data flows |
-| [`REPOS.md`](REPOS.md) | Карта репозиториев и контракты |
-| [`ROADMAP.md`](ROADMAP.md) | Фазовое развитие |
+| [`ARCHITECTURE.md`](ARCHITECTURE.md) | System diagram, data flows |
+| [`REPOS.md`](REPOS.md) | Repository map and contracts |
+| [`ROADMAP.md`](ROADMAP.md) | Phased development |
 | [`docs/institutions/`](docs/institutions/) | Institutional topology |
 | [`docs/integrations/`](docs/integrations/) | Errorlogy, politic.bar, NAMM |
-| [`docs/examples/trump-macron-cascade.md`](docs/examples/trump-macron-cascade.md) | End-to-end сценарий |
+| [`docs/examples/trump-macron-cascade.md`](docs/examples/trump-macron-cascade.md) | End-to-end scenario |
 
 ---
 
-## Теги (GitHub topics)
+## Tags (GitHub topics)
 
-Рекомендуемые topics для этого и дочерних репо:
+Recommended topics for this and child repos:
 
 `ai-native-gov`, `errorlogy`, `governance-modeling`, `institutional-topology`, `politic-bar`, `namm`
 
 ---
 
-## Лицензия и статус
+## License and status
 
-Research / architecture documentation. Статус: **early concept — active development**.
+Research / architecture documentation. Status: **early concept — active development**.
 
-Связанные проекты: [errorlogy.com](https://errorlogy.com) · [Anthemium](https://anthemium.tech)
+Related projects: [errorlogy.com](https://errorlogy.com) · [Anthemium](https://anthemium.tech)

@@ -93,75 +93,75 @@ Extend schemas here; implement parsers in child repos.
 
 ## Agent Retrospective & Context Rules
 
-Эта секция нужна, чтобы агенты не «съезжали» по контексту при работе над историческими версиями (v0.6 sketches, taxonomy v16 и т.д.) и при переключении между umbrella и child репозиториями.
+This section exists so agents do not drift off context when working with historical versions (v0.6 sketches, taxonomy v16, etc.) and when switching between umbrella and child repositories.
 
-### Мульти-репозитории и ownership (кто хранит какой тип знаний)
+### Multi-repository ownership (who stores which type of knowledge)
 
-AI Native Gov (`ai-native-gov`) — это umbrella / наднациональный слой **institutional topology & contracts**. Любая “продуктовая” реализация (UI/пайплайны/математические движки) живет в child репозиториях и должна подключаться ссылками, а не дублированием.
+AI Native Gov (`ai-native-gov`) is the umbrella / supranational layer for **institutional topology & contracts**. Any "product" implementation (UI, pipelines, math engines) lives in child repositories and should be connected via links, not duplication.
 
-Ориентируйся по типу знания:
+Route by knowledge type:
 
-| Тип знания | Источник (repo) | Что делать |
+| Knowledge type | Source (repo) | What to do |
 |---|---|---|
-| Institutional topology / рамки судов/парламента/интерпола, intersection tensions, checks & balances | `ai-native-gov` | Добавляй/обновляй docs в `docs/institutions/` и TOPOLOGY |
-| Taxonomy v16 и μ/α/PNO/FPD engine math | `errorlogy/errorlogy` | Считай/генерируй в child репо, а в umbrella — только контракты/выводы (например `INSTITUTIONAL_MODEL`) |
-| Error cards, politifi, signal/noise streams, UI-слои | `errorlogy/politic-bar` | Полагайся на schema/интеграционные документы umbrella |
-| Verification-first сертификаты / Protocol v2 / эксперименты | `errorlogy/namm-experiments` | Ставь ссылки на результаты в umbrella, не подменяй verifiable артефакты метафорами |
+| Institutional topology / courts, parliament, interpol framing, intersection tensions, checks & balances | `ai-native-gov` | Add / update docs in `docs/institutions/` and TOPOLOGY |
+| Taxonomy v16 and μ/α/PNO/FPD engine math | `errorlogy/errorlogy` | Compute / generate in the child repo; in the umbrella — contracts / outputs only (e.g. `INSTITUTIONAL_MODEL`) |
+| Error cards, politifi, signal/noise streams, UI layers | `errorlogy/politic-bar` | Rely on umbrella schema / integration documents |
+| Verification-first certificates / Protocol v2 / experiments | `errorlogy/namm-experiments` | Link results in the umbrella; do not replace verifiable artifacts with metaphors |
 
-### Milestones (phase / research-development как “контрольная точка”)
+### Milestones (phase / research-development as checkpoints)
 
-Планируется как последовательность Phase 0 → Phase 5 (см. `ROADMAP.md`):
+Planned as a sequence Phase 0 → Phase 5 (see `ROADMAP.md`):
 
-1. Phase 0 — umbrella foundation: структура, core docs, baseline topology и integration docs
-2. Phase 1 — child repo linkage: проверить фактические API child репозиториев и привести shared schemas в соответствие
-3. Phase 2 — schema contracts: определить и версионировать ingress/egress (signal-envelope, institutional-output, forecast deltas)
-4. Phase 3 — institutional depth: расширение layer’ов (ministry stubs), и “machine-readable” topology рядом с `TOPOLOGY.md`
-5. Phase 4 — pipeline integration: связать umbrella output с ошибко-детекцией/валидируемыми потоками в child репах
-6. Phase 5 — agent automation: PR templates, lightweight validation scripts, playbooks для типовых задач
+1. Phase 0 — umbrella foundation: structure, core docs, baseline topology and integration docs
+2. Phase 1 — child repo linkage: verify actual child repository APIs and align shared schemas
+3. Phase 2 — schema contracts: define and version ingress/egress (signal-envelope, institutional-output, forecast deltas)
+4. Phase 3 — institutional depth: expand layers (ministry stubs) and "machine-readable" topology alongside `TOPOLOGY.md`
+5. Phase 4 — pipeline integration: connect umbrella output to error detection / validatable streams in child repos
+6. Phase 5 — agent automation: PR templates, lightweight validation scripts, playbooks for typical tasks
 
-Правило: если ты находишь “что-то недоделанное”, сначала зафиксируй какой Phase это похоже, и только потом меняй код/документы.
+Rule: if you find "something unfinished", first record which Phase it resembles, and only then change code / documents.
 
-### Когда ты рассуждаешь: контекстный чеклист (уменьшай signal/noise)
+### When reasoning: context checklist (reduce signal/noise)
 
-Перед тем как писать вывод/решение:
+Before writing a conclusion / decision:
 
-1. **Спроси себя “какой слой?”**
-   - `INSTITUTIONAL_MODEL` — umbrella фрейм/модель, не судебный приговор
-   - `OPERATIONAL` — только то, что child-движок/сертификат реально считает или подтверждает
-2. **Сверь версию taxonomy.**
-   Используй taxonomy v16 в umbrella. “v0.6” — только как исторический артефакт для retrospective (и только в соответствующем контексте).
-3. **Выбирай schema место хранения.**
-   - Stubs/контракты: `schemas/` внутри umbrella
-   - Парсеры/адаптеры/конкретные форматы валидации: child репы
-4. **Не дублируй знания.**
-   - Не копируй большие JSON/таксономии в umbrella (пример — `errorlogy_unified_taxonomy_v16.json`).
-   - Не копируй код product pipeline’ов в umbrella.
-5. **Ссылайся на child репы “как на источник”, а не как на ресурс для копипаста.**
-   Для ссылок и ориентира обновляй `docs/integrations/` и `docs/examples/`, а не переносить архитектуру в код umbrella.
+1. **Ask yourself "which layer?"**
+   - `INSTITUTIONAL_MODEL` — umbrella frame / model, not a legal verdict
+   - `OPERATIONAL` — only what the child engine / certificate actually computes or confirms
+2. **Check the taxonomy version.**
+   Use taxonomy v16 in the umbrella. "v0.6" — only as a historical artifact for retrospective (and only in the appropriate context).
+3. **Choose schema storage location.**
+   - Stubs / contracts: `schemas/` inside the umbrella
+   - Parsers / adapters / concrete validation formats: child repos
+4. **Do not duplicate knowledge.**
+   - Do not copy large JSON / taxonomies into the umbrella (example — `errorlogy_unified_taxonomy_v16.json`).
+   - Do not copy product pipeline code into the umbrella.
+5. **Reference child repos "as sources", not as copy-paste resources.**
+   For links and orientation, update `docs/integrations/` and `docs/examples/` rather than moving architecture into umbrella code.
 
-### Retrospective: как смотреть назад и переносить инсайты
+### Retrospective: how to look back and transfer insights
 
-1. **Найди “точку сравнения”.**
-   Обычно это миграции/наброски: `v0.6 sketch (politic-bar)` → taxonomy v16 (см. `docs/integrations/POLITIC_BAR.md` и `docs/integrations/ERRORLOGY.md`).
-2. **Сохрани инварианты, а не черновики.**
-   - Переноси в umbrella: уроки по ownership, схеме, границам ответственности, проблемам интерпретации.
-   - Не переноси в umbrella: engine math, UI реализацию, “новые версии” таксономии.
-3. **Собирай “diff notes” в docs.**
-   Лучше добавить пару абзацев в `docs/examples/` или `docs/integrations/`, чем менять интерпретацию в середине разработки.
-4. **Проверь, что insight доходит до нужной Phase.**
-   Если insight про контракт — это Phase 2. Если про routing/ownership — Phase 1/4.
-5. **Сохраняй эпистемическую скромность.**
-   Retrospective — для обучения агенту, а не для “повторного утверждения” юридических/моральных вердиктов.
+1. **Find the "comparison point".**
+   Usually migrations / sketches: `v0.6 sketch (politic-bar)` → taxonomy v16 (see `docs/integrations/POLITIC_BAR.md` and `docs/integrations/ERRORLOGY.md`).
+2. **Preserve invariants, not drafts.**
+   - Transfer to umbrella: lessons on ownership, schema, responsibility boundaries, interpretation issues.
+   - Do not transfer to umbrella: engine math, UI implementation, "new versions" of taxonomy.
+3. **Collect "diff notes" in docs.**
+   Better to add a couple of paragraphs in `docs/examples/` or `docs/integrations/` than to change interpretation mid-development.
+4. **Verify the insight reaches the right Phase.**
+   If the insight is about contracts — that is Phase 2. If about routing / ownership — Phase 1/4.
+5. **Preserve epistemic humility.**
+   Retrospective is for agent learning, not for "re-asserting" legal / moral verdicts.
 
-### Common failure modes (частые ошибки)
+### Common failure modes
 
-- Смешивание taxonomy версий: v0.6 элементы трактуются как часть taxonomy v16 “по умолчанию”.
-- Употребление umbrella как замены “правительств”: umbrella — это layer моделей/контрактов, а не суверенная замена институтам в реальном мире.
-- Копирование кода из child репозиториев в umbrella вместо контрактных ссылок.
-- Auto-merge politic-bar v0.6 taxonomy с v16 (запрещено — см. `Do not` выше).
-- Попытка “встроить” verification (NAMM сертификаты) в umbrella как юридический приговор вместо маркировки `COMPUTATIONAL_EVIDENCE`.
+- Mixing taxonomy versions: v0.6 elements treated as part of taxonomy v16 "by default".
+- Using the umbrella as a replacement for "governments": the umbrella is a layer of models / contracts, not a sovereign replacement for real-world institutions.
+- Copying code from child repositories into the umbrella instead of contract links.
+- Auto-merge politic-bar v0.6 taxonomy with v16 (forbidden — see `Do not` above).
+- Attempting to "embed" verification (NAMM certificates) in the umbrella as a legal verdict instead of labeling `COMPUTATIONAL_EVIDENCE`.
 
-### Ссылки (child repos / verification sources)
+### Links (child repos / verification sources)
 
 - umbrella: https://github.com/errorlogy/ai-native-gov
 - errorlogy: https://github.com/errorlogy/errorlogy
@@ -169,7 +169,7 @@ AI Native Gov (`ai-native-gov`) — это umbrella / наднациональн
 - errorlogy.com: https://errorlogy.com
 - NAMM: https://github.com/errorlogy/namm-experiments
 
-См. также `RETROSPECTIVE.md` (чеклист-версия инструкции).
+See also `RETROSPECTIVE.md` (checklist version of these instructions).
 
 ---
 ## Local clones (Windows)

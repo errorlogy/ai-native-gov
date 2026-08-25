@@ -181,7 +181,7 @@ Official APIs (prefer over MCP wrappers when building production fetchers):
 | RSS feeds | `errorlogy-mas/data/ingest_feeds.json` (BBC Politics, gov.uk, NASA, GAO) |
 | CLI | `scripts/fetch_gov_media.py` (`--us-gov-only`, `--rss-only`) |
 | API | `POST /api/ingest/fetch-all`, `fetch-us-gov` |
-| Obsidian notes | `Ingest — info stream layer`, `Data Sources — обзор`, `Data Sources — environments` |
+| Obsidian notes | `Ingest — info stream layer`, `Data Sources — overview`, `Data Sources — environments` |
 | Provenance | US fetchers adapted from [democracy-monitor](https://github.com/agile-explorations/democracy-monitor) (**collection only** — no DM concern-scoring into μ) |
 | Roadmap gap | H2 notes call for **EU/UK analogues** (NAO, EUR-Lex RSS) — not yet first-class fetchers |
 

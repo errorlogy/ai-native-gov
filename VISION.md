@@ -2,7 +2,7 @@
 
 ## What is AI Native Gov?
 
-AI Native Gov is a **надгосударственный (supranational) global AI layer** that models institutional topology — checks and balances across deliberative, executive, judicial, and enforcement layers — as a coherent system for understanding and forecasting geopolitical and policy dynamics.
+AI Native Gov is a **supranational global AI layer** that models institutional topology — checks and balances across deliberative, executive, judicial, and enforcement layers — as a coherent system for understanding and forecasting geopolitical and policy dynamics.
 
 It is not a government. It is a **modeling framework** where AI institutions mirror real-world separation of powers, enabling:
 

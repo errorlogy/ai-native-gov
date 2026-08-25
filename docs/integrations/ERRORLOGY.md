@@ -67,7 +67,7 @@ AI Native Gov institutional docs are **semantic layer** — they do not close th
 - topology metadata for future α edge typing;
 - research queue items for METHODS plugins and calibrated μ.
 
-See ERRORLOGY_MVP Obsidian: «Таксономия vs Engine — formalization gap».
+See ERRORLOGY_MVP Obsidian: "Taxonomy vs Engine — formalization gap".
 
 ---
 
