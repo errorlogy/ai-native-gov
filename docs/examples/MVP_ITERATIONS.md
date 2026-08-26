@@ -106,20 +106,20 @@ Vite proxies `/api` → `:8000`. Topology map + institutional event feed = **one
 
 | Target | Action |
 |--------|--------|
-| `src/pages/TopologyPage.tsx` (or `InstitutionsPage.tsx`) | **New** — two-panel: static EU/national layer graph + live event list |
-| `src/App.tsx` / `Layout.tsx` / `lib/ru.ts` | Route `/topology` + nav entry |
-| `src/lib/api.ts` + `types.ts` | `crossLayerPost`, `crossLayerList`, `crossLayerLayers` |
-| Map data | Hardcode or fetch static JSON derived from umbrella `EU_TOPOLOGY` / layer IDs — **no** runtime import from umbrella git path required if a small `public/eu-topology.json` is checked into gui-v2 |
+| `src/pages/LayersPage.tsx` | **Done** — two-panel: static EU/national layer graph + live event list |
+| `src/App.tsx` / `Layout.tsx` / `lib/en.ts` | **Done** — route `/layers` + nav entry |
+| `src/lib/api.ts` + `types.ts` | **Done** — `crossLayerPost`, `crossLayerList`, `crossLayerLayers` |
+| Map data | **Done** — `public/eu-topology.json` checked into gui-v2 |
 
 **Feasibility:** 1–2 iterations is realistic if the map is **schematic** (nodes = layer IDs / member ISO codes, highlight on `activated_layers`), not a full GIS product. Reuse poll interval pattern from `DataStreamsPage` (~12s).
 
 **Done when:**
 
-- [ ] `/topology` loads without auth wall
-- [ ] Map shows EU supranational nodes + at least a subset of national instances (or “national-instance” generic + sample ISO set)
-- [ ] Event feed shows `GET /api/events/cross-layer`; selecting an event highlights `activated_layers` on the map
-- [ ] Manual “activate sample event” button posts a fixture envelope (optional but useful)
-- [ ] No Electron packaging; no politic.bar iframe
+- [x] `/layers` loads without auth wall
+- [x] Map shows EU supranational nodes + at least a subset of national instances (or “national-instance” generic + sample ISO set)
+- [x] Event feed shows `GET /api/events/cross-layer`; selecting an event highlights `activated_layers` on the map
+- [x] Manual “activate sample event” button posts a fixture envelope (optional but useful)
+- [x] No Electron packaging; no politic.bar iframe
 
 ---
 
@@ -131,17 +131,33 @@ Vite proxies `/api` → `:8000`. Topology map + institutional event feed = **one
 
 | Target | Action |
 |--------|--------|
-| `requirements.txt` | Add `ccxt` (pin a known stable minor) |
-| `mas/adapters/fin_crypto_ccxt.py` (or `mas/ingest/fetchers/ccxt_markets.py`) | Public ticker/OHLCV only → FIN_CRYPTO normalized record → map to `fin_crypto_market_snapshot` |
-| `api/routers/cross_layer.py` or thin `api/routers/fin_crypto.py` | `POST /api/events/fin-crypto/snapshot` (symbols + optional exchange) → activate stub |
-| Config | Exchange list + symbols via env; **no API keys** for public market path |
+| `requirements.txt` | **Done** — `ccxt>=4.4.0,<5` |
+| `mas/adapters/fin_crypto_ccxt.py` | **Done** — public ticker → FIN_CRYPTO normalized record → `fin_crypto_market_snapshot` |
+| `api/routers/cross_layer.py` | **Done** — `POST /api/events/fin-crypto/snapshot` (symbols + optional exchange) → activate stub + persist |
+| Config | Exchange/symbol via query params or env (`FIN_CRYPTO_CCXT_*`); **no API keys** for public market path |
 
 **Done when:**
 
-- [ ] One public call (e.g. Binance or Kraken ticker for `BTC/USDT`) returns normalized record + cross-layer envelope with layers from FIN_CRYPTO table (`executive`, `central-bank-analog`, `regulatory-agency`) and `epistemic_label=OPERATIONAL`
-- [ ] Provider failure emits `fin_crypto_data_unavailable` (or equivalent quality flags) without crashing the API
-- [ ] No order placement / balance / private endpoints exposed
-- [ ] Umbrella FIN_CRYPTO doc gains a one-line note: “FastAPI MVP uses CCXT **library**; TradingView MCP remains agent/MCP path”
+- [x] One public call (e.g. Binance or Kraken ticker for `BTC/USDT`) returns normalized record + cross-layer envelope with layers from FIN_CRYPTO table (`executive`, `central-bank-analog`, `regulatory-agency`) and `epistemic_label=OPERATIONAL`
+- [x] Provider failure emits `fin_crypto_data_unavailable` (or equivalent quality flags) without crashing the API
+- [x] No order placement / balance / private endpoints exposed
+- [x] Umbrella FIN_CRYPTO doc gains a one-line note: “FastAPI MVP uses CCXT **library**; TradingView MCP remains agent/MCP path”
+
+---
+
+## Phase A — Memetic contracts (umbrella + vendored sync)
+
+Shipped alongside iter 3 (contracts only — no memetic graph runtime yet).
+
+| Target | Path | Status |
+|--------|------|--------|
+| Stream envelope schema | `schemas/signal-envelope.json` | **Done** — `evidence_grade`, `memetic_metrics`, `epistemic_label` |
+| Cross-layer memetic types | `schemas/cross-layer-event.json` | **Done** — six memetic `event_type` examples |
+| Integration doc | `docs/integrations/MEMETIC_DYNAMICS.md` | **Done** — 7 contours, repo ownership, HM/SOCIAL_MEDIA refs |
+| Runtime routing | `errorlogy-mas/mas/institutional/activation.py` | **Done** — prefix table (`memetic_market_` before `memetic_`) |
+| Vendored copies | `errorlogy-mas/schemas/` | **Done** — sync with umbrella |
+
+See [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md) for Phase B/C contours (graph, half-life indexer, sociome).
 
 ---
 
@@ -149,7 +165,7 @@ Vite proxies `/api` → `:8000`. Topology map + institutional event feed = **one
 
 | Keep here | Do not put here |
 |-----------|-----------------|
-| `schemas/cross-layer-event.json`, `institution-layer-id.json` | FastAPI apps, adapters, SQLite |
+| `schemas/cross-layer-event.json`, `institution-layer-id.json`, `signal-envelope.json` | FastAPI apps, adapters, SQLite |
 | `docs/integrations/FIN_CRYPTO_MARKETS.md`, `GOV_DATA_SOURCES.md` | MCP server processes as “product runtime” |
 | `docs/institutions/EU_*.md`, `TOPOLOGY.md`, `GLOBAL_AI_GOVERNANCE.md` | gui-v2 / Electron binaries |
 | This file (`docs/examples/MVP_ITERATIONS.md`) | Copied `errorlogy_unified_taxonomy_v16.json` |
@@ -168,7 +184,7 @@ ARCHITECTURE remains: umbrella = topology + contracts; Errorlogy = runtime.
 - Exchange **execution** / private account reads
 - Full 27-state interactive GIS; ASEAN/AU/Mercosur blocs
 - Engine math changes (μ/α/PNO/FPD); taxonomy v0.6 ↔ v16 merge
-- `schemas/signal-envelope.json` full Phase 2 suite (optional follow-on; activate stub can stay on `cross-layer-event` alone)
+- `schemas/signal-envelope.json` full Phase 2 suite | **Phase A stub shipped** — see [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md); graph runtime is Phase B |
 
 ---
 
@@ -199,10 +215,13 @@ TradingView MCP stays the preferred **agent/MCP** exploration path in docs; defe
 Schema-valid activate + list events + layers enum; stub only; pytest or curl green.
 
 ### Iteration 2 done when…
-`/topology` map + event feed wired to institutions API; schematic EU/national highlight works.
+`/layers` map + event feed wired to institutions API; schematic EU/national highlight works.
 
 ### Iteration 3 done when…
 Public CCXT snapshot → normalized record → institutional envelope `OPERATIONAL`; failures soft-fail; no trading surface.
+
+### Phase A done when…
+`signal-envelope.json` + memetic cross-layer types documented; activation routing synced in errorlogy-mas.
 
 ---
 
@@ -222,6 +241,8 @@ Public CCXT snapshot → normalized record → institutional envelope `OPERATION
 - [`ROADMAP.md`](../../ROADMAP.md)
 - [`ARCHITECTURE.md`](../../ARCHITECTURE.md)
 - [`schemas/cross-layer-event.json`](../../schemas/cross-layer-event.json)
+- [`schemas/signal-envelope.json`](../../schemas/signal-envelope.json)
 - [`docs/integrations/FIN_CRYPTO_MARKETS.md`](../integrations/FIN_CRYPTO_MARKETS.md)
+- [`docs/integrations/MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md)
 - [`docs/integrations/CONNECTION_GUIDE.md`](../integrations/CONNECTION_GUIDE.md)
 - Child: `ERRORLOGY_MVP/errorlogy-mas/api/main.py`, `errorlogy-gui-v2/src/App.tsx`

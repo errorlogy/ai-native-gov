@@ -17,6 +17,10 @@ In the AI Native Gov ecosystem, this layer is an `INSTITUTIONAL_MODEL` adapter c
 
 Only downstream certified artifacts may be labeled `COMPUTATIONAL_EVIDENCE` (via NAMM certificates). Otherwise, cross-layer envelopes remain `OPERATIONAL`.
 
+**FastAPI MVP (iter 3):** public market snapshots use the in-process **CCXT Python library** (`errorlogy-mas/mas/adapters/fin_crypto_ccxt.py`, `POST /api/events/fin-crypto/snapshot`). TradingView MCP and community CCXT **MCP** servers remain the preferred **agent/MCP** exploration path — not embedded in FastAPI.
+
+**Memetic ↔ market join (Phase A contract):** `memetic_market_coupling_snapshot` cross-layer events (see [`MEMETIC_DYNAMICS.md`](MEMETIC_DYNAMICS.md)) join narrative velocity from `signal-envelope.json` stream items with `fin_crypto_market_snapshot` / `fin_crypto_sentiment_momentum` records on a shared `story_id` or instrument symbol. Join runtime is Phase B; iter 3 ships market snapshots only.
+
 ## What belongs in this layer (signal families)
 Adapters under this layer may ingest (or reference) signals from:
 
@@ -247,4 +251,5 @@ This layer produces normalized operational inputs that later institutional frami
 - Cursor connection playbook: [`CONNECTION_GUIDE.md`](CONNECTION_GUIDE.md)
 - [`ERRORLOGY.md`](ERRORLOGY.md)
 - [`NAMM.md`](NAMM.md)
+- [`MEMETIC_DYNAMICS.md`](MEMETIC_DYNAMICS.md) — Phase A memetic contracts + `memetic_market_coupling_snapshot` join
 
