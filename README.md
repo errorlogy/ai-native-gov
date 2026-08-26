@@ -7,7 +7,7 @@
 
 **Homepage:** [anthemium.tech](https://anthemium.tech) · **Engine & ontology:** [errorlogy.com](https://errorlogy.com)
 
-Open framework to model AI-native government as institutional reasoning layers — parliament, judiciary, transnational ops — with human oversight dials. **Not sovereignty claims.** (`INSTITUTIONAL_MODEL`)
+AI Native Government research: supranational AI governance institution modeling, with national AI-native gov stacks in scope — institutional reasoning layers — parliament, judiciary, transnational ops — with human oversight dials. **Not sovereignty claims.** (`INSTITUTIONAL_MODEL`)
 
 The umbrella covers an EU 27-state simulator, symbolic identity layer, fin-crypto and gov-data integration contracts, and routes product work to the child repositories below.
 
