@@ -74,7 +74,7 @@ Topology defines **how institutional layers intersect** — which layers can con
 | Agentic economics → Transnational Ops | Cross-border on-chain risk routes to coordination layer |
 | FIN_CRYPTO ingress → Monetary stack | Normalized market events activate central-bank, treasury, regulatory, agentic layers per [FIN_CRYPTO_MARKETS.md](../integrations/FIN_CRYPTO_MARKETS.md) |
 | National instance → Regional bloc | Treaty collisions and delegate aggregation (EU: [EU_TOPOLOGY.md](EU_TOPOLOGY.md)) |
-| Symbolic-visual ↔ discourse-sacred-memetic | Sacred narrative forks bind to symbolic carriers; memetic half-life updates carrier registry ([SYMBOLIC_SACRED_DYNAMICS.md](SYMBOLIC_SACRED_DYNAMICS.md), [SYMBOLIC_VISUAL_LAYER.md](../integrations/SYMBOLIC_VISUAL_LAYER.md)) |
+| Symbolic-visual ↔ ISA contour | Sacred narrative forks bind to symbolic carriers; memetic half-life updates carrier registry ([ISA.md](ISA.md), [SYMBOLIC_VISUAL_LAYER.md](../integrations/SYMBOLIC_VISUAL_LAYER.md)) |
 
 ## Checks and balances
 
@@ -100,7 +100,7 @@ Topology defines **how institutional layers intersect** — which layers can con
 5. **Market / crypto snapshot** → Central bank analog + Regulatory agency + Treasury analog; Executive for stability context ([FIN_CRYPTO_MARKETS.md](../integrations/FIN_CRYPTO_MARKETS.md))
 6. **On-chain risk / DeFi stress** → Agentic economics + Regulatory agency + Judiciary; Transnational Ops if cross-border ([AI_MONETARY_SYSTEM.md](AI_MONETARY_SYSTEM.md))
 7. **Fiscal / macro open data** → Treasury analog + Finance Ministry + optional `bloc:eu` coordination ([GOV_DATA_SOURCES.md](../integrations/GOV_DATA_SOURCES.md))
-8. **Sacred-discourse / symbolic-sacred fork** → Symbolic-visual + Parliament + Party MAS; optional ISA consensus crosswalk ([SYMBOLIC_SACRED_DYNAMICS.md](SYMBOLIC_SACRED_DYNAMICS.md), [MEMETIC_DYNAMICS.md](../integrations/MEMETIC_DYNAMICS.md))
+8. **Sacred-discourse / ISA contour fork** → Symbolic-visual + Parliament + Party MAS; optional ISA consensus crosswalk ([ISA.md](ISA.md), [MEMETIC_DYNAMICS.md](../integrations/MEMETIC_DYNAMICS.md))
 
 ## Topology evolution
 

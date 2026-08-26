@@ -18,7 +18,7 @@ At **world scale**, the simulator stacks three tiers: **national instances** (pe
 | [Interpol](interpol.md) | Cross-border coordination | Jurisdiction bridges, enforcement posture |
 | [AI Monetary System](AI_MONETARY_SYSTEM.md) | Central bank, treasury, regulatory, agentic economics | Monetary stability signals, fiscal capacity, market oversight posture |
 | [AI National Instance](AI_NATIONAL_INSTANCE.md) | Per-country full stack (`state:{iso2}`) | National charter through transnational interface |
-| [Symbolic Sacred Dynamics](SYMBOLIC_SACRED_DYNAMICS.md) | Sacred-discourse memetic contour + consensus topology crosswalk (private research linked) | Narrative fork routing, symbolic-sacred carrier bind (`INSTITUTIONAL_MODEL`) |
+| [ISA 2.0](ISA.md) | Institutional–Symbolic Alignment — memetic contour + ASI \| mirror \| ISA consensus crosswalk (private research linked) | Narrative fork routing, symbolic carrier bind (`INSTITUTIONAL_MODEL`) |
 
 ## Ministries
 
@@ -97,6 +97,6 @@ The **AI Charter** ([CHARTER.md](CHARTER.md)) is the hard-stop layer above all o
 - [AI_MONETARY_SYSTEM.md](AI_MONETARY_SYSTEM.md) — central bank, treasury, regulatory, agentic economics
 - [AI_NATIONAL_INSTANCE.md](AI_NATIONAL_INSTANCE.md) — per-country institutional stack template
 - [TOPOLOGY.md](TOPOLOGY.md) — layer intersections
-- [SYMBOLIC_SACRED_DYNAMICS.md](SYMBOLIC_SACRED_DYNAMICS.md) — sacred-discourse stub (links private research repo)
+- [ISA.md](ISA.md) — Institutional–Symbolic Alignment (links private research repo)
 - [ARCHITECTURE.md](../ARCHITECTURE.md) — system architecture
 - Integrations: [ERRORLOGY.md](../integrations/ERRORLOGY.md), [POLITIC_BAR.md](../integrations/POLITIC_BAR.md)
