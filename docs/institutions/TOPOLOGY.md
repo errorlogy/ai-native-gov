@@ -67,6 +67,13 @@ Topology defines **how institutional layers intersect** — which layers can con
 | AI PM → Executive | Cabinet intent becomes action likelihood |
 | Human oversight → all AI slots | Veto and autonomy dial rollback |
 | Charter/Legal → all layers | Procedural validity constraints |
+| Central bank analog → Treasury analog | Monetary stability signals constrain fiscal headroom hypotheses |
+| Treasury analog → Finance Ministry | Fiscal capacity caps minister `branch_likelihood` |
+| Regulatory agency → Judiciary | Market integrity hypotheses become dispute surfaces (not verdicts) |
+| Agentic economics → Central bank / Regulatory | On-chain liquidity and platform context feed monetary and oversight layers |
+| Agentic economics → Transnational Ops | Cross-border on-chain risk routes to coordination layer |
+| FIN_CRYPTO ingress → Monetary stack | Normalized market events activate central-bank, treasury, regulatory, agentic layers per [FIN_CRYPTO_MARKETS.md](../integrations/FIN_CRYPTO_MARKETS.md) |
+| National instance → Regional bloc | Treaty collisions and delegate aggregation (EU: [EU_TOPOLOGY.md](EU_TOPOLOGY.md)) |
 
 ## Checks and balances
 
@@ -79,6 +86,9 @@ Topology defines **how institutional layers intersect** — which layers can con
 | AI Speaker vs Party MAS | Speaker procedural-only; parties hold substantive positions |
 | Human oversight vs AI agents | Veto enabled per role; autonomy dial rollback |
 | Charter/Legal vs Parliament | Invalid procedure blocks downstream synthesis |
+| Central bank analog vs Executive | Monetary independence modeled as constraint on executive fiscal pressure |
+| Regulatory agency vs Agentic economics | Oversight posture vs on-chain coordination hypotheses (peer tension) |
+| Treasury vs Finance Ministry | Fiscal capacity constrains minister portfolio without PM override |
 
 ## Signal routing rules
 
@@ -86,6 +96,9 @@ Topology defines **how institutional layers intersect** — which layers can con
 2. **Legal/regulatory** → Judiciary + Parliament; Executive for implementation
 3. **Sanctions/trade** → Ministries (finance) + Executive + Interpol
 4. **Military/security** → Ministries (defense) + Executive + Interpol
+5. **Market / crypto snapshot** → Central bank analog + Regulatory agency + Treasury analog; Executive for stability context ([FIN_CRYPTO_MARKETS.md](../integrations/FIN_CRYPTO_MARKETS.md))
+6. **On-chain risk / DeFi stress** → Agentic economics + Regulatory agency + Judiciary; Transnational Ops if cross-border ([AI_MONETARY_SYSTEM.md](AI_MONETARY_SYSTEM.md))
+7. **Fiscal / macro open data** → Treasury analog + Finance Ministry + optional `bloc:eu` coordination ([GOV_DATA_SOURCES.md](../integrations/GOV_DATA_SOURCES.md))
 
 ## Topology evolution
 

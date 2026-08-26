@@ -40,7 +40,7 @@ Adapters normalize their raw outputs into a shared set of event types. Example e
 - `fin_crypto_data_unavailable`: provider failure, rate limit, missing fields (no values)
 
 ## Routing targets inside the institutional simulator
-The institutional framer maps each normalized event to a set of activated institution layers. Labels are epistemic labels for the eventual cross-layer envelope:
+The institutional framer maps each normalized event to a set of activated institution layers. Layer semantics for monetary, treasury, regulatory, and agentic economics roles: [AI_MONETARY_SYSTEM.md](../institutions/AI_MONETARY_SYSTEM.md). Labels are epistemic labels for the eventual cross-layer envelope:
 
 - `OPERATIONAL`: default for adapter-derived signals and computed indicators without NAMM certificate linking
 - `COMPUTATIONAL_EVIDENCE`: only when a linked `certificate_ref` (NAMM `certificate.json`) is present

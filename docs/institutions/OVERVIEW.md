@@ -16,6 +16,8 @@ At **world scale**, the simulator stacks three tiers: **national instances** (pe
 | [Executive](executive.md) | Abstract policy execution layer | Implementation paths, executive orders (modeled) |
 | [Judiciary](judiciary.md) | Dispute resolution, precedent | Rulings, legitimacy constraints |
 | [Interpol](interpol.md) | Cross-border coordination | Jurisdiction bridges, enforcement posture |
+| [AI Monetary System](AI_MONETARY_SYSTEM.md) | Central bank, treasury, regulatory, agentic economics | Monetary stability signals, fiscal capacity, market oversight posture |
+| [AI National Instance](AI_NATIONAL_INSTANCE.md) | Per-country full stack (`state:{iso2}`) | National charter through transnational interface |
 
 ## Ministries
 
@@ -91,6 +93,8 @@ The **AI Charter** ([CHARTER.md](CHARTER.md)) is the hard-stop layer above all o
 - [AI_HUMAN_OVERSIGHT.md](AI_HUMAN_OVERSIGHT.md) — veto, appeal, audit, dead man's switch
 - [AI_CABINET.md](AI_CABINET.md) — PM coordination, cabinet ensemble, decision flow
 - [AI_MINISTRIES.md](AI_MINISTRIES.md) — domain executive agents
+- [AI_MONETARY_SYSTEM.md](AI_MONETARY_SYSTEM.md) — central bank, treasury, regulatory, agentic economics
+- [AI_NATIONAL_INSTANCE.md](AI_NATIONAL_INSTANCE.md) — per-country institutional stack template
 - [TOPOLOGY.md](TOPOLOGY.md) — layer intersections
 - [ARCHITECTURE.md](../ARCHITECTURE.md) — system architecture
 - Integrations: [ERRORLOGY.md](../integrations/ERRORLOGY.md), [POLITIC_BAR.md](../integrations/POLITIC_BAR.md)

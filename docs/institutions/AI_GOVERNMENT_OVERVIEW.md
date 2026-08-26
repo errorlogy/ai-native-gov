@@ -79,7 +79,10 @@ For implementation detail on each layer, follow the cross-links.
 | Party Coalition MAS | [AI_PARLIAMENT.md](AI_PARLIAMENT.md) | `institution:party-coalition` | Multi-agent coalition synthesis |
 | AI Ministers | [AI_PARLIAMENT.md](AI_PARLIAMENT.md) | `institution:ai-minister` | Domain portfolio posture |
 | AI PM | [AI_PARLIAMENT.md](AI_PARLIAMENT.md) | `institution:ai-pm` | Cabinet coordination, executive intent |
-| Ministries (domain) | *(stubs planned)* | `institution:ministry-*` | Sector signals: defense, finance, climate, tech |
+| Ministries (domain) | [AI_MINISTRIES.md](AI_MINISTRIES.md) | `institution:minister-*` | Sector signals: finance, justice, interior, foreign affairs, science/tech |
+| AI Cabinet | [AI_CABINET.md](AI_CABINET.md) | `institution:ai-pm`, `institution:cabinet-mas` | PM coordination, cabinet ensemble, inter-ministry synthesis |
+| AI Monetary System | [AI_MONETARY_SYSTEM.md](AI_MONETARY_SYSTEM.md) | `institution:central-bank-analog`, `treasury-analog`, `regulatory-agency`, `agentic-economics` | Monetary/fiscal/market/agentic coordination signals |
+| AI National Instance | [AI_NATIONAL_INSTANCE.md](AI_NATIONAL_INSTANCE.md) | `institution:national-instance`, `state:{iso2}` | Per-country full stack template |
 | AI Cabinet / Executive | [executive.md](executive.md) | `institution:executive` | Action likelihood, policy execution paths |
 | AI Judiciary | [AI_JUDICIARY.md](AI_JUDICIARY.md) | `institution:ai-presiding-judge` / `institution:ai-judicial-panel` | Procedural constraint, due process, constraint outputs |
 | Transnational Ops | [AI_TRANSNATIONAL_OPS.md](AI_TRANSNATIONAL_OPS.md) | `institution:transnational-ops` | Cross-border coordination, routing, audit trail |
@@ -230,8 +233,10 @@ Integration contracts: [ERRORLOGY.md](../integrations/ERRORLOGY.md), [POLITIC_BA
 | [interpol.md](interpol.md) | Active | Abstract cross-border coordination layer |
 | [OVERVIEW.md](OVERVIEW.md) | Active | Institutional map (short reference) |
 | [TOPOLOGY.md](TOPOLOGY.md) | Active | Layer intersection matrix |
-| AI_CABINET.md | Planned | Cabinet MAS detail |
-| AI_MINISTRIES.md | Planned | Domain ministry stubs (defense, finance, climate, tech) |
+| [AI_CABINET.md](AI_CABINET.md) | Active | PM coordination, cabinet ensemble, decision flow |
+| [AI_MINISTRIES.md](AI_MINISTRIES.md) | Active | Domain executive agents (finance, justice, interior, foreign affairs, science/tech) |
+| [AI_MONETARY_SYSTEM.md](AI_MONETARY_SYSTEM.md) | Active | Central bank, treasury, regulatory, agentic/blockchain economics |
+| [AI_NATIONAL_INSTANCE.md](AI_NATIONAL_INSTANCE.md) | Active | Per-country stack template (`state:{iso2}`) |
 
 ---
 
