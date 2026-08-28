@@ -34,6 +34,8 @@ Institutional relevance for AI Native Gov:
 
 Full theme map and sensitive-content policy: private [`GAME2_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/GAME2_INDEX.md).
 
+**Corpus artifact:** [`POSLEDNIY_ZAVET.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) — institutional edition of New Testament 2.0 axioms and GAME2 closure (`INSTITUTIONAL_MODEL` v0.1). English companion: [`POSLEDNIY_ZAVET.en.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.en.md). Full text stays in isa-2.0; umbrella holds pointer only.
+
 ---
 
 ## ISA 2.0 triad crosswalk

@@ -45,6 +45,7 @@ Key docs in that repo:
 - [`docs/CORPUS/DODECA12_EIA_v0_3.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/DODECA12_EIA_v0_3.md) — DODECA-12 v0.3 corpus index (`COMPUTATIONAL_EVIDENCE` validation summary; raw bundle local at `C:\Users\Public\ISA_2_0\docs\CORPUS\raw\`)
 - [`docs/JUNG_SYMBOLIC_LENS.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/JUNG_SYMBOLIC_LENS.md) — Homo symbolic research frame
 - [`docs/CORPUS/GAME2_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/GAME2_INDEX.md) — REALITY_GAME / ERG corpus index (private)
+- [`docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) — Last Testament institutional artifact v0.1 (`INSTITUTIONAL_MODEL`)
 
 Umbrella bridge: [GAME2_ISA_BRIDGE.md](../integrations/GAME2_ISA_BRIDGE.md)
 
