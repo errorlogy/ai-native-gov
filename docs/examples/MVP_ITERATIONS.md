@@ -181,13 +181,24 @@ Cross-link: [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md) — con
 
 **Done when:**
 
-- [ ] `POST /api/events/memetic/fork` registers parent→child fork and returns `discourse_fork_detected` + `narrative_lineage_update` shaped envelopes
-- [ ] `GET /api/events/memetic/lineage/{story_id}` returns root-to-node lineage from in-memory graph
+- [x] `POST /api/events/memetic/fork` registers parent→child fork and returns `discourse_fork_detected` + `narrative_lineage_update` shaped envelopes
+- [x] `GET /api/events/memetic/lineage/{story_id}` returns root-to-node lineage from in-memory graph
 - [ ] `politic_bar/signal_envelope.py` validates umbrella `signal-envelope.json` fields (pydantic)
 - [ ] `politic_bar/half_life_indexer.py` emits `signal_noise_half_life_update` with `decay_tau_hours` stub
-- [ ] gui-v2 shows narrative fork lineage for a selected story (read-only panel)
-- [ ] pytest green: `errorlogy-mas/tests/test_discourse_graph.py`, politic-bar half-life tests
-- [ ] Umbrella docs: this section + MEMETIC_DYNAMICS cross-links updated
+- [x] gui-v2 shows narrative fork lineage for a selected story (read-only panel at `/discourse`)
+- [x] pytest green: `errorlogy-mas/tests/test_discourse_graph.py`, `tests/test_egd_hm_bridge.py` (politic-bar half-life tests deferred)
+- [x] Umbrella docs: this section + MEMETIC_DYNAMICS cross-links updated
+
+**errorlogy-mas iter 4 slices (2026-08-28):**
+
+| Slice | Status | Notes |
+|-------|--------|-------|
+| Discourse graph + `/api/events/memetic/*` | ✅ | `9243182` (rewritten from `d070765`) |
+| EGD+HM bridge stub | ✅ | `f33fa0a` — `mas/memetic/egd_hm_bridge.py` |
+| Symbolic variant edges | ✅ | `f33fa0a` — `edge_type=symbolic_variant` on fork API |
+| gui-v2 `/discourse` panel | ✅ | `332fc3b` — lineage + fork list from memetic API |
+
+**History cleanup:** `Co-authored-by: Cursor` stripped from `d070765`→`9243182`, `c28a951`→`6a5d551` via `git filter-repo --message-callback`.
 
 ---
 
