@@ -183,10 +183,10 @@ Cross-link: [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md) — con
 
 - [x] `POST /api/events/memetic/fork` registers parent→child fork and returns `discourse_fork_detected` + `narrative_lineage_update` shaped envelopes
 - [x] `GET /api/events/memetic/lineage/{story_id}` returns root-to-node lineage from in-memory graph
-- [ ] `politic_bar/signal_envelope.py` validates umbrella `signal-envelope.json` fields (pydantic)
-- [ ] `politic_bar/half_life_indexer.py` emits `signal_noise_half_life_update` with `decay_tau_hours` stub
+- [x] `politic_bar/signal_envelope.py` validates umbrella `signal-envelope.json` fields (pydantic)
+- [x] `politic_bar/half_life_indexer.py` emits `signal_noise_half_life_update` with `decay_tau_hours` stub
 - [x] gui-v2 shows narrative fork lineage for a selected story (read-only panel at `/discourse`)
-- [x] pytest green: `errorlogy-mas/tests/test_discourse_graph.py`, `tests/test_egd_hm_bridge.py` (politic-bar half-life tests deferred)
+- [x] pytest green: `errorlogy-mas/tests/test_discourse_graph.py`, `errorlogy-mas/tests/test_egd_hm_bridge.py` (mas); `politic-bar/tests/test_half_life_indexer.py` (4 tests, politic-bar)
 - [x] Umbrella docs: this section + MEMETIC_DYNAMICS cross-links updated
 
 **errorlogy-mas iter 4 slices (2026-08-28):**
@@ -198,6 +198,14 @@ Cross-link: [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md) — con
 | Symbolic variant edges | ✅ | `f33fa0a` — `edge_type=symbolic_variant` on fork API |
 | gui-v2 `/discourse` panel | ✅ | `332fc3b` — lineage + fork list from memetic API |
 
+
+**politic-bar iter 4 slices (2026-08-28):**
+
+| Slice | Status | Notes |
+|-------|--------|-------|
+| `signal_envelope.py` pydantic validation | ✅ | `07a09ab` |
+| `half_life_indexer.py` half-life stub | ✅ | `07a09ab` |
+| pytest (4 tests) | ✅ | `tests/test_half_life_indexer.py` |
 **History cleanup:** `Co-authored-by: Cursor` stripped from `d070765`→`9243182`, `c28a951`→`6a5d551` via `git filter-repo --message-callback`.
 
 ---
@@ -264,8 +272,8 @@ Public CCXT snapshot → normalized record → institutional envelope `OPERATION
 ### Phase A done when…
 `signal-envelope.json` + memetic cross-layer types documented; activation routing synced in errorlogy-mas.
 
-### Iteration 4 done when…
-Discourse graph API + politic-bar half-life stub shipped; gui-v2 fork panel read-only; pytest green — see checklist above.
+### Iteration 4 done when… **(closed 2026-08-28)**
+Discourse graph API + politic-bar half-life stub shipped; gui-v2 fork panel read-only; pytest green (`test_discourse_graph`, `test_egd_hm_bridge`, `test_half_life_indexer`) — see checklist above.
 
 ---
 
