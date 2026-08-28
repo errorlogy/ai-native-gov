@@ -161,6 +161,36 @@ See [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md) for Phase B/C c
 
 ---
 
+## Iteration 4 — Phase B memetic runtime
+
+**Title:** Phase B memetic runtime (discourse graph + half-life stub + UI fork panel)
+
+**Epistemic label:** `INSTITUTIONAL_MODEL` for graph framing; adapter/indexer outputs default to `OPERATIONAL`.
+
+| Component | Owner repo | Target |
+|-----------|------------|--------|
+| Discourse graph (networkx DiGraph, fork/lineage) | `errorlogy-mas` | `mas/memetic/discourse_graph.py` + `/api/events/memetic/*` |
+| Half-life indexer stub (`decay_tau_hours` from `first_seen` + `peak_velocity`) | `politic-bar` | `politic_bar/half_life_indexer.py` + `signal_envelope` validation |
+| EGD+HM bridge stub (echo-room ↔ homo-mas contour join) | `errorlogy-mas` | `mas/memetic/` extension — route only, no new HM-xxx IDs |
+| Symbolic variant edges (media carrier forks) | `errorlogy-mas` | `discourse_graph.add_fork_edge(edge_type="symbolic_variant")` |
+| gui-v2 narrative fork panel | `errorlogy-gui-v2` | New panel on `/layers` or `/stream` — lineage from `GET /api/events/memetic/lineage/{story_id}` |
+
+Cross-link: [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md) — contours 1–2 (graph/lineage), 4 (half-life), 6 (symbolic carrier).
+
+**Do not in iter 4:** claim legal verdict authority; invent CB-/HM-/PNO- mode IDs; merge politic-bar v0.6 taxonomy with v16; full sociome / MatrAIx cohort runtime (Phase C).
+
+**Done when:**
+
+- [ ] `POST /api/events/memetic/fork` registers parent→child fork and returns `discourse_fork_detected` + `narrative_lineage_update` shaped envelopes
+- [ ] `GET /api/events/memetic/lineage/{story_id}` returns root-to-node lineage from in-memory graph
+- [ ] `politic_bar/signal_envelope.py` validates umbrella `signal-envelope.json` fields (pydantic)
+- [ ] `politic_bar/half_life_indexer.py` emits `signal_noise_half_life_update` with `decay_tau_hours` stub
+- [ ] gui-v2 shows narrative fork lineage for a selected story (read-only panel)
+- [ ] pytest green: `errorlogy-mas/tests/test_discourse_graph.py`, politic-bar half-life tests
+- [ ] Umbrella docs: this section + MEMETIC_DYNAMICS cross-links updated
+
+---
+
 ## What stays in the umbrella (contracts only)
 
 | Keep here | Do not put here |
@@ -184,7 +214,7 @@ ARCHITECTURE remains: umbrella = topology + contracts; Errorlogy = runtime.
 - Exchange **execution** / private account reads
 - Full 27-state interactive GIS; ASEAN/AU/Mercosur blocs
 - Engine math changes (μ/α/PNO/FPD); taxonomy v0.6 ↔ v16 merge
-- `schemas/signal-envelope.json` full Phase 2 suite | **Phase A stub shipped** — see [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md); graph runtime is Phase B |
+- Full sociome / MatrAIx persona cohort runtime (Phase C — see [`MATRAIX_PERSONA.md`](../integrations/MATRAIX_PERSONA.md))
 
 ---
 
@@ -223,16 +253,19 @@ Public CCXT snapshot → normalized record → institutional envelope `OPERATION
 ### Phase A done when…
 `signal-envelope.json` + memetic cross-layer types documented; activation routing synced in errorlogy-mas.
 
+### Iteration 4 done when…
+Discourse graph API + politic-bar half-life stub shipped; gui-v2 fork panel read-only; pytest green — see checklist above.
+
 ---
 
-## Later (explicitly after MVP)
+## Later (explicitly after MVP / Iteration 4)
 
 1. Electron-gui parity (optional port of `/topology`)
-2. politic.bar stream_refs / story anchors
+2. politic.bar live politifi asset updates (beyond half-life stub)
 3. NAMM certificate_ref → `COMPUTATIONAL_EVIDENCE`
 4. TradingView MCP or official `ccxt-mcp` as alternate adapters
 5. Gov open-data fetchers already in MAS (`fetch-us-gov`, etc.) mapped through the same institutions framer
-6. **Future: persona cohorts** — after Iteration 1 events stub: optional `persona_cohort_id` tags / sidecar on cross-layer events; full MatrAIx Persona 1M adapter only post-MVP (see [`MATRAIX_PERSONA.md`](../integrations/MATRAIX_PERSONA.md)). Never claim 8.3B simultaneous agents or “digital EU citizens.”
+6. **Future: persona cohorts** — after Iteration 4 graph stub: optional `persona_cohort_id` tags / sidecar on cross-layer events; full MatrAIx Persona 1M adapter only post-MVP (see [`MATRAIX_PERSONA.md`](../integrations/MATRAIX_PERSONA.md)). Never claim 8.3B simultaneous agents or “digital EU citizens.”
 
 ---
 
