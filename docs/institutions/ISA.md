@@ -40,7 +40,9 @@ Full framework definition, consensus matrix, Jung lens, and corpus placeholders 
 Key docs in that repo:
 
 - [`docs/ISA.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/ISA.md) — canonical ISA 2.0 framework definition
+- [`docs/EIA.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/EIA.md) — Endogenous Initiative Architecture layer
 - [`docs/CONSENSUS_MATRIX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CONSENSUS_MATRIX.md) — ASI \| mirror \| ISA matrix, 12+1 panel
+- [`docs/CORPUS/DODECA12_EIA_v0_3.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/DODECA12_EIA_v0_3.md) — DODECA-12 v0.3 corpus index (`COMPUTATIONAL_EVIDENCE` validation summary; raw bundle local at `C:\Users\Public\ISA_2_0\docs\CORPUS\raw\`)
 - [`docs/JUNG_SYMBOLIC_LENS.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/JUNG_SYMBOLIC_LENS.md) — Homo symbolic research frame
 
 ---

@@ -26,3 +26,7 @@ repos/*/.venv/
 dist/
 build/
 *.log
+
+# Large archives (corpus artifacts live in ISA_2_0, not umbrella)
+dodeca12*.zip
+*.zip
