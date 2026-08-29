@@ -158,14 +158,30 @@ Current [`schemas/cross-layer-event.json`](../../schemas/cross-layer-event.json)
 
 Standalone stub: [`schemas/persona-cohort-ref.json`](../../schemas/persona-cohort-ref.json). Documents the future object shape. Not yet `$ref`'d from cross-layer-event.
 
-### Phase B — coordinated optional fields (later)
+### Phase B — optional `persona_cohort_id` sidecar (Iteration 7 / Phase C)
 
-When MVP consumers are ready, add **optional** properties (still required list unchanged):
+Shipped as a **minimal bounded slice** — slug sidecar only, no MatrAIx runtime or Persona 1M adapter.
 
-**On `cross-layer-event`:**
+| Schema | Field | Validation |
+|--------|-------|------------|
+| [`cross-layer-event.json`](../../schemas/cross-layer-event.json) | `persona_cohort_id` | Lowercase slug `^[a-z][a-z0-9_-]{2,63}$` |
+| [`signal-envelope.json`](../../schemas/signal-envelope.json) | `persona_cohort_id` | Same slug pattern |
+
+Runtime owners:
+
+| Repo | Module | Role |
+|------|--------|------|
+| `errorlogy-mas` | `mas/memetic/sociome_sidecar.py` | Validate slug; attach to cross-layer / fork / market-coupling events |
+| `politic-bar` | `politic_bar/sociome_tag.py` | Stream-item tag helper |
+| `errorlogy-gui-v2` | `/discourse` | Read-only cohort badge when present |
+
+**Guardrails (unchanged):** never claim 8.3B simultaneous agents or “digital EU citizens”; cohort tags are `INSTITUTIONAL_MODEL` simulation instruments only.
+
+### Phase C — full `persona_cohort_refs` + adapter (post-MVP)
+
+When Persona 1M adapter ships, add **optional** multi-cohort refs (required list unchanged):
 
 ```json
-"persona_cohort_id": { "type": "string", "description": "Opaque cohort id from MatrAIx adapter" },
 "persona_cohort_refs": {
   "type": "array",
   "items": { "$ref": "persona-cohort-ref.json" },
@@ -182,7 +198,7 @@ When MVP consumers are ready, add **optional** properties (still required list u
 }
 ```
 
-Until Phase B ships, adapters may keep cohort metadata in a **sidecar** JSON next to the event store row in ERRORLOGY_MVP (same `event_id`), without claiming schema compliance for those keys.
+Until the full adapter ships, adapters may keep extended cohort metadata in a **sidecar** JSON next to the event store row in ERRORLOGY_MVP (same `event_id`), beyond the single `persona_cohort_id` slug.
 
 ---
 

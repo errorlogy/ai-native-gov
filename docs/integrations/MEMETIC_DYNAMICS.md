@@ -14,7 +14,7 @@ Memetic dynamics are **named** in Errorlogy taxonomy v16 (HM layer, SOCIAL_MEDIA
 |---|---------|---------------------|-------------|
 | 1 | Memetic propagation graph (R₀ analog, variant tracking) | `memetic_propagation_snapshot` event type | `errorlogy-mas` engine |
 | 2 | Discourse lineage / narrative forks | `discourse_fork_detected`, `narrative_lineage_update` | `errorlogy-mas` (networkx extension) |
-| 3 | Sociome coupling (MatrAIx cohorts) | Sidecar fields only — see [`MATRAIX_PERSONA.md`](MATRAIX_PERSONA.md) | Post-MVP |
+| 3 | Sociome coupling (MatrAIx cohorts) | **Done (Iter 7)** — optional `persona_cohort_id` sidecar on cross-layer + signal-envelope; see [`MATRAIX_PERSONA.md`](MATRAIX_PERSONA.md) | Full Persona 1M adapter post-MVP |
 | 4 | Signal/noise memetic half-life | [`schemas/signal-envelope.json`](../../schemas/signal-envelope.json) | `politic-bar` streams |
 | 5 | fin_crypto ↔ memetic momentum | `memetic_market_coupling_snapshot` + FIN join | `errorlogy-mas` — [`MEMETIC_MARKET_COUPLING.md`](MEMETIC_MARKET_COUPLING.md) |
 | 6 | Symbolic meme carrier registry | Reuse `symbolic_media_variant` — see [`SYMBOLIC_VISUAL_LAYER.md`](SYMBOLIC_VISUAL_LAYER.md) | Symbolic ingest |

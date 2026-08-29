@@ -268,6 +268,35 @@ Cross-link: [`MEMETIC_MARKET_COUPLING.md`](../integrations/MEMETIC_MARKET_COUPLI
 
 ---
 
+## Iteration 7 — Phase C sociome sidecar (MatrAIx cohort tags)
+
+**Title:** Optional `persona_cohort_id` sidecar on cross-layer events and signal envelopes — no MatrAIx runtime
+
+**Epistemic label:** `INSTITUTIONAL_MODEL` for cohort routing docs; adapter sidecar tags default to `OPERATIONAL` on stream items.
+
+| Component | Owner repo | Target |
+|-----------|------------|--------|
+| Schema sidecar + contract update | `ai-native-gov` | `persona_cohort_id` on cross-layer + signal-envelope; [`MATRAIX_PERSONA.md`](../integrations/MATRAIX_PERSONA.md) Phase B section |
+| Sociome validator + attach | `errorlogy-mas` | `mas/memetic/sociome_sidecar.py`; extend cross-layer / fork / market-coupling ingress |
+| Stream tag helper | `politic-bar` | `politic_bar/sociome_tag.py`; optional field on `SignalEnvelope` |
+| Cohort badge | `errorlogy-gui-v2` | `/discourse` — read-only badge when `persona_cohort_id` present |
+
+Cross-link: [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md) contour #3, [`MATRAIX_PERSONA.md`](../integrations/MATRAIX_PERSONA.md).
+
+**Do not in iter 7:** full MatrAIx Persona 1M adapter; persona engine math; claim 8.3B simultaneous agents or “digital EU citizens”; invent CB-/HM-/PNO- mode IDs.
+
+**Done when:**
+
+- [x] `persona_cohort_id` optional on umbrella schemas (slug pattern)
+- [x] `POST /api/events/cross-layer` accepts optional `persona_cohort_id`; invalid slug → 422
+- [x] `POST /api/events/memetic/fork` and `POST /api/events/memetic/market-coupling` accept optional `persona_cohort_id`
+- [x] `politic_bar` signal envelope validates optional sidecar; `persona_cohort_tag` stub exports tag dict
+- [x] gui-v2 `/discourse` shows cohort badge on events/edges when present
+- [x] pytest green: `test_sociome_sidecar.py` (mas), politic-bar sociome tests
+- [x] Commits pushed per touched repo
+
+---
+
 ## What stays in the umbrella (contracts only)
 
 | Keep here | Do not put here |
