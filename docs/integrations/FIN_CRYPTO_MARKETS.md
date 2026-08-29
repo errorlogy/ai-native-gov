@@ -19,7 +19,7 @@ Only downstream certified artifacts may be labeled `COMPUTATIONAL_EVIDENCE` (via
 
 **FastAPI MVP (iter 3):** public market snapshots use the in-process **CCXT Python library** (`errorlogy-mas/mas/adapters/fin_crypto_ccxt.py`, `POST /api/events/fin-crypto/snapshot`). TradingView MCP and community CCXT **MCP** servers remain the preferred **agent/MCP** exploration path — not embedded in FastAPI.
 
-**Memetic ↔ market join (Phase A contract):** `memetic_market_coupling_snapshot` cross-layer events (see [`MEMETIC_DYNAMICS.md`](MEMETIC_DYNAMICS.md)) join narrative velocity from `signal-envelope.json` stream items with `fin_crypto_market_snapshot` / `fin_crypto_sentiment_momentum` records on a shared `story_id` or instrument symbol. Join runtime is Phase B; iter 3 ships market snapshots only.
+**Memetic ↔ market join (Phase B runtime — Iter 6):** `memetic_market_coupling_snapshot` cross-layer events join narrative velocity from `signal-envelope.json` stream items with `fin_crypto_market_snapshot` records on shared `story_id` or instrument symbol. See [`MEMETIC_MARKET_COUPLING.md`](MEMETIC_MARKET_COUPLING.md). Runtime: `POST /api/events/memetic/market-coupling` in errorlogy-mas.
 
 ## What belongs in this layer (signal families)
 Adapters under this layer may ingest (or reference) signals from:
@@ -252,4 +252,5 @@ This layer produces normalized operational inputs that later institutional frami
 - [`ERRORLOGY.md`](ERRORLOGY.md)
 - [`NAMM.md`](NAMM.md)
 - [`MEMETIC_DYNAMICS.md`](MEMETIC_DYNAMICS.md) — Phase A memetic contracts + `memetic_market_coupling_snapshot` join
+- [`MEMETIC_MARKET_COUPLING.md`](MEMETIC_MARKET_COUPLING.md) — Iter 6 join record + API contract
 

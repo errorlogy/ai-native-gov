@@ -239,6 +239,35 @@ Cross-link: [`POSLEDNIY_ZAVET_RUNTIME.md`](../integrations/POSLEDNIY_ZAVET_RUNTI
 
 ---
 
+## Iteration 6 — Memetic ↔ market coupling join
+
+**Title:** Join CCXT market snapshot (iter 3) with memetic velocity sidecar on shared `story_id` or symbol
+
+**Epistemic label:** `INSTITUTIONAL_MODEL` for coupling framing; market adapter records remain `OPERATIONAL`.
+
+| Component | Owner repo | Target |
+|-----------|------------|--------|
+| Join contract + record shape | `ai-native-gov` | [`MEMETIC_MARKET_COUPLING.md`](../integrations/MEMETIC_MARKET_COUPLING.md) |
+| Coupling adapter + API | `errorlogy-mas` | `mas/memetic/market_coupling.py`, `POST /api/events/memetic/market-coupling` |
+| Memetic sidecar stub | `politic-bar` | `politic_bar/memetic_market_join.py` |
+| Coupling feed (optional) | `errorlogy-gui-v2` | `/discourse` — list `memetic_market_coupling_snapshot` by story |
+
+Cross-link: [`MEMETIC_MARKET_COUPLING.md`](../integrations/MEMETIC_MARKET_COUPLING.md), [`FIN_CRYPTO_MARKETS.md`](../integrations/FIN_CRYPTO_MARKETS.md), [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md).
+
+**Do not in iter 6:** trading execution; invent CB-/HM-/PNO- mode IDs; claim verdict authority; label coupling as `COMPUTATIONAL_EVIDENCE` without NAMM.
+
+**Done when:**
+
+- [x] Umbrella contract documents join record, event_type, activated_layers, quality flags
+- [x] `POST /api/events/memetic/market-coupling` joins market + optional memetic sidecar; persists cross-layer event
+- [x] Join key: `story_id` preferred, else symbol → default story slug mapping
+- [x] `politic_bar/memetic_metrics_for_join` stub reuses half-life indexer shape
+- [x] gui-v2 `/discourse` shows recent coupling events for loaded story (read-only)
+- [x] pytest green: `test_memetic_market_coupling.py`, `test_memetic_market_join.py`
+- [x] Commits pushed per touched repo
+
+---
+
 ## What stays in the umbrella (contracts only)
 
 | Keep here | Do not put here |
@@ -325,5 +354,6 @@ Discourse graph API + politic-bar half-life stub shipped; gui-v2 fork panel read
 - [`schemas/signal-envelope.json`](../../schemas/signal-envelope.json)
 - [`docs/integrations/FIN_CRYPTO_MARKETS.md`](../integrations/FIN_CRYPTO_MARKETS.md)
 - [`docs/integrations/MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md)
+- [`docs/integrations/MEMETIC_MARKET_COUPLING.md`](../integrations/MEMETIC_MARKET_COUPLING.md)
 - [`docs/integrations/CONNECTION_GUIDE.md`](../integrations/CONNECTION_GUIDE.md)
 - Child: `ERRORLOGY_MVP/errorlogy-mas/api/main.py`, `errorlogy-gui-v2/src/App.tsx`

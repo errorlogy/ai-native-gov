@@ -16,7 +16,7 @@ Memetic dynamics are **named** in Errorlogy taxonomy v16 (HM layer, SOCIAL_MEDIA
 | 2 | Discourse lineage / narrative forks | `discourse_fork_detected`, `narrative_lineage_update` | `errorlogy-mas` (networkx extension) |
 | 3 | Sociome coupling (MatrAIx cohorts) | Sidecar fields only — see [`MATRAIX_PERSONA.md`](MATRAIX_PERSONA.md) | Post-MVP |
 | 4 | Signal/noise memetic half-life | [`schemas/signal-envelope.json`](../../schemas/signal-envelope.json) | `politic-bar` streams |
-| 5 | fin_crypto ↔ memetic momentum | `memetic_market_coupling_snapshot` + FIN join | `errorlogy-mas` adapter join |
+| 5 | fin_crypto ↔ memetic momentum | `memetic_market_coupling_snapshot` + FIN join | `errorlogy-mas` — [`MEMETIC_MARKET_COUPLING.md`](MEMETIC_MARKET_COUPLING.md) |
 | 6 | Symbolic meme carrier registry | Reuse `symbolic_media_variant` — see [`SYMBOLIC_VISUAL_LAYER.md`](SYMBOLIC_VISUAL_LAYER.md) | Symbolic ingest |
 | 7 | SOCIAL_MEDIA platform contour state | `social_contour_state_update` | `errorlogy-mas` ingest |
 
@@ -73,7 +73,7 @@ Routing implementation: `errorlogy-mas/mas/institutional/activation.py` prefix t
 
 ## Related
 
-- [`FIN_CRYPTO_MARKETS.md`](FIN_CRYPTO_MARKETS.md) — market snapshots + `memetic_market_coupling_snapshot` join
+- [`MEMETIC_MARKET_COUPLING.md`](MEMETIC_MARKET_COUPLING.md) — iter 6 join record + API
 - [`MVP_ITERATIONS.md`](../examples/MVP_ITERATIONS.md) — iter 3 CCXT adapter + Phase A section
 - [`MATRAIX_PERSONA.md`](MATRAIX_PERSONA.md) — sociome contour (Phase C)
 - [`ERRORLOGY.md`](ERRORLOGY.md) — engine pipeline ingress/egress
