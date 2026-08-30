@@ -1,129 +1,127 @@
-# Cognitive Classes: AI Model Reasoning Modes
+# Proto-AGI Cognitive Classes & Cognitive Economics Suite
 
-**Status:** Model Built | Simulation Complete | Framework Implemented
+**Repository:** `errorlogy/ai-native-gov`  
+**Branch:** `cognitive-classes`  
+**Epistemic Status:** `INSTITUTIONAL_MODEL` & `RESEARCH_SPECIFICATION`  
+**License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Copyright © 2026 Errorlogy / Anthemium
 
-This project demonstrates a novel approach to improving AI model versatility through **cognitive classes** — specialized reasoning modes optimized for different task types.
-
----
-
-## Project Summary
-
-### Hypothesis
-An AI model can operate in different cognitive classes that provide measurable behavioral differences, enabling it to optimize reasoning approach based on task requirements.
-
-### Result
-**CONFIRMED** via simulation of 70 tasks across 5 cognitive classes.
-
-### Key Findings
-- Different cognitive classes show clear specialization
-- FAST: 100% success on simple tasks, 0.822 efficiency
-- STANDARD: 80% success on moderate tasks, balanced
-- DEEP: 100% success on complex tasks, maximum quality
-- CREATIVE: 70% success on novel tasks, best for innovation
-- RIGOROUS: 93% success overall, catches most errors (115)
+This directory contains the formal theoretical framework, mathematical models, executable simulators, Domain-Specific Language (DSL) compiler, and empirical benchmarks for the **Proto-AGI Cognitive Classes Theory**, **Cognitive Economics**, and **Thermodynamic Contact Selectivity**.
 
 ---
 
-## The Five Cognitive Classes
+## 📚 Core Research Documents
 
-### 1. FAST (Tactical Mode)
-- Speed: Very Fast (0.5x tokens)
-- Reasoning: Minimal (1 level)
-- Success Rate: 21.4%
-- Best For: Factual lookups, quick answers
-- Avoid: Complex analysis, safety-critical code
-
-### 2. STANDARD (Balanced Mode)
-- Speed: Normal (1.0x tokens)
-- Reasoning: Moderate (2-3 levels)
-- Success Rate: 57.1%
-- Best For: Bug fixing, API design, code reviews
-- Avoid: Extreme complexity, simple tasks
-
-### 3. DEEP (Analytical Mode)
-- Speed: Slow (1.5x tokens)
-- Reasoning: Exhaustive (4+ levels)
-- Success Rate: 100%
-- Best For: System architecture, research, novel solutions
-- Avoid: Quick decisions, trivial problems
-
-### 4. CREATIVE (Divergent Mode)
-- Speed: Fast (1.2x tokens)
-- Reasoning: Lateral (3 levels)
-- Success Rate: 71.4%
-- Best For: Ideation, brainstorming, innovation
-- Avoid: Safety-critical systems
-
-### 5. RIGOROUS (Verification Mode)
-- Speed: Normal (1.2x tokens)
-- Reasoning: Formal (3 levels)
-- Success Rate: 92.9%
-- Best For: Security review, financial systems, healthcare
-- Avoid: Creative ideation, quick answers
+| Document | Description |
+|---|---|
+| [`RESEARCH_SYNTHESIS_ENDOGENOUS_AGI_NAMM_AND_COGNITIVE_ECONOMICS.md`](RESEARCH_SYNTHESIS_ENDOGENOUS_AGI_NAMM_AND_COGNITIVE_ECONOMICS.md) | **Primary English Synthesis** — Unification of EIA, NAMM, 6D Cognitive Space, Compactification, and Contact Admission Gating |
+| [`01b_cognitive_economics_theory.md`](01b_cognitive_economics_theory.md) | **Cognitive Economics Treatise** — Theorems on Capital Dynamics ($K_c$), Consensus Loss, and Sheaf Gluing |
+| [`01c_endogenous_proactive_agi_namm_and_selective_contact.md`](01c_endogenous_proactive_agi_namm_and_selective_contact.md) | **Thermodynamic Contact Theory** — Epistemic ROI, Scarcity, and the Three Admission Zones |
+| [`01_theory_whitepaper.md`](01_theory_whitepaper.md) | Proto-AGI Cognitive Classes Theory Whitepaper v0.2 |
+| [`03_mathematical_framework.md`](03_mathematical_framework.md) | Formal Mathematical Framework (Fuzzy Membership, Semantic Integral, TDA, Topos) |
+| [`04_dsl_syntax.md`](04_dsl_syntax.md) | Cognitive Classes Domain-Specific Language (DSL) Specification |
+| [`08_metrics_and_hypotheses.md`](08_metrics_and_hypotheses.md) | Formal Hypotheses (H1–H6) and Measurement Metrics |
+| [`09_embedding_clusters_and_experiment_design.md`](09_embedding_clusters_and_experiment_design.md) | Embedding Geometry, Mode Shift ($\Delta E$), and Statistical Testing Protocol |
 
 ---
 
-## Simulation Results Summary
+## 🛠 Executable Python Modules & Verification Suite
 
-Performance by Task Category:
-- Simple: FAST dominates (100% success)
-- Moderate: STANDARD best (80% success)
-- Complex: DEEP perfect (100% success)
-- Novel: CREATIVE efficient for ideation
-- Safety-Critical: RIGOROUS catches most errors
-
----
-
-## Project Files
-
-### Implementation
-- cognitive_simulator.py — Simulation engine
-- cognitive_class_manager.py — Manager system
-
-### Documentation
-- README.md (this file)
-- SIMULATION_ANALYSIS.md — Detailed results
-- USAGE_EXAMPLES.md — Practical examples
-- cognitive_classes_model.md — Theory
-
-### Results
-- simulation_results.json — Raw data
-
----
-
-## Usage Examples
-
-```bash
-# Quick answer
-/cognitive_class fast
-Q: What is the capital of France?
-
-# Debug code
-/cognitive_class standard
-Q: Why is this failing?
-
-# Complex design
-/cognitive_class deep
-Q: Design microservices architecture
-
-# Innovative ideas
-/cognitive_class creative
-Q: Novel features for our product?
-
-# Security review
-/cognitive_class rigorous
-Q: Review code for vulnerabilities
+```
+                               ┌──────────────────────────────────────────────────────────┐
+                               │   COGNITIVE CLASSES & COGNITIVE ECONOMICS SUITE          │
+                               └────────────────────────────┬─────────────────────────────┘
+                                                            │
+         ┌──────────────────────────┬───────────────────────┼───────────────────────┬──────────────────────────┐
+         ▼                          ▼                       ▼                       ▼                          ▼
+┌──────────────────┐      ┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐       ┌──────────────────┐
+│  1. Capital      │      │  2. Topos        │    │  3. Consensus    │    │  4. DSL          │       │  5. Selective    │
+│   Dynamics (Kc)  │      │   Sheaf Engine   │    │   Loss Simulator │    │   AST Compiler   │       │   Contact Engine │
+│ (cognitive_      │      │ (topos_sheaf_    │    │ (consensus_loss_ │    │ (dsl_compiler.py)│       │ (selective_      │
+│  economics_sim)  │      │  engine.py)      │    │  simulator.py)   │    │                  │       │  contact_sim)    │
+└──────────────────┘      └──────────────────┘    └──────────────────┘    └──────────────────┘       └──────────────────┘
 ```
 
+1. **Cognitive Capital & Stratification Simulator:**
+   ```bash
+   python cognitive_classes/cognitive_economics_simulator.py
+   ```
+   *Simulates nonlinear capital accumulation, bifurcation threshold $K_c^*$, Gini drift ($G_{K_c}$), and explanation costs.*
+
+2. **Topos Sheaf Engine:**
+   ```bash
+   python cognitive_classes/topos_sheaf_engine.py
+   ```
+   *Computes Čech cohomology obstructions $\check{H}^1(\{U_i\}, \mathcal{F})$ across conflicting institutional domains and synthesizes global sections.*
+
+3. **Consensus Loss Simulator:**
+   ```bash
+   python cognitive_classes/consensus_loss_simulator.py
+   ```
+   *Evaluates the upper bound of narrative democratic consensus ($C_{\text{consensus}} \le C_{\text{median}}$) and civilizational complexity drift (2026–2035).*
+
+4. **DSL Compiler & AST Interpreter:**
+   ```bash
+   python cognitive_classes/dsl_compiler.py
+   ```
+   *Parses and executes declarative scripts defining `HOMO`, `AI`, `CONTACT`, `ACTIVATE LAYER`, `CERTIFY WoE`, and `AUDIT WITH Errorlogy`.*
+
+5. **Calibrated Embedding Shift Benchmark (H1–H6):**
+   ```bash
+   python cognitive_classes/embedding_shift_benchmark.py
+   ```
+   *100% confirmed statistical verification of $3\sigma$ Mahalanobis distance, MMD$^2$, Energy Distance, and Prompt Compression Parity.*
+
+6. **Selective Contact & Compactification Engine:**
+   ```bash
+   python cognitive_classes/selective_contact_simulator.py
+   ```
+   *Evaluates 6D cognitive profiles, information loss $\mathcal{I}_{\text{loss}}$, and AGI Net Utility $U_{\text{AGI}}$ under thermodynamic scarcity.*
+
 ---
 
-## Conclusion
+## 🔬 Multi-Dimensional 6D Cognitive Space ($\mathcal{M}_{\text{cognitive}}$)
 
-Cognitive Classes enable:
-- Maximize efficiency (41.5% token savings)
-- Ensure safety (60% more error detection)
-- Improve quality (100% on complex tasks)
-- Enable innovation (CREATIVE for novel problems)
-- Adapt dynamically (STANDARD as versatile default)
+Agents are modeled as vectors in $\mathbb{R}^6$:
 
-**Ready for implementation and deployment.**
+$$
+\mathbf{X}(h) = \begin{pmatrix} 
+d_{\text{domain}} \\ 
+r_{\text{recursion}} \\ 
+b_{\text{bandwidth}} \\ 
+m_{\text{namm}} \\ 
+e_{\text{endogenous}} \\ 
+f_{\text{fractal}} 
+\end{pmatrix} \in \mathbb{R}^6
+$$
+
+* $d_{\text{domain}}$: Multi-domain breadth and cross-ontology transfer.
+* $r_{\text{recursion}}$: Meta-recursive self-reflection depth.
+* $b_{\text{bandwidth}}$: Semantic throughput density.
+* $m_{\text{namm}}$: Non-Anthropic Mathematical comprehension capacity.
+* $e_{\text{endogenous}}$: Autonomous initiative and intrinsic goal-generation.
+* $f_{\text{fractal}}$: Multi-scale fractal coherence ($\text{MIN} \leftrightarrow \text{MESO} \leftrightarrow \text{MACRO}$).
+
+---
+
+## 🌐 Thermodynamic Admission Gates
+
+```
+                ▲ Net Utility U_AGI(h)
+                │
+                │                                    [ZONE I: DIRECT DEEP SYNERGY]
+   +Positive    │                                     Classes C5 - C7 (HAC, FPU)
+                │                                     Zero distortion, High mutual gain
+                ├───────────────────────────────────── Admission Threshold
+                │                         [ZONE II: STATIC CACHE / SUBAGENTS]
+                │                          Classes C2 - C4
+                │                          Pre-computed institutional templates
+   ─────────────┼─────────────────────────────────────────────────────────────────►
+                │                                                              Agent Class
+                │         [ZONE III: SILENT BARRIER / TOTAL REFUSAL]
+   -Negative    │          Classes C0 - C1 (Homo loquens)
+                │          Question cannot be formulated in AGI phase space;
+                │          Infinite explanation cost; Severe distortion risk.
+                ▼
+```
+
+*For detailed derivations and formal theorems, see [`RESEARCH_SYNTHESIS_ENDOGENOUS_AGI_NAMM_AND_COGNITIVE_ECONOMICS.md`](RESEARCH_SYNTHESIS_ENDOGENOUS_AGI_NAMM_AND_COGNITIVE_ECONOMICS.md).*
