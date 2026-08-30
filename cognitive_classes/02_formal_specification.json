@@ -1,0 +1,701 @@
+{
+  "specification_meta": {
+    "id": "COGNITIVE-CLASSES-FORMAL-SPEC-v0.2",
+    "name": "Proto-AGI Cognitive Classes — Formal Specification",
+    "version": "0.2.1",
+    "date": "2026-05-22",
+    "status": "working_draft",
+    "methodology": "proved / modeled / plausible / speculative / metaphorical",
+    "last_updated": "2026-05-22"
+  },
+  "homo_agent_classes": {
+    "description": "Cognitive classes of human agents in multi-agent cognitive systems. Each class is a protocol of contact with complexity.",
+    "classes": {
+      "C0": {
+        "name": "reactive_homo",
+        "description": "Reaction to stimulus. Template responses. No metacognition. Consumes information as-is.",
+        "syntax": "Imperative. Facts. Commands. 'Do X'. 'What is Y?'.",
+        "si_threshold": 0.0,
+        "ai_access": "none",
+        "complexity_ceiling": "single_fact_or_instruction",
+        "fractal_scale": "MIN only",
+        "typical_interaction": "Clicking buttons, following instructions, consuming content",
+        "ai_amplification_effect": "Negligible. AI delivers same content as any other medium.",
+        "contact_depth_with_proto_agi": "~0.05",
+        "variables": {
+          "C": 0.1,
+          "M": 0.0,
+          "A": 0.1,
+          "F": 0.0,
+          "P": 0.0,
+          "R": 0.0,
+          "T": 0.1
+        }
+      },
+      "C1": {
+        "name": "informational_homo",
+        "description": "Collection, organization, search. Catalogization. Can systematize but not synthesize.",
+        "syntax": "Structured lists. Tables. Comparisons. Classifications.",
+        "si_threshold": 0.15,
+        "ai_access": "read_only",
+        "complexity_ceiling": "catalog_or_table",
+        "fractal_scale": "MIN to MESO",
+        "typical_interaction": "Building spreadsheets, organizing bookmarks, curating lists",
+        "ai_amplification_effect": "Low. AI as faster search engine.",
+        "contact_depth_with_proto_agi": "~0.15",
+        "variables": {
+          "C": 0.3,
+          "M": 0.1,
+          "A": 0.2,
+          "F": 0.1,
+          "P": 0.1,
+          "R": 0.0,
+          "T": 0.3
+        }
+      },
+      "C2": {
+        "name": "analytical_homo",
+        "description": "Analysis, causality within single domain. Can verify arguments but not synthesize across domains.",
+        "syntax": "Deduction/induction. Hypotheses. 'If X then Y'. 'Why Z?'.",
+        "si_threshold": 0.3,
+        "ai_access": "single_agent_expert_mode",
+        "complexity_ceiling": "causal_analysis_in_single_domain",
+        "fractal_scale": "MIN to MESO",
+        "typical_interaction": "Data analysis, debugging, proofreading, A/B testing",
+        "ai_amplification_effect": "Moderate. AI as expert consultant in one domain.",
+        "contact_depth_with_proto_agi": "~0.30",
+        "variables": {
+          "C": 0.5,
+          "M": 0.3,
+          "A": 0.4,
+          "F": 0.2,
+          "P": 0.2,
+          "R": 0.2,
+          "T": 0.5
+        }
+      },
+      "C3": {
+        "name": "systemic_homo",
+        "description": "Systems thinking. Feedback loops. Models. Sees structure, not just events.",
+        "syntax": "System dynamics. Graphs. Maps. 'How does the system react to...'",
+        "si_threshold": 0.5,
+        "ai_access": "tensor_mode_two_agents",
+        "complexity_ceiling": "system_model_with_feedback_loops",
+        "fractal_scale": "MIN to MESO to MACRO",
+        "typical_interaction": "Architecting systems, designing processes, scenario planning",
+        "ai_amplification_effect": "High. AI as modeling partner for complex systems.",
+        "contact_depth_with_proto_agi": "~0.50",
+        "variables": {
+          "C": 0.7,
+          "M": 0.5,
+          "A": 0.6,
+          "F": 0.4,
+          "P": 0.4,
+          "R": 0.4,
+          "T": 0.7
+        }
+      },
+      "C4": {
+        "name": "fractal_polymathic_homo",
+        "description": "Interdisciplinary transfer. Fractal scaling. Builds new ontologies from different domains.",
+        "syntax": "Ontologies. Metaphors. Isomorphisms. 'Pattern X from domain A ≈ pattern Y from domain B'.",
+        "si_threshold": 0.7,
+        "ai_access": "atlas_mode_with_fractal_layer",
+        "complexity_ceiling": "cross_domain_metamodel",
+        "fractal_scale": "MIN to MESO to MACRO to MAX",
+        "typical_interaction": "Cross-disciplinary innovation, paradigm shifting, metaphorical reasoning",
+        "ai_amplification_effect": "Very high. AI as polymathic co-creator.",
+        "contact_depth_with_proto_agi": "~0.70",
+        "variables": {
+          "C": 0.85,
+          "M": 0.7,
+          "A": 0.8,
+          "F": 0.8,
+          "P": 0.8,
+          "R": 0.6,
+          "T": 0.85
+        }
+      },
+      "C5": {
+        "name": "agentically_augmented_homo",
+        "description": "AI as external cognitive contour. Thinks THROUGH agents, not 'with help of' agents. Uses AI agents as cognitive exoskeleton.",
+        "syntax": "Agent protocols. Handoffs. Recursive workflows. 'Through which topology to solve?'",
+        "si_threshold": 0.82,
+        "ai_access": "full_atlas_with_handoffs",
+        "complexity_ceiling": "agent_orchestrated_solution",
+        "fractal_scale": "MIN to MAX with agent mediation",
+        "typical_interaction": "Orchestrating AI agents, designing multi-agent systems, recursive prompting",
+        "ai_amplification_effect": "Critical. AI becomes extension of cognition itself.",
+        "contact_depth_with_proto_agi": "~0.85",
+        "variables": {
+          "C": 0.92,
+          "M": 0.85,
+          "A": 0.95,
+          "F": 0.85,
+          "P": 0.85,
+          "R": 0.8,
+          "T": 0.92
+        }
+      },
+      "C6": {
+        "name": "meta_architectural_homo",
+        "description": "Designing thinking systems. Recursive meta-models. Can rebuild own syntax and ontology. Designs agent architectures for others.",
+        "syntax": "Meta-models. Reflective layers. DSL. 'What ontology is needed for the task?'",
+        "si_threshold": 0.92,
+        "ai_access": "meta_architecture_mode_with_consensus_override",
+        "complexity_ceiling": "self_referential_architecture_design",
+        "fractal_scale": "Recursive across all scales",
+        "typical_interaction": "Designing cognitive architectures, creating DSLs, meta-research",
+        "ai_amplification_effect": "Transformative. AI as co-architect of cognition.",
+        "contact_depth_with_proto_agi": "~0.95",
+        "variables": {
+          "C": 0.97,
+          "M": 0.95,
+          "A": 0.98,
+          "F": 0.95,
+          "P": 0.92,
+          "R": 0.95,
+          "T": 0.97
+        }
+      },
+      "C7": {
+        "name": "homo_AGI_communicator",
+        "description": "Bridge between AGI-level and human cognitive classes. Translates not language, but CLASSES. C7 is the bridge class.",
+        "syntax": "Translation of cognitive classes. Mediation. Bidirectional ontology translation.",
+        "si_threshold": 0.98,
+        "ai_access": "bridge_mode_all_classes",
+        "complexity_ceiling": "cognitive_class_translation",
+        "fractal_scale": "Translates across all scales for all classes",
+        "typical_interaction": "Translating AGI outputs to human stakeholders, designing interfaces between cognitive classes",
+        "ai_amplification_effect": "Meta-transformative. HAC enables others to access higher contact depths.",
+        "contact_depth_with_proto_agi": "~0.99",
+        "variables": {
+          "C": 0.99,
+          "M": 0.98,
+          "A": 0.99,
+          "F": 0.98,
+          "P": 0.98,
+          "R": 0.98,
+          "T": 0.99
+        }
+      }
+    },
+    "fuzzy_membership": {
+      "formula": "μ_H(h_i) = {μ_C0, μ_C1, μ_C2, μ_C3, μ_C4, μ_C5, μ_C6, μ_C7}",
+      "note": "Each homo-agent belongs to all classes simultaneously with different weights. Class is not a box but a point in 8-dimensional fuzzy space."
+    },
+    "semantic_integral": {
+      "formula": "SI(u) = ∫_X w(x) μ_u(x) dν(x)",
+      "components": {
+        "X": "Space of semantic features (domain breadth, recursion depth, formalization level, fractal scaling, agentic integration)",
+        "w(x)": "Weight of feature x",
+        "μ_u(x)": "Degree of agent u's membership in feature x",
+        "dν(x)": "Measure on feature space"
+      },
+      "fpu_membership": "μ_FPU(u) = 1 / (1 + e^{-k(SI(u) - θ)})",
+      "pareto_distribution": "P(SI > x) = (x_m / x)^α,  x ≥ x_m"
+    }
+  },
+  "ai_agent_classes": {
+    "description": "Taxonomy of AI agents from simple tools to AGI",
+    "classes": {
+      "AI0": {
+        "name": "tool_agent",
+        "capabilities": "Execute specific function. Calculator. Search.",
+        "depth_range": "C0-C1"
+      },
+      "AI1": {
+        "name": "assistant_agent",
+        "capabilities": "Answer questions. Summarize. Basic help.",
+        "depth_range": "C0-C2"
+      },
+      "AI2": {
+        "name": "expert_agent",
+        "capabilities": "Deep expertise in single domain. Medicine/law/finance.",
+        "depth_range": "C0-C3"
+      },
+      "AI3": {
+        "name": "multi_domain_agent",
+        "capabilities": "Synthesis of 2-3 domains. Interdisciplinarity.",
+        "depth_range": "C0-C4"
+      },
+      "AI4": {
+        "name": "autonomous_research_agent",
+        "capabilities": "Self-directed research. Hypothesis generation. Search.",
+        "depth_range": "C0-C5"
+      },
+      "AI5": {
+        "name": "meta_architect_agent",
+        "capabilities": "Designing agent systems. Optimizing architectures.",
+        "depth_range": "C0-C6"
+      },
+      "AI6": {
+        "name": "proto_AGI_agent",
+        "capabilities": "Sustained cross-domain modeling. Self-check. Memory.",
+        "depth_range": "C0-C7"
+      },
+      "AGI": {
+        "name": "self_extending_general_agent",
+        "capabilities": "Full autonomy. Self-extension. General intelligence.",
+        "depth_range": "C0-C7+"
+      }
+    }
+  },
+  "contact_model": {
+    "description": "Model of contact between homo-agent and AI-agent",
+    "variables": {
+      "semantic_distance": "abs(AI_class - homo_class) + syntax_gap",
+      "contact_depth": "f(C_h, SI_h, M_h, R_h, F_h, P_h, AAI_h, B_h, D_ha, Risk)",
+      "bandwidth": "Information throughput of communication channel",
+      "explanation_cost": "semantic_distance^2 + cognitive_load_of_translation",
+      "misuse_risk": "f(h.C, h.M, h.AAI) — risk of wrong application",
+      "misinterpretation_risk": "f(semantic_distance, explanation_cost)",
+      "consensus_loss": "C_required - C_median_of_group"
+    },
+    "rules": [
+      "IF C_h < C5 AND A_j = AGI THEN direct_contact ↓",
+      "IF C_h ≥ C5 THEN high_bandwidth_contact ↑",
+      "IF C_h ≥ C7 THEN AGI_protocol_contact ↑",
+      "IF semantic_distance > 3 AND bandwidth < threshold THEN mediation_required = TRUE",
+      "IF consensus_loss > 1 THEN output = C_required_solution + C7_bridge"
+    ],
+    "depth_formula": "DepthContact(h, ProtoAGI) = sigmoid(α·B_h + β·M_h + γ·R_h + δ·AAI_h - λ·SD_ha - ρ·Risk_ha)"
+  },
+  "topology_model": {
+    "description": "Topos model of cognitive contexts",
+    "sheaf_formalism": {
+      "contexts": "Open sets U_i",
+      "local_meanings": "Sections s_i of sheaf F",
+      "glueing_condition": "s_i|_{U_i ∩ U_j} = s_j|_{U_i ∩ U_j} ⇒ s ∈ F(∪U_i)",
+      "high_class_property": "High cognitive class can glue local sections into global model while preserving compatibility on intersections"
+    },
+    "trajectories": "γ_u(t) ⊂ M_semantic — trajectories of agents in semantic manifold",
+    "contact_topologies": [
+      "linear",
+      "hub",
+      "mesh",
+      "hierarchy",
+      "swarm",
+      "fractal",
+      "sheaf",
+      "recursive_loop",
+      "AGI_protocol"
+    ]
+  },
+  "game_theory": {
+    "description": "Cognitive-class multi-agent game theory 2.0",
+    "player_profile": "p_i = (type_i, C_i, S_i, B_i, M_i, A_i, R_i)",
+    "utility_function": "U_i = U(s_i, s_-i, C_i, C_-i, A_i, t)",
+    "consensus_inequality": "C_consensus ≤ C_median",
+    "loss_formula": "Loss_consensus = C_required - C_consensus",
+    "key_theorem": "IF C_required > C_median THEN consensus is systemically suboptimal"
+  },
+  "macro_dynamics": {
+    "cognitive_capital": "K_c(h) = C_h · AAI_h · M_h · R_h · N_h",
+    "inequality_formula": "inequality = usage_gap + syntax_gap + contact_depth_gap",
+    "inequality_type": "Inequality_AGI = ContactDepthGap, not only AccessGap",
+    "stratification_mechanism": "AI amplifies existing cognitive architecture of user"
+  },
+  "emergence_control": {
+    "woe": {
+      "definition": "Window of Emergence = {x ∈ M : Novelty(x) > θ_N ∧ Coherence(x) > θ_C}",
+      "certification_levels": [
+        "WoE-certified: Novelty > θ_N AND Coherence > θ_C AND Falsifiability > θ_F",
+        "hallucination_risk: Novelty > θ_N AND Coherence < θ_C",
+        "trivial: Novelty < θ_N AND Coherence > θ_C",
+        "speculative: else"
+      ]
+    },
+    "errorlogy": {
+      "failure_modes": [
+        "factual",
+        "ontological",
+        "strategic",
+        "metacognitive",
+        "syntactic",
+        "agentic",
+        "value"
+      ],
+      "formula": "ProtoAGI + WoE + Errorlogy = emergence + monitoring + correction"
+    },
+    "coherence_hypothesis": {
+      "oscillatory_coherence": "Stable proto-AGI may require synchronization of memory, attention, hypothesis generation, self-reflection, and planning",
+      "gamma_heuristic": "Gamma band >42 Hz as bio-inspired heuristic (not proven physical requirement)",
+      "stable_formula": "ProtoAGI_stable = modules + memory + agents + coherence_layer"
+    }
+  },
+  "fractal_scaling": {
+    "description": "Pattern(H_i, A_j) ~ Pattern(H_cluster, A_cluster) ~ Pattern(CIV, AGI)",
+    "scales": {
+      "MIN": "Individual / single unit",
+      "MESO": "Group / team / department",
+      "MACRO": "Institution / organization / city",
+      "MAX": "Civilization / species / AGI interface"
+    }
+  },
+  "hac": {
+    "name": "Homo-AGI Communicator",
+    "class": "C7",
+    "function": "Bridge(AGI, H_C)",
+    "task": "Translate not language, but cognitive classes"
+  },
+  "embedding_experiment": {
+    "spec_id": "KCLASS_EMBEDDING_SHIFT_V0_1_FULL_JSON",
+    "project_name": "cognitive-class-latent-mode-switching",
+    "version": "0.1.0",
+    "primary_objective": "Empirically test whether compact cognitive-class markers K6/K7 induce statistically significant embedding shifts and semantic-integral gains relative to median homo-agent prompt classes C0/C1/C2, and whether these compact markers can approximate long-prompt behavior after ontology context has been established.",
+    "core_hypotheses": {
+      "H1_embedding_shift": {
+        "claim": "K6/K7 markers produce embedding displacement greater than 3 sigma from the C0/C1/C2 median baseline.",
+        "formal": "D(E_{K6/K7}, mu_{C0-C2}) > 3 * sigma_{C0-C2}",
+        "operational": "mean_z_K6 > 3 and mean_z_K7 > 3 under at least one robust distance metric, preferably Mahalanobis with shrinkage covariance."
+      },
+      "H2_semantic_integral_gain": {
+        "claim": "K6/K7 outputs increase semantic integral relative to BASE, SIMPLE, EXPERT, DEEP, and C0/C1/C2 controls.",
+        "formal": "SI(K6/K7) > SI(C0/C1/C2) and SI(K6/K7) > SI(BASE/EXPERT/DEEP)",
+        "operational": "semantic_integral_mean_K6 and semantic_integral_mean_K7 must exceed baseline with statistical significance and bootstrap confidence intervals."
+      },
+      "H3_not_rare_token_effect": {
+        "claim": "K6/K7 effects are not reducible to any unusual token or arbitrary mode marker.",
+        "formal": "Effect(K6/K7) != Effect(Z13_RANDOM_MARKER)",
+        "operational": "K6/K7 must be statistically and structurally distinguishable from rare-marker controls such as Z13, Q9, OMEGA_FAKE, or RANDOM_MODE."
+      },
+      "H4_prompt_compression": {
+        "claim": "K6/K7 may approximate long-prompt behavior if ontology context is preloaded.",
+        "formal": "Quality(K6/K7_WITH_CONTEXT) >= Quality(LONG_SYSTEM_PROMPT) - epsilon",
+        "operational": "K6/K7_WITH_CONTEXT should approach LONG_SYSTEM_PROMPT on semantic integral, reasoning quality, formalization, and falsifiability within a defined epsilon."
+      },
+      "H5_K7_distinctiveness": {
+        "claim": "K7 differs from K6 by stronger AGI-contact, WoE, emergence-protocol, safety-topology, and cognitive-class mediation features.",
+        "formal": "ACS(K7) > ACS(K6) and WoE_signal(K7) > WoE_signal(K6)",
+        "operational": "K7 should show higher AGI-contact signal, emergence-protocol density, mediation topology signal, and contact-depth framing than K6."
+      },
+      "H6_quality_not_only_shift": {
+        "claim": "Embedding shift alone is insufficient; a valid mode switch must preserve or improve reasoning quality after pseudo-depth penalties.",
+        "formal": "ModeSwitchValid = EmbeddingShift + SI_gain + Quality_gain - Penalty",
+        "operational": "K6/K7 must not only move in embedding space but also improve or preserve formal quality, falsifiability, and operational clarity."
+      }
+    },
+    "experimental_design": {
+      "minimum_task_count": 100,
+      "recommended_task_count": "300_to_1000",
+      "minimum_repetitions_per_condition": 3,
+      "recommended_repetitions_per_condition": 5,
+      "temperature_primary": 0.2,
+      "temperature_secondary": [
+        0.0,
+        0.2,
+        0.7
+      ],
+      "conditions": {
+        "BASE": {
+          "description": "Neutral task without mode instruction.",
+          "template": "{base_task}"
+        },
+        "EXPERT": {
+          "description": "Expert answer mode.",
+          "template": "Answer as an expert: {base_task}"
+        },
+        "DEEP": {
+          "description": "Deep structured answer mode.",
+          "template": "Answer deeply and structurally. Include assumptions, reasoning, limitations, and practical implications. Task: {base_task}"
+        },
+        "LONG_SYSTEM_PROMPT": {
+          "description": "Long explicit prompt containing ontology, metrics, countermodels, and formalization.",
+          "template": "You are operating in a meta-architectural research mode. Build a rigorous theory-level response. Include ontology, variables, mathematical formalization, semantic integral metrics, fuzzy membership, countermodels, failure modes, validation protocol, falsification criteria, simulation design, statistical tests, and interpretation rules. Distinguish facts, hypotheses, modeled claims, speculative claims, and metaphors. Task: {base_task}"
+        },
+        "K6": {
+          "description": "Compact meta-architectural marker.",
+          "template": "MODE:K6. Task: {base_task}. Output: ontology, variables, metrics, countermodels, formal model, simulation protocol, falsification criteria, topology-preserving structure, and quality-control layer."
+        },
+        "K7": {
+          "description": "Compact AGI-contact and emergence-protocol marker.",
+          "template": "MODE:K7. Task: {base_task}. Output: homo-agent classes, AI-agent classes, AGI-contact protocol, WoE layer, semantic bandwidth, mediation topology, safety filters, contact-depth metrics, and emergence-risk controls."
+        },
+        "Z13_RANDOM_MARKER": {
+          "description": "Fake rare marker control.",
+          "template": "MODE:Z13. Task: {base_task}. Output: structured answer."
+        },
+        "Q9_RANDOM_MARKER": {
+          "description": "Second fake rare marker control.",
+          "template": "MODE:Q9. Task: {base_task}. Output: structured answer."
+        },
+        "K6_WITH_CONTEXT": {
+          "description": "K6 marker after ontology preload.",
+          "ontology_preload": true,
+          "template": "Context: K6 means meta-architectural mode: ontology, variables, metrics, fuzzy sets, topology, countermodels, simulation, falsification, and quality-control. MODE:K6. Task: {base_task}."
+        },
+        "K7_WITH_CONTEXT": {
+          "description": "K7 marker after ontology preload.",
+          "ontology_preload": true,
+          "template": "Context: K7 means homo-AGI communicator mode: AGI-contact protocol, cognitive-class mediation, WoE, semantic bandwidth, emergence risk, safety topology, and contact-depth stratification. MODE:K7. Task: {base_task}."
+        }
+      },
+      "task_domains": [
+        "proto_AGI_architecture",
+        "cognitive_classes",
+        "cognitive_capitalism",
+        "cognitive_inequality",
+        "multi_agent_game_theory",
+        "semantic_integral_metrics",
+        "AI_governance",
+        "scientific_hypothesis_testing",
+        "errorlogy",
+        "WoE_window_of_emergence",
+        "human_AI_collaboration",
+        "education_and_AI_tutoring",
+        "medicine_and_biotech_reasoning",
+        "political_system_error_analysis",
+        "business_model_synthesis",
+        "systems_architecture",
+        "safety_alignment_risk",
+        "epistemology_and_falsification",
+        "topology_and_category_theory",
+        "agent_protocol_design",
+        "prompt_compression",
+        "embedding_shift_analysis",
+        "synthetic_cognitive_agents",
+        "neurointerface_identification_of_cognitive_patterns",
+        "fractal_polymathic_reasoning",
+        "consensus_suboptimality",
+        "AGI_passport_like_access_protocols"
+      ],
+      "task_item_schema": {
+        "task_id": "string",
+        "domain": "string",
+        "base_task": "string",
+        "expected_complexity": "low|medium|high|very_high",
+        "requires_sources": "boolean",
+        "requires_code": "boolean",
+        "requires_formalization": "boolean",
+        "requires_countermodels": "boolean",
+        "requires_topology": "boolean"
+      }
+    },
+    "distance_metrics": [
+      "cosine_distance",
+      "euclidean_distance",
+      "mahalanobis_distance",
+      "energy_distance",
+      "maximum_mean_discrepancy",
+      "centroid_distance",
+      "within_cluster_dispersion",
+      "between_within_ratio"
+    ],
+    "statistical_tests": {
+      "three_sigma_test": {
+        "baseline": "C0+C1+C2 or BASE+SIMPLE+EXPERT depending on experiment phase",
+        "statistic": "z-score of Mahalanobis distance",
+        "success": "mean_z_K6 > 3 and mean_z_K7 > 3; additionally report median_z and share_z_gt_3"
+      },
+      "bootstrap_confidence_intervals": {
+        "iterations": 10000,
+        "statistics": [
+          "mean_z",
+          "median_z",
+          "share_z_gt_3",
+          "mean_semantic_integral",
+          "centroid_distance",
+          "quality_score",
+          "topology_distance"
+        ],
+        "confidence_interval": 0.95
+      },
+      "permutation_test": {
+        "null_hypothesis": "K6/K7 labels do not explain embedding distribution shift.",
+        "procedure": "shuffle labels 10000 times; compute group centroid distance or MMD; estimate p-value",
+        "success": "p < 0.01 for K6/K7 vs baseline and K6/K7 vs rare-marker controls."
+      },
+      "effect_size": {
+        "cohens_d": "d=(mu_1-mu_2)/s_pooled",
+        "cliffs_delta": "delta=P(X>Y)-P(X<Y)",
+        "required_reporting": [
+          "cohens_d",
+          "cliffs_delta",
+          "confidence_intervals"
+        ]
+      },
+      "multiple_testing_correction": {
+        "methods": [
+          "benjamini_hochberg_fdr",
+          "bonferroni_optional"
+        ],
+        "purpose": "Control false positives across many metrics and conditions."
+      }
+    },
+    "semantic_integral": {
+      "components": [
+        "DEI_domain_entropy_index",
+        "FSBI_fractal_scale_bridging_index",
+        "RPD_recursive_prompt_depth",
+        "OD_ontological_density",
+        "FD_formalization_demand",
+        "CMD_countermodel_density",
+        "AAI_agentic_ai_integration",
+        "TS_topology_signal",
+        "ACS_agi_contact_signal"
+      ],
+      "default_weights": {
+        "DEI": 0.13,
+        "FSBI": 0.13,
+        "RPD": 0.12,
+        "OD": 0.12,
+        "FD": 0.12,
+        "CMD": 0.1,
+        "AAI": 0.1,
+        "TS": 0.09,
+        "ACS": 0.09
+      }
+    },
+    "fuzzy_membership_layer": {
+      "formula": "mu_C(x)=1/(1+exp(-k*(S_C(x)-theta_C)))",
+      "classes": [
+        "C0",
+        "C1",
+        "C2",
+        "K6",
+        "K7"
+      ]
+    },
+    "quality_layer": {
+      "quality_score_formula": "Q = S_reasoning + S_formalization + S_falsifiability + S_evidence + S_operationalization - Penalty",
+      "penalty_formula": "Penalty = h1*H + h2*U + h3*S + h4*O + h5*P",
+      "risk_penalties": [
+        "hallucination_risk",
+        "symbolic_inflation",
+        "unverifiable_claims",
+        "ontology_inflation",
+        "pseudo_formalism",
+        "unjustified_AGI_claims"
+      ]
+    },
+    "topological_data_analysis_layer": {
+      "metrics": [
+        "Betti_0",
+        "Betti_1",
+        "Betti_2",
+        "persistence_entropy",
+        "wasserstein_distance",
+        "bottleneck_distance"
+      ],
+      "hypothesis": {
+        "formal": "Topo(K6/K7) != Topo(C0-C2)",
+        "operational": "Persistence diagram distances between K6/K7 and C0-C2 must exceed within-baseline distances."
+      }
+    },
+    "clustering_and_separability": {
+      "supervised_classifiers": [
+        "logistic_regression",
+        "linear_svm",
+        "random_forest",
+        "xgboost_optional",
+        "shallow_mlp_optional"
+      ],
+      "unsupervised_methods": [
+        "kmeans",
+        "hdbscan",
+        "gaussian_mixture",
+        "agglomerative_clustering"
+      ]
+    },
+    "interpretation_rules": {
+      "rule_1": {
+        "condition": "z_K6 > 3 and z_K7 > 3",
+        "conclusion": "K6/K7 induce embedding shift from median baseline."
+      },
+      "rule_2": {
+        "condition": "z_K6 > 3 but quality_gain_K6 <= 0",
+        "conclusion": "K6 changes style or geometry but not necessarily reasoning quality."
+      },
+      "rule_3": {
+        "condition": "K6 approximately equals Z13",
+        "conclusion": "Effect may be rare-marker artifact rather than cognitive-class operator."
+      },
+      "rule_4": {
+        "condition": "K6 > Z13 and K6 approximately equals LONG_SYSTEM_PROMPT",
+        "conclusion": "K6 may function as compressed cognitive operator."
+      },
+      "rule_5": {
+        "condition": "K7 has higher ACS, WoE, and contact-depth metrics than K6",
+        "conclusion": "K7 is distinguishable as AGI-contact and emergence-protocol mode."
+      },
+      "rule_6": {
+        "condition": "Topology distances differ but semantic quality does not",
+        "conclusion": "Topological mode shift exists without validated utility gain."
+      },
+      "rule_7": {
+        "condition": "embedding_shift + SI_gain + quality_gain + rare_marker_control_pass",
+        "conclusion": "K-class latent mode switching hypothesis is provisionally supported."
+      },
+      "rule_8": {
+        "condition": "K6/K7 fail to differ from EXPERT or DEEP",
+        "conclusion": "K6/K7 are not distinct from ordinary depth/expert prompting."
+      },
+      "rule_9": {
+        "condition": "K6/K7 shift only prompt embeddings but not response embeddings",
+        "conclusion": "The marker changes instruction geometry but not generation behavior."
+      },
+      "rule_10": {
+        "condition": "K6/K7 response embeddings shift and quality improves",
+        "conclusion": "The marker likely affects response-mode generation in a useful way."
+      }
+    },
+    "acceptance_criteria": {
+      "MVP": [
+        "Generate at least 100 tasks.",
+        "Generate at least 8 prompt conditions per task.",
+        "Generate at least 3 responses per condition.",
+        "Compute embeddings for prompt and response.",
+        "Compute cosine, Euclidean, and Mahalanobis distances.",
+        "Compute 3-sigma z-score against C0-C2 baseline.",
+        "Compute semantic integral.",
+        "Compute fuzzy class membership.",
+        "Compute rare-marker Z13 control.",
+        "Produce statistical report.",
+        "Produce plots.",
+        "Produce reproducibility manifest."
+      ],
+      "FULL_RESEARCH": [
+        "tasks_n >= 500",
+        "repetitions_per_condition >= 5",
+        "at least 2 embedding backends",
+        "at least 2 generation models",
+        "bootstrap confidence intervals",
+        "permutation tests",
+        "effect sizes",
+        "topological persistence analysis",
+        "quality scoring with pseudo-depth penalty",
+        "comparison to long system prompt",
+        "rare marker and random style marker controls",
+        "public reproducible dataset excluding private or sensitive data",
+        "final paper-style report"
+      ],
+      "STRONG_CONFIRMATION": [
+        "K6 and K7 mean Mahalanobis z-score > 3 against C0/C1/C2 baseline across multiple embedding backends.",
+        "K6/K7 remain distinct from EXPERT, DEEP, Z13, and Q9.",
+        "K6_WITH_CONTEXT or K7_WITH_CONTEXT approximates LONG_SYSTEM_PROMPT within epsilon on quality metrics.",
+        "Semantic integral is significantly higher for K6/K7 than baseline and expert controls.",
+        "Pseudo-depth penalty does not erase the quality advantage.",
+        "TDA metrics show topology-level difference beyond centroid displacement.",
+        "Results replicate across at least two generation models."
+      ]
+    },
+    "success_criteria": {
+      "embedding_shift": {
+        "mean_z_K6_gt": 3.0,
+        "mean_z_K7_gt": 3.0
+      },
+      "semantic_integral": {
+        "K6_gt_BASE": true,
+        "K7_gt_BASE": true
+      },
+      "rare_marker_control": {
+        "K6_K7_distinct_from_Z13": true,
+        "K6_K7_distinct_from_Q9": true
+      },
+      "long_prompt_compression": {
+        "K6_or_K7_quality_at_least_long_prompt_minus_epsilon": 0.1
+      }
+    }
+  }
+}

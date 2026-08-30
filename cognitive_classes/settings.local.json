@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python cognitive_simulator.py)",
+      "Bash(sed -i 's/✓/[OK]/g' hypothesis_testing_simulator.py)",
+      "Bash(sed -i 's/✗/[FAIL]/g' hypothesis_testing_simulator.py)",
+      "Bash(python hypothesis_testing_simulator.py)",
+      "Bash(python cognitive_command_interpreter.py)",
+      "Bash(python real_world_simulation.py)"
+    ]
+  }
+}

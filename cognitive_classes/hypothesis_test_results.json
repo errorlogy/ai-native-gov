@@ -1,0 +1,58 @@
+{
+  "H1": {
+    "passed": false,
+    "sigma_distance": 0.75,
+    "threshold": 3.0,
+    "distance_c2_c6": 1.422,
+    "mean_c0_c2": 0.929,
+    "std_c0_c2": 0.657
+  },
+  "H2": {
+    "passed": true,
+    "si_values": {
+      "C0": 0.057,
+      "C1": 0.128,
+      "C2": 0.226,
+      "C3": 0.32899999999999996,
+      "C4": 0.43200000000000005,
+      "C5": 0.461,
+      "C6": 0.51
+    },
+    "monotonic_score": 1.0,
+    "threshold": 0.7
+  },
+  "H3": {
+    "passed": true,
+    "dist_c2_c6_real": 1.422,
+    "avg_dist_to_fakes": 56.049
+  },
+  "H4": {
+    "passed": true,
+    "c6_depth": 6,
+    "long_prompt_depth": 6,
+    "depth_diff": 0,
+    "si_diff": 0.055
+  },
+  "H5": {
+    "passed": true,
+    "improvements": 4,
+    "threshold": 3,
+    "c5_metrics": {
+      "depth": 4,
+      "falsifiability": 0.9,
+      "errors": 22,
+      "coherence": 0.9
+    },
+    "c6_metrics": {
+      "depth": 5,
+      "falsifiability": 0.95,
+      "errors": 25,
+      "coherence": 0.95
+    }
+  },
+  "H6": {
+    "passed": true,
+    "monotonic_score": 1.0,
+    "threshold": 0.7
+  }
+}

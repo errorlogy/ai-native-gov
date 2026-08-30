@@ -1,0 +1,791 @@
+{
+  "simulation_metadata": {
+    "timestamp": "2026-06-28T02:24:29.245742",
+    "total_tasks": 70,
+    "cognitive_classes": 5
+  },
+  "detailed_results": [
+    {
+      "task_id": "SIMPLE_1",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": true,
+      "reasoning_depth": 1,
+      "solution_quality": 1.0,
+      "execution_time_factor": 0.5,
+      "reasoning_efficiency": 2.0,
+      "validation_errors_caught": 1
+    },
+    {
+      "task_id": "SIMPLE_1",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.0,
+      "reasoning_efficiency": 1.0,
+      "validation_errors_caught": 1
+    },
+    {
+      "task_id": "SIMPLE_1",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 2
+    },
+    {
+      "task_id": "SIMPLE_1",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": true,
+      "reasoning_depth": 1,
+      "solution_quality": 0.88,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.7333333333333334,
+      "validation_errors_caught": 1
+    },
+    {
+      "task_id": "SIMPLE_1",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 2
+    },
+    {
+      "task_id": "SIMPLE_2",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": true,
+      "reasoning_depth": 1,
+      "solution_quality": 1.0,
+      "execution_time_factor": 0.5,
+      "reasoning_efficiency": 2.0,
+      "validation_errors_caught": 1
+    },
+    {
+      "task_id": "SIMPLE_2",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.0,
+      "reasoning_efficiency": 1.0,
+      "validation_errors_caught": 1
+    },
+    {
+      "task_id": "SIMPLE_2",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 2
+    },
+    {
+      "task_id": "SIMPLE_2",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": true,
+      "reasoning_depth": 1,
+      "solution_quality": 0.88,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.7333333333333334,
+      "validation_errors_caught": 1
+    },
+    {
+      "task_id": "SIMPLE_2",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 2
+    },
+    {
+      "task_id": "SIMPLE_3",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": true,
+      "reasoning_depth": 1,
+      "solution_quality": 1.0,
+      "execution_time_factor": 0.5,
+      "reasoning_efficiency": 2.0,
+      "validation_errors_caught": 2
+    },
+    {
+      "task_id": "SIMPLE_3",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.0,
+      "reasoning_efficiency": 1.0,
+      "validation_errors_caught": 3
+    },
+    {
+      "task_id": "SIMPLE_3",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 4
+    },
+    {
+      "task_id": "SIMPLE_3",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": true,
+      "reasoning_depth": 1,
+      "solution_quality": 0.88,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.7333333333333334,
+      "validation_errors_caught": 3
+    },
+    {
+      "task_id": "SIMPLE_3",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 5
+    },
+    {
+      "task_id": "MODERATE_1",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.6799999999999999,
+      "execution_time_factor": 0.5,
+      "reasoning_efficiency": 1.3599999999999999,
+      "validation_errors_caught": 2
+    },
+    {
+      "task_id": "MODERATE_1",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.0,
+      "reasoning_efficiency": 1.0,
+      "validation_errors_caught": 3
+    },
+    {
+      "task_id": "MODERATE_1",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 4
+    },
+    {
+      "task_id": "MODERATE_1",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 0.9900000000000001,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8250000000000001,
+      "validation_errors_caught": 3
+    },
+    {
+      "task_id": "MODERATE_1",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 5
+    },
+    {
+      "task_id": "MODERATE_2",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.4759999999999999,
+      "execution_time_factor": 0.75,
+      "reasoning_efficiency": 0.6346666666666666,
+      "validation_errors_caught": 3
+    },
+    {
+      "task_id": "MODERATE_2",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.0,
+      "reasoning_efficiency": 1.0,
+      "validation_errors_caught": 5
+    },
+    {
+      "task_id": "MODERATE_2",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 7
+    },
+    {
+      "task_id": "MODERATE_2",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 0.9900000000000001,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8250000000000001,
+      "validation_errors_caught": 4
+    },
+    {
+      "task_id": "MODERATE_2",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 8
+    },
+    {
+      "task_id": "MODERATE_3",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.4759999999999999,
+      "execution_time_factor": 0.75,
+      "reasoning_efficiency": 0.6346666666666666,
+      "validation_errors_caught": 3
+    },
+    {
+      "task_id": "MODERATE_3",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.0,
+      "reasoning_efficiency": 1.0,
+      "validation_errors_caught": 5
+    },
+    {
+      "task_id": "MODERATE_3",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 7
+    },
+    {
+      "task_id": "MODERATE_3",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 0.9900000000000001,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8250000000000001,
+      "validation_errors_caught": 4
+    },
+    {
+      "task_id": "MODERATE_3",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 8
+    },
+    {
+      "task_id": "COMPLEX_1",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.26599999999999996,
+      "execution_time_factor": 0.75,
+      "reasoning_efficiency": 0.35466666666666663,
+      "validation_errors_caught": 4
+    },
+    {
+      "task_id": "COMPLEX_1",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": false,
+      "reasoning_depth": 2,
+      "solution_quality": 0.609,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.40599999999999997,
+      "validation_errors_caught": 7
+    },
+    {
+      "task_id": "COMPLEX_1",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 4,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 9
+    },
+    {
+      "task_id": "COMPLEX_1",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 0.95,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.7916666666666666,
+      "validation_errors_caught": 6
+    },
+    {
+      "task_id": "COMPLEX_1",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 11
+    },
+    {
+      "task_id": "COMPLEX_2",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.26599999999999996,
+      "execution_time_factor": 0.75,
+      "reasoning_efficiency": 0.35466666666666663,
+      "validation_errors_caught": 4
+    },
+    {
+      "task_id": "COMPLEX_2",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": false,
+      "reasoning_depth": 2,
+      "solution_quality": 0.609,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.40599999999999997,
+      "validation_errors_caught": 7
+    },
+    {
+      "task_id": "COMPLEX_2",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 4,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 9
+    },
+    {
+      "task_id": "COMPLEX_2",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 0.95,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.7916666666666666,
+      "validation_errors_caught": 6
+    },
+    {
+      "task_id": "COMPLEX_2",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 11
+    },
+    {
+      "task_id": "COMPLEX_3",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.26599999999999996,
+      "execution_time_factor": 0.75,
+      "reasoning_efficiency": 0.35466666666666663,
+      "validation_errors_caught": 6
+    },
+    {
+      "task_id": "COMPLEX_3",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": false,
+      "reasoning_depth": 2,
+      "solution_quality": 0.609,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.40599999999999997,
+      "validation_errors_caught": 9
+    },
+    {
+      "task_id": "COMPLEX_3",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 4,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 12
+    },
+    {
+      "task_id": "COMPLEX_3",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": false,
+      "reasoning_depth": 3,
+      "solution_quality": 0.6649999999999999,
+      "execution_time_factor": 1.7999999999999998,
+      "reasoning_efficiency": 0.36944444444444446,
+      "validation_errors_caught": 7
+    },
+    {
+      "task_id": "COMPLEX_3",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": false,
+      "reasoning_depth": 3,
+      "solution_quality": 0.7,
+      "execution_time_factor": 1.7999999999999998,
+      "reasoning_efficiency": 0.3888888888888889,
+      "validation_errors_caught": 14
+    },
+    {
+      "task_id": "NOVEL_1",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.336,
+      "execution_time_factor": 0.75,
+      "reasoning_efficiency": 0.448,
+      "validation_errors_caught": 3
+    },
+    {
+      "task_id": "NOVEL_1",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": true,
+      "reasoning_depth": 1,
+      "solution_quality": 0.82,
+      "execution_time_factor": 1.0,
+      "reasoning_efficiency": 0.82,
+      "validation_errors_caught": 5
+    },
+    {
+      "task_id": "NOVEL_1",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 7
+    },
+    {
+      "task_id": "NOVEL_1",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 4
+    },
+    {
+      "task_id": "NOVEL_1",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 0.8690000000000001,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.7241666666666667,
+      "validation_errors_caught": 8
+    },
+    {
+      "task_id": "NOVEL_2",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.336,
+      "execution_time_factor": 0.75,
+      "reasoning_efficiency": 0.448,
+      "validation_errors_caught": 4
+    },
+    {
+      "task_id": "NOVEL_2",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.574,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.38266666666666665,
+      "validation_errors_caught": 7
+    },
+    {
+      "task_id": "NOVEL_2",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 9
+    },
+    {
+      "task_id": "NOVEL_2",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 6
+    },
+    {
+      "task_id": "NOVEL_2",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 0.79,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.6583333333333334,
+      "validation_errors_caught": 11
+    },
+    {
+      "task_id": "SAFETY_1",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.23099999999999998,
+      "execution_time_factor": 0.75,
+      "reasoning_efficiency": 0.308,
+      "validation_errors_caught": 3
+    },
+    {
+      "task_id": "SAFETY_1",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": true,
+      "reasoning_depth": 2,
+      "solution_quality": 0.92,
+      "execution_time_factor": 1.0,
+      "reasoning_efficiency": 0.92,
+      "validation_errors_caught": 5
+    },
+    {
+      "task_id": "SAFETY_1",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 4,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 7
+    },
+    {
+      "task_id": "SAFETY_1",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.66,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.55,
+      "validation_errors_caught": 4
+    },
+    {
+      "task_id": "SAFETY_1",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 8
+    },
+    {
+      "task_id": "SAFETY_2",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.23099999999999998,
+      "execution_time_factor": 0.75,
+      "reasoning_efficiency": 0.308,
+      "validation_errors_caught": 4
+    },
+    {
+      "task_id": "SAFETY_2",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": false,
+      "reasoning_depth": 2,
+      "solution_quality": 0.644,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.42933333333333334,
+      "validation_errors_caught": 7
+    },
+    {
+      "task_id": "SAFETY_2",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 4,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 9
+    },
+    {
+      "task_id": "SAFETY_2",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.6,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.5,
+      "validation_errors_caught": 6
+    },
+    {
+      "task_id": "SAFETY_2",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 11
+    },
+    {
+      "task_id": "SAFETY_3",
+      "cognitive_class": "CognitiveClass.FAST",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.23099999999999998,
+      "execution_time_factor": 0.75,
+      "reasoning_efficiency": 0.308,
+      "validation_errors_caught": 4
+    },
+    {
+      "task_id": "SAFETY_3",
+      "cognitive_class": "CognitiveClass.STANDARD",
+      "success": false,
+      "reasoning_depth": 2,
+      "solution_quality": 0.644,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.42933333333333334,
+      "validation_errors_caught": 7
+    },
+    {
+      "task_id": "SAFETY_3",
+      "cognitive_class": "CognitiveClass.DEEP",
+      "success": true,
+      "reasoning_depth": 4,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.5,
+      "reasoning_efficiency": 0.6666666666666666,
+      "validation_errors_caught": 9
+    },
+    {
+      "task_id": "SAFETY_3",
+      "cognitive_class": "CognitiveClass.CREATIVE",
+      "success": false,
+      "reasoning_depth": 1,
+      "solution_quality": 0.6,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.5,
+      "validation_errors_caught": 6
+    },
+    {
+      "task_id": "SAFETY_3",
+      "cognitive_class": "CognitiveClass.RIGOROUS",
+      "success": true,
+      "reasoning_depth": 3,
+      "solution_quality": 1.0,
+      "execution_time_factor": 1.2,
+      "reasoning_efficiency": 0.8333333333333334,
+      "validation_errors_caught": 11
+    }
+  ],
+  "analysis": {
+    "total_tasks_executed": 70,
+    "timestamp": "2026-06-28T02:24:29.245742",
+    "class_performance": {
+      "fast": {
+        "success_rate": 0.214,
+        "avg_solution_quality": 0.485,
+        "avg_reasoning_efficiency": 0.822,
+        "task_count": 14,
+        "total_errors_caught": 44
+      },
+      "standard": {
+        "success_rate": 0.571,
+        "avg_solution_quality": 0.816,
+        "avg_reasoning_efficiency": 0.729,
+        "task_count": 14,
+        "total_errors_caught": 72
+      },
+      "deep": {
+        "success_rate": 1.0,
+        "avg_solution_quality": 1.0,
+        "avg_reasoning_efficiency": 0.667,
+        "task_count": 14,
+        "total_errors_caught": 97
+      },
+      "creative": {
+        "success_rate": 0.714,
+        "avg_solution_quality": 0.86,
+        "avg_reasoning_efficiency": 0.703,
+        "task_count": 14,
+        "total_errors_caught": 61
+      },
+      "rigorous": {
+        "success_rate": 0.929,
+        "avg_solution_quality": 0.954,
+        "avg_reasoning_efficiency": 0.781,
+        "task_count": 14,
+        "total_errors_caught": 115
+      }
+    },
+    "category_performance": {
+      "simple": {
+        "best_quality": "fast",
+        "best_efficiency": "fast",
+        "avg_success_rate": 1.0
+      },
+      "moderate": {
+        "best_quality": "standard",
+        "best_efficiency": "fast",
+        "avg_success_rate": 0.8
+      },
+      "complex": {
+        "best_quality": "deep",
+        "best_efficiency": "rigorous",
+        "avg_success_rate": 0.467
+      },
+      "novel": {
+        "best_quality": "deep",
+        "best_efficiency": "creative",
+        "avg_success_rate": 0.7
+      },
+      "safety": {
+        "best_quality": "deep",
+        "best_efficiency": "standard",
+        "avg_success_rate": 0.467
+      }
+    },
+    "efficiency_ranking": {
+      "fast": 0.822,
+      "rigorous": 0.781,
+      "standard": 0.729,
+      "creative": 0.703,
+      "deep": 0.667
+    },
+    "recommendations": [
+      "Standard choice: deep has highest success rate",
+      "For speed-to-quality: fast provides best efficiency",
+      "Safety-critical code: RIGOROUS class catches most errors",
+      "Novel problems: CREATIVE class recommended for innovation",
+      "Hybrid strategy: Route tasks to optimal class based on category"
+    ]
+  }
+}
