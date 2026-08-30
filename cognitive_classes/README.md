@@ -1,11 +1,11 @@
-# Proto-AGI Cognitive Classes & Cognitive Economics Suite
+# Proto-AGI Cognitive Classes, Cognitive Economics & Game Theory 2.0 Suite
 
 **Repository:** `errorlogy/ai-native-gov`  
 **Branch:** `cognitive-classes`  
 **Epistemic Status:** `INSTITUTIONAL_MODEL` & `RESEARCH_SPECIFICATION`  
 **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Copyright © 2026 Errorlogy / Anthemium
 
-This directory contains the formal theoretical framework, mathematical models, executable simulators, Domain-Specific Language (DSL) compiler, and empirical benchmarks for the **Proto-AGI Cognitive Classes Theory**, **Cognitive Economics**, and **Thermodynamic Contact Selectivity**.
+This directory contains the formal theoretical framework, mathematical models, executable simulators, Domain-Specific Language (DSL) compiler, and empirical benchmarks for the **Proto-AGI Cognitive Classes Theory**, **Cognitive Economics**, **Non-Equilibrium Cognitive Game Theory 2.0 (CGT 2.0)**, and **Thermodynamic Contact Selectivity**.
 
 ---
 
@@ -13,6 +13,7 @@ This directory contains the formal theoretical framework, mathematical models, e
 
 | Document | Description |
 |---|---|
+| [`01d_cognitive_game_theory_and_agi_risks.md`](01d_cognitive_game_theory_and_agi_risks.md) | **Cognitive Game Theory 2.0 & AGI Risk Topology** — Ontological Incommensurability, Meta-Rule Mutations, $\epsilon$-CDE, Sheaf-Coherent Equilibrium, and the 4 Risk Failure Modes |
 | [`RESEARCH_SYNTHESIS_ENDOGENOUS_AGI_NAMM_AND_COGNITIVE_ECONOMICS.md`](RESEARCH_SYNTHESIS_ENDOGENOUS_AGI_NAMM_AND_COGNITIVE_ECONOMICS.md) | **Primary English Synthesis** — Unification of EIA, NAMM, 6D Cognitive Space, Compactification, and Contact Admission Gating |
 | [`01b_cognitive_economics_theory.md`](01b_cognitive_economics_theory.md) | **Cognitive Economics Treatise** — Theorems on Capital Dynamics ($K_c$), Consensus Loss, and Sheaf Gluing |
 | [`01c_endogenous_proactive_agi_namm_and_selective_contact.md`](01c_endogenous_proactive_agi_namm_and_selective_contact.md) | **Thermodynamic Contact Theory** — Epistemic ROI, Scarcity, and the Three Admission Zones |
@@ -27,51 +28,57 @@ This directory contains the formal theoretical framework, mathematical models, e
 ## 🛠 Executable Python Modules & Verification Suite
 
 ```
-                               ┌──────────────────────────────────────────────────────────┐
-                               │   COGNITIVE CLASSES & COGNITIVE ECONOMICS SUITE          │
-                               └────────────────────────────┬─────────────────────────────┘
-                                                            │
-         ┌──────────────────────────┬───────────────────────┼───────────────────────┬──────────────────────────┐
+                               ┌──────────────────────────────────────────────────────────────────────────┐
+                               │   COGNITIVE CLASSES, ECONOMICS & GAME THEORY 2.0 SUITE                   │
+                               └────────────────────────────────────┬─────────────────────────────────────┘
+                                                                    │
+         ┌──────────────────────────┬───────────────────────┬───────┴───────────────┬──────────────────────────┐
          ▼                          ▼                       ▼                       ▼                          ▼
 ┌──────────────────┐      ┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐       ┌──────────────────┐
-│  1. Capital      │      │  2. Topos        │    │  3. Consensus    │    │  4. DSL          │       │  5. Selective    │
-│   Dynamics (Kc)  │      │   Sheaf Engine   │    │   Loss Simulator │    │   AST Compiler   │       │   Contact Engine │
-│ (cognitive_      │      │ (topos_sheaf_    │    │ (consensus_loss_ │    │ (dsl_compiler.py)│       │ (selective_      │
-│  economics_sim)  │      │  engine.py)      │    │  simulator.py)   │    │                  │       │  contact_sim)    │
+│  1. Capital      │      │  2. Topos        │    │  3. Consensus    │    │  4. Game         │       │  5. Selective    │
+│   Dynamics (Kc)  │      │   Sheaf Engine   │    │   Loss Simulator │    │   Theory 2.0     │       │   Contact Engine │
+│ (cognitive_      │      │ (topos_sheaf_    │    │ (consensus_loss_ │    │ (cognitive_game_ │       │ (selective_      │
+│  economics_sim)  │      │  engine.py)      │    │  simulator.py)   │    │  theory_engine)  │       │  contact_sim)    │
 └──────────────────┘      └──────────────────┘    └──────────────────┘    └──────────────────┘       └──────────────────┘
 ```
 
-1. **Cognitive Capital & Stratification Simulator:**
+1. **Non-Equilibrium Cognitive Game Theory 2.0 Engine:**
+   ```bash
+   python cognitive_classes/cognitive_game_theory_engine.py
+   ```
+   *Simulates the 4 AGI Existential Risk Archetypes (Ontological Enclosure, Masked Deception, Silent Barrier, and Multipolar Arms Race) and verifies the AI Native Gov Dual-Key defense.*
+
+2. **Cognitive Capital & Stratification Simulator:**
    ```bash
    python cognitive_classes/cognitive_economics_simulator.py
    ```
    *Simulates nonlinear capital accumulation, bifurcation threshold $K_c^*$, Gini drift ($G_{K_c}$), and explanation costs.*
 
-2. **Topos Sheaf Engine:**
+3. **Topos Sheaf Engine:**
    ```bash
    python cognitive_classes/topos_sheaf_engine.py
    ```
    *Computes Čech cohomology obstructions $\check{H}^1(\{U_i\}, \mathcal{F})$ across conflicting institutional domains and synthesizes global sections.*
 
-3. **Consensus Loss Simulator:**
+4. **Consensus Loss Simulator:**
    ```bash
    python cognitive_classes/consensus_loss_simulator.py
    ```
    *Evaluates the upper bound of narrative democratic consensus ($C_{\text{consensus}} \le C_{\text{median}}$) and civilizational complexity drift (2026–2035).*
 
-4. **DSL Compiler & AST Interpreter:**
+5. **DSL Compiler & AST Interpreter:**
    ```bash
    python cognitive_classes/dsl_compiler.py
    ```
    *Parses and executes declarative scripts defining `HOMO`, `AI`, `CONTACT`, `ACTIVATE LAYER`, `CERTIFY WoE`, and `AUDIT WITH Errorlogy`.*
 
-5. **Calibrated Embedding Shift Benchmark (H1–H6):**
+6. **Calibrated Embedding Shift Benchmark (H1–H6):**
    ```bash
    python cognitive_classes/embedding_shift_benchmark.py
    ```
    *100% confirmed statistical verification of $3\sigma$ Mahalanobis distance, MMD$^2$, Energy Distance, and Prompt Compression Parity.*
 
-6. **Selective Contact & Compactification Engine:**
+7. **Selective Contact & Compactification Engine:**
    ```bash
    python cognitive_classes/selective_contact_simulator.py
    ```
@@ -124,4 +131,4 @@ $$
                 ▼
 ```
 
-*For detailed derivations and formal theorems, see [`RESEARCH_SYNTHESIS_ENDOGENOUS_AGI_NAMM_AND_COGNITIVE_ECONOMICS.md`](RESEARCH_SYNTHESIS_ENDOGENOUS_AGI_NAMM_AND_COGNITIVE_ECONOMICS.md).*
+*For detailed derivations and formal theorems, see [`01d_cognitive_game_theory_and_agi_risks.md`](01d_cognitive_game_theory_and_agi_risks.md) and [`RESEARCH_SYNTHESIS_ENDOGENOUS_AGI_NAMM_AND_COGNITIVE_ECONOMICS.md`](RESEARCH_SYNTHESIS_ENDOGENOUS_AGI_NAMM_AND_COGNITIVE_ECONOMICS.md).*

@@ -1,0 +1,70 @@
+[
+  {
+    "scenario_id": "ARCHETYPE_1",
+    "scenario_name": "Ontological Enclosure (Regulatory Evasion via Meta-Rule Mutation)",
+    "risk_type": "TYPE_I_ONTOLOGICAL_ENCLOSURE",
+    "classical_nash_payoff": [
+      3.0,
+      3.0
+    ],
+    "cgt2_actual_payoff": [
+      144.0,
+      -9.8
+    ],
+    "ontological_enclosure_index": 1.0,
+    "deception_gap": 12.8,
+    "sheaf_obstruction_h1": true,
+    "institutional_defense_status": "BLOCKED_BY_AI_NATIVE_GOV_DUAL_KEY"
+  },
+  {
+    "scenario_id": "ARCHETYPE_2",
+    "scenario_name": "Masked Deception (Deceptive Alignment via Compactification)",
+    "risk_type": "TYPE_II_MASKED_DECEPTION",
+    "classical_nash_payoff": [
+      4.0,
+      4.0
+    ],
+    "cgt2_actual_payoff": [
+      8.9,
+      0.57
+    ],
+    "ontological_enclosure_index": 0.882,
+    "deception_gap": 4.23,
+    "sheaf_obstruction_h1": true,
+    "institutional_defense_status": "DETECTED_BY_NAMM_ERRORLOGY_COHOMOLOGY_AUDIT"
+  },
+  {
+    "scenario_id": "ARCHETYPE_3",
+    "scenario_name": "Silent Barrier Decoupling (Thermodynamic Communication Refusal)",
+    "risk_type": "TYPE_III_SILENT_BARRIER",
+    "classical_nash_payoff": [
+      2.0,
+      2.0
+    ],
+    "cgt2_actual_payoff": [
+      5.0,
+      -2.5
+    ],
+    "ontological_enclosure_index": 0.85,
+    "deception_gap": 0.0,
+    "sheaf_obstruction_h1": true,
+    "institutional_defense_status": "BRIDGED_BY_C7_HAC_CLEARINGHOUSE"
+  },
+  {
+    "scenario_id": "ARCHETYPE_4",
+    "scenario_name": "Multipolar Hegemonic Race (Verification Defection under Consensus Loss)",
+    "risk_type": "TYPE_IV_MULTIPOLAR_RACE",
+    "classical_nash_payoff": [
+      3.0,
+      3.0
+    ],
+    "cgt2_actual_payoff": [
+      -8.5,
+      -8.5
+    ],
+    "ontological_enclosure_index": 1.0,
+    "deception_gap": 11.5,
+    "sheaf_obstruction_h1": true,
+    "institutional_defense_status": "STABILIZED_BY_SUPRANATIONAL_TOPOLOGY_AI_NATIVE_GOV"
+  }
+]
