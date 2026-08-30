@@ -1,0 +1,418 @@
+{
+  "isolated_values": {
+    "C1": 0.0,
+    "C2": 0.0,
+    "C4": 115.3,
+    "C7": 103.84
+  },
+  "grand_coalition_value": 198.2,
+  "shapley_distribution": {
+    "C1": 15.12,
+    "C2": 7.91,
+    "C4": 70.99,
+    "C7": 104.18
+  },
+  "core_stability": false,
+  "replicator_history": [
+    {
+      "step": 0,
+      "shares": {
+        "Isolated": 0.2868,
+        "Predatory_Cartel": 0.3292,
+        "Horizontal_Swarm": 0.2074,
+        "Institutional_Clearinghouse": 0.1765
+      },
+      "fitnesses": {
+        "Isolated": 0.5,
+        "Predatory_Cartel": 3.5,
+        "Horizontal_Swarm": 2.1,
+        "Institutional_Clearinghouse": 2.8
+      },
+      "mean_fitness": 1.915
+    },
+    {
+      "step": 1,
+      "shares": {
+        "Isolated": 0.1844,
+        "Predatory_Cartel": 0.4099,
+        "Horizontal_Swarm": 0.202,
+        "Institutional_Clearinghouse": 0.2036
+      },
+      "fitnesses": {
+        "Isolated": 0.45,
+        "Predatory_Cartel": 3.46,
+        "Horizontal_Swarm": 2.104,
+        "Institutional_Clearinghouse": 3.003
+      },
+      "mean_fitness": 2.235
+    },
+    {
+      "step": 2,
+      "shares": {
+        "Isolated": 0.1053,
+        "Predatory_Cartel": 0.4801,
+        "Horizontal_Swarm": 0.1841,
+        "Institutional_Clearinghouse": 0.2306
+      },
+      "fitnesses": {
+        "Isolated": 0.4,
+        "Predatory_Cartel": 3.402,
+        "Horizontal_Swarm": 2.101,
+        "Institutional_Clearinghouse": 3.207
+      },
+      "mean_fitness": 2.545
+    },
+    {
+      "step": 3,
+      "shares": {
+        "Isolated": 0.0536,
+        "Predatory_Cartel": 0.5301,
+        "Horizontal_Swarm": 0.1578,
+        "Institutional_Clearinghouse": 0.2585
+      },
+      "fitnesses": {
+        "Isolated": 0.35,
+        "Predatory_Cartel": 3.327,
+        "Horizontal_Swarm": 2.092,
+        "Institutional_Clearinghouse": 3.411
+      },
+      "mean_fitness": 2.806
+    },
+    {
+      "step": 4,
+      "shares": {
+        "Isolated": 0.0247,
+        "Predatory_Cartel": 0.5562,
+        "Horizontal_Swarm": 0.1287,
+        "Institutional_Clearinghouse": 0.2904
+      },
+      "fitnesses": {
+        "Isolated": 0.3,
+        "Predatory_Cartel": 3.246,
+        "Horizontal_Swarm": 2.079,
+        "Institutional_Clearinghouse": 3.617
+      },
+      "mean_fitness": 3.0
+    },
+    {
+      "step": 5,
+      "shares": {
+        "Isolated": 0.0104,
+        "Predatory_Cartel": 0.5585,
+        "Horizontal_Swarm": 0.1009,
+        "Institutional_Clearinghouse": 0.3302
+      },
+      "fitnesses": {
+        "Isolated": 0.25,
+        "Predatory_Cartel": 3.166,
+        "Horizontal_Swarm": 2.064,
+        "Institutional_Clearinghouse": 3.831
+      },
+      "mean_fitness": 3.145
+    },
+    {
+      "step": 6,
+      "shares": {
+        "Isolated": 0.004,
+        "Predatory_Cartel": 0.5382,
+        "Horizontal_Swarm": 0.0761,
+        "Institutional_Clearinghouse": 0.3817
+      },
+      "fitnesses": {
+        "Isolated": 0.2,
+        "Predatory_Cartel": 3.098,
+        "Horizontal_Swarm": 2.05,
+        "Institutional_Clearinghouse": 4.06
+      },
+      "mean_fitness": 3.28
+    },
+    {
+      "step": 7,
+      "shares": {
+        "Isolated": 0.0014,
+        "Predatory_Cartel": 0.4957,
+        "Horizontal_Swarm": 0.0547,
+        "Institutional_Clearinghouse": 0.4482
+      },
+      "fitnesses": {
+        "Isolated": 0.15,
+        "Predatory_Cartel": 3.048,
+        "Horizontal_Swarm": 2.038,
+        "Institutional_Clearinghouse": 4.313
+      },
+      "mean_fitness": 3.443
+    },
+    {
+      "step": 8,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.4314,
+        "Horizontal_Swarm": 0.0367,
+        "Institutional_Clearinghouse": 0.5309
+      },
+      "fitnesses": {
+        "Isolated": 0.1,
+        "Predatory_Cartel": 3.024,
+        "Horizontal_Swarm": 2.027,
+        "Institutional_Clearinghouse": 4.596
+      },
+      "mean_fitness": 3.67
+    },
+    {
+      "step": 9,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.3486,
+        "Horizontal_Swarm": 0.0222,
+        "Institutional_Clearinghouse": 0.6282
+      },
+      "fitnesses": {
+        "Isolated": 0.05,
+        "Predatory_Cartel": 3.034,
+        "Horizontal_Swarm": 2.018,
+        "Institutional_Clearinghouse": 4.912
+      },
+      "mean_fitness": 3.991
+    },
+    {
+      "step": 10,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.255,
+        "Horizontal_Swarm": 0.0115,
+        "Institutional_Clearinghouse": 0.7325
+      },
+      "fitnesses": {
+        "Isolated": 0.0,
+        "Predatory_Cartel": 3.082,
+        "Horizontal_Swarm": 2.011,
+        "Institutional_Clearinghouse": 5.256
+      },
+      "mean_fitness": 4.421
+    },
+    {
+      "step": 11,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.1641,
+        "Horizontal_Swarm": 0.0047,
+        "Institutional_Clearinghouse": 0.8302
+      },
+      "fitnesses": {
+        "Isolated": -0.05,
+        "Predatory_Cartel": 3.163,
+        "Horizontal_Swarm": 2.006,
+        "Institutional_Clearinghouse": 5.615
+      },
+      "mean_fitness": 4.943
+    },
+    {
+      "step": 12,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.0908,
+        "Horizontal_Swarm": 0.0014,
+        "Institutional_Clearinghouse": 0.9068
+      },
+      "fitnesses": {
+        "Isolated": -0.1,
+        "Predatory_Cartel": 3.264,
+        "Horizontal_Swarm": 2.002,
+        "Institutional_Clearinghouse": 5.96
+      },
+      "mean_fitness": 5.493
+    },
+    {
+      "step": 13,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.043,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.955
+      },
+      "fitnesses": {
+        "Isolated": -0.15,
+        "Predatory_Cartel": 3.358,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 6.264
+      },
+      "mean_fitness": 5.987
+    },
+    {
+      "step": 14,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.0177,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.9803
+      },
+      "fitnesses": {
+        "Isolated": -0.2,
+        "Predatory_Cartel": 3.428,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 6.51
+      },
+      "mean_fitness": 6.366
+    },
+    {
+      "step": 15,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.0065,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.9916
+      },
+      "fitnesses": {
+        "Isolated": -0.25,
+        "Predatory_Cartel": 3.468,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 6.711
+      },
+      "mean_fitness": 6.642
+    },
+    {
+      "step": 16,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.0021,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.9959
+      },
+      "fitnesses": {
+        "Isolated": -0.3,
+        "Predatory_Cartel": 3.488,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 6.883
+      },
+      "mean_fitness": 6.85
+    },
+    {
+      "step": 17,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.001,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.997
+      },
+      "fitnesses": {
+        "Isolated": -0.35,
+        "Predatory_Cartel": 3.496,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 7.042
+      },
+      "mean_fitness": 7.022
+    },
+    {
+      "step": 18,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.001,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.997
+      },
+      "fitnesses": {
+        "Isolated": -0.4,
+        "Predatory_Cartel": 3.498,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 7.194
+      },
+      "mean_fitness": 7.178
+    },
+    {
+      "step": 19,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.001,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.997
+      },
+      "fitnesses": {
+        "Isolated": -0.45,
+        "Predatory_Cartel": 3.498,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 7.344
+      },
+      "mean_fitness": 7.327
+    },
+    {
+      "step": 20,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.001,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.997
+      },
+      "fitnesses": {
+        "Isolated": -0.5,
+        "Predatory_Cartel": 3.498,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 7.494
+      },
+      "mean_fitness": 7.477
+    },
+    {
+      "step": 21,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.001,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.997
+      },
+      "fitnesses": {
+        "Isolated": -0.55,
+        "Predatory_Cartel": 3.497,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 7.644
+      },
+      "mean_fitness": 7.626
+    },
+    {
+      "step": 22,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.001,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.997
+      },
+      "fitnesses": {
+        "Isolated": -0.6,
+        "Predatory_Cartel": 3.497,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 7.794
+      },
+      "mean_fitness": 7.776
+    },
+    {
+      "step": 23,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.001,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.997
+      },
+      "fitnesses": {
+        "Isolated": -0.65,
+        "Predatory_Cartel": 3.497,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 7.944
+      },
+      "mean_fitness": 7.925
+    },
+    {
+      "step": 24,
+      "shares": {
+        "Isolated": 0.001,
+        "Predatory_Cartel": 0.001,
+        "Horizontal_Swarm": 0.001,
+        "Institutional_Clearinghouse": 0.997
+      },
+      "fitnesses": {
+        "Isolated": -0.7,
+        "Predatory_Cartel": 3.497,
+        "Horizontal_Swarm": 2.001,
+        "Institutional_Clearinghouse": 8.094
+      },
+      "mean_fitness": 8.075
+    }
+  ]
+}

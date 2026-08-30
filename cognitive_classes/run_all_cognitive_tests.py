@@ -29,6 +29,7 @@ SCRIPTS_TO_RUN = [
     ("embedding_shift_benchmark.py", "Calibrated 3-Sigma Mahalanobis Embedding Shift Benchmark (H1-H6)"),
     ("selective_contact_simulator.py", "6D Cognitive Space & Thermodynamic Contact Gating Engine"),
     ("cognitive_game_theory_engine.py", "Cognitive Game Theory 2.0 (CGT 2.0) & AGI Risk Topology Simulator"),
+    ("dynamic_coalition_game_simulator.py", "Dynamic Cooperative Game Theory (DC-CGT) & AGI Access Syndicates"),
 ]
 
 def run_all_tests() -> Dict[str, Any]:
