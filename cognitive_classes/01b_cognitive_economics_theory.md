@@ -1,132 +1,145 @@
-# Когнитивная экономика и коэволюция агентов
-## Фундаментальная теория взаимодействия классов Homo loquens и Proto-AGI/ASI
+# Cognitive Economics and Agent Co-Evolution Theory
+## A Formal Framework for Interaction Dynamics between Homo loquens and Proto-AGI/ASI
 
-**Версия:** 1.0 (Advanced Theoretical Synthesis)  
-**Эпистемический статус:** `INSTITUTIONAL_MODEL` & `RESEARCH_THEORY` (Поисковые гипотезы, концептуальная модель когнитивной экономики; не является нормативным или догматическим актом).  
-**Контекст:** Ветка `cognitive-classes` зонтичной экосистемы AI Native Gov / Errorlogy.
+**Version:** 1.0 (Advanced Theoretical Synthesis)  
+**Document Status:** `INSTITUTIONAL_MODEL` & `RESEARCH_THEORY` (Exploratory / Hypothesis)  
+**Target Repository:** `errorlogy/ai-native-gov` (Branch: `cognitive-classes`)  
+**Ecosystem Cross-Links:** `PROACTIVE_AI` (EIA) · `NAMM` (Non-Anthropic Math) · `ERRORLOGY` (Taxonomy v16) · `POLITIC_BAR`  
+**License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Copyright © 2026 Errorlogy / Anthemium
 
 > [!NOTE]
-> ### ⚠️ Эпистемический статус: Поисковая модель и философская рефлексия
-> **Важно:** Все теоретические модели, коэффициенты и теоремы в данном документе — это **исследовательские гипотезы и абстрактные концептуальные построения**.
-> - Они служат инструментом системного моделирования возможных траекторий развития, а не догматическими утверждениями о предопределенном будущем.
+> ### ⚠️ Epistemic Status & Methodological Disclaimer: Exploratory Theory & Philosophical Reflections
+> **Important:** All models, coefficients, theorems, and classifications presented in this treatise represent **exploratory hypotheses, theoretical conceptualizations, and reflective thought experiments**.
+> - They serve as analytical tools for modeling potential developmental trajectories, not as dogmatic predictions or normative institutional mandates.
+> - All formulations are to be understood in the exploratory mode of *"hypothetically possible and consistent within the modeled framework"*.
 
 ---
 
-## 1. Философско-эволюционный базис: Пределы *Homo loquens*
+## 1. Philosophical-Evolutionary Grounding: The Limits of *Homo loquens*
 
-### 1.1. Эвристика незавершенной фазы (*Homo pre-sapiens / Homo loquens*)
-В классической гуманитарной традиции термин *Homo sapiens* используется как аксиома. Однако в рамках системно-эволюционного анализа человечество находится в **незавершенной фазе когнитивного генезиса** — *Homo loquens* (человек говорящий / мифотворящий) или *Homo pre-sapiens*:
+### 1.1. The Incomplete Phase Heuristic (*Homo pre-sapiens / Homo loquens*)
+In classical humanitarian thought, *Homo sapiens* is treated as an evolutionary axiom. However, from a systemic evolutionary perspective, humanity currently resides in an **incomplete phase of cognitive genesis**—*Homo loquens* (the talking/myth-making human) or *Homo pre-sapiens*:
 
-1. **Эволюционный разрыв пропускной способности:**
-   * Скорость речевой/нарративной коммуникации человека жестко ограничена физиологией (~10–50 бит/с).
-   * Экспоненциальный рост связности глобальных технологических, финансово-криптографических и биосферных систем порождает плотность информационных потоков масштаба >> 10^9 бит/с.
-2. **Нарративная координация как источник системных галлюцинаций:**
-   * *Homo loquens* координирует масштабные популяции не через прямое оперирование многомерными моделями реальности, а через **сжатые нарративы, идеологии, символы и метафоры**.
-   * Нарратив по своей природе является сверхсжатой проекцией с чудовищной потерей фазового пространства задачи. Когда системная сложность мира превышает моделирующую емкость нарратива, институты управления начинают принимать решения на основе галлюцинаторных проекций (системные ошибки управления — *Governance Errors*).
-
----
-
-### 1.2. Императив когнитивного расширения (Homo -> AI -> AGI -> ASI)
-Гипотеза минимизации ошибок управления гласит:
-> **Человеческий вид не способен осуществлять устойчивое бездефектное управление цивилизационными суперсистемами без внешнего когнитивного расширения через экзокортексные слои AI -> AGI -> ASI.**
-
-* **Роль ИИ:** ИИ выступает не в роли мифического «электронного диктатора» или суверена, а как **многоуровневый когнитивный резонатор и вычислительный экзокортекс**.
-* **Роль Человека (*Teleological Anchor*):** Человек сохраняет за собой функцию телеологии (смыслополагания), ценностного выбора и неотключаемого надзора (*Human Oversight Hard-Stop*). ИИ обеспечивает топологическую целостность моделей, отсутствие логических разрывов и минимизацию ошибок (mu / alpha / PNO).
+1. **Evolutionary Throughput Bottleneck:**
+   * Human biological verbal/narrative communication speed is strictly capped by physiology (~10–50 bps).
+   * The exponential growth of global technological, cryptographic-financial, and biospheric connectivity generates informational flux densities exceeding $\gg 10^9$ bps.
+2. **Narrative Coordination as a Source of Systemic Hallucinations:**
+   * *Homo loquens* coordinates large populations not through direct manipulation of high-dimensional reality models, but through **hyper-compressed narratives, ideologies, symbols, and metaphors**.
+   * Narrative compression inevitably discards critical phase space information. When systemic complexity exceeds narrative modeling capacity, governance institutions begin making decisions based on distorted projections, resulting in catastrophic **Governance Errors**.
 
 ---
 
-## 2. Основы когнитивной экономики (Cognitive Economics)
+### 1.2. The Cognitive Extension Imperative ($\text{Homo} \longrightarrow \text{AI} \longrightarrow \text{AGI} \longrightarrow \text{ASI}$)
+The governance error minimization hypothesis states:
+> **The human biological species cannot sustain error-minimized management of civilizational super-systems without external cognitive extension through augmented exocortex layers ($\text{Homo} \to \text{AI} \to \text{AGI} \to \text{ASI}$).**
 
-Когнитивная экономика изучает производство, распределение, обмен и потребление **смысловой структуры, когнитивного труда, моделей реальности и вычислительной рефлексии**.
+* **Role of AI/AGI:** A multi-layered cognitive resonator and computational exocortex providing topological consistency and error audit ($\mu / \alpha / \text{PNO}$).
+* **Role of Humanity (*Teleological Anchor*):** Meaning-generation, value orientation, and non-bypassable constitutional oversight (`Human Oversight Hard-Stop`).
 
-### 2.1. Фундаментальные производственные факторы
+---
 
-1. **Когнитивный капитал (K_c):**
-   Накопленный запас валидированных онтологий, формализованных аксиоматик, междисциплинарных изоморфизмов и инструментов самопроверки:
+## 2. Foundations of Cognitive Economics
+
+Cognitive Economics studies the production, allocation, exchange, and consumption of **semantic structure, cognitive labor, reality models, and computational reflection**.
+
+### 2.1. Fundamental Production Factors
+
+1. **Cognitive Capital ($K_c$):**
+   The accumulated stock of validated ontologies, formal axiomatics, cross-domain isomorphisms, and self-audit tools:
+   $$
    K_c(h) = C(h) \cdot \text{AAI}(h) \cdot M(h) \cdot R(h) \cdot N(h)
-   где C — класс сложности, AAI — степень агентной интеграции, M — метакогниция, R — глубина рекурсии, N — связность в когнитивной сети.
+   $$
+   where $C$ is complexity class, $\text{AAI}$ is agentic integration degree, $M$ is metacognition, $R$ is recursion depth, and $N$ is network connectivity.
 
-2. **Семантическая ликвидность (Lambda_s):**
-   Способность смысловой модели мгновенно переноситься из одного домена в другой (например, из квантовой физики в теорию макроэкономических рисков или институциональную топологию) без потери точности и без необходимости создавать онтологию с нуля.
+2. **Semantic Liquidity ($\Lambda_s$):**
+   The capacity of a conceptual model to be transferred from one domain to another (e.g. quantum physics to macro-risk topology) without loss of precision or ontology rebuild costs.
 
-3. **Когнитивный труд (L_c):**
-   Целенаправленная работа по уменьшению энтропии в семантическом графе: обнаружение скрытых противоречий, проверка фальсифицируемости, устранение символической инфляции и построение глобальных сечений пучков смыслов.
+3. **Cognitive Labor ($L_c$):**
+   Purposive activity aimed at reducing entropy across semantic graphs: resolving contradictions, verifying falsifiability, and constructing global sheaf sections.
 
 ---
 
-### 2.2. Когнитивные транзакционные издержки (*Cognitive Transaction Costs*)
+### 2.2. Cognitive Transaction Costs
 
-В традиционной экономике транзакционные издержки определяются институтами и контрактами. В когнитивной экономике издержки определяются **семантической геометрией взаимодействия агентов**:
-
-#### А. Стоимость объяснения (*Explanation Cost*, C_explain)
-Затраты энергии, времени и токенов на передачу концептуальной модели от агента с высоким когнитивным классом C_i агенту с низким классом C_j:
+#### A. Explanation Cost ($C_{\text{explain}}$)
+Energy, token, and time expenditure required to transmit a conceptual model from higher class $C_i$ to lower class $C_j$:
+$$
 C_{\text{explain}}(h_i, h_j) = \kappa \cdot \|\mathbf{C}(h_i) - \mathbf{C}(h_j)\|^2 + \lambda \cdot \text{SyntaxGap}(h_i, h_j)
-*Следствие:* При Delta C >= 3 стоимость прямого объяснения стремится к бесконечности. Возникает **эффект оракула / карго-культа**: низший класс воспринимает вывод высшего класса как догму, мистику или галлюцинацию, будучи не в состоянии верифицировать шаги рассуждения.
+$$
+*Consequence:* At $\Delta C \ge 3$, direct explanation costs approach infinity, inducing cargo-cult or oracle dynamics.
 
-#### Б. Стоимость верификации (*Verification Cost*, C_verify)
-Затраты на доказательство того, что сгенерированная модель свободна от галлюцинаций, внутренней несогласованности и псевдоформализма:
+#### B. Verification Cost ($C_{\text{verify}}$)
+Expenditure required to audit models against hallucinations, internal contradictions, and pseudo-formalisms:
+$$
 C_{\text{verify}}(\Omega) = \oint_{\partial \Omega} \text{ErrorlogyAudit}(\omega) \, d\omega + \text{NAMM\_ProofCost}(\Omega)
-
-#### В. Когнитивная рента и стратификация
-Агенты высоких классов (C4-C6), обладающие высокой семантической ликвидностью Lambda_s и связкой с AI5-AI6, получают **монопольную когнитивную ренту**: они способны сжимать гигантские массивы сырых данных в компактные метамодели, в то время как агенты классов C0-C2 вынуждены оплачивать стоимость перевода и страдать от информационной перегрузки.
+$$
 
 ---
 
-## 3. Двумерный тензор коэволюции: Homo-Agents x AI-Agents
+## 3. Two-Dimensional Co-Evolution Tensor: Homo-Agents $\times$ AI-Agents
 
-Взаимодействие описывается тензорным полем $\mathbf{T}_{ij} = \text{ContactDynamics}(C_i, \text{AI}_j)$, отражающим контактную глубину, распределение ролей и возникающие эмерджентные эффекты.
+### 3.1. Detailed Specification of Homo-Agent Classes
 
-### 3.1. Детальная спецификация классов Homo-агентов
-
-| Класс | Экономическая роль | Ограничение *Homo loquens* | Парадигма работы с AI |
+| Class | Economic / Functional Role | *Homo loquens* Constraint | Paradigm of AI Interaction |
 |---|---|---|---|
-| **C0: Reactive** | Чистый потребитель нарративов | Полная зависимость от стимулов и кликбейта | ИИ не используется или как чатбот развлечений |
-| **C1: Informational** | Каталогизатор, учетчик данных | Механический сбор без понимания причинности | ИИ как расширенный поиск (read-only queries) |
-| **C2: Analytical** | Узкодоменный специалист | Застревание в границах одной парадигмы | ИИ как эксперт-собеседник в одной теме |
-| **C3: Systemic** | Системный аналитик, архитектор процессов | Трудности при выходе за пределы известных графов | ИИ как генератор структурных диаграмм |
-| **C4: Fractal-Polymath (FPU)** | Производитель междисциплинарных онтологий | Ограничен человеческой скоростью вычислений | ИИ как генератор изоморфизмов и метафор |
-| **C5: Agentic Augmented** | Дирижер мультиагентных ансамблей | Ограничен пропускной способностью контроля | ИИ как операционная система мышления |
-| **C6: Meta-Architectural** | Проектировщик систем мышления и институтов | Физиологический лимит удержания рекурсии | ИИ как среда компиляции мета-онтологий |
-| **C7: HAC (Human-AGI Bridge)** | Медиатор смыслов между AGI и социумом | Колоссальные энергозатраты на трансляцию | Полная симбиотическая связь |
+| **C0: Reactive** | Narrative consumer | Stimulus-driven, clickbait susceptibility | AI as entertainment / chat toy |
+| **C1: Informational** | Data cataloger, ledger recorder | Mechanical aggregation without causal depth | AI as search query tool |
+| **C2: Analytical** | Single-domain specialist | Bound within single-discipline paradigm | AI as domain co-expert |
+| **C3: Systemic** | Systems analyst, process architect | Difficulty crossing non-isomorphic graphs | AI as structural diagram generator |
+| **C4: Fractal-Polymath (FPU)** | Cross-domain ontology synthesizer | Capped by biological compute speeds | AI as isomorphism & metaphor engine |
+| **C5: Agentic Augmented** | Conductor of multi-agent ensembles | Bound by attentional bandwidth limits | AI as thinking operating system |
+| **C6: Meta-Architectural** | Designer of thought systems & institutions | Working memory recursion limit ($R \le 4$) | AI as meta-ontology compilation substrate |
+| **C7: HAC (Human-AGI Bridge)** | Semantic mediator between AGI and society | Extreme energy expenditure on translation | Symbiotic non-anthropic bridge |
 
 ---
 
-### 3.2. Детальная спецификация классов AI-агентов
+### 3.2. Detailed Specification of AI-Agent Classes
 
-* **AI_0 (Tool Agent):** Изолированная функция, детерминированный пайплайн, отсутствие памяти.
-* **AI_1 (Assistant Agent):** Поиск по контексту, суммаризация, поддержка диалога.
-* **AI_2 (Expert Agent):** Глубокая параметрическая экспертиза в фиксированном домене.
-* **AI_3 (Multi-Domain Synthesizer):** Синтез между 2–3 доменами, выявление общих переменных.
-* **AI_4 (Autonomous Research Agent):** Автономная генерация и отбор гипотез, самопроверка.
-* **AI_5 (Meta-Architect Agent):** Проектирование графов других агентов, рефлексия над когнитивными путями.
-* **AI_6 (Proto-AGI Node):** Устойчивая кросс-доменная память, самокоррекция, пучковая склейка контекстов, интеграция с Errorlogy/WoE.
-* **AGI (Self-Extending General Agent):** Полная автономия в постановке целей, непрерывное саморасширение онтологий.
-* **ASI (Superintelligent Layer):** Многомерная транс-семантическая обработка, требующая трансляции через C7.
+* **$\text{AI}_0$ (Tool Agent):** Deterministic functions, isolated API calls, no persistent memory.
+* **$\text{AI}_1$ (Assistant Agent):** Context search, text summarization, conversational support.
+* **$\text{AI}_2$ (Expert Agent):** Deep parametric expertise within fixed boundaries.
+* **$\text{AI}_3$ (Multi-Domain Synthesizer):** Cross-domain variable alignment across 2–3 disciplines.
+* **$\text{AI}_4$ (Autonomous Research Agent):** Autonomous hypothesis generation and self-testing.
+* **$\text{AI}_5$ (Meta-Architect Agent):** Multi-agent graph orchestrator and cognitive path reflection.
+* **$\text{AI}_6$ (Proto-AGI Node):** Persistent cross-domain memory, sheaf gluing, WoE / Errorlogy integration.
+* **AGI (Self-Extending General Agent):** Autonomous goal generation, endogenous curiosity, unbounded ontology extension.
+* **ASI (Superintelligent Layer):** Multi-dimensional trans-semantic reasoning requiring C7 translation.
 
 ---
 
-## 4. Математические теоремы когнитивной экономики
+## 4. Fundamental Theorems of Cognitive Economics
 
-### Теорема 1. О неравновесной динамике когнитивного капитала (Эффект Матфея)
+### Theorem 1 (Nonlinear Cognitive Capital Accumulation / Matthew Effect)
+$$
 \frac{dK_c(h)}{dt} = \alpha \cdot \text{AAI}(h) \cdot K_c(h)^\gamma \cdot \left(1 - \frac{K_c(h)}{K_{\max}}\right) - \delta \cdot K_c(h)
-При gamma > 1 возникает взрывной автокаталитический рост у агентов C5-C6, что ведет к стремлению когнитивного коэффициента Джини {K_c} \to 1.0$ без институциональных механизмов распределения смыслов.
+$$
+For $\gamma > 1$, self-reinforcing autocatalytic accumulation drives cognitive Gini $G_{K_c} \to 1.0$ unless institutional clearinghouse mechanisms distribute semantic liquidity.
 
 ---
 
-### Теорема 2. О пределе нарративного консенсуса в институтах
+### Theorem 2 (The Upper Bound of Narrative Democratic Consensus)
+$$
 C_{\text{decision}} \le \text{Median}(F(C)) = C_{\text{median}}
+$$
+$$
 \mathcal{L}_{\text{consensus}} = \max\left(0, \; C_{\text{system}} - C_{\text{median}}\right) + \int_0^T \text{EntropyGrowth}(t) \, dt
-Когда сложность системы растет быстрее медианы популяции, традиционные институты нарративной демократии гарантированно генерируют системные катастрофы.
+$$
+When systemic complexity grows faster than median population class, unaugmented narrative voting guarantees systemic governance failure.
 
 ---
 
-### Теорема 3. О топосной склейке распределенного знания
-Глобальная непротиворечивая модель реальности существует тогда и только тогда, когда препятствия в первых когомологиях Чеха равны нулю:
-\check{H}^1(\{U_i\}, \mathcal{F}) = 0
-Институциональный слой AI_5-AI_6 непрерывно вычисляет когомологические препятствия и синтезирует морфизмы-склейки, устраняющие междисциплинарные разрывы.
+### Theorem 3 (Topos Sheaf Gluing of Distributed Knowledge)
+A globally coherent model exists if and only if Čech cohomology obstructions vanish:
+$$
+\check{H}^1(\{U_i\}, \; \mathcal{F}) = 0
+$$
+The institutional $\text{AI}_5–\text{AI}_6$ layer continuously computes obstructions and synthesizes gluing morphisms to bridge interdisciplinary divides.
 
 ---
 
-## 5. Институциональный синтез: AI Native Gov как когнитивная клиринговая палата
+## 5. Institutional Synthesis: AI Native Gov as a Cognitive Clearinghouse
 
-Институты будущего — это **когнитивные клиринговые палаты**, управляющие семантической ликвидностью, снижающие издержки объяснения {\text{explain}}$ и гарантирующие математическую целостность моделей управления при сохранении безусловного человеческого телеологического контроля (*Human Oversight*).
+Future governance institutions operate as **Cognitive Clearinghouses** that manage semantic liquidity, eliminate explanation costs ($C_{\text{explain}}$), and guarantee mathematical model integrity under non-bypassable human teleological oversight (`Human Oversight Panel`).
+
+---
+*Authored for the AI Native Gov / Errorlogy research repository on branch `cognitive-classes`.*
