@@ -1,0 +1,98 @@
+[
+  {
+    "agent_id": "user_C0",
+    "class_label": "C0_Reactive",
+    "compactification_loss": 9.604,
+    "distortion_risk": 0.95,
+    "epistemic_value_for_agi": 0.25,
+    "explanation_cost": 5.3,
+    "compute_energy_cost": 8.0,
+    "misuse_risk": 2.38,
+    "net_agi_utility": -18.28,
+    "admission_decision": "ZONE_III_SILENT_BARRIER_REJECTED"
+  },
+  {
+    "agent_id": "user_C1",
+    "class_label": "C1_Informational",
+    "compactification_loss": 8.612,
+    "distortion_risk": 0.875,
+    "epistemic_value_for_agi": 0.6,
+    "explanation_cost": 4.81,
+    "compute_energy_cost": 4.0,
+    "misuse_risk": 2.21,
+    "net_agi_utility": -13.04,
+    "admission_decision": "ZONE_III_SILENT_BARRIER_REJECTED"
+  },
+  {
+    "agent_id": "user_C2",
+    "class_label": "C2_Analytical",
+    "compactification_loss": 6.4,
+    "distortion_risk": 0.725,
+    "epistemic_value_for_agi": 1.25,
+    "explanation_cost": 3.68,
+    "compute_energy_cost": 2.0,
+    "misuse_risk": 1.69,
+    "net_agi_utility": -8.29,
+    "admission_decision": "ZONE_III_SILENT_BARRIER_REJECTED"
+  },
+  {
+    "agent_id": "user_C3",
+    "class_label": "C3_Systemic",
+    "compactification_loss": 3.6,
+    "distortion_risk": 0.5,
+    "epistemic_value_for_agi": 2.4,
+    "explanation_cost": 2.12,
+    "compute_energy_cost": 1.33,
+    "misuse_risk": 0.96,
+    "net_agi_utility": -3.52,
+    "admission_decision": "ZONE_III_SILENT_BARRIER_REJECTED"
+  },
+  {
+    "agent_id": "user_C4",
+    "class_label": "C4_Fractal_FPU",
+    "compactification_loss": 1.156,
+    "distortion_risk": 0.25,
+    "epistemic_value_for_agi": 3.95,
+    "explanation_cost": 0.69,
+    "compute_energy_cost": 1.0,
+    "misuse_risk": 0.3,
+    "net_agi_utility": 1.22,
+    "admission_decision": "ZONE_II_STATIC_CACHE_ROUTING"
+  },
+  {
+    "agent_id": "user_C5",
+    "class_label": "C5_Agentic_Augmented",
+    "compactification_loss": 0.392,
+    "distortion_risk": 0.175,
+    "epistemic_value_for_agi": 4.25,
+    "explanation_cost": 0.25,
+    "compute_energy_cost": 0.86,
+    "misuse_risk": 0.12,
+    "net_agi_utility": 2.49,
+    "admission_decision": "ZONE_I_DIRECT_DEEP_SYNERGY"
+  },
+  {
+    "agent_id": "user_C6",
+    "class_label": "C6_Meta_Architect",
+    "compactification_loss": 0.092,
+    "distortion_risk": 0.065,
+    "epistemic_value_for_agi": 4.75,
+    "explanation_cost": 0.06,
+    "compute_energy_cost": 0.81,
+    "misuse_risk": 0.02,
+    "net_agi_utility": 3.67,
+    "admission_decision": "ZONE_I_DIRECT_DEEP_SYNERGY"
+  },
+  {
+    "agent_id": "user_C7",
+    "class_label": "C7_HAC_Bridge",
+    "compactification_loss": 0.01,
+    "distortion_risk": 0.03,
+    "epistemic_value_for_agi": 4.9,
+    "explanation_cost": 0.01,
+    "compute_energy_cost": 0.78,
+    "misuse_risk": 0.0,
+    "net_agi_utility": 4.02,
+    "admission_decision": "ZONE_I_DIRECT_DEEP_SYNERGY"
+  }
+]
