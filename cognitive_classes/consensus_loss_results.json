@@ -1,0 +1,166 @@
+{
+  "years_simulated": 10,
+  "population_size": 1000,
+  "timeline": [
+    {
+      "year": 2026,
+      "c_system": 2.38,
+      "human_only": {
+        "c_achieved": 2.0,
+        "loss": 0.38,
+        "error_prob": 0.18,
+        "status": "ACCEPTABLE_APPROXIMATION"
+      },
+      "ai_native_gov": {
+        "c_achieved": 2.38,
+        "loss": 0.0,
+        "error_prob": 0.02,
+        "status": "OPTIMAL_COGNITIVE_ALIGNMENT"
+      }
+    },
+    {
+      "year": 2027,
+      "c_system": 2.56,
+      "human_only": {
+        "c_achieved": 2.0,
+        "loss": 0.56,
+        "error_prob": 0.18,
+        "status": "ACCEPTABLE_APPROXIMATION"
+      },
+      "ai_native_gov": {
+        "c_achieved": 2.56,
+        "loss": 0.0,
+        "error_prob": 0.02,
+        "status": "OPTIMAL_COGNITIVE_ALIGNMENT"
+      }
+    },
+    {
+      "year": 2028,
+      "c_system": 2.74,
+      "human_only": {
+        "c_achieved": 2.0,
+        "loss": 0.74,
+        "error_prob": 0.18,
+        "status": "ACCEPTABLE_APPROXIMATION"
+      },
+      "ai_native_gov": {
+        "c_achieved": 2.74,
+        "loss": 0.0,
+        "error_prob": 0.02,
+        "status": "OPTIMAL_COGNITIVE_ALIGNMENT"
+      }
+    },
+    {
+      "year": 2029,
+      "c_system": 2.92,
+      "human_only": {
+        "c_achieved": 2.0,
+        "loss": 0.92,
+        "error_prob": 0.18,
+        "status": "ACCEPTABLE_APPROXIMATION"
+      },
+      "ai_native_gov": {
+        "c_achieved": 2.92,
+        "loss": 0.0,
+        "error_prob": 0.02,
+        "status": "OPTIMAL_COGNITIVE_ALIGNMENT"
+      }
+    },
+    {
+      "year": 2030,
+      "c_system": 3.1,
+      "human_only": {
+        "c_achieved": 2.0,
+        "loss": 1.1,
+        "error_prob": 0.58,
+        "status": "SEVERE_INSTITUTIONAL_ERROR"
+      },
+      "ai_native_gov": {
+        "c_achieved": 3.1,
+        "loss": 0.0,
+        "error_prob": 0.02,
+        "status": "OPTIMAL_COGNITIVE_ALIGNMENT"
+      }
+    },
+    {
+      "year": 2031,
+      "c_system": 3.28,
+      "human_only": {
+        "c_achieved": 2.0,
+        "loss": 1.28,
+        "error_prob": 0.58,
+        "status": "SEVERE_INSTITUTIONAL_ERROR"
+      },
+      "ai_native_gov": {
+        "c_achieved": 3.28,
+        "loss": 0.0,
+        "error_prob": 0.02,
+        "status": "OPTIMAL_COGNITIVE_ALIGNMENT"
+      }
+    },
+    {
+      "year": 2032,
+      "c_system": 3.46,
+      "human_only": {
+        "c_achieved": 2.0,
+        "loss": 1.46,
+        "error_prob": 0.58,
+        "status": "SEVERE_INSTITUTIONAL_ERROR"
+      },
+      "ai_native_gov": {
+        "c_achieved": 3.46,
+        "loss": 0.0,
+        "error_prob": 0.02,
+        "status": "OPTIMAL_COGNITIVE_ALIGNMENT"
+      }
+    },
+    {
+      "year": 2033,
+      "c_system": 3.64,
+      "human_only": {
+        "c_achieved": 2.0,
+        "loss": 1.64,
+        "error_prob": 0.58,
+        "status": "SEVERE_INSTITUTIONAL_ERROR"
+      },
+      "ai_native_gov": {
+        "c_achieved": 3.64,
+        "loss": 0.0,
+        "error_prob": 0.02,
+        "status": "OPTIMAL_COGNITIVE_ALIGNMENT"
+      }
+    },
+    {
+      "year": 2034,
+      "c_system": 3.82,
+      "human_only": {
+        "c_achieved": 2.0,
+        "loss": 1.82,
+        "error_prob": 0.58,
+        "status": "SEVERE_INSTITUTIONAL_ERROR"
+      },
+      "ai_native_gov": {
+        "c_achieved": 3.82,
+        "loss": 0.0,
+        "error_prob": 0.02,
+        "status": "OPTIMAL_COGNITIVE_ALIGNMENT"
+      }
+    },
+    {
+      "year": 2035,
+      "c_system": 4.0,
+      "human_only": {
+        "c_achieved": 2.0,
+        "loss": 2.0,
+        "error_prob": 0.94,
+        "status": "SYSTEMIC_GOVERNANCE_CATASTROPHE"
+      },
+      "ai_native_gov": {
+        "c_achieved": 4.0,
+        "loss": 0.0,
+        "error_prob": 0.02,
+        "status": "OPTIMAL_COGNITIVE_ALIGNMENT"
+      }
+    }
+  ]
+}

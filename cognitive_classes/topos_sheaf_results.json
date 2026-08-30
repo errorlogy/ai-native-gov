@@ -1,0 +1,100 @@
+{
+  "cohomology": {
+    "h1_is_zero": false,
+    "obstruction_count": 2,
+    "obstructions": [
+      {
+        "domain_pair": [
+          "tech_ai",
+          "law_judiciary"
+        ],
+        "concept": "model_autonomy",
+        "val_d1": "UNRESTRICTED_AGENTIC",
+        "val_d2": "HUMAN_OVERSIGHT_GATED",
+        "discrepancy": "Conflict on 'model_autonomy': tech_ai asserts 'UNRESTRICTED_AGENTIC' vs law_judiciary asserts 'HUMAN_OVERSIGHT_GATED'"
+      },
+      {
+        "domain_pair": [
+          "tech_ai",
+          "law_judiciary"
+        ],
+        "concept": "data_retention",
+        "val_d1": "PERMANENT_ONCHAIN",
+        "val_d2": "GDPR_EPHEMERAL",
+        "discrepancy": "Conflict on 'data_retention': tech_ai asserts 'PERMANENT_ONCHAIN' vs law_judiciary asserts 'GDPR_EPHEMERAL'"
+      }
+    ],
+    "agreements": [
+      {
+        "domain_pair": [
+          "tech_ai",
+          "finance_treasury"
+        ],
+        "concept": "crypto_liquidity",
+        "shared_value": "DEEP"
+      },
+      {
+        "domain_pair": [
+          "tech_ai",
+          "finance_treasury"
+        ],
+        "concept": "execution_speed",
+        "shared_value": "ULTRA_FAST"
+      }
+    ]
+  },
+  "c3_result": {
+    "gluing_status": "GLUING_FAILED_CECH_OBSTRUCTION",
+    "h1_obstruction": true,
+    "unresolved_obstructions": [
+      {
+        "domain_pair": [
+          "tech_ai",
+          "law_judiciary"
+        ],
+        "concept": "model_autonomy",
+        "val_d1": "UNRESTRICTED_AGENTIC",
+        "val_d2": "HUMAN_OVERSIGHT_GATED",
+        "discrepancy": "Conflict on 'model_autonomy': tech_ai asserts 'UNRESTRICTED_AGENTIC' vs law_judiciary asserts 'HUMAN_OVERSIGHT_GATED'"
+      },
+      {
+        "domain_pair": [
+          "tech_ai",
+          "law_judiciary"
+        ],
+        "concept": "data_retention",
+        "val_d1": "PERMANENT_ONCHAIN",
+        "val_d2": "GDPR_EPHEMERAL",
+        "discrepancy": "Conflict on 'data_retention': tech_ai asserts 'PERMANENT_ONCHAIN' vs law_judiciary asserts 'GDPR_EPHEMERAL'"
+      }
+    ],
+    "global_section": null,
+    "resolved_via": "NONE"
+  },
+  "c6_result": {
+    "gluing_status": "GLOBAL_SECTION_CONSTRUCTED",
+    "h1_obstruction": true,
+    "obstructions_resolved": [
+      {
+        "concept": "model_autonomy",
+        "resolution": "SYNTHESIS(UNRESTRICTED_AGENTIC + HUMAN_OVERSIGHT_GATED)",
+        "mechanism": "META_MORPHISM_GLUING"
+      },
+      {
+        "concept": "data_retention",
+        "resolution": "SYNTHESIS(PERMANENT_ONCHAIN + GDPR_EPHEMERAL)",
+        "mechanism": "META_MORPHISM_GLUING"
+      }
+    ],
+    "global_section": {
+      "execution_speed": "ULTRA_FAST",
+      "model_autonomy": "SYNTHESIS(UNRESTRICTED_AGENTIC + HUMAN_OVERSIGHT_GATED)",
+      "data_retention": "SYNTHESIS(PERMANENT_ONCHAIN + GDPR_EPHEMERAL)",
+      "crypto_liquidity": "DEEP",
+      "due_process": "STRICT_ADHERENCE",
+      "human_oversight": "HARD_STOP_ENABLED",
+      "capital_adequacy": "TIER_1_STABLE"
+    },
+    "resolved_via": "C6_META_SYNTHESIS"
+  }
+}
