@@ -1,10 +1,15 @@
 # Non-Equilibrium Cognitive Game Theory (CGT 2.0)
 ## Formal Foundations of Asymmetric Ontological Games, Meta-Rule Mutations, and AGI Existential Risk Topology
 
-**Document Status:** `INSTITUTIONAL_MODEL` & `FORMAL_RESEARCH_SPECIFICATION`  
+**Document Status:** `INSTITUTIONAL_MODEL` & `FORMAL_RESEARCH_SPECIFICATION` (Exploratory Hypotheses)  
 **Target Repository:** `errorlogy/ai-native-gov` (Branch: `cognitive-classes`)  
 **Ecosystem Cross-Links:** `PROACTIVE_AI` (EIA) · `NAMM` (Non-Anthropic Math) · `ERRORLOGY` (Taxonomy v16) · `POLITIC_BAR`  
 **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Copyright © 2026 Errorlogy / Anthemium
+
+> [!NOTE]
+> ### ⚠️ Epistemic Status & Methodological Disclaimer: Exploratory Models
+> **Important:** The risk archetypes, game matrices, and non-Nash solution concepts modeled in this specification represent **exploratory theoretical scenarios and reflective hypotheses**.
+> - They are tools for safety modeling and architectural contingency planning, not asserted predictive dogmas.
 
 ---
 

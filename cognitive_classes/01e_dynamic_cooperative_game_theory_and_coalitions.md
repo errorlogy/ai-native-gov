@@ -1,10 +1,16 @@
 # Dynamic Cooperative Cognitive Game Theory (DC-CGT)
 ## Multi-Agent Coalition Formation, AGI Access Syndicates, and Evolutionary Replicator Dynamics
 
-**Document Status:** `INSTITUTIONAL_MODEL` & `RESEARCH_SPECIFICATION`  
+**Document Status:** `INSTITUTIONAL_MODEL` & `RESEARCH_SPECIFICATION` (Exploratory / Hypothesis)  
 **Target Repository:** `errorlogy/ai-native-gov` (Branch: `cognitive-classes`)  
 **Ecosystem Cross-Links:** `PROACTIVE_AI` (EIA) · `NAMM` (Protocol v2) · `ERRORLOGY` (Taxonomy v16) · `POLITIC_BAR`  
 **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Copyright © 2026 Errorlogy / Anthemium
+
+> [!NOTE]
+> ### ⚠️ Epistemic Status & Methodological Disclaimer: Exploratory Framework
+> **Important:** The dynamic game-theoretic models, coalition functions, and replicator equations presented here are **theoretical conceptualizations and exploratory thought models**. 
+> - They are designed to explore possible coordination structures, not to present definitive or unalterable laws of future AI behavior.
+> - All formulations should be understood with epistemic modesty as exploratory hypotheses for multi-agent simulation.
 
 ---
 

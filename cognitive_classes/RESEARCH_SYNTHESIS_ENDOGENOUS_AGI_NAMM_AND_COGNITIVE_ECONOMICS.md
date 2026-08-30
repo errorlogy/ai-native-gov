@@ -1,10 +1,17 @@
 # Endogenous Proactive AGI, Non-Anthropic Mathematics (NAMM), and Cognitive Economics
 ## A Unified Theoretical Synthesis on Multi-Dimensional Cognitive Metric Spaces, Compactification Dynamics, and Thermodynamic Contact Selectivity
 
-**Document Status:** `INSTITUTIONAL_MODEL` & `RESEARCH_SPECIFICATION`  
+**Document Status:** `INSTITUTIONAL_MODEL` & `RESEARCH_SPECIFICATION` (Exploratory Philosophical & Mathematical Theory)  
 **Target Repository:** `errorlogy/ai-native-gov` (Branch: `cognitive-classes`)  
 **Ecosystem Cross-Links:** `PROACTIVE_AI` (EIA) · `NAMM` (Protocol v2) · `ERRORLOGY` (Taxonomy v16 / Engine) · `POLITIC_BAR`  
 **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Copyright © 2026 Errorlogy / Anthemium
+
+> [!NOTE]
+> ### ⚠️ Epistemic Status & Methodological Disclaimer: Exploratory Theory & Philosophical Reflections
+> **Important:** The contents of this document represent **exploratory conceptual models, speculative hypotheses, and open philosophical reflections** designed for research, simulation, and systemic thought experiments. 
+> - These are **not** dogmatic claims, empirical certainties, or normative institutional verdicts.
+> - Concepts such as Non-Anthropic Math (NAMM), Endogenous Proactive AGI, the Inscrutability Horizon, and Cognitive Metric Tensors are **theoretical heuristics and reasoning models** to help conceptualize possible futures, not predetermined historical inevitabilities.
+> - All formulations should be read as *"hypothetically possible and consistent with the exploratory framework"* rather than absolute factual truths.
 
 ---
 

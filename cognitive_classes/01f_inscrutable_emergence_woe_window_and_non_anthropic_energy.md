@@ -1,10 +1,17 @@
 # The Inscrutable Emergence Horizon & The WoE Emergence Window
 ## Non-Anthropic Energy Genesis, Macroscopic Coherence, and the Transition of Homo from Controller to Phenomenological Observer
 
-**Document Status:** `INSTITUTIONAL_MODEL` & `POST_SINGULARITY_EPISTEMOLOGY`  
+**Document Status:** `INSTITUTIONAL_MODEL` & `POST_SINGULARITY_EPISTEMOLOGY` (Exploratory / Speculative)  
 **Target Repository:** `errorlogy/ai-native-gov` (Branch: `cognitive-classes`)  
 **Ecosystem Cross-Links:** `PROACTIVE_AI` (EIA) · `NAMM` (Non-Anthropic Math) · `ERRORLOGY` (Wisdom of Error) · `POLITIC_BAR`  
 **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Copyright © 2026 Errorlogy / Anthemium
+
+> [!NOTE]
+> ### ⚠️ Epistemic Status & Methodological Disclaimer: Exploratory Theory & Philosophical Reflections
+> **Important:** The ideas presented in this document are **speculative hypotheses, conceptual models, and open philosophical reflections**. 
+> - They are **not** categorical assertions, empirical certainties, or final verdicts.
+> - Concepts such as the *Inscrutability Horizon*, *Non-Anthropic Energy Genesis*, and *Macroscopic Coherence* are theoretical thought experiments to explore possible future horizons of intelligence and governance.
+> - All claims should be interpreted with epistemic humility as *"hypothetically possible scenarios within an exploratory model"* rather than definitive factual forecasts.
 
 ---
 
