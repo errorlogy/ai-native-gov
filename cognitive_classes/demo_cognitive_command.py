@@ -129,13 +129,21 @@ def demo():
         ("/cognitive_class C3", "Back to default Systemic level"),
     ]
 
+    import sys
+    is_interactive = sys.stdin.isatty() and "--non-interactive" not in sys.argv
+
     for cmd, description in demo_commands:
         print(f"\n>>> {description}")
         print(f"Command: {cmd}")
         print("-" * 80)
         result = interpreter.execute(cmd)
         print(result)
-        input("Press Enter to continue...")
+        if is_interactive:
+            input("Press Enter to continue...")
+
+    if not is_interactive:
+        print("\n[Non-interactive demo complete]")
+        return
 
     print("\n" + "="*80)
     print("INTERACTIVE MODE")

@@ -8,20 +8,20 @@
           "tech_ai",
           "law_judiciary"
         ],
-        "concept": "model_autonomy",
-        "val_d1": "UNRESTRICTED_AGENTIC",
-        "val_d2": "HUMAN_OVERSIGHT_GATED",
-        "discrepancy": "Conflict on 'model_autonomy': tech_ai asserts 'UNRESTRICTED_AGENTIC' vs law_judiciary asserts 'HUMAN_OVERSIGHT_GATED'"
+        "concept": "data_retention",
+        "val_d1": "PERMANENT_ONCHAIN",
+        "val_d2": "GDPR_EPHEMERAL",
+        "discrepancy": "Conflict on 'data_retention': tech_ai asserts 'PERMANENT_ONCHAIN' vs law_judiciary asserts 'GDPR_EPHEMERAL'"
       },
       {
         "domain_pair": [
           "tech_ai",
           "law_judiciary"
         ],
-        "concept": "data_retention",
-        "val_d1": "PERMANENT_ONCHAIN",
-        "val_d2": "GDPR_EPHEMERAL",
-        "discrepancy": "Conflict on 'data_retention': tech_ai asserts 'PERMANENT_ONCHAIN' vs law_judiciary asserts 'GDPR_EPHEMERAL'"
+        "concept": "model_autonomy",
+        "val_d1": "UNRESTRICTED_AGENTIC",
+        "val_d2": "HUMAN_OVERSIGHT_GATED",
+        "discrepancy": "Conflict on 'model_autonomy': tech_ai asserts 'UNRESTRICTED_AGENTIC' vs law_judiciary asserts 'HUMAN_OVERSIGHT_GATED'"
       }
     ],
     "agreements": [
@@ -52,20 +52,20 @@
           "tech_ai",
           "law_judiciary"
         ],
-        "concept": "model_autonomy",
-        "val_d1": "UNRESTRICTED_AGENTIC",
-        "val_d2": "HUMAN_OVERSIGHT_GATED",
-        "discrepancy": "Conflict on 'model_autonomy': tech_ai asserts 'UNRESTRICTED_AGENTIC' vs law_judiciary asserts 'HUMAN_OVERSIGHT_GATED'"
+        "concept": "data_retention",
+        "val_d1": "PERMANENT_ONCHAIN",
+        "val_d2": "GDPR_EPHEMERAL",
+        "discrepancy": "Conflict on 'data_retention': tech_ai asserts 'PERMANENT_ONCHAIN' vs law_judiciary asserts 'GDPR_EPHEMERAL'"
       },
       {
         "domain_pair": [
           "tech_ai",
           "law_judiciary"
         ],
-        "concept": "data_retention",
-        "val_d1": "PERMANENT_ONCHAIN",
-        "val_d2": "GDPR_EPHEMERAL",
-        "discrepancy": "Conflict on 'data_retention': tech_ai asserts 'PERMANENT_ONCHAIN' vs law_judiciary asserts 'GDPR_EPHEMERAL'"
+        "concept": "model_autonomy",
+        "val_d1": "UNRESTRICTED_AGENTIC",
+        "val_d2": "HUMAN_OVERSIGHT_GATED",
+        "discrepancy": "Conflict on 'model_autonomy': tech_ai asserts 'UNRESTRICTED_AGENTIC' vs law_judiciary asserts 'HUMAN_OVERSIGHT_GATED'"
       }
     ],
     "global_section": null,
@@ -76,13 +76,13 @@
     "h1_obstruction": true,
     "obstructions_resolved": [
       {
-        "concept": "model_autonomy",
-        "resolution": "SYNTHESIS(UNRESTRICTED_AGENTIC + HUMAN_OVERSIGHT_GATED)",
+        "concept": "data_retention",
+        "resolution": "SYNTHESIS(PERMANENT_ONCHAIN + GDPR_EPHEMERAL)",
         "mechanism": "META_MORPHISM_GLUING"
       },
       {
-        "concept": "data_retention",
-        "resolution": "SYNTHESIS(PERMANENT_ONCHAIN + GDPR_EPHEMERAL)",
+        "concept": "model_autonomy",
+        "resolution": "SYNTHESIS(UNRESTRICTED_AGENTIC + HUMAN_OVERSIGHT_GATED)",
         "mechanism": "META_MORPHISM_GLUING"
       }
     ],

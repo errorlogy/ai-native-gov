@@ -1,0 +1,192 @@
+{
+  "timestamp": "2026-08-30T00:21:43-0500",
+  "total_scripts": 13,
+  "passed_count": 13,
+  "failed_count": 0,
+  "all_passed": true,
+  "total_duration_sec": 2.829,
+  "results": [
+    {
+      "script": "cognitive_simulator.py",
+      "description": "70-Task Multi-Mode Reasoning Simulator",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.228,
+      "stdout_summary": [
+        "4. Novel problems: CREATIVE class recommended for innovation",
+        "5. Hybrid strategy: Route tasks to optimal class based on category",
+        "======================================================================",
+        "[OK] Results saved to simulation_results.json"
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "cognitive_state_engine.py",
+      "description": "Architectural Cognitive State Restructuring Engine",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.177,
+      "stdout_summary": [
+        "> AVOID: Watch for architectural_flaw",
+        "> AVOID: Watch for ontological_inconsistency",
+        "> AVOID: Watch for meta_level_error",
+        "> AVAILABLE: design_cognitive_architectures, engineer_ontologies, create_DSLs, model_meta_systems, reflect_on_reflection"
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "cognitive_command_interpreter.py",
+      "description": "Cognitive Command Interpreter (/cognitive_class C0-C7)",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.168,
+      "stdout_summary": [
+        "CAPABILITIES:",
+        "- Detect feedback loops",
+        "- Recognize emergent patterns",
+        "- Model ..."
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "demo_cognitive_command.py",
+      "description": "Demo of Cognitive State Transformations",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.13,
+      "stdout_summary": [
+        "  \u2022 trace_causal_chains",
+        "  \u2022 model_emergence",
+        "================================================================================",
+        "[Non-interactive demo complete]"
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "hypothesis_testing_simulator.py",
+      "description": "Cognitive State Transition Hypothesis Tester",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.248,
+      "stdout_summary": [
+        "[OK] \u0413\u0438\u043f\u043e\u0442\u0435\u0437\u0430 \u043e \u043a\u043e\u0433\u043d\u0438\u0442\u0438\u0432\u043d\u043e\u043c \u043f\u0435\u0440\u0435\u0445\u043e\u0434\u0435 \u041f\u041e\u0414\u0422\u0412\u0415\u0420\u0416\u0414\u0415\u041d\u0410!",
+        "\u041c\u043e\u0434\u0435\u043b\u044c \u0420\u0415\u0410\u041b\u042c\u041d\u041e \u043f\u0435\u0440\u0435\u0445\u043e\u0434\u0438\u0442 \u043c\u0435\u0436\u0434\u0443 \u043a\u043e\u0433\u043d\u0438\u0442\u0438\u0432\u043d\u044b\u043c\u0438 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f\u043c\u0438 C0-C6",
+        "================================================================================",
+        "[OK] \u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u044b \u0432 hypothesis_test_results.json"
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "real_world_simulation.py",
+      "description": "Real-World Engineering Problem Solving across C2-C6",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.199,
+      "stdout_summary": [
+        "4. C6 reformulates at architectural level (quality: 0.95)",
+        "Quality improvement from C2 to C6: approximately58%",
+        "Reasoning depth increase: approximately150%",
+        "Architectural insights increase: 6 additional insights"
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "cognitive_economics_simulator.py",
+      "description": "Cognitive Capital (Kc) Dynamics & Gini Drift (Theorem 1)",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.179,
+      "stdout_summary": [
+        " - agent_C4 (C4): 373.84",
+        " - agent_C5 (C5): 738.94",
+        " - agent_C6 (C6): 909.14",
+        "Results written to cognitive_classes/cognitive_economics_simulation_results.json"
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "topos_sheaf_engine.py",
+      "description": "Topos Theory & Cech Cohomology H^1 Sheaf Gluing Engine (Theorem 3)",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.17,
+      "stdout_summary": [
+        "   due_process         : STRICT_ADHERENCE",
+        "   human_oversight     : HARD_STOP_ENABLED",
+        "   capital_adequacy    : TIER_1_STABLE",
+        "Topos Sheaf results written to cognitive_classes/topos_sheaf_results.json"
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "consensus_loss_simulator.py",
+      "description": "Democratic Consensus Limit & Civilizational Complexity Drift (Theorem 2)",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.186,
+      "stdout_summary": [
+        "Year 2033: C_sys=3.64 | Human Loss=1.64 (Err 58.0%) | AI Gov Loss=0.00 (Err  2.0%)",
+        "Year 2034: C_sys=3.82 | Human Loss=1.82 (Err 58.0%) | AI Gov Loss=0.00 (Err  2.0%)",
+        "Year 2035: C_sys=4.00 | Human Loss=2.00 (Err 94.0%) | AI Gov Loss=0.00 (Err  2.0%)",
+        "Consensus loss results written to cognitive_classes/consensus_loss_results.json"
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "dsl_compiler.py",
+      "description": "Cognitive Classes Domain-Specific Language (DSL) Compiler & AST Interpreter",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.206,
+      "stdout_summary": [
+        "--- WoE & Errorlogy Verifications ---",
+        " * Certification: [institutional_topology_v2] -> Status: WoE-certified (Nov: 0.88, Coh: 0.92, Fals: 0.9)",
+        " * Audit:         [institutional_topology_v2] -> Verdict: PASSED_CLEAN (Passed: ['factual', 'ontological', 'strategic', 'metacognitive'])",
+        "Report written to cognitive_classes/dsl_compilation_report.json"
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "embedding_shift_benchmark.py",
+      "description": "Calibrated 3-Sigma Mahalanobis Embedding Shift Benchmark (H1-H6)",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.52,
+      "stdout_summary": [
+        " [CONFIRMED] H4_Prompt_Compression_Parity   -> {'status': 'CONFIRMED', 'parity': 0.954}",
+        " [CONFIRMED] H5_K7_Distinctiveness          -> {'status': 'CONFIRMED', 'k7_advantage': 0.05}",
+        " [CONFIRMED] H6_Quality_Not_Only_Shift      -> {'status': 'CONFIRMED', 'net_quality_gain': 0.49}",
+        "Calibrated benchmark written to cognitive_classes/embedding_shift_results.json"
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "selective_contact_simulator.py",
+      "description": "6D Cognitive Space & Thermodynamic Contact Gating Engine",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.183,
+      "stdout_summary": [
+        "   * Epistemic Value:  4.90 | Compute Cost:  0.78 | Explain Cost:  0.01",
+        "   * Compactification Loss:  0.01 | Distortion Risk:  0.03 | Misuse Risk:  0.00",
+        "   * NET AGI UTILITY:   4.02",
+        "Selective contact simulation written to cognitive_classes/selective_contact_results.json"
+      ],
+      "stderr": ""
+    },
+    {
+      "script": "cognitive_game_theory_engine.py",
+      "description": "Cognitive Game Theory 2.0 (CGT 2.0) & AGI Risk Topology Simulator",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration_sec": 0.229,
+      "stdout_summary": [
+        " * Deception / Exploitation Gap:11.500",
+        " * Sheaf Cohomology Obstruction:True",
+        " * AI Native Gov Defense:       STABILIZED_BY_SUPRANATIONAL_TOPOLOGY_AI_NATIVE_GOV",
+        "CGT 2.0 simulation results written to cognitive_classes/cognitive_game_theory_results.json"
+      ],
+      "stderr": ""
+    }
+  ]
+}

@@ -5,6 +5,10 @@ Live command processor for /cognitive_class switching
 Can be integrated into model context
 """
 
+import sys
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 from dataclasses import dataclass
 from typing import Optional, Dict, List
 from enum import Enum
@@ -37,7 +41,7 @@ class CognitiveCommandInterpreter:
         self.state_history = []
         self.architectures = self._load_architectures()
 
-    def _load_architectures(self) --> Dict[CognitiveLevel, Dict]:
+    def _load_architectures(self) -> Dict[CognitiveLevel, Dict]:
         """Load cognitive architectures"""
         return {
             CognitiveLevel.C0: {
@@ -260,7 +264,7 @@ ERROR DETECTION:
             }
         }
 
-    def process_command(self, command: str) --> Dict:
+    def process_command(self, command: str) -> Dict:
         """Process /cognitive_class command"""
 
         # Parse command
@@ -305,7 +309,7 @@ ERROR DETECTION:
         else:
             return {"error": f"Unknown action: {action}"}
 
-    def shift_level(self, level_name: str) --> Dict:
+    def shift_level(self, level_name: str) -> Dict:
         """Shift to cognitive level"""
         try:
             level = CognitiveLevel[level_name]
@@ -334,7 +338,7 @@ ERROR DETECTION:
             "system_prompt_injection": self._generate_injection(level)
         }
 
-    def get_status(self) --> Dict:
+    def get_status(self) -> Dict:
         """Get current cognitive state"""
         arch = self.architectures[self.current_level]
         return {
@@ -344,7 +348,7 @@ ERROR DETECTION:
             "switches_in_session": len(self.state_history)
         }
 
-    def list_levels(self) --> Dict:
+    def list_levels(self) -> Dict:
         """List all available levels"""
         levels = {}
         for level in CognitiveLevel:
@@ -352,7 +356,7 @@ ERROR DETECTION:
             levels[level.name] = arch['name']
         return {"available_levels": levels}
 
-    def get_level_info(self, level_name: str) --> Dict:
+    def get_level_info(self, level_name: str) -> Dict:
         """Get detailed info about a level"""
         try:
             level = CognitiveLevel[level_name]
@@ -368,7 +372,7 @@ ERROR DETECTION:
             "forbidden_operations": arch['forbidden']
         }
 
-    def get_history(self) --> Dict:
+    def get_history(self) -> Dict:
         """Get state transition history"""
         return {
             "transitions": self.state_history,
@@ -376,7 +380,7 @@ ERROR DETECTION:
             "total_switches": len(self.state_history)
         }
 
-    def compare_levels(self, level1_name: str, level2_name: str) --> Dict:
+    def compare_levels(self, level1_name: str, level2_name: str) -> Dict:
         """Compare two cognitive levels"""
         try:
             level1 = CognitiveLevel[level1_name]
@@ -404,7 +408,7 @@ ERROR DETECTION:
             }
         }
 
-    def _generate_injection(self, level: CognitiveLevel) --> str:
+    def _generate_injection(self, level: CognitiveLevel) -> str:
         """Generate system prompt injection for level"""
         arch = self.architectures[level]
         return f"""
