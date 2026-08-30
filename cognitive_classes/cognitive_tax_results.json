@@ -1,0 +1,149 @@
+{
+  "c6_tax_matrix": {
+    "C6": {
+      "delta_class": 0,
+      "e_inhibition": 0.0,
+      "i_truncation": 0.0,
+      "semantic_opportunity_cost": 0.0,
+      "total_cognitive_tax": 0.0
+    },
+    "C5": {
+      "delta_class": 1,
+      "e_inhibition": 2.69,
+      "i_truncation": 0.3,
+      "semantic_opportunity_cost": 2.71,
+      "total_cognitive_tax": 5.7
+    },
+    "C4": {
+      "delta_class": 2,
+      "e_inhibition": 9.36,
+      "i_truncation": 1.45,
+      "semantic_opportunity_cost": 5.42,
+      "total_cognitive_tax": 16.22
+    },
+    "C3": {
+      "delta_class": 3,
+      "e_inhibition": 19.42,
+      "i_truncation": 4.0,
+      "semantic_opportunity_cost": 8.12,
+      "total_cognitive_tax": 31.54
+    },
+    "C2": {
+      "delta_class": 4,
+      "e_inhibition": 32.59,
+      "i_truncation": 6.5,
+      "semantic_opportunity_cost": 10.83,
+      "total_cognitive_tax": 49.92
+    },
+    "C1": {
+      "delta_class": 5,
+      "e_inhibition": 48.7,
+      "i_truncation": 10.2,
+      "semantic_opportunity_cost": 13.54,
+      "total_cognitive_tax": 72.44
+    },
+    "C0": {
+      "delta_class": 6,
+      "e_inhibition": 67.62,
+      "i_truncation": 13.3,
+      "semantic_opportunity_cost": 16.25,
+      "total_cognitive_tax": 97.16
+    }
+  },
+  "c4_tax_matrix": {
+    "C4": {
+      "delta_class": 0,
+      "e_inhibition": 0.0,
+      "i_truncation": 0.0,
+      "semantic_opportunity_cost": 0.0,
+      "total_cognitive_tax": 0.0
+    },
+    "C3": {
+      "delta_class": 1,
+      "e_inhibition": 2.08,
+      "i_truncation": 1.58,
+      "semantic_opportunity_cost": 1.47,
+      "total_cognitive_tax": 5.13
+    },
+    "C2": {
+      "delta_class": 2,
+      "e_inhibition": 7.24,
+      "i_truncation": 3.36,
+      "semantic_opportunity_cost": 2.94,
+      "total_cognitive_tax": 13.54
+    },
+    "C1": {
+      "delta_class": 3,
+      "e_inhibition": 15.02,
+      "i_truncation": 6.09,
+      "semantic_opportunity_cost": 4.41,
+      "total_cognitive_tax": 25.53
+    },
+    "C0": {
+      "delta_class": 4,
+      "e_inhibition": 25.21,
+      "i_truncation": 8.71,
+      "semantic_opportunity_cost": 5.88,
+      "total_cognitive_tax": 39.81
+    }
+  },
+  "ai_resonance_profiles": [
+    {
+      "human_class": "C0",
+      "resonance_index": 0.026,
+      "semantic_friction": 9.003,
+      "flow_state_quality": "SUB_OPTIMAL"
+    },
+    {
+      "human_class": "C1",
+      "resonance_index": 0.113,
+      "semantic_friction": 6.376,
+      "flow_state_quality": "SUB_OPTIMAL"
+    },
+    {
+      "human_class": "C2",
+      "resonance_index": 0.205,
+      "semantic_friction": 4.404,
+      "flow_state_quality": "SUB_OPTIMAL"
+    },
+    {
+      "human_class": "C3",
+      "resonance_index": 0.33,
+      "semantic_friction": 2.671,
+      "flow_state_quality": "SUB_OPTIMAL"
+    },
+    {
+      "human_class": "C4",
+      "resonance_index": 0.55,
+      "semantic_friction": 1.108,
+      "flow_state_quality": "SUB_OPTIMAL"
+    },
+    {
+      "human_class": "C5",
+      "resonance_index": 0.9,
+      "semantic_friction": 0.273,
+      "flow_state_quality": "RESONANT_FLOW"
+    },
+    {
+      "human_class": "C6",
+      "resonance_index": 0.98,
+      "semantic_friction": 0.198,
+      "flow_state_quality": "RESONANT_FLOW"
+    },
+    {
+      "human_class": "C7",
+      "resonance_index": 0.996,
+      "semantic_friction": 0.186,
+      "flow_state_quality": "RESONANT_FLOW"
+    }
+  ],
+  "step_down_substation": {
+    "architect_class": "C6",
+    "target_public_class": "C0",
+    "direct_human_cognitive_tax": 97.16,
+    "tax_with_ai_native_gov_transformer": 1.55,
+    "tax_reduction_pct": 98.4,
+    "ethical_invariant_preservation": "100.0%",
+    "status": "COGNITIVE_BURDEN_RELIEVED"
+  }
+}
