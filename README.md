@@ -64,6 +64,8 @@ More detail: [`REPOS.md`](REPOS.md)
 | [`docs/institutions/`](docs/institutions/) | Institutional topology |
 | [`docs/integrations/`](docs/integrations/) | Errorlogy, politic.bar, NAMM |
 | [`docs/examples/trump-macron-cascade.md`](docs/examples/trump-macron-cascade.md) | End-to-end scenario |
+| [`cognitive_classes/README.md`](cognitive_classes/README.md) | Proto-AGI cognitive classes research suite (`RESEARCH_SPECIFICATION` / `INSTITUTIONAL_MODEL`) |
+| [`scripts/arxiv_toolkit/README.md`](scripts/arxiv_toolkit/README.md) | arXiv paper compile and packaging toolkit |
 
 ---
 

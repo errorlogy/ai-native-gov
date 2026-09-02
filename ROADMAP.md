@@ -1,5 +1,10 @@
 # Roadmap
 
+## Research specifications (published)
+
+- [`cognitive_classes/`](cognitive_classes/) — Proto-AGI cognitive classes theory, simulators, and benchmarks (`RESEARCH_SPECIFICATION`; epistemic status `INSTITUTIONAL_MODEL`, not legal or sovereignty claims)
+- [`paper_templates/`](paper_templates/) + [`scripts/arxiv_toolkit/`](scripts/arxiv_toolkit/) — arXiv preprint pipeline for cognitive-classes research
+
 ## Phase 0 — Umbrella foundation ✅ (current)
 
 - [x] `AI_NATIVE_GOV` workspace structure

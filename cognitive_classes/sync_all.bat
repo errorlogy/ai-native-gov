@@ -18,7 +18,7 @@ if exist D:\ (
 
 :: --- 2. YANDEX.DISK (append/update, no delete) ---
 echo [%date% %time%] [2/2] Yandex.Disk... >> "%LOG%"
-set YANDEST=C:\Users\lawye\Yandex.Disk\AI_PROJECTS\COGNITIVE_CLASSES
+set YANDEST=%USERPROFILE%\Yandex.Disk\AI_PROJECTS\COGNITIVE_CLASSES
 if exist "%YANDEST%\" (
     robocopy "%SOURCE%" "%YANDEST%" /E /Z /R:3 /W:5 /XC /XN /XO /XD .git node_modules __pycache__ .venv venv /XF *.tmp *.log ~$* /MT:8 /NP /NDL /NFL
     echo [%date% %time%] [2/2] Yandex.Disk done (code %ERRORLEVEL%) >> "%LOG%"

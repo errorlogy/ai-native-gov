@@ -5,7 +5,7 @@
 | Destination | Тип | Режим | Путь |
 |-------------|-----|-------|------|
 | **Флешка** | Локальный носитель | Зеркало (`/MIR`) | `D:\COGNETIVE_CLASSES` |
-| **Yandex.Disk** | Облако (десктоп) | Архив (`/E /XC /XN /XO`) | `C:\Users\lawye\Yandex.Disk\AI_PROJECTS\COGNITIVE_CLASSES` |
+| **Yandex.Disk** | Облако (десктоп) | Архив (`/E /XC /XN /XO`) | `%USERPROFILE%\Yandex.Disk\AI_PROJECTS\COGNITIVE_CLASSES` |
 
 **Разница режимов:**
 - **Зеркало** — полная идентичность: новые файлы копируются, изменённые обновляются, удалённые из источника удаляются с флешки.

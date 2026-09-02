@@ -3,7 +3,7 @@
 
 $source = "C:\ai_models\cognitive_classes"
 $flash  = "D:\COGNETIVE_CLASSES"
-$yandex = "C:\Users\lawye\Yandex.Disk\AI_PROJECTS\COGNITIVE_CLASSES"
+$yandex = Join-Path $env:USERPROFILE "Yandex.Disk\AI_PROJECTS\COGNITIVE_CLASSES"
 $log    = "$source\auto_sync_log.txt"
 
 function Write-Log($msg) {

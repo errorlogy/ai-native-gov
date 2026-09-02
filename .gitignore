@@ -27,6 +27,18 @@ dist/
 build/
 *.log
 
+# LaTeX / arXiv build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+paper_templates/**/main.pdf
+paper_templates/**/*_arXiv/
+paper_templates/**/*_arXiv_submission.tar.gz
+
 # Large archives (corpus artifacts live in ISA_2_0, not umbrella)
 dodeca12*.zip
 *.zip
