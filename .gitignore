@@ -12,6 +12,8 @@ Thumbs.db
 *.pem
 credentials.json
 secrets/
+settings.local.json
+**/settings.local.json
 
 # Child repo clones (keep repos/README.md only)
 repos/*
