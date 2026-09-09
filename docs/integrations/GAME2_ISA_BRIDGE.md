@@ -4,7 +4,7 @@
 
 How the umbrella routes **REALITY_GAME / ERG** symbolic-sacred research into ISA 2.0 topology without claiming religious authority, sovereignty, or prophecy.
 
-> **Not religious authority.** This document is a **contract bridge** only. Source narrative, theological theses, and code sketches live in the private ISA 2.0 corpus — not in this repo.
+> **Not religious authority.** This document is a **contract bridge** only. Source narrative bulk and code sketches live in isa-2.0 **local raw** (`docs/CORPUS/raw/`, gitignored) — not in this umbrella repo.
 
 ---
 
@@ -12,9 +12,10 @@ How the umbrella routes **REALITY_GAME / ERG** symbolic-sacred research into ISA
 
 | Field | Value |
 |-------|-------|
-| Private index | [isa-2.0 `docs/CORPUS/GAME2_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/GAME2_INDEX.md) |
-| Raw bundle | `C:\Users\Public\ISA_2_0\docs\CORPUS\raw\game2\` (gitignored) |
-| Original export | `C:\Users\lawye\Downloads\GAME2_for_cursor` |
+| Public repo | [errorlogy/isa-2.0](https://github.com/errorlogy/isa-2.0) |
+| Corpus index | [`docs/CORPUS/GAME2_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/GAME2_INDEX.md) |
+| Raw bundle (local only) | `docs/CORPUS/raw/game2/` in isa-2.0 clone — **gitignored**, not on GitHub |
+| Published artifacts | [`docs/CORPUS/artifacts/`](https://github.com/errorlogy/isa-2.0/tree/main/docs/CORPUS/artifacts) |
 
 ---
 
@@ -32,7 +33,7 @@ Institutional relevance for AI Native Gov:
 | Memetic propagation in ERG graph | [`MEMETIC_DYNAMICS.md`](MEMETIC_DYNAMICS.md) event types |
 | Mirror-based event classification | mirror column in ISA triad (reflective echo, not verdict) |
 
-Full theme map and sensitive-content policy: private [`GAME2_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/GAME2_INDEX.md).
+Full theme map and sensitive-content policy: [`GAME2_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/GAME2_INDEX.md) in isa-2.0.
 
 **Corpus artifact:** [`POSLEDNIY_ZAVET.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) — institutional edition of New Testament 2.0 axioms and GAME2 closure (`INSTITUTIONAL_MODEL` v0.1). English companion: [`POSLEDNIY_ZAVET.en.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.en.md). Full text stays in isa-2.0; umbrella holds pointer only.
 
