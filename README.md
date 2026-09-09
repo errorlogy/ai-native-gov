@@ -64,6 +64,9 @@ More detail: [`REPOS.md`](REPOS.md)
 | [`docs/institutions/`](docs/institutions/) | Institutional topology |
 | [`docs/integrations/`](docs/integrations/) | Errorlogy, politic.bar, NAMM |
 | [`docs/examples/trump-macron-cascade.md`](docs/examples/trump-macron-cascade.md) | End-to-end scenario |
+| [`docs/product/INSTITUTIONAL_LAYER_PACKS.md`](docs/product/INSTITUTIONAL_LAYER_PACKS.md) | Institutional Layer Packs (ILP) product spec |
+| [`packs/README.md`](packs/README.md) | Starter packs (`interop-eu-ilp`, `parliament-ilp`) |
+| [`docs/architecture/MODELING_BASE.md`](docs/architecture/MODELING_BASE.md) | Institutional Scenario Registry (ISR) |
 | [`cognitive_classes/README.md`](cognitive_classes/README.md) | Proto-AGI cognitive classes research suite (`RESEARCH_SPECIFICATION` / `INSTITUTIONAL_MODEL`) |
 | [`scripts/arxiv_toolkit/README.md`](scripts/arxiv_toolkit/README.md) | arXiv paper compile and packaging toolkit |
 

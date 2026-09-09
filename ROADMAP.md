@@ -34,7 +34,8 @@
 - [ ] Ministry stubs (defense, finance, climate, tech)
 - [ ] Topology graph (machine-readable) alongside TOPOLOGY.md
 - [ ] Additional cascade examples (2–3 scenarios)
-- [ ] **Modeling Base seeds** — expand `docs/examples/modeling-base/` (trump-macron, eu-consensus); link profiles to Institutional Packs when `INSTITUTIONAL_PACKS.md` ships
+- [x] **Institutional Layer Packs (ILP)** — starter packs [`packs/interop-eu-ilp/`](packs/interop-eu-ilp/), [`packs/parliament-ilp/`](packs/parliament-ilp/); spec [`docs/product/INSTITUTIONAL_LAYER_PACKS.md`](docs/product/INSTITUTIONAL_LAYER_PACKS.md); harness [`scripts/run_ilp_harness.ps1`](scripts/run_ilp_harness.ps1)
+- [ ] **Modeling Base seeds** — expand `docs/examples/modeling-base/` (trump-macron, eu-consensus)
 
 ## Phase 4 — Pipeline integration
 
@@ -45,7 +46,8 @@
 ## Phase 5 — Agent automation
 
 - [ ] Cross-repo PR templates linking umbrella + child changes
-- [ ] Optional: lightweight validation script for schema conformance
+- [x] ILP harness validation — [`scripts/run_ilp_harness.ps1`](scripts/run_ilp_harness.ps1)
+- [ ] Optional: lightweight validation script for remaining schema conformance
 - [ ] Agent playbooks for common tasks (topology update, new integration)
 - [x] Modeling self-improve playbook stub — [`docs/playbooks/MODELING_SELF_IMPROVE.md`](docs/playbooks/MODELING_SELF_IMPROVE.md) (full automation: pytest seed validation + errorlogy-mas runtime store)
 

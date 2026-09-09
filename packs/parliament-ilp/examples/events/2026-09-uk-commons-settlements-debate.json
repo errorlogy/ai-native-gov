@@ -1,0 +1,31 @@
+{
+  "story_id": "2026-09-settlements-uk-fr-coalition",
+  "event_type": "gov_parliamentary_activity",
+  "activated_layers": [
+    "institution:parliament",
+    "institution:party-coalition",
+    "institution:executive",
+    "institution:national-instance"
+  ],
+  "topology_intersections": [
+    {
+      "intersection": "parliament-executive",
+      "tension_type": "mandate_gap_hypothesis",
+      "resolution_status": "unresolved"
+    },
+    {
+      "intersection": "party-coalition-executive",
+      "tension_type": "dissent_ratio_cap",
+      "resolution_status": "unresolved"
+    }
+  ],
+  "jurisdiction_set": ["GB"],
+  "coordination_forum": "UK House of Commons",
+  "politifi_assets": [
+    "brand:miliband",
+    "agenda:west-bank-settlements",
+    "institution:uk-parliament"
+  ],
+  "stream_refs": ["2026-09-08-miliband-commons-settlements"],
+  "epistemic_label": "INSTITUTIONAL_MODEL"
+}

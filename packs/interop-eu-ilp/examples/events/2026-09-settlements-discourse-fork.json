@@ -1,0 +1,31 @@
+{
+  "story_id": "2026-09-settlements-discourse-fork",
+  "event_type": "discourse_fork_detected",
+  "activated_layers": [
+    "institution:symbolic-visual",
+    "institution:party-coalition",
+    "institution:parliament",
+    "institution:executive"
+  ],
+  "topology_intersections": [
+    {
+      "intersection": "symbolic-visual-party-coalition",
+      "tension_type": "narrative_binding",
+      "resolution_status": "unresolved"
+    },
+    {
+      "intersection": "parliament-executive",
+      "tension_type": "framing_mismatch",
+      "resolution_status": "unresolved"
+    }
+  ],
+  "jurisdiction_set": ["GB", "IL", "US", "EU"],
+  "politifi_assets": [
+    "agenda:west-bank-settlements",
+    "brand:miliband",
+    "brand:herzog",
+    "brand:huckabee"
+  ],
+  "persona_cohort_id": "eu-foreign-policy-dove",
+  "epistemic_label": "INSTITUTIONAL_MODEL"
+}

@@ -1,0 +1,28 @@
+{
+  "story_id": "2026-09-settlements-discourse-fork",
+  "event_type": "discourse_fork_detected",
+  "activated_layers": [
+    "institution:parliament",
+    "institution:party-coalition",
+    "institution:executive",
+    "institution:symbolic-visual"
+  ],
+  "topology_intersections": [
+    {
+      "intersection": "parliament-executive",
+      "tension_type": "framing_mismatch",
+      "resolution_status": "unresolved"
+    },
+    {
+      "intersection": "symbolic-visual-party-coalition",
+      "tension_type": "narrative_binding",
+      "resolution_status": "unresolved"
+    }
+  ],
+  "jurisdiction_set": ["GB", "EU"],
+  "politifi_assets": [
+    "brand:miliband",
+    "agenda:west-bank-settlements"
+  ],
+  "epistemic_label": "INSTITUTIONAL_MODEL"
+}

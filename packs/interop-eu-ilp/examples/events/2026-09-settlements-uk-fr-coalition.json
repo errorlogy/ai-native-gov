@@ -1,0 +1,43 @@
+{
+  "story_id": "2026-09-settlements-uk-fr-coalition",
+  "event_type": "sanctions_coordination",
+  "activated_layers": [
+    "institution:national-instance",
+    "institution:executive",
+    "institution:minister-foreign-affairs",
+    "institution:eu-council",
+    "institution:eu-commission",
+    "institution:parliament",
+    "institution:party-coalition"
+  ],
+  "topology_intersections": [
+    {
+      "intersection": "eu-council-national-instance",
+      "tension_type": "policy_divergence",
+      "resolution_status": "unresolved"
+    },
+    {
+      "intersection": "parliament-executive",
+      "tension_type": "mandate_gap_hypothesis",
+      "resolution_status": "unresolved"
+    },
+    {
+      "intersection": "executive-executive",
+      "tension_type": "bilateral_retaliation",
+      "resolution_status": "unresolved"
+    }
+  ],
+  "jurisdiction_set": ["GB", "FR", "DE", "IE", "ES", "PL", "EU"],
+  "coordination_forum": "12-country joint statement; EU Council (deadlocked)",
+  "politifi_assets": [
+    "brand:miliband",
+    "brand:saar",
+    "agenda:two-state-solution",
+    "agenda:west-bank-settlements",
+    "institution:uk-fcdo",
+    "institution:eu-council",
+    "institution:eu-commission"
+  ],
+  "precedent_refs": ["EU-GYMNICH-2026-09-WICKLOW-01"],
+  "epistemic_label": "INSTITUTIONAL_MODEL"
+}

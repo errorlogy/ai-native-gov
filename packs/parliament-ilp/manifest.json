@@ -1,0 +1,25 @@
+{
+  "pack_id": "pack:parliament-ilp",
+  "pack_slug": "parliament-ilp",
+  "title": "Parliament — Deliberation & Mandate Gap",
+  "version": "0.1.0",
+  "institution_layers": [
+    "institution:parliament",
+    "institution:party-coalition",
+    "institution:executive",
+    "institution:national-instance"
+  ],
+  "schema_refs": [
+    "https://github.com/errorlogy/ai-native-gov/schemas/cross-layer-event.json",
+    "https://github.com/errorlogy/ai-native-gov/schemas/institution-layer-id.json",
+    "https://github.com/errorlogy/ai-native-gov/schemas/modeling-profile.json"
+  ],
+  "min_errorlogy_ref": "errorlogy-mas@main",
+  "modeling_profile_id": "eu-anticonsensus-settlements-2026",
+  "scenario_doc_ref": "docs/examples/eu-anticonsensus-israel-uk-sanctions-2026.md",
+  "event_types": [
+    "gov_parliamentary_activity",
+    "discourse_fork_detected"
+  ],
+  "epistemic_label": "INSTITUTIONAL_MODEL"
+}

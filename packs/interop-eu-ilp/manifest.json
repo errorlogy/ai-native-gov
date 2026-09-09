@@ -1,0 +1,30 @@
+{
+  "pack_id": "pack:interop-eu-ilp",
+  "pack_slug": "interop-eu-ilp",
+  "title": "EU Interop — Cross-Layer & Anticonsensus",
+  "version": "0.1.0",
+  "institution_layers": [
+    "institution:national-instance",
+    "institution:eu-council",
+    "institution:eu-commission",
+    "institution:executive",
+    "institution:minister-foreign-affairs",
+    "institution:minister-finance",
+    "institution:parliament",
+    "institution:party-coalition"
+  ],
+  "schema_refs": [
+    "https://github.com/errorlogy/ai-native-gov/schemas/cross-layer-event.json",
+    "https://github.com/errorlogy/ai-native-gov/schemas/signal-envelope.json",
+    "https://github.com/errorlogy/ai-native-gov/schemas/institution-layer-id.json",
+    "https://github.com/errorlogy/ai-native-gov/schemas/modeling-profile.json"
+  ],
+  "min_errorlogy_ref": "errorlogy-mas@main",
+  "modeling_profile_id": "eu-anticonsensus-settlements-2026",
+  "scenario_doc_ref": "docs/examples/eu-anticonsensus-israel-uk-sanctions-2026.md",
+  "event_types": [
+    "sanctions_coordination",
+    "discourse_fork_detected"
+  ],
+  "epistemic_label": "INSTITUTIONAL_MODEL"
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": "2026-09-eu-variable-geometry-settlements",
+  "event_type": "sanctions_coordination",
+  "activated_layers": [
+    "institution:national-instance",
+    "institution:eu-council",
+    "institution:eu-commission",
+    "institution:eu-parliament",
+    "institution:minister-foreign-affairs",
+    "institution:minister-finance"
+  ],
+  "topology_intersections": [
+    {
+      "intersection": "eu-council-national-instance",
+      "tension_type": "policy_divergence",
+      "resolution_status": "unresolved"
+    },
+    {
+      "intersection": "eu-commission-eu-council",
+      "tension_type": "proposal_stalled",
+      "resolution_status": "unresolved"
+    },
+    {
+      "intersection": "national-instance-national-instance",
+      "tension_type": "variable_geometry_ring_split",
+      "resolution_status": "unresolved"
+    }
+  ],
+  "jurisdiction_set": ["EU", "DE", "FR", "IE", "ES", "PL", "HU"],
+  "coordination_forum": "EU Council (Gymnich); 12-country joint statement",
+  "precedent_refs": [
+    "EU-GYMNICH-2026-07-SETTLEMENTS-01",
+    "EU-GYMNICH-2026-09-WICKLOW-01"
+  ],
+  "epistemic_label": "INSTITUTIONAL_MODEL"
+}

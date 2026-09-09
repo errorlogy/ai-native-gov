@@ -1,0 +1,29 @@
+{
+  "story_id": "2026-09-eu-variable-geometry-settlements",
+  "event_type": "gov_parliamentary_activity",
+  "activated_layers": [
+    "institution:parliament",
+    "institution:party-coalition",
+    "institution:eu-parliament",
+    "institution:eu-council"
+  ],
+  "topology_intersections": [
+    {
+      "intersection": "parliament-executive",
+      "tension_type": "delegate_split",
+      "resolution_status": "unresolved"
+    },
+    {
+      "intersection": "eu-council-national-instance",
+      "tension_type": "policy_divergence",
+      "resolution_status": "unresolved"
+    }
+  ],
+  "jurisdiction_set": ["EU", "DE", "FR", "IE", "ES", "PL"],
+  "coordination_forum": "European Parliament delegate groups",
+  "politifi_assets": [
+    "institution:eu-parliament",
+    "agenda:west-bank-settlements"
+  ],
+  "epistemic_label": "INSTITUTIONAL_MODEL"
+}

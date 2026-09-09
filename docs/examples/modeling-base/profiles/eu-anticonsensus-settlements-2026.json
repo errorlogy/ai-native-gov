@@ -57,8 +57,8 @@
     "possible / consistent with"
   ],
   "institutional_pack_refs": [
-    "pack:eu-anticonsensus",
-    "pack:sanctions-coordination"
+    "pack:interop-eu-ilp",
+    "pack:parliament-ilp"
   ],
   "state_profile_refs": [
     "GB",

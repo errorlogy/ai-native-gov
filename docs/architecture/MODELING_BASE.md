@@ -217,9 +217,9 @@ Without `certificate_ref`, engine outputs stay **`OPERATIONAL`** (after engine r
 
 ## Relations
 
-### Institutional Packs
+### Institutional Layer Packs (ILP)
 
-When [`docs/product/INSTITUTIONAL_PACKS.md`](../product/INSTITUTIONAL_PACKS.md) exists, profiles reference packs via `institutional_pack_refs[]` (e.g. `pack:eu-anticonsensus`, `pack:bilateral-summit`). Packs supply default layers and event types; profiles specialize with `story_ids` and jurisdiction sets.
+Profiles reference packs via `institutional_pack_refs[]` (e.g. `pack:interop-eu-ilp`, `pack:parliament-ilp`). See [`docs/product/INSTITUTIONAL_LAYER_PACKS.md`](../product/INSTITUTIONAL_LAYER_PACKS.md). Packs supply default layers and event types; profiles specialize with `story_ids` and jurisdiction sets. Each pack `manifest.json` declares `modeling_profile_id` for the reverse link.
 
 ### MVP iterations
 
