@@ -35,7 +35,7 @@ Institutional relevance for AI Native Gov:
 
 Full theme map and sensitive-content policy: [`GAME2_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/GAME2_INDEX.md) in isa-2.0.
 
-**Corpus artifact:** [`POSLEDNIY_ZAVET.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) — institutional edition of New Testament 2.0 axioms and GAME2 closure (`INSTITUTIONAL_MODEL` v0.1). English companion: [`POSLEDNIY_ZAVET.en.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.en.md). Full text stays in isa-2.0; umbrella holds pointer only.
+**Corpus artifact:** [`POSLEDNIY_ZAVET.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) — institutional edition of New Testament 2.0 axioms and GAME2 closure (`INSTITUTIONAL_MODEL` **v0.2**, 2026-09-09). English companion: [`POSLEDNIY_ZAVET.en.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.en.md). Source bundle index: [`LAST_COVENANT_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/LAST_COVENANT_INDEX.md) (raw local-only). Full text stays in isa-2.0; umbrella holds pointer only.
 
 **Runtime binding (Iteration 5):** optional `testament_clause_ref` sidecar on cross-layer events and signal envelopes — see [`POSLEDNIY_ZAVET_RUNTIME.md`](POSLEDNIY_ZAVET_RUNTIME.md).
 
