@@ -22,6 +22,7 @@ def load_schema_store() -> dict:
 
 
 def validate_file(data_path: Path, schema_path: Path, store: dict) -> None:
+    data_path = data_path.resolve()
     schema = json.loads(schema_path.read_text(encoding="utf-8"))
     data = json.loads(data_path.read_text(encoding="utf-8"))
     try:
@@ -36,6 +37,7 @@ def validate_file(data_path: Path, schema_path: Path, store: dict) -> None:
 
 
 def validate_events_dir(events_dir: Path) -> int:
+    events_dir = events_dir.resolve()
     store = load_schema_store()
     schema_path = SCHEMA_DIR / "cross-layer-event.json"
     errors = 0
