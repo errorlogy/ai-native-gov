@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/errorlogy/ai-native-gov/schemas/modeling-profile.json",
+  "title": "ModelingProfile",
+  "description": "Reusable institutional scenario template for the Modeling Base (ISR). Default epistemic_label: INSTITUTIONAL_MODEL.",
+  "type": "object",
+  "required": [
+    "profile_id",
+    "title",
+    "version",
+    "story_ids",
+    "default_activated_layers",
+    "epistemic_label"
+  ],
+  "properties": {
+    "profile_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]{2,63}$",
+      "description": "Stable slug for this profile",
+      "examples": ["eu-anticonsensus-settlements-2026"]
+    },
+    "title": {
+      "type": "string",
+      "description": "Human-readable profile title"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?$",
+      "description": "Semantic version of profile definition"
+    },
+    "story_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Stable story anchors (politic.bar / cross-layer story_id)"
+    },
+    "scenario_doc_ref": {
+      "type": "string",
+      "description": "Relative path to umbrella scenario doc",
+      "examples": ["docs/examples/eu-anticonsensus-israel-uk-sanctions-2026.md"]
+    },
+    "event_types": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Expected cross-layer event_type values for this profile"
+    },
+    "default_activated_layers": {
+      "type": "array",
+      "items": { "$ref": "institution-layer-id.json" },
+      "minItems": 1
+    },
+    "conditional_layers": {
+      "type": "array",
+      "items": { "$ref": "institution-layer-id.json" },
+      "description": "Layers activated only when scenario conditions met"
+    },
+    "topology_intersections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["intersection", "tension_type"],
+        "properties": {
+          "intersection": { "type": "string" },
+          "tension_type": { "type": "string" },
+          "resolution_status": {
+            "type": "string",
+            "enum": ["unresolved", "partially_resolved", "resolved", "not_applicable"]
+          }
+        }
+      }
+    },
+    "epistemic_constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Rules for agents (e.g. no guilt/criminal language, no sovereignty claims)"
+    },
+    "language_rules": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Preferred vocabulary per AGENTS.md"
+    },
+    "institutional_pack_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "References to institutional pack slugs"
+    },
+    "state_profile_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "ISO codes or state-profile slugs from EU_STATES / state-profile.json"
+    },
+    "baseline_run_id": {
+      "type": "string",
+      "description": "Optional run_id used for delta comparison in self-improve loop"
+    },
+    "quality_thresholds": {
+      "type": "object",
+      "properties": {
+        "min_activated_layers": { "type": "integer", "minimum": 1 },
+        "require_topology_intersections": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "mvp_iteration": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Optional link to MVP_ITERATIONS.md slice"
+    },
+    "harness_ref": {
+      "type": "object",
+      "properties": {
+        "repo": { "type": "string" },
+        "endpoint": { "type": "string" },
+        "test": { "type": "string" },
+        "script": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "epistemic_label": {
+      "type": "string",
+      "enum": [
+        "INSTITUTIONAL_MODEL",
+        "OPERATIONAL",
+        "COMPUTATIONAL_EVIDENCE",
+        "PHILOSOPHICAL_INFERENCE"
+      ],
+      "default": "INSTITUTIONAL_MODEL"
+    }
+  },
+  "additionalProperties": false
+}

@@ -23,16 +23,18 @@
 
 ## Phase 2 — Schema contracts
 
-- [ ] `schemas/signal-envelope.json` — ingress format
+- [x] `schemas/signal-envelope.json` — ingress format (Phase A memetic)
 - [ ] `schemas/institutional-output.json` — layer output format
 - [ ] `schemas/forecast-patch.json` — Errorlogy forecast delta
 - [ ] Versioning policy documented
+- [x] **Modeling Base (ISR)** — `schemas/modeling-profile.json`, `modeling-run.json`, `modeling-result.json`; architecture doc [`docs/architecture/MODELING_BASE.md`](docs/architecture/MODELING_BASE.md); seed [`docs/examples/modeling-base/`](docs/examples/modeling-base/); playbook [`docs/playbooks/MODELING_SELF_IMPROVE.md`](docs/playbooks/MODELING_SELF_IMPROVE.md)
 
 ## Phase 3 — Institutional depth
 
 - [ ] Ministry stubs (defense, finance, climate, tech)
 - [ ] Topology graph (machine-readable) alongside TOPOLOGY.md
 - [ ] Additional cascade examples (2–3 scenarios)
+- [ ] **Modeling Base seeds** — expand `docs/examples/modeling-base/` (trump-macron, eu-consensus); link profiles to Institutional Packs when `INSTITUTIONAL_PACKS.md` ships
 
 ## Phase 4 — Pipeline integration
 
@@ -45,6 +47,7 @@
 - [ ] Cross-repo PR templates linking umbrella + child changes
 - [ ] Optional: lightweight validation script for schema conformance
 - [ ] Agent playbooks for common tasks (topology update, new integration)
+- [x] Modeling self-improve playbook stub — [`docs/playbooks/MODELING_SELF_IMPROVE.md`](docs/playbooks/MODELING_SELF_IMPROVE.md) (full automation: pytest seed validation + errorlogy-mas runtime store)
 
 ## Global AI governance simulator (cross-cutting)
 

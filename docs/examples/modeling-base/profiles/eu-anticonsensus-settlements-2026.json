@@ -1,0 +1,84 @@
+{
+  "profile_id": "eu-anticonsensus-settlements-2026",
+  "title": "EU Anticonsensus — Israel–UK Sanctions Divergence (Sep 2026)",
+  "version": "1.0.0",
+  "story_ids": [
+    "2026-09-settlements-uk-fr-coalition",
+    "2026-09-settlements-discourse-fork",
+    "2026-09-eu-variable-geometry-settlements"
+  ],
+  "scenario_doc_ref": "docs/examples/eu-anticonsensus-israel-uk-sanctions-2026.md",
+  "event_types": [
+    "sanctions_coordination",
+    "discourse_fork_detected"
+  ],
+  "default_activated_layers": [
+    "institution:national-instance",
+    "institution:eu-council",
+    "institution:eu-commission",
+    "institution:executive",
+    "institution:minister-foreign-affairs",
+    "institution:parliament",
+    "institution:party-coalition"
+  ],
+  "conditional_layers": [
+    "institution:judiciary",
+    "institution:eu-court-of-justice",
+    "institution:symbolic-visual",
+    "institution:minister-finance"
+  ],
+  "topology_intersections": [
+    {
+      "intersection": "eu-council-national-instance",
+      "tension_type": "policy_divergence",
+      "resolution_status": "unresolved"
+    },
+    {
+      "intersection": "parliament-executive",
+      "tension_type": "mandate_gap_hypothesis",
+      "resolution_status": "unresolved"
+    },
+    {
+      "intersection": "symbolic-visual-party-coalition",
+      "tension_type": "narrative_binding",
+      "resolution_status": "unresolved"
+    }
+  ],
+  "epistemic_constraints": [
+    "No guilt/criminal/illegitimate-ruler language",
+    "No sovereignty claims",
+    "Legitimacy signals are modeled only — not verdicts",
+    "Do not publish μ/α/PNO without Errorlogy engine run"
+  ],
+  "language_rules": [
+    "analytical contribution",
+    "fuzzy membership μ",
+    "legitimacy signals (modeled)",
+    "possible / consistent with"
+  ],
+  "institutional_pack_refs": [
+    "pack:eu-anticonsensus",
+    "pack:sanctions-coordination"
+  ],
+  "state_profile_refs": [
+    "GB",
+    "FR",
+    "DE",
+    "IE",
+    "ES",
+    "PL",
+    "HU",
+    "EU"
+  ],
+  "quality_thresholds": {
+    "min_activated_layers": 5,
+    "require_topology_intersections": true
+  },
+  "mvp_iteration": 1,
+  "harness_ref": {
+    "repo": "errorlogy-mas",
+    "endpoint": "/api/events/cross-layer",
+    "test": "tests/test_cross_layer.py"
+  },
+  "epistemic_label": "INSTITUTIONAL_MODEL"
+}

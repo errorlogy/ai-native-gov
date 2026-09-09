@@ -1,0 +1,122 @@
+{
+  "run_id": "2026-09-scenario-a-uk-coalition",
+  "profile_id": "eu-anticonsensus-settlements-2026",
+  "started_at": "2026-09-09T12:00:00Z",
+  "completed_at": "2026-09-09T12:00:05Z",
+  "status": "completed",
+  "inputs": {
+    "story_id": "2026-09-settlements-uk-fr-coalition",
+    "cross_layer_envelopes": [
+      {
+        "story_id": "2026-09-settlements-uk-fr-coalition",
+        "event_type": "sanctions_coordination",
+        "activated_layers": [
+          "institution:national-instance",
+          "institution:executive",
+          "institution:minister-foreign-affairs",
+          "institution:eu-council",
+          "institution:eu-commission",
+          "institution:parliament",
+          "institution:party-coalition"
+        ],
+        "topology_intersections": [
+          {
+            "intersection": "eu-council-national-instance",
+            "tension_type": "policy_divergence",
+            "resolution_status": "unresolved"
+          },
+          {
+            "intersection": "parliament-executive",
+            "tension_type": "mandate_gap_hypothesis",
+            "resolution_status": "unresolved"
+          },
+          {
+            "intersection": "executive-executive",
+            "tension_type": "bilateral_retaliation",
+            "resolution_status": "unresolved"
+          }
+        ],
+        "jurisdiction_set": ["GB", "FR", "DE", "IE", "ES", "PL", "EU"],
+        "coordination_forum": "12-country joint statement; EU Council (deadlocked)",
+        "politifi_assets": [
+          "brand:miliband",
+          "brand:saar",
+          "agenda:two-state-solution",
+          "agenda:west-bank-settlements",
+          "institution:uk-fcdo",
+          "institution:eu-council",
+          "institution:eu-commission"
+        ],
+        "precedent_refs": ["EU-GYMNICH-2026-09-WICKLOW-01"],
+        "epistemic_label": "INSTITUTIONAL_MODEL"
+      }
+    ]
+  },
+  "outputs": {
+    "framed_envelopes": [
+      {
+        "story_id": "2026-09-settlements-uk-fr-coalition",
+        "event_type": "sanctions_coordination",
+        "activated_layers": [
+          "institution:national-instance",
+          "institution:executive",
+          "institution:minister-foreign-affairs",
+          "institution:eu-council",
+          "institution:eu-commission",
+          "institution:parliament",
+          "institution:party-coalition"
+        ],
+        "topology_intersections": [
+          {
+            "intersection": "eu-council-national-instance",
+            "tension_type": "policy_divergence",
+            "resolution_status": "unresolved"
+          },
+          {
+            "intersection": "parliament-executive",
+            "tension_type": "mandate_gap_hypothesis",
+            "resolution_status": "unresolved"
+          },
+          {
+            "intersection": "executive-executive",
+            "tension_type": "bilateral_retaliation",
+            "resolution_status": "unresolved"
+          }
+        ],
+        "jurisdiction_set": ["GB", "FR", "DE", "IE", "ES", "PL", "EU"],
+        "coordination_forum": "12-country joint statement; EU Council (deadlocked)",
+        "politifi_assets": [
+          "brand:miliband",
+          "brand:saar",
+          "agenda:two-state-solution",
+          "agenda:west-bank-settlements",
+          "institution:uk-fcdo",
+          "institution:eu-council",
+          "institution:eu-commission"
+        ],
+        "precedent_refs": ["EU-GYMNICH-2026-09-WICKLOW-01"],
+        "epistemic_label": "INSTITUTIONAL_MODEL"
+      }
+    ],
+    "activated_layers_union": [
+      "institution:national-instance",
+      "institution:executive",
+      "institution:minister-foreign-affairs",
+      "institution:eu-council",
+      "institution:eu-commission",
+      "institution:parliament",
+      "institution:party-coalition"
+    ]
+  },
+  "harness_ref": {
+    "repo": "errorlogy-mas",
+    "endpoint": "/api/events/cross-layer",
+    "test": "tests/test_cross_layer.py"
+  },
+  "provenance": {
+    "agent_id": "umbrella-seed",
+    "repo": "ai-native-gov",
+    "notes": "Design seed — Scenario A from eu-anticonsensus doc. POST to errorlogy-mas when runtime available."
+  },
+  "epistemic_label": "INSTITUTIONAL_MODEL"
+}

@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/errorlogy/ai-native-gov/schemas/modeling-run.json",
+  "title": "ModelingRun",
+  "description": "Timestamped execution of a modeling profile against inputs. Outputs reference cross-layer envelopes; engine math stays in child repos.",
+  "type": "object",
+  "required": [
+    "run_id",
+    "profile_id",
+    "started_at",
+    "status",
+    "epistemic_label"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]{2,127}$",
+      "description": "Unique run identifier",
+      "examples": ["2026-09-scenario-a-uk-coalition"]
+    },
+    "profile_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]{2,63}$"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "running", "completed", "failed", "partial"]
+    },
+    "inputs": {
+      "type": "object",
+      "properties": {
+        "cross_layer_envelopes": {
+          "type": "array",
+          "items": { "$ref": "cross-layer-event.json" }
+        },
+        "signal_envelopes": {
+          "type": "array",
+          "items": { "$ref": "signal-envelope.json" }
+        },
+        "story_id": {
+          "type": "string",
+          "description": "Primary story anchor for this run slice"
+        }
+      },
+      "additionalProperties": false
+    },
+    "outputs": {
+      "type": "object",
+      "properties": {
+        "cross_layer_event_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "IDs returned by errorlogy-mas persistence layer"
+        },
+        "framed_envelopes": {
+          "type": "array",
+          "items": { "$ref": "cross-layer-event.json" },
+          "description": "Activation stub responses (INSTITUTIONAL_MODEL)"
+        },
+        "activated_layers_union": {
+          "type": "array",
+          "items": { "$ref": "institution-layer-id.json" }
+        },
+        "engine_ref": {
+          "type": "string",
+          "description": "URI to child-repo artifact (analyze output, certificate) — no inline μ/α"
+        },
+        "result_id": {
+          "type": "string",
+          "description": "Link to modeling_result when derived"
+        }
+      },
+      "additionalProperties": false
+    },
+    "harness_ref": {
+      "type": "object",
+      "properties": {
+        "repo": { "type": "string", "examples": ["errorlogy-mas"] },
+        "endpoint": { "type": "string", "examples": ["/api/events/cross-layer"] },
+        "test": { "type": "string", "examples": ["tests/test_cross_layer.py"] },
+        "commit_sha": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "agent_id": { "type": "string" },
+        "repo": { "type": "string" },
+        "commit_sha": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "certificate_ref": {
+      "type": "string",
+      "description": "Optional NAMM certificate.json URI — upgrades linked fields to COMPUTATIONAL_EVIDENCE"
+    },
+    "epistemic_label": {
+      "type": "string",
+      "enum": [
+        "INSTITUTIONAL_MODEL",
+        "OPERATIONAL",
+        "COMPUTATIONAL_EVIDENCE",
+        "PHILOSOPHICAL_INFERENCE"
+      ],
+      "default": "INSTITUTIONAL_MODEL"
+    }
+  },
+  "additionalProperties": false
+}

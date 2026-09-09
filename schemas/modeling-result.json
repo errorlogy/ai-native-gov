@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/errorlogy/ai-native-gov/schemas/modeling-result.json",
+  "title": "ModelingResult",
+  "description": "Structured outcome from a modeling run with deltas and quality flags for the self-improve loop.",
+  "type": "object",
+  "required": [
+    "result_id",
+    "run_id",
+    "profile_id",
+    "epistemic_label"
+  ],
+  "properties": {
+    "result_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]{2,127}$"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "profile_id": {
+      "type": "string"
+    },
+    "derived_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "activated_layers_summary": {
+      "type": "array",
+      "items": { "$ref": "institution-layer-id.json" }
+    },
+    "intersection_status": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["intersection", "tension_type", "resolution_status"],
+        "properties": {
+          "intersection": { "type": "string" },
+          "tension_type": { "type": "string" },
+          "resolution_status": {
+            "type": "string",
+            "enum": ["unresolved", "partially_resolved", "resolved", "not_applicable"]
+          }
+        }
+      }
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "schema_valid",
+          "layers_match_profile",
+          "intersections_captured",
+          "missing_baseline",
+          "engine_not_run",
+          "certificate_linked",
+          "publication_blocker",
+          "retrospective_pending"
+        ]
+      }
+    },
+    "delta_vs_baseline": {
+      "type": "object",
+      "description": "Diff against profile.baseline_run_id",
+      "properties": {
+        "baseline_run_id": { "type": "string" },
+        "layers_added": {
+          "type": "array",
+          "items": { "$ref": "institution-layer-id.json" }
+        },
+        "layers_removed": {
+          "type": "array",
+          "items": { "$ref": "institution-layer-id.json" }
+        },
+        "intersections_changed": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "delta_vs_prior_run": {
+      "type": "object",
+      "properties": {
+        "prior_run_id": { "type": "string" },
+        "summary": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "retrospective_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Paths to retrospective notes (markdown or JSON sidecars)"
+    },
+    "certificate_ref": {
+      "type": "string",
+      "description": "When set, epistemic upgrade path to COMPUTATIONAL_EVIDENCE for verified fields"
+    },
+    "epistemic_label": {
+      "type": "string",
+      "enum": [
+        "INSTITUTIONAL_MODEL",
+        "OPERATIONAL",
+        "COMPUTATIONAL_EVIDENCE",
+        "PHILOSOPHICAL_INFERENCE"
+      ],
+      "default": "INSTITUTIONAL_MODEL"
+    }
+  },
+  "additionalProperties": false
+}
