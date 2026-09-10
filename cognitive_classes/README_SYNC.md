@@ -1,69 +1,69 @@
-# Инструкция по автосинхронизации Cognitive Classes
+# Cognitive Classes Auto-Sync Instructions
 
-## Куда копируется
+## Copy destinations
 
-| Destination | Тип | Режим | Путь |
-|-------------|-----|-------|------|
-| **Флешка** | Локальный носитель | Зеркало (`/MIR`) | `D:\COGNETIVE_CLASSES` |
-| **Yandex.Disk** | Облако (десктоп) | Архив (`/E /XC /XN /XO`) | `%USERPROFILE%\Yandex.Disk\AI_PROJECTS\COGNITIVE_CLASSES` |
+| Destination | Type | Mode | Path |
+|-------------|------|------|------|
+| **Flash drive** | Local media | Mirror (`/MIR`) | `D:\COGNETIVE_CLASSES` |
+| **Yandex.Disk** | Cloud (desktop) | Archive (`/E /XC /XN /XO`) | `%USERPROFILE%\Yandex.Disk\AI_PROJECTS\COGNITIVE_CLASSES` |
 
-**Разница режимов:**
-- **Зеркало** — полная идентичность: новые файлы копируются, изменённые обновляются, удалённые из источника удаляются с флешки.
-- **Архив** — только добавление/обновление: ничего не удаляется из облака (защита от случайной потери).
+**Mode difference:**
+- **Mirror** — full identity: new files are copied, changed files updated, files deleted from source are removed from the flash drive.
+- **Archive** — append/update only: nothing is deleted from the cloud (protection against accidental loss).
 
 ---
 
-## Быстрый старт
+## Quick start
 
-### Ручная синхронизация (перед извлечением флешки)
+### Manual sync (before ejecting the flash drive)
 
-Дважды кликните: **`sync_all.bat`**
+Double-click: **`sync_all.bat`**
 
-- Если флешка подключена — обновит её.
-- Если Яндекс.Диск запущен — обновит облачную папку.
-- Пишет лог в `sync_log.txt`.
+- If the flash drive is connected — it will be updated.
+- If Yandex.Disk is running — the cloud folder will be updated.
+- Writes a log to `sync_log.txt`.
 
-### Фоновый автосинхронизатор
+### Background auto-sync
 
-Дважды кликните: **`run_auto_sync_hidden.vbs`**
+Double-click: **`run_auto_sync_hidden.vbs`**
 
-- Следит за изменениями в `C:\ai_models\cognitive_classes`
-- При сохранении/создании/удалении файла ждёт 8 секунд и синхронизирует **оба** destination (если доступны)
-- Работает скрыто (без окна PowerShell)
+- Watches for changes in `C:\ai_models\cognitive_classes`
+- On file save/create/delete, waits 8 seconds and syncs **both** destinations (if available)
+- Runs hidden (no PowerShell window)
 
-**Остановка:** Диспетчер задач → найдите `powershell.exe` → Завершите задачу.
+**Stop:** Task Manager → find `powershell.exe` → End task.
 
-### Автозагрузка Windows
+### Windows startup
 
-Нажмите `Win+R`, введите:
+Press `Win+R`, enter:
 ```
 shell:startup
 ```
 
-Скопируйте туда ярлык на **`run_auto_sync_hidden.vbs`** — watcher будет стартовать при каждом входе.
+Copy a shortcut to **`run_auto_sync_hidden.vbs`** there — the watcher will start on every login.
 
 ---
 
-## Исключения
+## Exclusions
 
-Robocopy пропускает:
+Robocopy skips:
 - `.git`, `node_modules`, `__pycache__`, `.venv`, `venv`
-- `*.tmp`, `*.log`, `~$*` (временные/лок-файлы)
+- `*.tmp`, `*.log`, `~$*` (temporary/lock files)
 
 ---
 
-## Логи
+## Logs
 
-- `sync_log.txt` — ручные запуски `sync_all.bat`
-- `auto_sync_log.txt` — фоновый watcher
+- `sync_log.txt` — manual runs of `sync_all.bat`
+- `auto_sync_log.txt` — background watcher
 
 ---
 
-## Если что-то не работает
+## Troubleshooting
 
-| Симптом | Решение |
-|---------|---------|
-| Флешка не копируется | Проверьте букву диска (должна быть `D:`) |
-| Yandex.Disk не копируется | Убедитесь, что папка `Yandex.Disk` синхронизируется (иконка в трее) |
-| PowerShell ругается на политики | Запускайте через `.vbs` — он обходит политики (`-ExecutionPolicy Bypass`) |
-| Файлы не удаляются с флешки | Это нормально: в облаке используется архивный режим без удаления |
+| Symptom | Solution |
+|---------|----------|
+| Flash drive not copying | Check drive letter (should be `D:`) |
+| Yandex.Disk not copying | Ensure `Yandex.Disk` folder is syncing (tray icon) |
+| PowerShell policy errors | Run via `.vbs` — it bypasses policies (`-ExecutionPolicy Bypass`) |
+| Files not deleted from flash | Normal: cloud uses archive mode without deletion |

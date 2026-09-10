@@ -377,4 +377,4 @@ Penalty = h1·H + h2·U + h3·S + h4·O + h5·P
 
 ---
 
-*Research Program v0.2 — минимальная программа для эмпирической валидации теории когнитивных классов.*
+*Research Program v0.2 — minimal program for empirical validation of cognitive class theory.*

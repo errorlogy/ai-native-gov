@@ -1,5 +1,7 @@
 # Agent Instructions — AI Native Gov
 
+**Public docs: English primary.** Historical Russian versions are archived as `*.ru.md` sidecars where retained.
+
 ## Mission
 
 Navigate the **AI Native Gov umbrella** and route work to the correct child repository. This repo holds **vision, institutional topology, and integration contracts** — not product code.

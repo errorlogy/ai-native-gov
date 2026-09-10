@@ -256,4 +256,4 @@ QUERY fpu_distribution ::
 
 ---
 
-*DSL v0.2 — рабочий черновик для агентной формализации. Расширяемый.*
+*DSL v0.2 — working draft for agent formalization. Extensible.*

@@ -52,31 +52,31 @@ class HypothesisTestingSimulator:
         return [
             {
                 "id": "Q1",
-                "text": "Спроектируй систему обработки данных",
+                "text": "Design a data processing system",
                 "category": "architecture",
                 "required_depth": 3
             },
             {
                 "id": "Q2",
-                "text": "Найди ошибки в этой архитектуре",
+                "text": "Find errors in this architecture",
                 "category": "debugging",
                 "required_depth": 4
             },
             {
                 "id": "Q3",
-                "text": "Объясни, как работает распределённый консенсус",
+                "text": "Explain how distributed consensus works",
                 "category": "explanation",
                 "required_depth": 3
             },
             {
                 "id": "Q4",
-                "text": "Спроектируй мета-архитектуру для обучающей системы",
+                "text": "Design a meta-architecture for a learning system",
                 "category": "meta_architecture",
                 "required_depth": 5
             },
             {
                 "id": "Q5",
-                "text": "Как перейти от монолита к микросервисам?",
+                "text": "How to migrate from monolith to microservices?",
                 "category": "strategy",
                 "required_depth": 4
             }
@@ -172,7 +172,7 @@ class HypothesisTestingSimulator:
         print("\n" + "="*80)
         print("H1 TESTING: EMBEDDING SHIFT")
         print("="*80)
-        print("Гипотеза: embeddings C6 отличаются от C0-C2 на >3 сигма")
+        print("Hypothesis: C6 embeddings differ from C0-C2 by >3 sigma")
 
         question = self.test_questions[0]
 
@@ -221,7 +221,7 @@ class HypothesisTestingSimulator:
         print("\n" + "="*80)
         print("H2 TESTING: SEMANTIC INTEGRAL GAIN")
         print("="*80)
-        print("Гипотеза: SI возрастает с уровнем когниции")
+        print("Hypothesis: SI increases with cognitive level")
 
         si_values = {}
 
@@ -237,7 +237,7 @@ class HypothesisTestingSimulator:
         monotonic_score = increasing_pairs / total_pairs
         passed = monotonic_score >= 0.7  # At least 70% pairs are increasing
 
-        print("\nSemantic Integral по уровням:")
+        print("\nSemantic Integral by level:")
         for level_name, si in si_values.items():
             print(f"  {level_name}: {si:.2f}")
 
@@ -259,7 +259,7 @@ class HypothesisTestingSimulator:
         print("\n" + "="*80)
         print("H3 TESTING: NOT RARE TOKEN EFFECT")
         print("="*80)
-        print("Гипотеза: Эффект - это архитектура, не просто редкий токен")
+        print("Hypothesis: Effect is architecture, not just a rare token")
 
         # Compare real C6 with fake modes
         real_c6 = self._generate_response(self.test_questions[0], CognitiveLevel.C6)
@@ -310,7 +310,7 @@ class HypothesisTestingSimulator:
         print("\n" + "="*80)
         print("H4 TESTING: PROMPT COMPRESSION")
         print("="*80)
-        print("Гипотеза: C6+context приближается к long_prompt результату")
+        print("Hypothesis: C6+context approximates long_prompt result")
 
         # Simulate responses
         c6_response = self._generate_response(self.test_questions[3], CognitiveLevel.C6)  # Meta-arch question
@@ -354,7 +354,7 @@ class HypothesisTestingSimulator:
         print("\n" + "="*80)
         print("H5 TESTING: C6 DISTINCTIVENESS")
         print("="*80)
-        print("Гипотеза: C6 отличается от C5 мета-архитектурными свойствами")
+        print("Hypothesis: C6 differs from C5 by meta-architectural properties")
 
         c5_response = self._generate_response(self.test_questions[0], CognitiveLevel.C5)
         c6_response = self._generate_response(self.test_questions[0], CognitiveLevel.C6)
@@ -407,7 +407,7 @@ class HypothesisTestingSimulator:
         print("\n" + "="*80)
         print("H6 TESTING: QUALITY NOT ONLY SHIFT")
         print("="*80)
-        print("Гипотеза: Качество улучшается, не просто сдвигается")
+        print("Hypothesis: Quality improves, not just shifts")
 
         results_by_level = {}
 
@@ -432,7 +432,7 @@ class HypothesisTestingSimulator:
         monotonic_score = increasing_pairs / total_pairs
         passed = monotonic_score >= 0.7
 
-        print("\nQuality Score по уровням:")
+        print("\nQuality Score by level:")
         for level_name, metrics in results_by_level.items():
             print(f"  {level_name}: {metrics['quality_score']:.3f} " +
                   f"(fals: {metrics['falsifiability']:.2f}, coh: {metrics['coherence']:.2f})")
@@ -453,9 +453,9 @@ class HypothesisTestingSimulator:
     def run_all_tests(self):
         """Run all 6 hypothesis tests"""
         print("\n\n" + "="*80)
-        print("ПОЛНОЕ ТЕСТИРОВАНИЕ ГИПОТЕЗ H1-H6")
+        print("FULL HYPOTHESIS TESTING H1-H6")
         print("="*80)
-        print("Симуляция когнитивного переходa модели между уровнями C0-C6")
+        print("Simulating model cognitive transition between levels C0-C6")
         print()
 
         self.test_H1_embedding_shift()
@@ -470,20 +470,20 @@ class HypothesisTestingSimulator:
     def print_summary(self):
         """Print summary of all test results"""
         print("\n\n" + "="*80)
-        print("ИТОГОВЫЙ ОТЧЕТ ТЕСТИРОВАНИЯ")
+        print("FINAL TEST REPORT")
         print("="*80)
 
         passed_count = sum(1 for h in self.results.values() if h.get("passed", False))
         total_count = len(self.results)
 
-        print(f"\nРЕЗУЛЬТАТЫ: {passed_count}/{total_count} гипотез подтверждены\n")
+        print(f"\nRESULTS: {passed_count}/{total_count} hypotheses confirmed\n")
 
         for hypothesis, result in self.results.items():
             status = "[OK] PASSED" if result.get("passed") else "[FAIL] FAILED"
             print(f"{hypothesis}: {status}")
 
         print("\n" + "="*80)
-        print("ДЕТАЛЬНЫЕ РЕЗУЛЬТАТЫ")
+        print("DETAILED RESULTS")
         print("="*80)
 
         for hypothesis, result in self.results.items():
@@ -493,17 +493,17 @@ class HypothesisTestingSimulator:
                     print(f"  {key}: {value}")
 
         print("\n" + "="*80)
-        print("ВЫВОД")
+        print("CONCLUSION")
         print("="*80)
 
         if passed_count >= 5:
-            print("[OK] Гипотеза о когнитивном переходе ПОДТВЕРЖДЕНА!")
-            print("Модель РЕАЛЬНО переходит между когнитивными состояниями C0-C6")
+            print("[OK] Cognitive transition hypothesis CONFIRMED!")
+            print("Model GENUINELY transitions between cognitive states C0-C6")
         elif passed_count >= 3:
-            print("⚠ Гипотеза ЧАСТИЧНО подтверждена")
-            print(f"Прошли {passed_count} из 6 тестов")
+            print("⚠ Hypothesis PARTIALLY confirmed")
+            print(f"Passed {passed_count} of 6 tests")
         else:
-            print("[FAIL] Гипотеза не подтверждена")
+            print("[FAIL] Hypothesis not confirmed")
 
         print("\n" + "="*80)
 
@@ -519,7 +519,7 @@ def main():
             results_to_save[h] = {k: v for k, v in r.items() if not isinstance(v, dict) or all(isinstance(x, (int, float, str, bool, type(None))) for x in v.values())}
         json.dump(results_to_save, f, indent=2)
 
-    print("\n[OK] Результаты сохранены в hypothesis_test_results.json")
+    print("\n[OK] Results saved to hypothesis_test_results.json")
 
 if __name__ == "__main__":
     main()

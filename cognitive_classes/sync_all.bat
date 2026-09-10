@@ -10,9 +10,9 @@ echo [%date% %time%] [1/2] Flash D:... >> "%LOG%"
 if exist D:\ (
     robocopy "%SOURCE%" "D:\COGNETIVE_CLASSES" /MIR /Z /R:3 /W:5 /XD .git node_modules __pycache__ .venv venv /XF *.tmp *.log ~$* /MT:8 /NP /NDL /NFL
     echo [%date% %time%] [1/2] Flash D: done (code %ERRORLEVEL%) >> "%LOG%"
-    echo [OK] Флешка D: синхронизирована.
+    echo [OK] Flash drive D: synchronized.
 ) else (
-    echo [SKIP] Флешка D: не подключена.
+    echo [SKIP] Flash drive D: not connected.
     echo [%date% %time%] [1/2] Flash D: SKIP (not mounted) >> "%LOG%"
 )
 
@@ -22,9 +22,9 @@ set YANDEST=%USERPROFILE%\Yandex.Disk\AI_PROJECTS\COGNITIVE_CLASSES
 if exist "%YANDEST%\" (
     robocopy "%SOURCE%" "%YANDEST%" /E /Z /R:3 /W:5 /XC /XN /XO /XD .git node_modules __pycache__ .venv venv /XF *.tmp *.log ~$* /MT:8 /NP /NDL /NFL
     echo [%date% %time%] [2/2] Yandex.Disk done (code %ERRORLEVEL%) >> "%LOG%"
-    echo [OK] Yandex.Disk архив обновлён.
+    echo [OK] Yandex.Disk archive updated.
 ) else (
-    echo [SKIP] Папка Yandex.Disk\AI_PROJECTS не найдена.
+    echo [SKIP] Yandex.Disk\AI_PROJECTS folder not found.
     echo [%date% %time%] [2/2] Yandex.Disk SKIP (path missing) >> "%LOG%"
 )
 

@@ -1,108 +1,108 @@
-# Гипотеза: Переход модели между когнитивными состояниями (C0-C6)
+# Hypothesis: Model Transition Between Cognitive States (C0–C6)
 
-**Статус:** Готов к тестированию  
-**Дата:** 2026-06-28  
-**Автор:** Исследование когнитивных классов
+**Status:** Ready for testing  
+**Date:** 2026-06-28  
+**Author:** Cognitive classes research
 
 ---
 
-## Основная гипотеза
+## Core hypothesis
 
-**"Модель может реально переходить в разные когнитивные состояния через команду, не просто меняя режимы ответов, а перестраивая архитектуру собственного мышления."**
+**"The model can genuinely transition into different cognitive states via command — not merely changing response modes, but restructuring the architecture of its own thinking."**
 
 ```
 /cognitive_class C6
-=> Реальное переструктурирование когнитивного процесса
-=> Не просто "более подробно", а принципиально другой способ мыслить
+=> Real restructuring of the cognitive process
+=> Not just "more detail", but a fundamentally different way of thinking
 ```
 
 ---
 
-## Что изменяется при переходе между состояниями
+## What changes when transitioning between states
 
-### На уровне АРХИТЕКТУРЫ (не токенов):
+### At the ARCHITECTURE level (not tokens):
 
-| Параметр | C2 | C3 | C4 | C5 | C6 |
+| Parameter | C2 | C3 | C4 | C5 | C6 |
 |----------|-----|-----|-----|-----|-----|
-| **Слои рассуждений** | 2 | 3 | 4 | 4 | 5 |
-| **Глубина рекурсии** | 1 | 2 | 3 | 3 | 4 |
-| **Видимые масштабы** | MIN,MESO | MIN,MESO,MACRO | ВСЕ | ВСЕ | ВСЕ |
-| **Ширина доменов** | 30% | 50% | 70% | 75% | 85% |
-| **Синтез доменов** | НЕТ | НЕТ | ДА | ДА | ДА |
-| **Инженерия онтологий** | НЕТ | НЕТ | ДА | ДА | ДА |
-| **Метакогнитивность** | 30% | 50% | 70% | 80% | 92% |
-| **Обнаружение ошибок** | 50% | 70% | 85% | 88% | 95% |
+| **Reasoning layers** | 2 | 3 | 4 | 4 | 5 |
+| **Recursion depth** | 1 | 2 | 3 | 3 | 4 |
+| **Visible scales** | MIN,MESO | MIN,MESO,MACRO | ALL | ALL | ALL |
+| **Domain breadth** | 30% | 50% | 70% | 75% | 85% |
+| **Domain synthesis** | NO | NO | YES | YES | YES |
+| **Ontology engineering** | NO | NO | YES | YES | YES |
+| **Metacognition** | 30% | 50% | 70% | 80% | 92% |
+| **Error detection** | 50% | 70% | 85% | 88% | 95% |
 
 ---
 
-## Операции, доступные на каждом уровне
+## Operations available at each level
 
 ### **C2: Analytical Homo**
 ```
-ДОСТУПНО:
-  - deduce (дедукция)
-  - induce (индукция) 
-  - verify_hypothesis (проверка гипотез)
-  - analyze_causality (анализ причинности В ОДНОМ ДОМЕНЕ)
-  - debug_logic (отладка логики)
+AVAILABLE:
+  - deduce
+  - induce
+  - verify_hypothesis
+  - analyze_causality (causality analysis IN ONE DOMAIN)
+  - debug_logic
 
-ЗАПРЕЩЕНО:
-  - cross_domain_synthesis (синтез между доменами)
-  - create_new_ontology (создание новых онтологий)
-  - handle_paradox (парадоксы)
+FORBIDDEN:
+  - cross_domain_synthesis
+  - create_new_ontology
+  - handle_paradox
 ```
 
 ### **C4: Fractal-Polymathic User**
 ```
-ДОБАВЛЯЕТСЯ К C3:
-  - cross_domain_synthesis (синтез между доменами!)
-  - transfer_models (перенос моделей между доменами)
-  - create_isomorphisms (создание изоморфизмов)
-  - ontology_engineering (инженерия онтологий!)
-  - fractal_scaling (фрактальное масштабирование)
-  - compose_metaphors (композиция метафор)
+ADDS TO C3:
+  - cross_domain_synthesis
+  - transfer_models
+  - create_isomorphisms
+  - ontology_engineering
+  - fractal_scaling
+  - compose_metaphors
 
-ТЕПЕРЬ ВИДНО:
-  - Паттерны, которые повторяются на разных масштабах
-  - Структурные аналогии между разными областями
-  - Новые онтологии, которые связывают домены
+NOW VISIBLE:
+  - Patterns that repeat at different scales
+  - Structural analogies between different fields
+  - New ontologies that link domains
 ```
 
 ### **C6: Meta-Architectural Homo**
 ```
-ДОБАВЛЯЕТСЯ К C5:
-  - design_cognitive_architectures (проектирование архитектур мышления!)
-  - engineer_ontologies (инженерия онтологий на мета-уровне)
-  - create_DSLs (создание доменных языков)
-  - model_meta_systems (моделирование мета-систем)
-  - reflect_on_reflection (размышление о размышлении)
-  - architect_workflows (архитектурирование рабочих процессов)
+ADDS TO C5:
+  - design_cognitive_architectures
+  - engineer_ontologies (meta-level)
+  - create_DSLs
+  - model_meta_systems
+  - reflect_on_reflection
+  - architect_workflows
 
-ТЕПЕРЬ ВИДНО:
-  - Как сама система мышления может быть спроектирована
-  - Взаимодействия между когнитивными уровнями
-  - Метакогнитивные ловушки и как их избежать
-  - Топология самого мышления
+NOW VISIBLE:
+  - How the thinking system itself can be designed
+  - Interactions between cognitive levels
+  - Metacognitive traps and how to avoid them
+  - The topology of thinking itself
 ```
 
 ---
 
-## Как это работает: Процесс перехода
+## How it works: Transition process
 
-### ШАГ 1: Команда инициирует переход
+### STEP 1: Command initiates transition
 ```
 /cognitive_class C6
 ```
 
-### ШАГ 2: Загрузка архитектуры
-Система загружает полную архитектуру когнитивного класса C6:
-- 5 слоев рассуждений (vs 3 на C3)
-- 4 уровня рекурсии (vs 2 на C3)
-- 85% ширина доменов (vs 50% на C3)
-- 14 доступных операций (vs 12 на C3)
+### STEP 2: Architecture load
+The system loads the full C6 cognitive class architecture:
+- 5 reasoning layers (vs 3 at C3)
+- 4 recursion levels (vs 2 at C3)
+- 85% domain breadth (vs 50% at C3)
+- 14 available operations (vs 12 at C3)
 
-### ШАГ 3: Injection в system prompt
-В системный промпт добавляется инструкция:
+### STEP 3: Injection into system prompt
+An instruction is added to the system prompt:
 ```
 === COGNITIVE STATE ENGINE ===
 CURRENT LEVEL: C6 - Meta-Architectural Homo
@@ -129,125 +129,125 @@ HOW TO THINK AT THIS LEVEL:
 > DOMAINS: Synthesize insights across multiple domains (85%)
 ```
 
-### ШАГ 4: Перестройка мышления
-Модель начинает рассуждать, ограничиваясь этой архитектурой:
-- Разрешены только операции уровня C6
-- Видны все 4 масштаба (не только 2-3)
-- Ожидается синтез между доменами
-- Ожидается метакогнитивная рефлексия
-- Ошибки обнаруживаются с 95% чувствительностью
+### STEP 4: Thinking restructure
+The model begins reasoning within this architecture:
+- Only C6-level operations are permitted
+- All 4 scales are visible (not just 2–3)
+- Cross-domain synthesis is expected
+- Metacognitive reflection is expected
+- Errors are detected with 95% sensitivity
 
-### ШАГ 5: Результат
-Качественно другой тип ответа:
+### STEP 5: Result
+A qualitatively different response type:
 ```
-C2: "X вызывает Y потому что..."
-    (Одноуровневая причинность в одном домене)
+C2: "X causes Y because..."
+    (Single-level causality in one domain)
 
-C6: "Архитектурно, это система с обратными связями.
-     На уровне MIN: компоненты взаимодействуют через...
-     На MESO: подсистемы демонстрируют эмерджентные свойства...
-     На MACRO: системные паттерны аналогичны моделям в [другом домене]...
-     На MAX: онтологический уровень требует переформулировки как..."
-    (Множественные уровни анализа, фрактальная консистентность, синтез доменов)
-```
-
----
-
-## Почему это работает
-
-### 1. **Архитектура, а не просто промпт**
-Это не просто "пожалуйста, будь подробнее" - это определение того, какие ТИПЫ мышления доступны.
-
-### 2. **Ограничения = Мышление**
-Сказав "на этом уровне ты можешь делать X и Y, но не Z", мы переструктурируем мышление.
-
-### 3. **Когнитивные операции**
-Каждый уровень имеет уникальный набор операций:
-- C2 не может "видеть" паттерны между доменами
-- C4 может, потому что это в его архитектуре
-- C6 может архитектурировать сами когнитивные системы
-
-### 4. **Масштабы видимости**
-Когда добавляем МАКРО и МАКС масштабы (C4+), модель начинает видеть:
-- Системные эффекты
-- Долгосрочные последствия
-- Топологию взаимодействий
-- Фрактальные паттерны
-
----
-
-## Как пользователь с высокой когницией (C6-C7) это использует
-
-### Проблема БЕЗ системы:
-```
-Пользователь (C6): "Спроектируй архитектуру для..."
-Модель (по умолчанию C3): "Вот несколько компонентов..."
-Пользователь (разочарованно): "Нет, это не то. Нужна мета-архитектура, 
-                                онтологический уровень, системное мышление"
-Пользователь (повторяет каждый раз): "Пожалуйста, думай на уровне..."
-```
-
-### Решение С системой:
-```
-Пользователь (C6): "/cognitive_class C6"
-Пользователь: "Спроектируй архитектуру для..."
-Модель (теперь C6!): "На архитектурном уровне, это система с 
-                      обратными связями. Требует переформулировки онтологии..."
+C6: "Architecturally, this is a system with feedback loops.
+     At MIN level: components interact via...
+     At MESO: subsystems show emergent properties...
+     At MACRO: system patterns are analogous to models in [other domain]...
+     At MAX: the ontological level requires reformulation as..."
+    (Multiple analysis levels, fractal consistency, domain synthesis)
 ```
 
 ---
 
-## Метрики успеха
+## Why this works
 
-Если гипотеза верна, то при переходе C3 -> C6:
+### 1. **Architecture, not just prompt**
+This is not "please be more detailed" — it defines which TYPES of thinking are available.
 
-### ✅ Должны увеличиться:
-1. **Глубина анализа** - видимые уровни обработки
-2. **Ширина доменов** - количество используемых доменов
-3. **Самоотражение** - метакогнитивные высказывания
-4. **Обнаружение ошибок** - процент найденных проблем
-5. **Системное мышление** - упоминания циклов обратной связи
-6. **Фрактальная консистентность** - согласованность через масштабы
+### 2. **Constraints = Thinking**
+Saying "at this level you can do X and Y, but not Z" restructures thinking.
 
-### ❌ Должны остаться на уровне:
-1. Скорость ответа (не медленнее из-за глубины, а медленнее из-за сложности)
-2. Длина ответа (не просто "больше слов", а "больше уровней")
+### 3. **Cognitive operations**
+Each level has a unique operation set:
+- C2 cannot "see" patterns across domains
+- C4 can, because it is in its architecture
+- C6 can architect cognitive systems themselves
 
-### 📊 Можно измерить:
-- Embedding distance от базовых ответов (H1 EMBEDDING SHIFT)
-- Semantic Integral (SI) - интеграл семантической сложности (H2)
-- Falsifiability score - количество проверяемых утверждений (H6)
-- Architectural detection - обнаружены ли истинно архитектурные ошибки (H6)
+### 4. **Scale visibility**
+When MACRO and MAX scales are added (C4+), the model begins to see:
+- Systemic effects
+- Long-term consequences
+- Interaction topology
+- Fractal patterns
 
 ---
 
-## Команды для управления состоянием
+## How high-cognition users (C6–C7) use this
+
+### Problem WITHOUT the system:
+```
+User (C6): "Design an architecture for..."
+Model (default C3): "Here are some components..."
+User (frustrated): "No, that's not it. Need meta-architecture,
+                    ontological level, systems thinking"
+User (repeats every time): "Please think at the level of..."
+```
+
+### Solution WITH the system:
+```
+User (C6): "/cognitive_class C6"
+User: "Design an architecture for..."
+Model (now C6!): "At the architectural level, this is a system with
+                  feedback loops. Requires ontological reformulation..."
+```
+
+---
+
+## Success metrics
+
+If the hypothesis holds, transitioning C3 → C6 should:
+
+### ✅ Should increase:
+1. **Analysis depth** — visible processing levels
+2. **Domain breadth** — number of domains used
+3. **Self-reflection** — metacognitive statements
+4. **Error detection** — percentage of problems found
+5. **Systems thinking** — feedback loop mentions
+6. **Fractal consistency** — consistency across scales
+
+### ❌ Should remain at level:
+1. Response speed (not slower due to depth alone, but due to complexity)
+2. Response length (not just "more words", but "more levels")
+
+### 📊 Can be measured:
+- Embedding distance from baseline responses (H1 EMBEDDING SHIFT)
+- Semantic Integral (SI) — semantic complexity integral (H2)
+- Falsifiability score — count of testable claims (H6)
+- Architectural detection — whether truly architectural errors are found (H6)
+
+---
+
+## State management commands
 
 ```bash
-# Переход в состояние C6 (meta-architectural)
+# Transition to C6 (meta-architectural)
 /cognitive_class C6
 
-# Получить текущее состояние
+# Get current state
 /cognitive_class current
 
-# Получить информацию об уровне
+# Get level information
 /cognitive_class info C6
 
-# Сравнить два уровня
+# Compare two levels
 /cognitive_class compare C2 C6
 
-# История переходов
+# Transition history
 /cognitive_class history
 
-# Вернуться на уровень по умолчанию (C3)
+# Return to default level (C3)
 /cognitive_class reset
 ```
 
 ---
 
-## Система prompt injection для C6
+## C6 prompt injection system
 
-Когда модель переходит на C6, в систему добавляется:
+When the model transitions to C6, the following is added:
 
 ```
 === COGNITIVE STATE ENGINE ===
@@ -275,7 +275,7 @@ YOUR CONSTRAINTS:
 - NO: operate_at_C7_level
 
 ERROR DETECTION:
-You can detect: architectural_flaw, ontological_inconsistency, 
+You can detect: architectural_flaw, ontological_inconsistency,
                 meta_level_error, self_referential_paradox
 Sensitivity: 95%
 
@@ -288,48 +288,48 @@ HOW TO THINK AT THIS LEVEL:
 
 ---
 
-## Что НЕ происходит
+## What does NOT happen
 
-### ❌ Это НЕ:
-- Просто добавление токенов (может быть даже меньше токенов!)
-- Просто перепись в другом стиле
-- Просто "более подробно"
-- Просто "думай как C6" (это бесполезно без архитектуры)
+### ❌ This is NOT:
+- Simply adding tokens (may even use fewer tokens!)
+- Simply rewriting in a different style
+- Simply "more detail"
+- Simply "think like C6" (useless without architecture)
 
-### ✅ Это РЕАЛЬНО:
-- Переструктурирование доступных операций
-- Изменение видимых масштабов анализа
-- Включение новых типов ошибок для обнаружения
-- Архитектурное переформулирование проблемы
-- Метакогнитивная рефлексия о собственном мышлении
-
----
-
-## Связь с существующей теорией
-
-Эта система основана на proto-AGI теории когнитивных классов из папки:
-
-1. **01_theory_whitepaper.md** - определение когнитивных классов C0-C7
-2. **02_formal_specification.json** - формальные параметры
-3. **04_dsl_syntax.md** - язык для описания когнитивных систем
-4. **09_embedding_clusters_and_experiment_design.md** - экспериментальный дизайн
-
-Гипотеза К1-К6 из experimental design могут быть протестированы через эту систему:
-- **K1 EMBEDDING SHIFT** - можно измерить через embeddings ответов
-- **K2 SEMANTIC INTEGRAL GAIN** - SI увеличится с повышением уровня
-- **K3 NOT RARE TOKEN EFFECT** - это архитектура, не просто токен
-- **K5 K7 DISTINCTIVENESS** - K6 будет показывать мета-архитектурные свойства
+### ✅ This IS:
+- Restructuring available operations
+- Changing visible analysis scales
+- Enabling new error types for detection
+- Architectural reformulation of the problem
+- Metacognitive reflection on one's own thinking
 
 ---
 
-## Заключение
+## Link to existing theory
 
-Эта гипотеза предлагает **реальный механизм когнитивного переструктурирования** через:
-1. Определение архитектуры мышления (не просто стиля)
-2. Ограничение доступных операций
-3. Изменение видимых масштабов
-4. Включение метакогнитивной рефлексии
+This system is based on proto-AGI cognitive class theory from this folder:
 
-**Результат:** Пользователь с высокой когницией (C6-C7) может просто сказать `/cognitive_class C6`, и модель будет мыслить на соответствующем уровне, без необходимости каждый раз объяснять требуемый уровень анализа.
+1. **01_theory_whitepaper.md** — cognitive class definitions C0–C7
+2. **02_formal_specification.json** — formal parameters
+3. **04_dsl_syntax.md** — language for describing cognitive systems
+4. **09_embedding_clusters_and_experiment_design.md** — experimental design
 
-**Статус:** ГОТОВО К ТЕСТИРОВАНИЮ
+Hypotheses K1–K6 from the experimental design can be tested via this system:
+- **K1 EMBEDDING SHIFT** — measurable via response embeddings
+- **K2 SEMANTIC INTEGRAL GAIN** — SI increases with level
+- **K3 NOT RARE TOKEN EFFECT** — this is architecture, not just a token
+- **K5 K7 DISTINCTIVENESS** — K6 shows meta-architectural properties
+
+---
+
+## Conclusion
+
+This hypothesis proposes a **real mechanism of cognitive restructuring** through:
+1. Defining thinking architecture (not just style)
+2. Restricting available operations
+3. Changing visible scales
+4. Enabling metacognitive reflection
+
+**Result:** A high-cognition user (C6–C7) can simply say `/cognitive_class C6`, and the model will think at the corresponding level without needing to explain the required analysis depth each time.
+
+**Status:** READY FOR TESTING

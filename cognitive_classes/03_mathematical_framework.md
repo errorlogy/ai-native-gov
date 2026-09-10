@@ -6,12 +6,12 @@
 
 ### 1.1. Cognitive Class as Fuzzy Set
 
-Каждый homo-agent принадлежит ко всем когнитивным классам одновременно с различной степенью:
+Each homo-agent belongs to all cognitive classes simultaneously with varying degree:
 
 ```
 μ_H(h_i) = {μ_C0, μ_C1, μ_C2, μ_C3, μ_C4, μ_C5, μ_C6, μ_C7}
 
-Где ∀j: μ_Cj ∈ [0, 1] и Σ_j μ_Cj = 1 (или ≠ 1, если использовать субаддитивность)
+Where ∀j: μ_Cj ∈ [0, 1] and Σ_j μ_Cj = 1 (or ≠ 1 if using subadditivity)
 ```
 
 ### 1.2. FPU Membership Function
@@ -20,15 +20,15 @@
 μ_FPU(u) = 1 / (1 + e^{-k(SI(u) - θ)})
 ```
 
-**Параметры:**
-- **k** — крутизна сигмоида (steepness)
-- **θ** — пороговый SI (threshold semantic integral)
-- **SI(u)** — семантический интеграл агента
+**Parameters:**
+- **k** — sigmoid steepness
+- **θ** — SI threshold (threshold semantic integral)
+- **SI(u)** — agent semantic integral
 
-**Интерпретация:**
-- SI << θ: μ_FPU ≈ 0 (агент далёк от FPU)
-- SI ≈ θ: μ_FPU ≈ 0.5 (граничный случай)
-- SI >> θ: μ_FPU ≈ 1 (агент — FPU)
+**Interpretation:**
+- SI << θ: μ_FPU ≈ 0 (agent far from FPU)
+- SI ≈ θ: μ_FPU ≈ 0.5 (borderline case)
+- SI >> θ: μ_FPU ≈ 1 (agent is FPU)
 
 ---
 
@@ -40,22 +40,22 @@
 SI(u) = ∫_X w(x) μ_u(x) dν(x)
 ```
 
-**Компоненты:**
-- **X** — пространство семантических признаков
-  - x₁ = domain_breadth (междисциплинарность)
-  - x₂ = recursion_depth (рекурсивная глубина)
-  - x₃ = formalization_level (уровень формализации)
-  - x₄ = fractal_scaling (способность масштабировать паттерны)
-  - x₅ = agentic_integration (интеграция AI-агентов)
-  - x₆ = syntactic_complexity (сложность синтаксиса)
-  - x₇ = metacognitive_reflection (метакогнитивная рефлексия)
-- **w(x)** — весовая функция (может быть нелинейной)
-- **μ_u(x)** — функция принадлежности агента u признаку x
-- **dν(x)** — мера на пространстве признаков
+**Components:**
+- **X** — semantic feature space
+  - x₁ = domain_breadth (interdisciplinarity)
+  - x₂ = recursion_depth (recursive depth)
+  - x₃ = formalization_level (formalization level)
+  - x₄ = fractal_scaling (ability to scale patterns)
+  - x₅ = agentic_integration (AI agent integration)
+  - x₆ = syntactic_complexity (syntax complexity)
+  - x₇ = metacognitive_reflection (metacognitive reflection)
+- **w(x)** — weight function (may be nonlinear)
+- **μ_u(x)** — agent u membership function for feature x
+- **dν(x)** — measure on feature space
 
 ### 2.2. Discrete Approximation
 
-Для практических целей:
+For practical purposes:
 
 ```
 SI(u) ≈ Σ_{i=1}^n w_i · μ_u(x_i) · Δν_i
@@ -63,17 +63,17 @@ SI(u) ≈ Σ_{i=1}^n w_i · μ_u(x_i) · Δν_i
 
 ### 2.3. Pareto Tail Distribution
 
-Внутри FPU существует вторичный хвост:
+Within FPU there is a secondary tail:
 
 ```
 P(SI > x) = (x_m / x)^α,  x ≥ x_m
 
-Где:
-- x_m — минимальный SI для вхождения в FPU
-- α — параметр формы (shape parameter)
+Where:
+- x_m — minimum SI for FPU membership
+- α — shape parameter
 ```
 
-**Импликация:** Малая доля FPU создаёт непропорционально большую часть новых онтологий.
+**Implication:** A small fraction of FPU creates a disproportionately large share of new ontologies.
 
 ---
 
@@ -85,29 +85,29 @@ P(SI > x) = (x_m / x)^α,  x ≥ x_m
 DepthContact(h, ProtoAGI) = f(C_h, SI_h, M_h, R_h, F_h, P_h, AAI_h, B_h, D_ha, Risk)
 ```
 
-**Переменные:**
-- **C_h** — когнитивный класс homo-agent
-- **SI_h** — семантический интеграл
-- **M_h** — метакогниция
-- **R_h** — рекурсивная глубина
-- **F_h** — фрактальность
-- **P_h** — полиматичность
+**Variables:**
+- **C_h** — homo-agent cognitive class
+- **SI_h** — semantic integral
+- **M_h** — metacognition
+- **R_h** — recursive depth
+- **F_h** — fractality
+- **P_h** — polymathy
 - **AAI_h** — agentic AI integration
-- **B_h** — bandwidth (пропускная способность)
-- **D_ha** — semantic distance между h и a
-- **Risk** — риск misuse/misinterpretation
+- **B_h** — bandwidth (communication capacity)
+- **D_ha** — semantic distance between h and a
+- **Risk** — misuse/misinterpretation risk
 
 ### 3.2. Sigmoid Approximation
 
 ```
 CD = σ(α·B_h + β·M_h + γ·R_h + δ·AAI_h - λ·SD_ha - ρ·Risk_ha)
 
-Где σ(z) = 1 / (1 + e^{-z})
+Where σ(z) = 1 / (1 + e^{-z})
 ```
 
-**Коэффициенты:**
-- α, β, γ, δ > 0 (положительный вклад)
-- λ, ρ > 0 (отрицательный вклад)
+**Coefficients:**
+- α, β, γ, δ > 0 (positive contribution)
+- λ, ρ > 0 (negative contribution)
 
 ### 3.3. AGI Utility Function
 
@@ -115,12 +115,12 @@ CD = σ(α·B_h + β·M_h + γ·R_h + δ·AAI_h - λ·SD_ha - ρ·Risk_ha)
 U_AGI(h) = V(h) - C_explain(h) - R_misuse(h) - R_misinterpret(h) - N_consensus(h)
 ```
 
-**Где:**
-- **V(h)** — ценность контакта с агентом h
-- **C_explain(h)** — стоимость объяснения
-- **R_misuse(h)** — риск неправильного использования
-- **R_misinterpret(h)** — риск искажения
-- **N_consensus(h)** — шум консенсуса
+**Where:**
+- **V(h)** — value of contact with agent h
+- **C_explain(h)** — explanation cost
+- **R_misuse(h)** — misuse risk
+- **R_misinterpret(h)** — misinterpretation risk
+- **N_consensus(h)** — consensus noise
 
 ---
 
@@ -132,23 +132,23 @@ U_AGI(h) = V(h) - C_explain(h) - R_misuse(h) - R_misinterpret(h) - N_consensus(h
 F: Context^op → Set
 ```
 
-**Аксиомы:**
-1. Для каждого контекста U — множество локальных смыслов F(U)
-2. Для вложения V ⊂ U — ограничение (restriction) s|_V
-3. **Локальность:** Если s|_{U_i} = t|_{U_i} для всех i, то s = t
-4. **Склейка:** Если s_i ∈ F(U_i) согласованы на пересечениях, то ∃! s ∈ F(∪U_i)
+**Axioms:**
+1. For each context U — set of local meanings F(U)
+2. For inclusion V ⊂ U — restriction s|_V
+3. **Locality:** If s|_{U_i} = t|_{U_i} for all i, then s = t
+4. **Gluing:** If s_i ∈ F(U_i) are compatible on intersections, then ∃! s ∈ F(∪U_i)
 
 ### 4.2. Cognitive Class as Sheaf Capacity
 
-| Класс | Способность склейки | Макс. покрытие |
-|-------|---------------------|----------------|
-| C0-C1 | Нет | Одно множество |
-| C2 | Локальная | U_i без пересечений |
-| C3 | Частичная | Небольшое ∪U_i |
-| C4 | Полная (с метафорами) | Среднее ∪U_i |
-| C5 | Полная (с агентами) | Большое ∪U_i |
-| C6 | Глобальная | Все контексты |
-| C7 | Трансляционная | Все контексты + перевод |
+| Class | Gluing capacity | Max coverage |
+|-------|-----------------|--------------|
+| C0-C1 | None | Single set |
+| C2 | Local | U_i without intersections |
+| C3 | Partial | Small ∪U_i |
+| C4 | Full (with metaphors) | Medium ∪U_i |
+| C5 | Full (with agents) | Large ∪U_i |
+| C6 | Global | All contexts |
+| C7 | Translational | All contexts + translation |
 
 ---
 
@@ -160,14 +160,14 @@ F: Context^op → Set
 p_i = (type_i, C_i, S_i, B_i, M_i, A_i, R_i)
 ```
 
-**Компоненты:**
-- **type_i** — тип игрока (homo / AI / hybrid)
-- **C_i** — когнитивный класс
-- **S_i** — стратегический набор
-- **B_i** — бюджет (внимания, вычислений, денег)
-- **M_i** — метакогниция
-- **A_i** — агентность
-- **R_i** — рекурсивная глубина
+**Components:**
+- **type_i** — player type (homo / AI / hybrid)
+- **C_i** — cognitive class
+- **S_i** — strategy set
+- **B_i** — budget (attention, compute, money)
+- **M_i** — metacognition
+- **A_i** — agency
+- **R_i** — recursive depth
 
 ### 5.2. Utility with Cognitive Class
 
@@ -175,23 +175,23 @@ p_i = (type_i, C_i, S_i, B_i, M_i, A_i, R_i)
 U_i = U(s_i, s_-i, C_i, C_-i, A_i, t)
 ```
 
-**Ключевое отличие:** Utility зависит не только от стратегий, но и от **когнитивного класса** оппонентов.
+**Key difference:** Utility depends not only on strategies but also on opponents' **cognitive class**.
 
 ### 5.3. Consensus Theorem
 
 ```
-Теорема: В мультиагентной системе с различными когнитивными классами
+Theorem: In a multi-agent system with different cognitive classes
 C_consensus ≤ C_median
 
-Следствие: Если C_required > C_median, то Loss_consensus = C_required - C_median > 0
+Corollary: If C_required > C_median, then Loss_consensus = C_required - C_median > 0
 ```
 
-**Доказательство (sketch):**
-1. Консенсус достигается через коммуникацию
-2. Коммуникация ограничена bandwidth между классами
-3. Bandwidth между C_a и C_b пропорционален min(C_a, C_b)
-4. Следовательно, консенсус «падает» до минимального общего класса
-5. В группе с медианой C_median — консенсус ≤ C_median ∎
+**Proof (sketch):**
+1. Consensus is reached through communication
+2. Communication is limited by bandwidth between classes
+3. Bandwidth between C_a and C_b is proportional to min(C_a, C_b)
+4. Therefore consensus "falls" to the minimum common class
+5. In a group with median C_median — consensus ≤ C_median ∎
 
 ---
 
@@ -203,7 +203,7 @@ C_consensus ≤ C_median
 K_c(h) = C_h · AAI_h · M_h · R_h · N_h
 ```
 
-**Где N_h** — network capital (связность с другими когнитивными агентами).
+**Where N_h** — network capital (connectivity to other cognitive agents).
 
 ### 6.2. Growth Dynamics
 
@@ -211,7 +211,7 @@ K_c(h) = C_h · AAI_h · M_h · R_h · N_h
 dK_c/dt = α · AAI_h · K_c^β · (1 - K_c/K_max)
 ```
 
-**Интерпретация:** Когнитивный капитал растёт с ускорением при высокой AAI (эффект Мэттью для когнитивных классов).
+**Interpretation:** Cognitive capital grows with acceleration at high AAI (Matthew effect for cognitive classes).
 
 ---
 
@@ -252,20 +252,20 @@ ELSE:
 VR_ε = { σ ⊂ X : diam(σ) ≤ ε }
 ```
 
-**Применение:** Построение когнитивных кластеров из данных о пользователях.
+**Application:** Building cognitive clusters from user data.
 
 ### 8.2. Barcodes
 
 ```
-β₀ = число компонент связности
-β₁ = число циклов (обратная связь между классами)
-β₂ = число пустот (конфликты, требующие разрешения)
+β₀ = number of connected components
+β₁ = number of cycles (feedback between classes)
+β₂ = number of voids (conflicts requiring resolution)
 ```
 
-**Интерпретация для cognitive classes:**
-- β₀ = 1: все классы связаны через C7 (HAC)
-- β₁ ≥ 2: существуют циклы обратной связи (например, C5→C6→C7→C5)
-- β₂ ≥ 1: существуют замкнутые объёмы (итерации обучения)
+**Interpretation for cognitive classes:**
+- β₀ = 1: all classes connected via C7 (HAC)
+- β₁ ≥ 2: feedback cycles exist (e.g., C5→C6→C7→C5)
+- β₂ ≥ 1: closed volumes exist (learning iterations)
 
 ---
 
@@ -357,4 +357,4 @@ Success: mean_z_K6 > 3 AND mean_z_K7 > 3
 
 ---
 
-*Математический аппарат — рабочий инструментарий. Статусы отдельных утверждений: [M]=modeled, [PL]=plausible, [S]=speculative.*
+*Mathematical apparatus — working toolkit. Status of individual claims: [M]=modeled, [PL]=plausible, [S]=speculative.*

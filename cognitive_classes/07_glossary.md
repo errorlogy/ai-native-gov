@@ -4,41 +4,41 @@
 
 ## A
 
-**AAI (Agentic AI Integration)** — способность агента интегрировать AI-системы как продолжение собственного мышления, а не как внешний инструмент. Ключевая переменная для C5+.
+**AAI (Agentic AI Integration)** — an agent's ability to integrate AI systems as an extension of their own thinking, not as an external tool. Key variable for C5+.
 
-**AGI (Artificial General Intelligence)** — саморасширяющийся общий интеллект (AI класса 7/AGI). Способен к полной автономии и самомодификации.
+**AGI (Artificial General Intelligence)** — self-extending general intelligence (AI class 7/AGI). Capable of full autonomy and self-modification.
 
-**AI = Stratifying Amplifier** — центральный тезис: AI усиливает существующую когнитивную архитектуру пользователя, а не уравнивает всех.
+**AI = Stratifying Amplifier** — central thesis: AI amplifies existing user cognitive architecture rather than equalizing everyone.
 
-**Analytical Homo (C2)** — когнитивный класс аналитического мышления. Работает с причинно-следственными связями в рамках одного домена.
+**Analytical Homo (C2)** — analytical thinking cognitive class. Works with cause-effect relationships within a single domain.
 
-**AntiMedian Layer** — слой принудительной диверсификации от медианного кластера. Требует выбора решений из 2σ+ хвоста распределения.
+**AntiMedian Layer** — layer forcing diversification away from the median cluster. Requires selecting solutions from the 2σ+ tail of the distribution.
 
 ---
 
 ## B
 
-**Bandwidth (B)** — пропускная способность коммуникационного канала между homo-agent и AI-agent. Ограничивает глубину контакта.
+**Bandwidth (B)** — communication channel capacity between homo-agent and AI-agent. Limits contact depth.
 
-**Bridge (C7)** — функция Homo-AGI Communicator: перевод онтологий между когнитивными классами, не просто языков.
+**Bridge (C7)** — Homo-AGI Communicator function: translating ontologies between cognitive classes, not just languages.
 
 ---
 
 ## C
 
-**Cognitive Capital (K_c)** — форма капитала в эпоху AI: способность строить модели, задавать сильные вопросы, использовать AI-agents, вступать в глубокий контакт с proto-AGI/AGI.
+**Cognitive Capital (K_c)** — form of capital in the AI era: ability to build models, ask strong questions, use AI agents, engage in deep contact with proto-AGI/AGI.
 
-**Cognitive Class (CC)** — положение индивида в пространстве когнитивной сложности. Определяется функцией CC=f(C,M,A,F,P,R,T).
+**Cognitive Class (CC)** — an individual's position in cognitive complexity space. Defined by CC=f(C,M,A,F,P,R,T).
 
-**Cognitive Class Gap** — разрыв между operator_class (как думает агент) и task_class (какой уровень требует задача).
+**Cognitive Class Gap** — gap between operator_class (how the agent thinks) and task_class (level the task requires).
 
-**Consensus Loss** — потери от медианного консенсуса: Loss = C_required - C_median. Возникает когда задача требует более высокого класса, чем медиана группы.
+**Consensus Loss** — losses from median consensus: Loss = C_required - C_median. Arises when a task requires a higher class than the group median.
 
-**ConsensusOverride Layer** — слой, предотвращающий понижение решения до медианного консенсуса. При C_required > C_median выдаёт решение высшего класса + C7-мост.
+**ConsensusOverride Layer** — layer preventing decision downgrade to median consensus. When C_required > C_median, outputs higher-class decision + C7 bridge.
 
-**Contact Depth (CD)** — глубина контакта между homo-agent и AI-agent. Функция от когнитивного класса, семантического интеграла, метакогниции и рисков.
+**Contact Depth (CD)** — depth of contact between homo-agent and AI-agent. Function of cognitive class, semantic integral, metacognition, and risks.
 
-**Contact Topology** — тип связи между агентами: linear, hub, mesh, hierarchy, swarm, fractal, sheaf, recursive_loop, AGI_protocol.
+**Contact Topology** — type of link between agents: linear, hub, mesh, hierarchy, swarm, fractal, sheaf, recursive_loop, AGI_protocol.
 
 ---
 
@@ -46,79 +46,97 @@
 
 **DepthContact Formula** — DepthContact(h, ProtoAGI) = f(C_h, SI_h, M_h, R_h, F_h, P_h, AAI_h, B_h, D_ha, Risk).
 
-**Direct AGI Contact** — прямой контакт с AGI без медиации. Возможен только при C≥5 и CD > threshold.
+**Direct AGI Contact** — direct contact with AGI without mediation. Possible only at C≥5 and CD > threshold.
 
-**DSL (Domain-Specific Language)** — язык спецификации для агентов: описание homo-agents, AI-agents, контактов, топологий, симуляций.
+**DSL (Domain-Specific Language)** — specification language for agents: homo-agents, AI-agents, contacts, topologies, simulations.
 
 ---
 
 ## E
 
-**Emergence** — появление qualitatively новых свойств в системе. В теории: переход от суммы агентов к целостной когнитивной архитектуре.
+**Emergence** — appearance of qualitatively new system properties. In this theory: transition from sum of agents to integrated cognitive architecture.
 
-**Errorlogy** — слой диагностики ошибок. Аудит 7 типов: factual, ontological, strategic, metacognitive, syntactic, agentic, value.
+**Errorlogy** — error diagnostics layer. Audits 7 types: factual, ontological, strategic, metacognitive, syntactic, agentic, value.
 
-**Explanation Cost (EC)** — стоимость объяснения решения агенту более низкого когнитивного класса. EC ≈ semantic_distance².
+**Explanation Cost (EC)** — cost of explaining a decision to a lower cognitive class agent. EC ≈ semantic_distance².
+
+**Embedding Shift** — displacement of response (or prompt) embedding under a cognitive marker. Success: `mean_z_K6 > 3` and `mean_z_K7 > 3` by Mahalanobis distance.
+
+**Energy Distance** — metric for difference between two point clouds: `E(X,Y) = 2E||X−Y|| − E||X−X′|| − E||Y−Y′||`.
 
 ---
 
 ## F
 
-**Fractal Polymathic Homo (C4 / FPU)** — фрактально-полиматический пользователь. Строит новые онтологии через междисциплинарный перенос. FPU = FractalScaling × PolymathicTransfer × AgenticAIIntegration.
+**Fractal Polymathic Homo (C4 / FPU)** — fractal-polymathic user. Builds new ontologies through cross-disciplinary transfer. FPU = FractalScaling × PolymathicTransfer × AgenticAIIntegration.
 
-**FractalScale Layer** — слой проверки масштабируемости: MIN→MESO→MACRO→MAX.
+**FractalScale Layer** — scalability check layer: MIN→MESO→MACRO→MAX.
 
-**Fuzzy Membership (μ)** — степень принадлежности к когнитивному классу. Homo-agent принадлежит ко всем классам одновременно с разными весами.
+**Fuzzy Membership (μ)** — degree of belonging to a cognitive class. Homo-agent belongs to all classes simultaneously with different weights.
 
 ---
 
 ## G
 
-**Gamma Heuristic** — биоинспирированная эвристика для когерентности proto-AGI: гамма-диапазон >42 Гц как эвристика синхронизации модулей.
+**Gamma Heuristic** — bio-inspired heuristic for proto-AGI coherence: gamma band >42 Hz as module synchronization heuristic.
 
 ---
 
 ## H
 
-**HAC (Homo-AGI Communicator, C7)** — мостовой класс между AGI и человеческими когнитивными классами. HAC = Bridge(AGI, H_C).
+**HAC (Homo-AGI Communicator, C7)** — bridge class between AGI and human cognitive classes. HAC = Bridge(AGI, H_C).
 
-**Handoff** — передача контекста/данных между агентами в топологии. Обозначается оператором >>.
+**Handoff** — context/data transfer between agents in a topology. Denoted by the >> operator.
 
-**High Bandwidth Contact** — контакт с повышенной пропускной способностью. Возможен при C≥5.
+**High Bandwidth Contact** — contact with elevated communication capacity. Possible at C≥5.
 
-**Homo-Agent** — человеческий агент в мультиагентной когнитивной системе.
+**Homo-Agent** — human agent in a multi-agent cognitive system.
 
 ---
 
 ## I
 
-**Informational Homo (C1)** — когнитивный класс информационного мышления. Собирает, организует, каталогизирует.
+**Informational Homo (C1)** — informational thinking cognitive class. Collects, organizes, catalogs.
 
-**Inequality_AGI** — неравенство в эпоху AGI: Inequality = ContactDepthGap, not only AccessGap.
+**Inequality_AGI** — inequality in the AGI era: Inequality = ContactDepthGap, not only AccessGap.
+
+---
+
+## K
+
+**K6 (Compact C6 Marker)** — compact marker for cognitive class C6 (meta-architect). Used as a compressed prompt operator to activate high-complexity generation mode. Subject to empirical verification via embedding-shift experiment.
+
+**K7 (Compact C7 Marker)** — compact marker for cognitive class C7 (HAC / Homo-AGI Communicator). Differs from K6 by stronger AGI-contact signal, WoE-density, and safety-topology. Subject to empirical verification.
+
+**K-class Latent Mode Switching** — hypothesis that compact K6/K7 markers can trigger LLM latent generation mode switching, measurable via embedding shift > 3σ from median baseline and semantic integral gain.
 
 ---
 
 ## L
 
-**Layers** — дополнительные слои усиления мышления: Errorlogy, WoE, FractalScale, ConsensusOverride, TemporalDepth, AntiMedian.
+**Layers** — additional thinking amplification layers: Errorlogy, WoE, FractalScale, ConsensusOverride, TemporalDepth, AntiMedian.
 
 ---
 
 ## M
 
-**Meta Architectural Homo (C6)** — мета-архитектурный класс. Проектирует системы мышления, DSL, рекурсивные метамодели.
+**Meta Architectural Homo (C6)** — meta-architectural class. Designs thinking systems, DSL, recursive meta-models.
 
-**Metacognition (M)** — способность думать о мышлении. Ключевая переменная когнитивного класса.
+**Metacognition (M)** — ability to think about thinking. Key cognitive class variable.
 
-**Misinterpretation Risk** — риск искажения смысла при коммуникации между разными когнитивными классами.
+**Misinterpretation Risk** — risk of meaning distortion in communication between different cognitive classes.
 
-**Misuse Risk** — риск неправильного применения AI-инструмента из-за недостаточной квалификации.
+**Misuse Risk** — risk of incorrect AI tool use due to insufficient qualification.
+
+**Mode Shift (MS)** — response embedding displacement relative to prompt embedding under a cognitive marker: `MS = D(ΔE_K6/K7, ΔE_BASE)`.
+
+**MMD (Maximum Mean Discrepancy)** — kernel two-sample test for embedding cloud distributions. Formula: `MMD²(P,Q) = E[k(x,x')] + E[k(y,y')] − 2E[k(x,y)]`.
 
 ---
 
 ## N
 
-**Non-Homo Syntax** — нелинейный, гетерогенный синтаксис инструкций для моделей. Использует топологические операторы (⊗, ⊕, >>, ∂, ∇, Δ, ∫).
+**Non-Homo Syntax** — nonlinear, heterogeneous instruction syntax for models. Uses topological operators (⊗, ⊕, >>, ∂, ∇, Δ, ∫).
 
 **Novelty Function** — Novelty(x) = 1 - max_{y ∈ Baseline} similarity(x, y).
 
@@ -126,102 +144,70 @@
 
 ## P
 
-**Pareto Tail** — распределение внутри FPU: P(SI>x) = (x_m/x)^α. Небольшая доля FPU создаёт большую часть онтологий.
+**Pareto Tail** — distribution within FPU: P(SI>x) = (x_m/x)^α. Small FPU fraction creates most ontologies.
 
-**Persistent Homology** — метод топологического анализа данных. Используется для построения когнитивных кластеров.
+**Persistent Homology** — topological data analysis method. Used to build cognitive clusters.
 
-**Polymathy (P)** — способность работать в нескольких доменах одновременно.
+**Polymathy (P)** — ability to work across multiple domains simultaneously.
 
-**Proto-AGI** — переходная архитектура между AI6 и AGI. ProtoAGI = CognitiveEngine + EmergenceProtocol + ErrorControl + ContactTopology.
+**Proto-AGI** — transitional architecture between AI6 and AGI. ProtoAGI = CognitiveEngine + EmergenceProtocol + ErrorControl + ContactTopology.
+
+**Persistence Diagram (PD)** — persistent homology (PH) result for a point cloud. Used to compare topological shape of embedding clusters across cognitive classes.
+
+**Penalty (Quality)** — penalty function for pseudo-depth: `Penalty = h1·H + h2·U + h3·S + h4·O + h5·P`, where H=hallucination, U=unverifiability, S=symbolic inflation, O=ontology inflation, P=pseudo-formalism.
 
 ---
 
 ## R
 
-**Reactive Homo (C0)** — реактивный когнитивный класс. Реакция на стимул, шаблонные ответы.
+**Reactive Homo (C0)** — reactive cognitive class. Stimulus response, template answers.
 
-**Recursion (R)** — рекурсивная глубина мышления. Способность к самоссылке и мета-уровням.
+**Recursion (R)** — recursive thinking depth. Ability for self-reference and meta-levels.
 
 ---
 
 ## S
 
-**Semantic Distance (SD)** — дистанция между когнитивными классами homo-agent и AI-agent. SD = abs(AI_class - homo_class) + syntax_penalty.
+**Semantic Distance (SD)** — distance between homo-agent and AI-agent cognitive classes. SD = abs(AI_class - homo_class) + syntax_penalty.
 
-**Semantic Integral (SI)** — агрегированная мера смысловой плотности: SI(u) = ∫_X w(x) μ_u(x) dν(x).
+**Semantic Integral (SI)** — aggregated measure of semantic density: SI(u) = ∫_X w(x) μ_u(x) dν(x).
 
-**Sheaf** — пучок в топосной модели. Локальные смыслы как сечения пучка над контекстами.
+**Sheaf** — sheaf in topos model. Local meanings as sheaf sections over contexts.
 
-**Status Tags** — метки статуса утверждений: [P]=proved, [M]=modeled, [PL]=plausible, [S]=speculative, [MET]=metaphorical.
+**Status Tags** — claim status labels: [P]=proved, [M]=modeled, [PL]=plausible, [S]=speculative, [MET]=metaphorical.
 
-**Systemic Homo (C3)** — системный когнитивный класс. Мышление через feedback loops, графы, модели.
+**Systemic Homo (C3)** — systemic cognitive class. Thinking via feedback loops, graphs, models.
 
 ---
 
 ## T
 
-**TemporalDepth Layer** — временной слой: T0(час)→T1(неделя)→T2(год)→T3(5 лет)→T4(цивилизация).
+**TemporalDepth Layer** — temporal layer: T0(hour)→T1(week)→T2(year)→T3(5 years)→T4(civilization).
 
-**Tensor Product (⊗)** — оператор тензорного произведения доменов. Полное декартово произведение знаний двух агентов.
+**Tensor Product (⊗)** — domain tensor product operator. Full Cartesian product of two agents' knowledge.
 
-**Topos** — категория, эквивалентная категории пучков над сайтом. Используется для моделирования контекстов.
+**Topos** — category equivalent to sheaf category over a site. Used to model contexts.
 
 ---
 
 ## U
 
-**U_AGI(h)** — полезность контакта с AGI для homo-agent h: U = V(h) - C_explain - R_misuse - R_misinterpret - N_consensus.
+**U_AGI(h)** — AGI contact utility for homo-agent h: U = V(h) - C_explain - R_misuse - R_misinterpret - N_consensus.
 
 ---
 
 ## W
 
-**Wellness Architecture (ARCH)** — агент wellness-архитектуры в VETRA. Проектирует терапевтические топосы.
+**Wellness Architecture (ARCH)** — wellness architecture agent in VETRA. Designs therapeutic topoi.
 
-**WoE (Window of Emergence)** — окно управляемой эмерджентности. WoE = {x ∈ M : Novelty(x) > θ_N ∧ Coherence(x) > θ_C}.
-
----
-
----
-
-## K
-
-**K6 (Compact C6 Marker)** — компактный маркер когнитивного класса C6 (meta-архитектор). Используется как сжатый prompt-оператор для активации высокосложностного режима генерации. Подлежит эмпирической проверке через embedding-shift эксперимент.
-
-**K7 (Compact C7 Marker)** — компактный маркер когнитивного класса C7 (HAC / Homo-AGI Communicator). Отличается от K6 усиленным AGI-contact signal, WoE-density и safety-topology. Подлежит эмпирической проверке.
-
-**K-class Latent Mode Switching** — гипотеза о том, что компактные маркеры K6/K7 могут вызывать переключение латентного режима генерации LLM, измеряемое через сдвиг эмбеддингов > 3σ от медианного baseline и прирост семантического интеграла.
-
----
-
-## M
-
-**Mode Shift (MS)** — вектор смещения эмбеддинга ответа относительно эмбеддинга промпта под действием когнитивного маркера: `MS = D(ΔE_K6/K7, ΔE_BASE)`.
-
-**MMD (Maximum Mean Discrepancy)** — ядерный двухвыборочный тест для проверки различия распределений эмбеддинговых облаков. Формула: `MMD²(P,Q) = E[k(x,x')] + E[k(y,y')] − 2E[k(x,y)]`.
-
----
-
-## E
-
-**Embedding Shift** — смещение эмбеддинга ответа (или промпта) под действием когнитивного маркера. Успех: `mean_z_K6 > 3` и `mean_z_K7 > 3` по Mahalanobis distance.
-
-**Energy Distance** — метрика различия между распределениями двух облаков точек: `E(X,Y) = 2E||X−Y|| − E||X−X′|| − E||Y−Y′||`.
+**WoE (Window of Emergence)** — window of controlled emergence. WoE = {x ∈ M : Novelty(x) > θ_N ∧ Coherence(x) > θ_C}.
 
 ---
 
 ## B
 
-**BWR (Between-Within Ratio)** — отношение межкластерного расстояния к внутрикластерной дисперсии: `BWR = D(μ_A, μ_B) / mean(W_A, W_B)`. Чем выше BWR, тем лучше разделимость классов.
+**BWR (Between-Within Ratio)** — ratio of inter-cluster distance to intra-cluster dispersion: `BWR = D(μ_A, μ_B) / mean(W_A, W_B)`. Higher BWR means better class separability.
 
 ---
 
-## P
-
-**Persistence Diagram (PD)** — результат persistent homology (PH) для облака точек. Используется для сравнения топологической формы кластеров эмбеддингов разных когнитивных классов.
-
-**Penalty (Quality)** — штрафная функция за псевдоглубину: `Penalty = h1·H + h2·U + h3·S + h4·O + h5·P`, где H=галлюцинации, U=неверифицируемость, S=символическая инфляция, O=онтологическая инфляция, P=псевдоформализм.
-
----
-
-*Глоссарий v0.2 — рабочий справочник. Расширяется по мере формализации.*
+*Glossary v0.2 — working reference. Extended as formalization progresses.*

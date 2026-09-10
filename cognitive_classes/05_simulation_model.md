@@ -274,4 +274,4 @@ Reason: AI amplification accelerates differentiation
 
 ---
 
-*Simulation model v0.2 — псевдокод для проверки гипотез. Требует эмпирической валидации.*
+*Simulation model v0.2 — pseudocode for hypothesis testing. Requires empirical validation.*

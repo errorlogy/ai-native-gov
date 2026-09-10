@@ -1,51 +1,51 @@
 # arXiv Publication Toolkit & Academic Workflow
 
-Комплексный инструментарий для генерации, верификации, компиляции и подготовки научных статей к публикации на **arXiv** (включая соответствие по содержанию и строгим требованиям к LaTeX-пакету).
+Comprehensive toolkit for generating, verifying, compiling, and preparing scientific papers for publication on **arXiv** (including content alignment and strict LaTeX package requirements).
 
 ---
 
-## 📁 Структура
+## Structure
 
 ```text
 AI_NATIVE_GOV/
 ├── paper_templates/
-│   └── arxiv_template/           # Базовый чистый LaTeX-шаблон для препринтов
-│       ├── main.tex              # Главный исходник (структурированные секции, математика, алгоритмы)
-│       ├── references.bib        # Верифицированный BibTeX файл
-│       └── figures/              # Папка для векторных (PDF) и растровых (PNG) иллюстраций
+│   └── arxiv_template/           # Base clean LaTeX template for preprints
+│       ├── main.tex              # Main source (structured sections, math, algorithms)
+│       ├── references.bib        # Verified BibTeX file
+│       └── figures/              # Folder for vector (PDF) and raster (PNG) illustrations
 │
 └── scripts/
     └── arxiv_toolkit/
-        ├── fetch_literature.py   # Поиск литературы через arXiv API и генерация честного BibTeX
-        ├── generate_figures.py   # Генерация векторных графиков (300+ DPI, serif шрифты)
-        ├── compile_paper.py      # Автоматическая компиляция через latexmk / pdflatex
-        ├── clean_and_package.py  # Очистка через Google's arxiv-latex-cleaner и упаковка в .tar.gz
+        ├── fetch_literature.py   # Literature search via arXiv API and honest BibTeX generation
+        ├── generate_figures.py   # Vector figure generation (300+ DPI, serif fonts)
+        ├── compile_paper.py      # Automatic compilation via latexmk / pdflatex
+        ├── clean_and_package.py  # Cleanup via Google's arxiv-latex-cleaner and .tar.gz packaging
         └── README.md
 ```
 
 ---
 
-## 🚀 Быстрый старт
+## Quick start
 
-Виртуальное окружение проекта (`.venv`) уже содержит все необходимые библиотеки (`arxiv-latex-cleaner`, `paper-qa`, `arxiv`, `semanticscholar`, `matplotlib`, `seaborn`, `bibtexparser`, `pydantic`).
+The project virtual environment (`.venv`) already includes all required libraries (`arxiv-latex-cleaner`, `paper-qa`, `arxiv`, `semanticscholar`, `matplotlib`, `seaborn`, `bibtexparser`, `pydantic`).
 
-### 1. Поиск и сбор литературы без галлюцинаций
+### 1. Literature search and collection without hallucinations
 ```powershell
 .venv\Scripts\python scripts\arxiv_toolkit\fetch_literature.py -q "cognitive game theory AGI" -n 5 -o paper_templates\arxiv_template\references.bib
 ```
 
-### 2. Генерация академических векторных графиков
+### 2. Generate academic vector figures
 ```powershell
 .venv\Scripts\python scripts\arxiv_toolkit\generate_figures.py
 ```
 
-### 3. Компиляция и локальная проверка PDF
+### 3. Compile and verify PDF locally
 ```powershell
 .venv\Scripts\python scripts\arxiv_toolkit\compile_paper.py -d paper_templates\arxiv_template
 ```
 
-### 4. Очистка и создание архива для arXiv
+### 4. Clean and create arXiv archive
 ```powershell
 .venv\Scripts\python scripts\arxiv_toolkit\clean_and_package.py -d paper_templates\arxiv_template
 ```
-В результате будет создан готовый файл `arxiv_template_arXiv_submission.tar.gz`, готовый к прямой загрузке на [arXiv.org/submit](https://arxiv.org/submit).
+This produces a ready-to-upload `arxiv_template_arXiv_submission.tar.gz` file for direct submission at [arXiv.org/submit](https://arxiv.org/submit).
