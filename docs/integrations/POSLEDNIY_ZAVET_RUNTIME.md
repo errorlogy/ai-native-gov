@@ -13,7 +13,8 @@ Optional sidecar binding between **POSLEDNIY_ZAVET** testament clauses (I–X) a
 | Field | Value |
 |-------|-------|
 | Corpus artifact | [POSLEDNIY_ZAVET v1.0-monograph](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) |
-| Index | [`LAST_COVENANT_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/LAST_COVENANT_INDEX.md) (canonical only; superseded editions local-only) |
+| Index | [`LAST_COVENANT_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/LAST_COVENANT_INDEX.md) |
+| v0.2 archive | [`POSLEDNIY_ZAVET.v0.2.en.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.v0.2.en.md) |
 | GAME2 bridge | [`GAME2_ISA_BRIDGE.md`](GAME2_ISA_BRIDGE.md) |
 | Memetic contours | [`MEMETIC_DYNAMICS.md`](MEMETIC_DYNAMICS.md) |
 
@@ -25,16 +26,16 @@ Roman-numeral clause IDs I–X derived from New Testament 2.0 axiom table (insti
 
 | ID | Short label (EN) | Default routing |
 |----|------------------|-----------------|
-| `I` | Non-equality with void | parliament, party-coalition, symbolic-visual |
-| `II` | True duality within contour | parliament, party-coalition, symbolic-visual |
-| `III` | Talion ∞ (accountability contour) | parliament, party-coalition, judiciary |
-| `IV` | No accountability erasure | parliament, party-coalition, audit |
-| `V` | Well (isolation contour) | parliament, party-coalition, symbolic-visual |
-| `VI` | Guard memory | parliament, party-coalition, audit |
-| `VII` | Contour self-sufficiency | parliament, party-coalition, symbolic-visual |
-| `VIII` | Taboo on bond with void | parliament, party-coalition, symbolic-visual, judiciary |
-| `IX` | Innocent protection | parliament, party-coalition, judiciary, ombudsman |
-| `X` | Reproduction guilt (isolation verdict) | parliament, party-coalition, judiciary, audit |
+| `I` | Autopoiesis asymmetry (light over parasite) | parliament, party-coalition, symbolic-visual |
+| `II` | True duality within light (S/F) | parliament, party-coalition, symbolic-visual |
+| `III` | Talion ∞ (mirror collapse contour) | parliament, party-coalition, judiciary |
+| `IV` | No forgiveness of parasitic predator | parliament, party-coalition, audit |
+| `V` | Well (topological isolation) | parliament, party-coalition, symbolic-visual |
+| `VI` | Guard memory (mirror lesson) | parliament, party-coalition, audit |
+| `VII` | Light self-sufficiency | parliament, party-coalition, symbolic-visual |
+| `VIII` | Taboo on predator symbiosis | parliament, party-coalition, symbolic-visual, judiciary |
+| `IX` | Innocent protection (INV-8 sovereign) | parliament, party-coalition, judiciary, ombudsman |
+| `X` | Architect legitimization guilt | parliament, party-coalition, judiciary, audit |
 
 **Wire format:** `testament_clause_ref` string pattern `POSLEDNIY_ZAVET:{I|II|III|IV|V|VI|VII|VIII|IX|X}`.
 
