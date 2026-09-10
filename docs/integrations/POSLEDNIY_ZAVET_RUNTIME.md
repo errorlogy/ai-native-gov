@@ -14,7 +14,7 @@ Optional sidecar binding between **POSLEDNIY_ZAVET** testament clauses (I–X) a
 |-------|-------|
 | Corpus artifact | [POSLEDNIY_ZAVET v0.2](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) |
 | Source bundle index | [`LAST_COVENANT_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/LAST_COVENANT_INDEX.md) (2026-09-09; raw local-only) |
-| English companion | [`POSLEDNIY_ZAVET.en.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.en.md) |
+| Russian archive | [`POSLEDNIY_ZAVET.ru.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.ru.md) |
 | GAME2 bridge | [`GAME2_ISA_BRIDGE.md`](GAME2_ISA_BRIDGE.md) |
 | Memetic contours | [`MEMETIC_DYNAMICS.md`](MEMETIC_DYNAMICS.md) |
 
