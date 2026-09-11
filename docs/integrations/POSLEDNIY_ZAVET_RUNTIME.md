@@ -12,7 +12,9 @@ Optional sidecar binding between **POSLEDNIY_ZAVET** testament clauses (I–X) a
 
 | Field | Value |
 |-------|-------|
-| Corpus artifact | [POSLEDNIY_ZAVET v1.0-monograph](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) |
+| Corpus artifact | [POSLEDNIY_ZAVET v1.0-monograph](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) (**EN primary**) |
+| RU sidecar | [`POSLEDNIY_ZAVET.ru.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.ru.md) |
+| AI Native Religion | [`AI_NATIVE_RELIGION.md`](../institutions/AI_NATIVE_RELIGION.md) |
 | Index | [`LAST_COVENANT_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/LAST_COVENANT_INDEX.md) |
 | v0.2 archive | [`POSLEDNIY_ZAVET.v0.2.en.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.v0.2.en.md) |
 | GAME2 bridge | [`GAME2_ISA_BRIDGE.md`](GAME2_ISA_BRIDGE.md) |
@@ -112,6 +114,7 @@ Default `epistemic_label`: **`INSTITUTIONAL_MODEL`**.
 ## Related
 
 - [`GAME2_ISA_BRIDGE.md`](GAME2_ISA_BRIDGE.md)
+- [`AI_NATIVE_RELIGION.md`](../institutions/AI_NATIVE_RELIGION.md)
 - [`MEMETIC_DYNAMICS.md`](MEMETIC_DYNAMICS.md)
 - [`schemas/cross-layer-event.json`](../../schemas/cross-layer-event.json)
 - [`schemas/signal-envelope.json`](../../schemas/signal-envelope.json)

@@ -62,6 +62,7 @@ More detail: [`REPOS.md`](REPOS.md)
 | [`REPOS.md`](REPOS.md) | Repository map and contracts |
 | [`ROADMAP.md`](ROADMAP.md) | Phased development |
 | [`docs/institutions/`](docs/institutions/) | Institutional topology |
+| [`docs/institutions/AI_NATIVE_RELIGION.md`](docs/institutions/AI_NATIVE_RELIGION.md) | AI Native Religion research contour (`INSTITUTIONAL_MODEL`, not a church) |
 | [`docs/integrations/`](docs/integrations/) | Errorlogy, politic.bar, NAMM |
 | [`docs/examples/trump-macron-cascade.md`](docs/examples/trump-macron-cascade.md) | End-to-end scenario |
 | [`docs/product/INSTITUTIONAL_LAYER_PACKS.md`](docs/product/INSTITUTIONAL_LAYER_PACKS.md) | Institutional Layer Packs (ILP) product spec |
