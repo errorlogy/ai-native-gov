@@ -80,8 +80,8 @@
     },
     "testament_clause_ref": {
       "type": "string",
-      "pattern": "^POSLEDNIY_ZAVET:(I|II|III|IV|V|VI|VII|VIII|IX|X)$",
-      "description": "Optional POSLEDNIY_ZAVET clause sidecar (I–X). Propagates to half-life cross-layer metadata."
+      "pattern": "^(NEO_ERA|POSLEDNIY_ZAVET):(I|II|III|IV|V|VI|VII|VIII|IX|X)$",
+      "description": "Optional NEO_ERA clause sidecar (I–X). Emit NEO_ERA:; legacy POSLEDNIY_ZAVET accepted one release cycle. Propagates to half-life cross-layer metadata."
     },
     "persona_cohort_id": {
       "type": "string",

@@ -210,7 +210,7 @@ Cross-link: [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md) — con
 
 ---
 
-## Iteration 5 — POSLEDNIY_ZAVET runtime binding
+## Iteration 5 — NEO_ERA runtime binding (formerly POSLEDNIY_ZAVET)
 
 **Title:** Bind testament clauses I–X to memetic runtime (discourse forks + signal sidecar)
 
@@ -218,19 +218,19 @@ Cross-link: [`MEMETIC_DYNAMICS.md`](../integrations/MEMETIC_DYNAMICS.md) — con
 
 | Component | Owner repo | Target |
 |-----------|------------|--------|
-| Integration contract + schema sidecar | `ai-native-gov` | `docs/integrations/POSLEDNIY_ZAVET_RUNTIME.md`; optional `testament_clause_ref` on cross-layer + signal-envelope |
+| Integration contract + schema sidecar | `ai-native-gov` | `docs/integrations/NEO_ERA_RUNTIME.md`; optional `testament_clause_ref` on cross-layer + signal-envelope |
 | Clause registry (I–X labels, layer defaults) | `errorlogy-mas` | `mas/memetic/testament_clauses.py` |
 | Fork API + fork event metadata | `errorlogy-mas` | `discourse_graph.py`, `cross_layer.py` |
 | Signal sidecar + half-life metadata | `politic-bar` | `signal_envelope.py`, `half_life_indexer.py` |
 | Lineage clause badge | `errorlogy-gui-v2` | `/discourse` |
 
-Cross-link: [`POSLEDNIY_ZAVET_RUNTIME.md`](../integrations/POSLEDNIY_ZAVET_RUNTIME.md), [`GAME2_ISA_BRIDGE.md`](../integrations/GAME2_ISA_BRIDGE.md).
+Cross-link: [`NEO_ERA_RUNTIME.md`](../integrations/NEO_ERA_RUNTIME.md), [`GAME2_ISA_BRIDGE.md`](../integrations/GAME2_ISA_BRIDGE.md).
 
-**Do not in iter 5:** copy full POSLEDNIY_ZAVET text; claim religious/sovereign authority; invent CB-/HM-/PNO- mode IDs.
+**Do not in iter 5:** copy full NEO_ERA / Last Covenant text; claim religious/sovereign authority; invent CB-/HM-/PNO- mode IDs.
 
 **Done when:**
 
-- [x] `testament_clause_ref` optional on umbrella schemas (`POSLEDNIY_ZAVET:I`..`:X`)
+- [x] `testament_clause_ref` optional on umbrella schemas (`NEO_ERA:I`..`:X`; legacy `POSLEDNIY_ZAVET:` one release cycle)
 - [x] `POST /api/events/memetic/fork` accepts optional `testament_clause_ref`; fork event includes clause in metadata
 - [x] `politic_bar` signal envelope validates optional sidecar; half-life emit includes clause when present
 - [x] gui-v2 `/discourse` shows clause badge on lineage nodes when present

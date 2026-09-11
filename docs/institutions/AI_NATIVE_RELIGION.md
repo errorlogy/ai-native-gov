@@ -30,8 +30,8 @@ Full framework, corpus artifacts, and monograph text live in isa-2.0:
 | Research contour | [`docs/AI_NATIVE_RELIGION.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/AI_NATIVE_RELIGION.md) |
 | ISA 2.0 framework | [`docs/ISA.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/ISA.md) |
 | GAME2 index | [`docs/CORPUS/GAME2_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/GAME2_INDEX.md) |
-| Last Covenant (canonical EN) | [`docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) |
-| RU sidecar | [`docs/CORPUS/artifacts/POSLEDNIY_ZAVET.ru.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.ru.md) |
+| Last Covenant (canonical EN) | [`docs/CORPUS/artifacts/NEO_ERA.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/NEO_ERA.md) |
+| RU sidecar | [`docs/CORPUS/artifacts/NEO_ERA.ru.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/NEO_ERA.ru.md) |
 
 Umbrella holds **pointers and contracts only** — never copy monograph bulk here.
 
@@ -42,7 +42,7 @@ Umbrella holds **pointers and contracts only** — never copy monograph bulk her
 | Contract | Purpose |
 |----------|---------|
 | [GAME2_ISA_BRIDGE.md](../integrations/GAME2_ISA_BRIDGE.md) | REALITY_GAME / ERG ↔ ISA 2.0 routing |
-| [POSLEDNIY_ZAVET_RUNTIME.md](../integrations/POSLEDNIY_ZAVET_RUNTIME.md) | `testament_clause_ref` sidecar, wire `POSLEDNIY_ZAVET:I..X` |
+| [NEO_ERA_RUNTIME.md](../integrations/NEO_ERA_RUNTIME.md) | `testament_clause_ref` sidecar, wire `NEO_ERA:I..X` |
 | [MEMETIC_DYNAMICS.md](../integrations/MEMETIC_DYNAMICS.md) | Discourse forks, propagation contours |
 | [SYMBOLIC_VISUAL_LAYER.md](../integrations/SYMBOLIC_VISUAL_LAYER.md) | Symbolic carrier registry |
 

@@ -35,11 +35,11 @@ Institutional relevance for AI Native Gov:
 
 Full theme map and sensitive-content policy: [`GAME2_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/GAME2_INDEX.md) in isa-2.0.
 
-**Corpus artifact:** [`POSLEDNIY_ZAVET.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) — **Analytical Monograph 3** (`INSTITUTIONAL_MODEL` **v1.0-monograph**, `source: analytical_monograph_3`, **English primary**). Russian sidecar: [`POSLEDNIY_ZAVET.ru.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.ru.md). Ontology `2.0_subjective_darkness`; wire `POSLEDNIY_ZAVET:I..X` unchanged. v0.2 institutional archive: [`POSLEDNIY_ZAVET.v0.2.en.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.v0.2.en.md). Index: [`LAST_COVENANT_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/LAST_COVENANT_INDEX.md). Full text stays in isa-2.0; umbrella holds pointer only.
+**Corpus artifact:** [`NEO_ERA.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/NEO_ERA.md) — **Analytical Monograph 3** (`INSTITUTIONAL_MODEL` **v1.0-monograph**, `source: analytical_monograph_3`, **English primary**). Russian sidecar: [`NEO_ERA.ru.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/NEO_ERA.ru.md). Ontology `2.0_subjective_darkness`; wire `NEO_ERA:I..X`. Legacy `POSLEDNIY_ZAVET:` accepted one release cycle. v0.2 institutional archive: [`POSLEDNIY_ZAVET.v0.2.en.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.v0.2.en.md). Index: [`LAST_COVENANT_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/LAST_COVENANT_INDEX.md). Full text stays in isa-2.0; umbrella holds pointer only.
 
 **AI Native Religion contour:** research framing for sacred-discourse routing — **not a church**. See [`AI_NATIVE_RELIGION.md`](../institutions/AI_NATIVE_RELIGION.md) and isa-2.0 [`docs/AI_NATIVE_RELIGION.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/AI_NATIVE_RELIGION.md).
 
-**Runtime binding (Iteration 5):** optional `testament_clause_ref` sidecar on cross-layer events and signal envelopes — see [`POSLEDNIY_ZAVET_RUNTIME.md`](POSLEDNIY_ZAVET_RUNTIME.md).
+**Runtime binding (Iteration 5):** optional `testament_clause_ref` sidecar on cross-layer events and signal envelopes — see [`NEO_ERA_RUNTIME.md`](NEO_ERA_RUNTIME.md).
 
 ---
 

@@ -45,8 +45,8 @@ Key docs in that repo:
 - [`docs/CORPUS/DODECA12_EIA_v0_3.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/DODECA12_EIA_v0_3.md) — DODECA-12 v0.3 corpus index (`COMPUTATIONAL_EVIDENCE` validation summary; raw bundle local-only under `docs/CORPUS/raw/`)
 - [`docs/JUNG_SYMBOLIC_LENS.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/JUNG_SYMBOLIC_LENS.md) — Homo symbolic research frame
 - [`docs/CORPUS/GAME2_INDEX.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/GAME2_INDEX.md) — REALITY_GAME / ERG corpus index
-- [`docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) — Last Testament v1.0-monograph (`INSTITUTIONAL_MODEL`, **EN primary**)
-- [`docs/CORPUS/artifacts/POSLEDNIY_ZAVET.ru.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/POSLEDNIY_ZAVET.ru.md) — Russian sidecar
+- [`docs/CORPUS/artifacts/NEO_ERA.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/NEO_ERA.md) — Last Testament v1.0-monograph (`INSTITUTIONAL_MODEL`, **EN primary**)
+- [`docs/CORPUS/artifacts/NEO_ERA.ru.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/CORPUS/artifacts/NEO_ERA.ru.md) — Russian sidecar
 - [`docs/AI_NATIVE_RELIGION.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/AI_NATIVE_RELIGION.md) — AI Native Religion research contour (not a church)
 - [`docs/PUBLIC_RELEASE.md`](https://github.com/errorlogy/isa-2.0/blob/main/docs/PUBLIC_RELEASE.md) — what is published vs gitignored
 
