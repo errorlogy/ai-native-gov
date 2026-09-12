@@ -37,6 +37,16 @@ Umbrella holds **pointers and contracts only** — never copy monograph bulk her
 
 ---
 
+## Public outreach (memetic layer)
+
+| Surface | Value |
+|---------|-------|
+| Telegram — NZ 2.0 / Last Covenant | [@OmegaCovenant](https://t.me/OmegaCovenant) |
+
+Optional public memetic/outreach channel for symbolic-discourse propagation — **not** a church, clergy, or source of religious authority.
+
+---
+
 ## Integration contracts
 
 | Contract | Purpose |
