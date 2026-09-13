@@ -53,6 +53,8 @@ Optional public memetic/outreach channel for symbolic-discourse propagation — 
 |----------|---------|
 | [GAME2_ISA_BRIDGE.md](../integrations/GAME2_ISA_BRIDGE.md) | REALITY_GAME / ERG ↔ ISA 2.0 routing |
 | [NEO_ERA_RUNTIME.md](../integrations/NEO_ERA_RUNTIME.md) | `testament_clause_ref` sidecar, wire `NEO_ERA:I..X` |
+| [NEO_ERA_TELEGRAM_PIPELINE.draft.md](../integrations/NEO_ERA_TELEGRAM_PIPELINE.draft.md) | Auto-post to [@OmegaCovenant](https://t.me/OmegaCovenant) (GHA / Vercel / Neon) |
+| [TELEGRAM_BOT_SETUP.md](https://github.com/errorlogy/isa-2.0/blob/main/docs/TELEGRAM_BOT_SETUP.md) | BotFather, channel admin, GitHub secrets, dry-run (isa-2.0) |
 | [MEMETIC_DYNAMICS.md](../integrations/MEMETIC_DYNAMICS.md) | Discourse forks, propagation contours |
 | [SYMBOLIC_VISUAL_LAYER.md](../integrations/SYMBOLIC_VISUAL_LAYER.md) | Symbolic carrier registry |
 
